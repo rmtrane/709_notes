@@ -1,0 +1,197 @@
+# Homework
+
+## Chapter 1
+
+### First Exam Period
+
+```{exercise, name = "Ex 2"}
+Let $\C$ be a collection of subsets of $\Omega$ and let $\Gamma = \{ \F | \F \text{ is a } \sigma \text{-field on } \Omega \text{ and } \C \subset \F \}$. Show that $\Gamma \neq \emptyset$ and $\sigma(\C) = \cap_{\F \in \Gamma} \F$. 
+```
+
+```{solution, name = "Ex 2"}
+Let $\P(\Omega)$ be the collection of all subsets of $\Omega$. We know that this is a $\sigma$-field. It also contains $\C$. Hence, $\Gamma \neq \emptyset$. 
+
+By definition, $\sigma(\C)$ is the smallest $\sigma$-field that contains $\C$, hence $\sigma(\C) \in \Gamma$ and $\sigma(\C) \subset \F$ for all $\F \in \Gamma$. Therefore, $\sigma(\C) \subset \cap_{\F \in \Gamma} \F$. But since $\sigma(\C) \in \Gamma$, $\sigma(\C) \in \cap_{\F \in \Gamma} \F$, which in turn ensures that $\cap_{\F \in \Gamma} \F \subset \sigma(\C)$. 
+
+Hence $\sigma(\C) = \cap_{\F \in \Gamma} \F$. 
+  
+```
+
+
+```{exercise, name = "Ex 3"}
+Let $\Omega, \F_j)$, $j=1,2,\ldots$, be measurable spaces such that $\F_j \subset \F_{j+1}$. Is $\cup_j \F_j$ a $\sigma$-field?
+```
+
+```{solution, name = "Ex 3"}
+No.
+
+Let $\Omega = [0,1]$, and $\F_n = \sigma \left\{[0,\tfrac{1}{2^n}),[\tfrac{1}{2^n},\tfrac{2}{2^n}), \ldots, [\tfrac{2^{n-1}}{2^n}, 1)\right\}$. 
+
+Now, consider the set $B_n = [0, \tfrac{1}{2^n})$. Clearly $B_n \in \F_n$ for all $n$, hence $B_n \in \cup_{i=1}^\infty \F_i$. Hower, $\cap_{i = 1}^{\infty} B_i = \{0\} \notin \cup_{i=1}^\infty \F_i$. So $\cup_{i=1}^\infty \F_i$ is not closed under countable intersection, i.e. it is not a $\sigma$-algebra. 
+
+```
+
+
+```{exercise, name = "Ex 5"}
+a) Let $\C$ be a $\pi$-system and $\mathcal{D}$ be a $\lambda$-system such that $\C \subset \mathcal{D}$. Show that $\sigma(\C) \subset \mathcal{D}$. 
+```
+
+```{solution, name = "Ex 6"}
+
+```
+
+
+```{exercise, name = "Ex 6"}
+Prove part (ii) and (iii) of proposition \@ref(prp:properties-of-measures). 
+```
+
+```{solution, name = "Ex 6"}
+
+i) Let $A \subset B$. Then $B \setminus A \cap A = \emptyset$, hence $\nu(B) = \nu((B\setminus A) \cup A) = \nu(B\setminus A) + \nu(A) \geq \nu(A)$. 
+
+ii) Let $A_1, A_2, \ldots$ be a sequence of sets. Define $B_i = A_i \setminus \left(\cup_{k = 1}^{i-1} A_k \right)$. Then the $B_i$s are pairwise disjoint. Hence, 
+
+\begin{align*}
+  \nu\left(\cup_{i = 1}^\infty A_i\right) &= \nu\left(\cup_{i=1}^\infty B_i\right) \\
+                                          &= \sum_{i=1}^\infty \nu(B_i) \\
+                                          &= \sum_{i=1}^\infty \nu\left(A_i \setminus \left(\cup_{k=1}^{i-1} A_k \right ) \right ).
+\end{align*}
+
+Since $A_i \setminus \left(\cup_{k=1}^{i-1} A_k \right) \subset A_i$, we use (i) to get the result:
+  
+\begin{align*}
+  \sum_{i=1}^\infty \nu\left(A_i \setminus \left(\cup_{k=1}^{i-1} A_k \right ) \right ) \leq \sum_{i=1}^\infty \nu\left(A_i \right )
+\end{align*}
+
+
+iii) Let $A_1 \subset A_2 \subset A_3 \subset \dots$. Define $B_i = A_i \setminus A_{i-1}$. Then $B_1, B_2, \ldots$ is a sequence of pairwise disjoint sets, and $\cup_{i = 1}^\infty B_i = \cup_{i=1}^\infty A_i$. Hence,
+
+\begin{align*}
+  \nu\left(\cup_{i=1}^k A_i\right) &= \nu\left(\cup_{i=1}^k B_i\right) \\
+                                   &= \sum_{i=1}^k \nu(B_i) \\
+                                   &= \sum_{i=1}^k \nu(A_i\setminus A_{i-1}) \\
+                                   &= \sum_{i=1}^k \nu(A_i) - \nu(A_{i-1}) \\
+                                   &= \nu(A_k). 
+\end{align*}
+                                   
+Taking the limit on both sides gives us 
+
+$$
+  \nu\left(\cup_{i=1}^k A_i \right) = \lim_{n \rightarrow \infty} \nu(A_n).
+$$
+
+```
+
+```{exercise, name = "Ex 12"}
+Let $\nu$ and $\lambda$ be two measures on $(\Omega, \F)$ such that $\nu(A) = \lambda(A)$ for any $A \in \C \subset \F$, where $\C$ is a $\pi$-system (\@ref(def:pi-system)). Assume that $\nu$ is $\sigma$-finite (\@ref(def:sigma-finite)). 
+
+Show that $\nu(A) = \lambda(A)$ for all $A \in \sigma(\C)$.
+
+```
+
+```{solution, name = "Ex 12"}
+Let $\F = \{A \in \sigma(\C) | \nu(A) = \lambda(A)\}$. Then $\C \subset \F$. If we can show that $\F$ is a $\sigma$-field, then $\sigma(\C) \subset \F$ (since $\sigma(\C)$ is the smallest $\sigma$-field that contains $\C$), which proves that $\nu(A) = \lambda(A)$ for all $A \in \sigma(\C)$. 
+
+```
+
+
+```{exercise, name = "Ex 14"}
+Prove proposition 1.4
+```
+
+
+```{exercise, name = "Ex 15"}
+Show that a monotone function from $\R$ to $\R$ is Borel, and a c.d.f. on $\R^k$ is Borel.
+```
+
+```{exercise, name = "Ex 17"}
+Let $f$ be a non-negative Borel function on $(\Omega, \F)$. Show that $f$ is the limit of a sequence of simple functions $\{\phi_n \}$ on $(\Omega, \F)$ with $0 \le \phi_1 \le \phi_2 \le \dots \le f$. 
+```
+
+
+```{exercise, name = "Ex 19"}
+
+Let $\{f_n\}$ be a sequence of Borel functions on a measurable space. Show that
+
+a) $\sigma(f_1, f_2, \ldots) = \sigma(\cup_{j=1}^{\infty} \sigma(f_j)) = \sigma(\cup_{j=1}^\infty \sigma(f_1,\ldots, f_j)).$
+b) $\sigma(\lim \sup_n f_n) \subset \cap_{n=1}^\infty \sigma(f_n, f_{n+1},\ldots).$
+  
+
+```
+
+
+```{exercise, name = "Ex 24"}
+
+Let $f$ be an integrable function on $(\Omega, \F, \nu)$. Show that for each $\epsilon > 0$, there exists a $\delta_\epsilon$ such that for $A \in \F$:
+
+$$
+  \nu(A) < \delta_\epsilon \Rightarrow \int_A |f| d\nu < \epsilon. 
+$$
+
+```
+
+
+```{solution}
+Let $\epsilon > 0$, $A \in \F$ with $\nu(A) < \delta_\epsilon = \frac{\epsilon}{\max_{\omega \in A} |f(\omega)|}$. Then
+
+\begin{align*}
+  \int_A |f| d\nu &\leq \int_A \max_{\omega \in A} |f(\omega)| d\nu \\
+                  &= \max_{\omega \in A} |f(\omega)| \nu(A) \\
+                  &< \epsilon.
+\end{align*}
+
+```
+
+```{exercise, name = "Ex 30"}
+For any c.d.f. $F$ and any $a \ge 0$, show that $\int [F(x+a) - F(x)] dx = a$ 
+```
+
+```{solution}
+
+```
+
+
+```{exercise, name = "Ex 34"}
+Prove proposition \@ref(prp:calc-radon-nikodym)}
+```
+
+```{solution, name = "Ex 34 i)"}
+Let $g$ be the unique function denoted by $\frac{d\lambda}{d\nu}$. Assume $f = 1_A$ for some $A\in \F$. Since $\lambda << \nu$, we know that $\lambda(A) = \int_A g d\nu$. So,
+
+\begin{align*}
+  \int f d\lambda &= \int 1_A d\lambda \\
+                  &= \lambda(A) \\
+                  &= \int_A g d\nu \\
+                  &= \int 1_A g d\nu = \int f g d\nu.
+\end{align*}
+
+Hence, (i) is true for all indicator functions, and so by linearity of integrals (\@ref(prp:int-linearity)) for all non-negative simple functions. 
+
+Now, let $f$ be a general non-negative Borel function. Then we know that there exists a sequence of simple functions $\phi_1, \phi_2, \ldots$ such that $\phi_n \uparrow f$. Hence, utilizing the monotone convergence theorem and the fact that we know (i) holds for simple functions,
+
+\begin{align*}
+  \int f d\lambda &= \int \lim_{n \rightarrow \infty} \phi_n d\lambda \\
+                  &= \lim_{n \rightarrow \infty} \int \phi_n d\lambda \\
+                  &= \lim_{n \rightarrow \infty} \int \phi_n g d\nu \\
+                  &= \int \lim_{n \rightarrow \infty} \phi_n g d\nu \\
+                  &= \int f g d\nu,
+\end{align*}
+
+and so we have shown that (i) holds for any non-negative Borel function. 
+
+```
+
+```{solution, name = "Ex 34 ii)"}
+Assume $\lambda_1 << \nu$ and $\lambda_2 << \nu$. Then
+
+\begin{align*}
+  (\lambda_1 + \lambda_2)(A) &= \lambda_1(A) + \lambda_2(A) \\
+                             &= \int_A g_1 d\nu + \int_A g_2 d\nu \\
+                             &= \int_A (g_1 + g_2)d\nu,
+\end{align*}
+
+so $\lambda_1 + \lambda_2 << \nu$, and 
+
+$$\frac{d(\lambda_1 + \lambda_2)}{d\nu} = g_1 + g_2 = \frac{d\lambda_1}{d\nu} + \frac{d\lambda_2}{d\nu}.$$
+  
+```

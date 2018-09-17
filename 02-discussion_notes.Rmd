@@ -1,0 +1,219 @@
+# Discussion Notes
+
+## Discussion 1: 5/14
+
+### $\sigma$-fields
+
+```{exercise, name = "Countable intersection/union of $\\sigma$-fields", label = ex11}
+Let $\F_n, n=1,2,\ldots$ be a sequance of $\sigma$-fields on $\Omega$. Show the following:
+  
+a) $\cap_{i=1}^\infty \F_n$ is a $\sigma$-field.
+b) If $\F_1 \subset \F_2 \subset \dots$, then $\cup_{i=1}^\infty \F_n$ is not necessarily a $\sigma$-field.
+
+```
+
+```{solution, name = "\\@ref(exr:ex11) a)"}
+We need to show (i)-(iii) from definition \@ref(def:sigmaField). 
+
+i) Since $\F_n$ are all $\sigma$-fields, $\emptyset \in \F_n$ for all $n=1,2,\ldots$. Hence, $\emptyset \in \cap_{i=1}^{\infty} \F_n$. 
+ii) As (i).
+iii) Let $\{A_i\}_{i=1}^\infty$ be a sequence of subsets from $\cap_{i=1}^{\infty} \F_n$. Then, for all $i$, $A_i \in \F_n$ for all $n$. Since $F_n$ is a $\sigma$-field, $\cup_{i=1}^\infty A_i \in \F_n$ for all $n$, and so $\cup_{i=1}^\infty A_i \in \cap_{i=1}^\infty \F_n$. 
+
+Hence, $\cap_{i=1}^\infty \F_n$ is a $\sigma$-field.
+
+```
+
+```{solution, name = "\\@ref(exr:ex11) b)"}
+
+Let $\Omega = [0,1]$, and $\F_n = \sigma \left\{[0,\tfrac{1}{2^n}),[\tfrac{1}{2^n},\tfrac{2}{2^n}), \ldots, [\tfrac{2^{n-1}}{2^n}, 1)\right\}$. 
+
+Now, consider the set $B_n = [0, \tfrac{1}{2^n})$. Clearly $B_n \in \F_n$ for all $n$, hence $B_n \in \cup_{i=1}^\infty \F_n$. Hower, $\cap_{i = 1}^{\infty} B_n = \{0\} \notin \cup_{i=1}^\infty \F_n$. So $\cup_{i=1}^\infty \F_n$ is not closed under countable intersection, i.e. it is not a $\sigma$-algebra. 
+
+```
+
+### $\pi-\lambda$ systems
+
+```{definition, name = "$\\pi$-system", label = pi-system}
+Let $\mathcal{D}$ be a collection of subsets of $\Omega$. $\mathcal{D}$ is said to be a ***$\pi$-system*** if it is closed under intersection, i.e. if 
+
+$$
+  A,B \in \mathcal{D} \Rightarrow A \cup B \in \mathcal{D}.
+$$
+  
+```
+
+```{definition, name = "$\\lambda$-system", label = lambda-system}
+Let $\mathcal{L}$ be a collection of subsets of $\Omega$. $\mathcal{L}$ is said to be a ***$\lambda$-system*** if it satisfies that 
+
+i) $\Omega \in \mathcal{L}$,
+ii) If $A,B \in \Omega$ with $A \subset B$, then $B\setminus A \in \Omega$
+iii) If $A_n \in \mathcal{L}$ and $A_n \subset A_{n+1}$ for all $n$, then 
+
+$$
+  \cup_{i=1}^{\infty} A_n \in \mathcal{L}  
+$$
+
+```
+
+```{theorem, name = "$\\pi-\\lambda$ Theorem", label = pi-lambda}
+If $\mathcal{D}$ is a $\pi$-system and $\mathcal{L}$ is a $\lambda$-system s.t. $\mathcal{D} \subset \mathcal{L}$, the $\sigma\{\mathcal(D)\} \subset \mathcal{L}$. 
+```
+
+```{exercise, name = "Proof of the $\\pi-\\lambda$ Theorem"}
+
+```
+
+```{solution}
+Proof hints:
+  
+1) If $\mathcal{L}_t$ is $\lambda$-system for all $t \in I$, $\mathcal{D} \subset \mathcal{L}_t$, then $\cap_{t \in I} \mathcal{L}_t$ is a $\lambda$-system. Denote this $\mathcal{L}(\mathcal{D})$ (smallest $\lambda$-system containing $\mathcal{D}$).
+2) If $\mathcal{L}$ is a $\pi$-system AND a $\lambda$-system, then $\mathcal{L}$ is a $\sigma$-field. 
+3) If $\mathcal{D}$ is $\pi$-system, then $\mathcal{L}(\mathcal{D})$ is $\pi$-system. 
+
+By 1)-3), $\mathcal{L} = \sigma(\mathcal{D})$, which implies ... 
+
+```
+
+###  The "Good Sets" Principle
+
+```{exercise, label = good-sets}
+Let $\mathcal{P}$ be a $\pi$-system, and $\nu_1$ and $\nu_2$ two measures that agree on $\mathcal{P}$, i.e. 
+
+$$
+  \nu_1(A) = \nu_2(A) \text{ for all } A \in \mathcal{P}.
+$$
+  
+Assume there is a sequence of sets $A_n \in \mathcal{P}$ with $A_n \uparrow \Omega$ and $\nu_i(A_n) < \infty$ for all $n$. 
+
+Use the $\pi-\lambda$ theorem to prove that $\nu_1$ and $\nu_2$ agree on $\sigma(\mathcal{P})$. 
+
+```
+
+```{solution, label = solution-good-sets}
+Let $\F_n$ be given by 
+
+$$
+  \F_n = \left \{A \in \sigma(\mathcal{P}) \left | \nu_1(A \cap A_n) = \nu_2(A \cap A_n) \forall n \right \} \right .
+$$
+
+Let $A \in \mathcal{P}$. Since $A_n \in \mathcal{P}$ for all $n$ and $\mathcal{P}$ is a $\pi$-system, $A \cap A_n \in \mathcal{P}$. So $\nu_1(A \cap A_n) = \nu_2(A \cap A_n)$, hence $\mathcal{P} \subset \F_n$. 
+
+By definition, $\F_n \subset \sigma(\mathcal{P})$, so $\mathcal{P} \subset \F_n \subset \sigma(\mathcal{P})$.
+
+Now, if we can prove that $\F_n$ is a $\lambda$-system for all $n$, then by the $\pi-\lambda$ theorem (theorem \@ref(thm:pi-lambda)), we have that $\sigma(\mathcal{P}) \subset \F_n$, which combined with the paragraph above gives us that $\sigma(\mathcal{P}) = \F_n$, hence $\nu_1$ and $\nu_2$ agree on $\sigma(\mathcal{P})$.
+
+So let us show that $\F_n$ is indeed a $\lambda$-system:
+  
+i) $\Omega \in \F_n$. Since $A_n \uparrow \Omega$, we can use continuity of measure (proposition \@ref(prp:properties-of-measures)) to conclude that 
+
+\begin{align*}
+  \lim_{n \rightarrow \infty} \nu_i(A_n) &= \nu_i(\lim_{n \rightarrow \infty} A_n) \\
+    &= \nu_i(\Omega).
+\end{align*}
+
+Since $\nu_1(A_n) = \nu_2(A_n)$ ($A_n \in \mathcal{P}$), it holds that $\nu_1(\Omega) = \nu_2(\Omega)$, so $\Omega \in \P \subset \F_n$.
+
+ii) Let $A,B \in \F_n$ with $A \subset B$. So, 
+
+\begin{align*}
+  \nu_1((A\setminus B) \cap A_n) &= \nu_1(A\cap A_n) - \nu_1(B\cap A_n) \\
+    &= \nu_2(A\cap A_n) - \nu_2(B\cap A_n) \\
+    &= \nu_2((A\setminus B) \cap A_n),
+\end{align*}
+
+which means that $A\setminus B \in \F_n$. 
+
+iii) Let $B_i \in \F_n$ s.t. $B_i \subset B_{i+1}$. Then, once again using continuity of measures to move limits around, we have 
+
+
+\begin{align}
+  \nu_1\left(\cup_{i=1}^\infty B_i \cap A_n \right) &= \nu_1\left(\cup_{i=1}^\infty (B_i \cap A_n) \right) \\
+    &= \lim_{i \rightarrow \infty} \nu_1(B_i \cap A_n) \\
+    &= \lim_{i \rightarrow \infty} \nu_2(B_i \cap A_n) \\
+    &= \nu_2\left(\cup_{i=1}^\infty (B_i \cap A_n) \right) \\
+    &= \nu_2\left(\cup_{i=1}^\infty B_i \cap A_n \right),
+\end{align}
+
+which gives us that $\cup_{i = 1}^\infty B_i \in \F_n$, hence $\F_n$ is a $\lambda$-system. 
+```
+
+
+### From Indicator Function to General (Borel) Function
+
+When we deine the Lebesgue integral, we define it in three steps. 
+
+1) First for indicator functions, which in turn is generalized to simple non-negative functions (i.e. linear combinations of indicator functions).
+2) Second for any non-negative functions (which is done by utilizing that any such function can be described as the limit of a sequence of simple functions)
+3) A general function (by separating the positive and negative parts)
+
+```{exercise}
+Let $\Omega = \left\{\omega_1, \omega_2, \ldots \right\}$ be a countable set, $\F$ all subsets of $\Omega$, and $\nu$ the counting measure on $\Omega$. Show that for any Borel function $f$, the integral of $f$ with respect to $\nu$ is 
+
+\begin{equation}
+  \int f d\nu = \sum_{i=1}^\infty f(\omega_i)  (\#eq:ex14)
+\end{equation}
+  
+```
+
+
+```{solution}
+Let $A \in \F$ and define $f = 1_A$. Then
+
+\begin{align*}
+  \int f d\nu &= \int_A d\nu \\
+              &= \nu(A) \\
+              &= \sum_{i=1}^\infty 1_A(\omega_i)
+\end{align*}
+
+I.e. \@ref(eq:ex14) holds for indicator functions, and hence also for simple functions.
+
+Now, let $f$ be a non-negative Borel function. Then we know that there exists a sequence $(f_n)_i^{\infty}$ of simple functions such that $f_n \uparrow f$. Then
+
+\begin{align*}
+  \int f d\nu &= \int \lim_{n \rightarrow \infty} f_n d\nu \\
+              &= \lim_{n\rightarrow \infty} \int f_n d\nu.
+\end{align*}
+
+Since $f_n$ is a simple function, we know that \@ref{eq:ex14} holds. Hence,
+
+\begin{align*}
+  \int f d\nu &= \lim_{n \rightarrow \infty} \sum_{i=1}^\infty f_n(\omega_i) \\
+  &= \sum_{i=1}^\infty \lim_{n \rightarrow \infty} f_n(\omega_i) \\
+  &= \sum_{i=1}^\infty f(\omega_i),
+\end{align*}
+
+and so \@ref{eq:ex14} holds for non-negative Borel functions.
+
+Finally, let $f$ be any Borel function. Then we can write $f = f_+ - f_-$, where $f_+ = \max(f,0)$ and $f_- = \max(-f, 0)$. Then both $f_+$ and $f_-$ are non-negative Borel functions, hence \@ref{eq:ex14} holds for both. So
+
+\begin{align*}
+  \int f d\nu &= \int f_+ d\nu - \int f_- d\nu \\
+              &= \sum_{i=1}^\infty f_+(\omega_i) - \sum_{i=1}^\infty f_-(\omega_i) \\
+              &= \sum_{i=1}^\infty f_+(\omega_i) - f_-(\omega_i) \\
+              &= \sum_{i=1}^\infty f(\omega_i).
+\end{align*}
+
+So \@ref(eq:ex14) holds for all Borel functions.
+
+```
+
+
+### Switch the Order of Integration and Limit
+
+```{exercise, name = "Generalized Dominated Convergence Theorem"}
+If $\lim f_n = f$ and there exists a sequence of integrable functions $g_1, g_2, g_3, \ldots$ such that 
+
+* $|f_n| \leq g_n$ a.e.
+* $g_n \rightarrow g$ a.e.
+* $\lim_{n \rightarrow \infty} \int g_n d\nu = \int g d\nu$
+  
+then
+
+\begin{equation}
+  \int \lim_{n \rightarrow \infty} f_n d\nu = \lim_{n \rightarrow \infty} \int f_n d\nu (\#eq:ex15)
+\end{equation}
+```
+
+
+
+

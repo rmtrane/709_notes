@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1536954271100.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "69B322F1",
+    "lastKnownWriteTime" : 1537206368,
+    "last_content_update" : 1537206368968,
+    "path" : "~/Documents/UW-Madison/STAT709/709_notes/03-homework.Rmd",
+    "project_path" : "03-homework.Rmd",
+    "properties" : {
+        "cursorPosition" : "141,0",
+        "scrollLine" : "135"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

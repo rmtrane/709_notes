@@ -1,0 +1,8 @@
+\newcommand{\mc}[1]{\mathcal{#1}}
+\renewcommand{\B}{\mathcal{B}}
+\renewcommand{\C}{\mathcal{C}}
+\newcommand{\F}{\mathcal{F}}
+
+\newcommand{\mb}[1]{\mathbb{#1}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\R}{\mathbb{R}}

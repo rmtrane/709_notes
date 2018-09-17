@@ -1,0 +1,1311 @@
+\documentclass[]{book}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={STAT 709: My notes},
+            pdfauthor={Ralph Møller Trane},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{STAT 709: My notes}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{Ralph Møller Trane}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+      \predate{\centering\large\emph}
+  \postdate{\par}
+    \date{Fall 2018 (compiled 2018-09-17)}
+
+\usepackage{booktabs}
+
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[chapter]
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}[chapter]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
+\let\BeginKnitrBlock\begin \let\EndKnitrBlock\end
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\renewcommand{\B}{\mathcal{B}}
+\renewcommand{\C}{\mathcal{C}}
+\newcommand{\F}{\mathcal{F}}
+
+\newcommand{\mb}[1]{\mathbb{#1}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\R}{\mathbb{R}}
+
+
+\chapter{Intro}\label{intro}
+
+\section{Textbook}\label{textbook}
+
+As of Fall 2018, this class uses the book \emph{Mathematical Statistics}
+by Jun Shao (2nd. edition). Unless otherwise noted, all definitions,
+lemmas, proposition, theorems, etc. can be found there. Numbering might
+not match.
+
+\section{\texorpdfstring{Conventions re:
+\(\infty\)}{Conventions re: \textbackslash{}infty}}\label{conventions-re-infty}
+
+We will use the following conventions:
+
+\begin{itemize}
+\tightlist
+\item
+  \(\infty + x = \infty, x \in \R\)
+\item
+  \(x\cdot \infty = \infty\) if \(x > 0\)
+\item
+  \(x\cdot \infty = -\infty\) if \(x < 0\)
+\item
+  \(0\cdot \infty = 0\)
+\item
+  \(\infty + \infty = \infty\)
+\item
+  \(\infty^a = \infty, \forall a > 0\)
+\item
+  \(\infty - \infty\) and \(\frac{\infty}{\infty}\) are not defined
+\end{itemize}
+
+\chapter{Lecture Notes}\label{lectures}
+
+\section{Chapter 1: Probability
+Theory}\label{chapter-1-probability-theory}
+
+\subsection{Lecture 1: Measure space, measurable function, and
+integration}\label{lecture-1-measure-space-measurable-function-and-integration}
+
+\subsubsection{\texorpdfstring{\(\sigma\)-fields}{\textbackslash{}sigma-fields}}\label{sigma-fields}
+
+\BeginKnitrBlock{definition}[$\sigma$-field (or $\sigma$-algebra)]
+\protect\hypertarget{def:sigmaField}{}{\label{def:sigmaField}
+\iffalse (\(\sigma\)-field (or \(\sigma\)-algebra)) \fi{} }A \(\F\)
+collection of subsets of \(\Omega\) is called a \(\sigma\)-field (or
+\(\sigma\)-algebra) if the following three conditions hold:
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\tightlist
+\item
+  \(\emptyset \in \F\)
+\item
+  \(A \in \F \Rightarrow A^{c} \in \F\)
+\item
+  If \(A_i \in \F\) for all \(i = 1,2,\ldots\), then
+  \(\bigcup_i A_i \in \F\).
+\end{enumerate}
+\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{example}[A Few $\sigma$-fields]
+\protect\hypertarget{exm:unnamed-chunk-1}{}{\label{exm:unnamed-chunk-1}
+\iffalse (A Few \(\sigma\)-fields) \fi{} }There are some trivial
+examples. One is the example where \(\F = \{\emptyset,\Omega\}\). It is
+easy to check that the three conditions are met for this collection of
+subsets. Another trivial example would be
+\(\F = \P(\Omega)\)\footnote{P is used to denote the collection of all subsets.}.
+
+The simplest non-trivial example is
+\(\F = \left\{\emptyset, A, A^C, \Omega\right\}\) where
+\(A \subset \Omega\). Since this collection of subsets is so small, it
+is easy to check the three conditions mentioned above.
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{definition}[Measurable Space]
+\protect\hypertarget{def:measurableSpace}{}{\label{def:measurableSpace}
+\iffalse (Measurable Space) \fi{} }If \(\F\) is a \(\sigma\)-field on
+\(\Omega\), then we call \(\left(\Omega, \F\right)\) a
+\textbf{\emph{measurable space}}.
+\EndKnitrBlock{definition}
+
+\subsubsection{\texorpdfstring{\(\sigma\)-field generated by a
+collection of
+subsets}{\textbackslash{}sigma-field generated by a collection of subsets}}\label{sigma-field-generated-by-a-collection-of-subsets}
+
+Sometimes we are interested in a specific collection of subsets, \(\C\),
+that is NOT a \(\sigma\)-field. But since all the machinery we will
+develop works with \(\sigma\)-fields, we are interested in creating a
+\(\sigma\)-field that contains \(\C\). So we introduce the notion of a
+\emph{\(\sigma\)-field generated by a collection of subsets}.
+
+\BeginKnitrBlock{definition}[Generated $\sigma$-field]
+\protect\hypertarget{def:unnamed-chunk-2}{}{\label{def:unnamed-chunk-2}
+\iffalse (Generated \(\sigma\)-field) \fi{} }The smallest
+\(\sigma\)-field containing a collection of subsets, \(\C\), is called
+the \(\sigma\)-field generated by \(\C\).
+\EndKnitrBlock{definition}
+
+\(\sigma\left(\C\right)\) is used to denote the \(\sigma\)-field
+generated by \(\C\), and is by definition the smallest \(\sigma\)-field
+that contains \(\C\): if \(\F\) is a \(\sigma\)-field with
+\(\C \subset \F\), then \(\sigma\left(\C\right) \subseteq \F\).
+
+\subsubsection{\texorpdfstring{Borel
+\(\sigma\)-field}{Borel \textbackslash{}sigma-field}}\label{borel-sigma-field}
+
+A particular important \(\sigma\)-field is the Borel \(\sigma\)-field.
+In general, this is defined as the \(\sigma\)-field generated by the
+collection of all open subsets of a specific topology. In particular, if
+we consider \(\R^k\) is the \(k\)-dimensional Euclidean space,
+\(\mc{O} = \left\{O \subseteq \R^k \left | O\ \text{open set} \right\}\right.\),
+then \(\sigma\left(\mc{O}\right) = \B^k\) (the Borel \(\sigma\)-field on
+\(\R^k\)).
+
+It can be shown that the \(\sigma\)-field generated by the collection of
+all closed sets is also the Borel \(\sigma\)-field.
+
+Sometimes it is useful to be able to limit ourselves to a subspace of
+\(\R^k\). In such cases, we can create the Borel \(\sigma\)-field on
+that subspace in the following way: if \(C \in \B^k\), then
+\(\B_C = \left\{ C\cap B \left | B \in \B^k \right\}\right.\) is the
+Borel \(\sigma\)-field on \(C\).
+
+\subsubsection{Measures}\label{measures}
+
+\BeginKnitrBlock{definition}[Measure]
+\protect\hypertarget{def:measure}{}{\label{def:measure} \iffalse (Measure)
+\fi{} }Let \(\left( \Omega, \F \right)\) is a measurable space
+
+\(\nu: \F \rightarrow \R \cup\{\infty\}\) is said to be a
+\textbf{\emph{measure}} if
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\tightlist
+\item
+  \(0 \leq \nu(A) \leq \infty\) for all \(A \in \F\)
+\item
+  \(\nu(\emptyset) = 0\)
+\item
+  If \(A_i \in \F\) for \(i=1,2,...\), and
+  \(A_i \cap A_j = \emptyset, \forall i \neq j\) (i.e. \(A_i\)'s are
+  pairwise disjoint), then it must hold that
+  \[\nu\left(\bigcup_{i=1}^\infty A_i \right) = \sum_{i=1}^\infty \nu(A_i)\]
+\end{enumerate}
+\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{example}[Counting Measure]
+\protect\hypertarget{exm:unnamed-chunk-3}{}{\label{exm:unnamed-chunk-3}
+\iffalse (Counting Measure) \fi{} }The \emph{counting measure} is simply
+the measure that returns the number of elements in a set.
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{example}[Lebesgue Measure]
+\protect\hypertarget{exm:unnamed-chunk-4}{}{\label{exm:unnamed-chunk-4}
+\iffalse (Lebesgue Measure) \fi{} }The measure \(m: \R \rightarrow \R\)
+satisfying that for all intervals \([a,b], a < b\),
+
+\[m([a,b]) = b-a,\]
+
+is called the \emph{lebesgue measure}. This measure is unique.
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{definition}[$\sigma$-finite measures]
+\protect\hypertarget{def:sigma-finite}{}{\label{def:sigma-finite}
+\iffalse (\(\sigma\)-finite measures) \fi{} }A measure \(\nu\) is called
+\emph{\(\sigma\)-finite} if and only if there exists a sequence
+\(\left\{A_1,A_2,\ldots\right\}\) such that \(\cup A_i = \Omega\) and
+\(\nu(A_i) < \infty, \forall i\).
+\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{definition}[Measure Space]
+\protect\hypertarget{def:unnamed-chunk-5}{}{\label{def:unnamed-chunk-5}
+\iffalse (Measure Space) \fi{} }If \(\nu\) is a measure on \(\F\), and
+\((\Omega, \F)\) is a measurable space, then \((\Omega, \F, \nu)\) is a
+\textbf{\emph{measure space}}.
+\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-6}{}{\label{exm:unnamed-chunk-6}
+}Both the Lebesque measure is \(\sigma\)-finite.
+
+The counting measure is \(\sigma\)-finite if and only if \(\Omega\) is
+countable.
+\EndKnitrBlock{example}
+
+\BeginKnitrBlock{definition}[Probability Space]
+\protect\hypertarget{def:unnamed-chunk-7}{}{\label{def:unnamed-chunk-7}
+\iffalse (Probability Space) \fi{} }If \((\Omega, \F, \nu)\) is a
+measurable space with \(\nu(\Omega) = 1\), then it is called a
+\textbf{\emph{probability space}}.
+\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{proposition}[Properties of measures]
+\protect\hypertarget{prp:properties-of-measures}{}{\label{prp:properties-of-measures}
+\iffalse (Properties of measures) \fi{} }Let \((\Omega, \F, \nu)\) be a
+measure space. Then the following holds:
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\tightlist
+\item
+  \textbf{Monotonicity:} if \(A \subseteq B\), then
+  \(\nu(A) \leq \nu(B)\)
+\item
+  \textbf{Subadditivity:} for any sequence, \(A_1,A_2,\ldots\),
+\end{enumerate}
+
+\[
+\nu\left(\bigcup_{i=1}^\infty A_i\right) \leq \sum_{i=1}^\infty \nu(A_i)
+\]
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \textbf{Continuity:} if \(A_1 \subset A_2 \subset \dots\) (or
+  \(A_1 \supset A_2 \supset \dots\)), then
+\end{enumerate}
+
+\[
+\nu\left(\lim_{n\rightarrow \infty}A_n\right) = \lim_{n\rightarrow\infty}\nu\left(A_n\right),
+\] where
+
+\[
+\lim_{n\rightarrow\infty}A_n = \bigcup_{i=1}^\infty A_i \left(\text{or} = \bigcap_{i=1}^\infty A_i\right)
+\]
+\EndKnitrBlock{proposition}
+
+\BeginKnitrBlock{definition}[Cumulative Distribution Function]
+\protect\hypertarget{def:cdf}{}{\label{def:cdf} \iffalse (Cumulative
+Distribution Function) \fi{} }The \emph{cumulative distribution
+function} (c.d.f.) of a measure \(\nu\) is defined as
+\[F(x) = \nu((-\infty,x]), x\in\R.\]
+\EndKnitrBlock{definition}
+
+There is a one-to-one correpsondence between probability measures on
+\((\R, \B)\) and the set of c.d.f.'s.
+
+\BeginKnitrBlock{proposition}[Properties of c.d.f.'s]
+\protect\hypertarget{prp:cdfProperties}{}{\label{prp:cdfProperties}
+\iffalse (Properties of c.d.f.'s) \fi{} } i) For a c.d.f, \(\F\), on
+\(\R\), it holds that: a) \(F(-\infty) = 0\) b) \(F(\infty) = 1\) c)
+\(x \leq y \Rightarrow F(x) \leq F(y)\) (\emph{non-decreasing}) d)
+\(\lim_{y\rightarrow x^+} F(y) = F(x)\) (\emph{right continuous}) ii) If
+a function \(F: \R \rightarrow \R\) satisfies the four conditions above,
+it is a c.d.f. of a unique probability measure on \((\R, \B)\).
+\EndKnitrBlock{proposition}
+
+\BeginKnitrBlock{proposition}[The Product Measure Theorem]
+\protect\hypertarget{prp:productMeasure}{}{\label{prp:productMeasure}
+\iffalse (The Product Measure Theorem) \fi{} }If
+\(\left(\Omega_i, \F_i, \nu_i\right), i = 1,\ldots,k\) are measure
+spaces with \(\sigma\)-finite measures. Then there exists a unique
+measure on the \(\sigma\)-field \(\sigma(\F_1 \times \dots \F_k)\):
+
+\[
+\nu_1 \times \dots \times \nu_k(A_1 \times \dots \times A_k) = \nu_1(A_1)\dots \nu_k(A_k)
+\]
+
+for all \(A_i \in \F_i, i = 1,\ldots,k\).
+
+This measure is called the \emph{product measure}.
+\EndKnitrBlock{proposition}
+
+\BeginKnitrBlock{definition}[Joint and Marginal c.d.f.'s]
+\protect\hypertarget{def:joint-marginal}{}{\label{def:joint-marginal}
+\iffalse (Joint and Marginal c.d.f.'s) \fi{} }The \emph{join c.d.f.} of
+a probability measure on \((\R^k, \B^k)\) is defined as
+
+\[
+F(x_1,\ldots, x_k) = P((-\infty, x_1]\times \dots \times (-\infty,x_k]), \quad x_i \in \R.
+\]
+\EndKnitrBlock{definition}
+
+\section{Lecture 2: 9/11}\label{lecture-2-911}
+
+\BeginKnitrBlock{definition}[Measurable Function]
+\protect\hypertarget{def:measurable-function}{}{\label{def:measurable-function}
+\iffalse (Measurable Function) \fi{} } Let \((\Omega, \F)\) and
+\((\Lambda, \mathcal{G})\) be measurable spaces. Let
+\(f: \Omega \rightarrow \Lambda\).
+
+\(f\) is called a \emph{measurable function} if and only if
+
+\[
+  f^{-1}(\mathcal{G}) \subset \F (\text{i.e.} f^{-1}(G) \in \F \forall G \in \mathcal{G}).
+\]
+\EndKnitrBlock{definition}
+
+Note that if \(\F\) is the collection of all subsets of \(\Omega\), then
+all functions are measurable.
+
+\BeginKnitrBlock{definition}[$\sigma$-field generated by a function]
+\protect\hypertarget{def:unnamed-chunk-8}{}{\label{def:unnamed-chunk-8}
+\iffalse (\(\sigma\)-field generated by a function) \fi{} } Let \(f\) be
+as in @ref\{measurable-function\}. Then \(f^{-1}(\mathcal{G})\) is a
+sub-\(\sigma\)-field of \(\F\). We call it the \(\sigma\)-field
+generated by \(f\), and denote it by \(\sigma(f)\).
+\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{definition}[Borel Functions]
+\protect\hypertarget{def:borelfunctions}{}{\label{def:borelfunctions}
+\iffalse (Borel Functions) \fi{} } A function from \((\Omega, \F)\) to
+\((\R, \B)\) is called a *Borel function\$ if it is measurable.
+\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{proposition}[Properties of Borel Functions]
+\protect\hypertarget{prp:unnamed-chunk-9}{}{\label{prp:unnamed-chunk-9}
+\iffalse (Properties of Borel Functions) \fi{} } i) A function is Borel
+if and only if \(f^{-1}(a,\infty) \in \F\) for all \(a \in \R\).
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\setcounter{enumi}{1}
+\item
+  If \(f\) and \(g\) are Borel, then so are \(fg\) and \(af + bg\),
+  where \(a,b \in \R\). Also, if \(g(\omega) \neq 0\) for all
+  \(\omega \in \Omega\), then \(f/g\) is also Borel.
+\item
+  If \(f_1, f_2, \ldots\) are all Borel functions, then so are
+  \(\sup_n f_n\), \(\inf_n f_n\), \(\lim \sup_n f_n\), and
+  \(\lim \inf_n f_n\). Furthermore, the set \[ 
+    A = \left\{ \omega \in \Omega | \lim_{n \rightarrow \infty} f_n(\omega) \text{ exists} \right \}
+  \] is an event, and the function \[
+    h(\omega) = \left\{ 
+  \begin{array}{ll}
+    \lim_{n\rightarrow \infty} f_n \omega & \quad \omega \in A \\
+    f_1(\omega) & \quad \omega \notin A 
+  \end{array}
+    \right .
+  \]
+\item
+  Suppose that \(f\) is measurable from \((\Omega, \F)\) to
+  \((\Lambda, \mathcal{G})\) and \(g\) is measurable from
+  \((\Lambda, \mathcal{G})\) to \((\Delta, \mathcal{H})\). Then the
+  composite function \(g \circ f\) is measurable from \((\Omega, \F)\)
+  to \((\Delta, \mathcal{H})\).
+\item
+  Let \(\Omega\) be a Borel set in \(\R^p\). If \(f\) is a continuous
+  function from \(\Omega\) to \(\R^q\), then \(f\) is measurable.
+\end{enumerate}
+\EndKnitrBlock{proposition}
+
+\BeginKnitrBlock{proposition}
+\protect\hypertarget{prp:unnamed-chunk-10}{}{\label{prp:unnamed-chunk-10}
+}For any non-negative Borel function \(f\) there exists a sequence of
+non-negative simple functions \(f_1, f_2, \ldots\) such that
+
+\[f_n \rightarrow f \text{ for } n \rightarrow \infty\]
+\EndKnitrBlock{proposition}
+
+\BeginKnitrBlock{definition}[Distribution]
+\protect\hypertarget{def:distribution}{}{\label{def:distribution}
+\iffalse (Distribution) \fi{} }Let \((\Omega, \F, \nu)\) be a measure
+space, and \(f\) a measurable function from this measure space into the
+measurable space \((\Lambda, \mathcal{G})\).
+
+The measure defined as
+
+\[
+  \nu \circ f^{-1}(B) = \nu(f\in B) = \nu(f^{-1}(B)), \quad B \in \mathcal{G} 
+\]
+
+is called the \emph{induced measure} by \(f\).
+
+If \(\nu\) is a probability measure and \(f\) is a random variable
+(i.e.~a Borel function), then \(\nu\circ f^{-1}\) is called the
+\emph{distribution} (or \emph{law}) of \(f\), and is denoted \(\nu_f\).
+\EndKnitrBlock{definition}
+
+Notice that there are many notations for the same thing. If \(P\) is a
+probability measure and \(X\) a random variable, then
+
+\[P_X(B) = P(X \in B) = P(X^{-1}(B)) = P \circ X^{-1}.\]
+
+\subsection{Integration}\label{integration}
+
+\BeginKnitrBlock{definition}[Simple Function]
+\protect\hypertarget{def:simple-function}{}{\label{def:simple-function}
+\iffalse (Simple Function) \fi{} }A function \(\phi\) is called a
+\emph{simple function} if it is of the form
+
+\[
+  \phi = \sum_{i=1}^\infty a_i 1_{A_i},
+\]
+
+where \(A_1, A_2, \ldots\) are sets. If \(a_i \geq 0\) for all
+\(i \ge 1\), then \(\phi\) is a non-negative simple function.
+\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{definition}[Integral of a Non-negative Simple Function]
+\protect\hypertarget{def:int-simple}{}{\label{def:int-simple}
+\iffalse (Integral of a Non-negative Simple Function) \fi{} }The
+integral of a non-negative simple function \(\phi\) with respect to a
+measure \(\nu\) is defined as
+
+\[
+  \int \phi d\nu = \sum_{i=1}^k a_i \nu(A_i).
+\]
+\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{definition}[Integral of Non-negative Borel Function]
+\protect\hypertarget{def:int-nonneg}{}{\label{def:int-nonneg}
+\iffalse (Integral of Non-negative Borel Function) \fi{} }Let \(f\) be a
+non-negative Borel function. Let \(\mathcal{S}_f\) be the collection of
+ALL non-negative simple function with
+\(\phi(\omega) \le f(\omega), \forall \omega \in \Omega\).
+
+The integral of \(f\) with respect to \(\nu\) is defined as
+
+\[
+  \int f d\nu = \sup\left\{\int \phi d\nu \left | \phi \in \mathcal{S}_f \right\} \right . .  
+\]
+\EndKnitrBlock{definition}
+
+Note: one consequence of this is that for any non-negative Borel
+function, there exists a sequence of simple functions
+\(\phi_1, \phi_2, \ldots\) such that \(0 \leq \phi_i \leq f\) for all i
+and
+
+\[
+  \lim_{n \rightarrow \infty} \int \phi_n d\nu = \int f d\nu
+\]
+
+\BeginKnitrBlock{definition}[Integral of General Borel Function]
+\protect\hypertarget{def:int-borel}{}{\label{def:int-borel}
+\iffalse (Integral of General Borel Function) \fi{} } Let \(f\) be a
+Borel function, and let \(f_+(\omega) = \max\{f(\omega), 0\}\) (i.e.~the
+positive part) and \(f_-(\omega) = \max\{-f(\omega), 0\}\) (i.e.~the
+negative part). If at least one of \(\int f_+ d\nu\) and
+\(\int f_- d\nu\) is finite, we say that \(\int f d\nu\) exists and
+
+\[
+  \int f d\nu = \int f_+ d\nu - \int f_- d\nu.
+\]
+\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{definition}[Integrable Functions]
+\protect\hypertarget{def:int-function}{}{\label{def:int-function}
+\iffalse (Integrable Functions) \fi{} } When \(\int f d\nu < \infty\),
+i.e.~the integral of both the positive and negative part of \(f\) is
+finite, we say that \(f\) is \emph{integrable}.
+\EndKnitrBlock{definition}
+
+Note: as a consequence of the definition of an integrable function we
+have that a Borel function is integrable if and only if \(|f|\) is
+integrable. (This is true since \(|f| = f_+ + f_-\).)
+
+Notation: There are many different ways to write down an integral:
+
+\[ 
+  \int f d\nu = \int_\Omega f d\nu = \int f(\omega) d\nu = \int f(\omega) d\nu(\omega) = \int f(\omega) \nu(d\omega),
+\]
+
+and if \(F\) is the c.d.f. (\ref{def:cdf}) of a probability measure P on
+\((\R^k, \B^k)\),
+
+\[
+  \int f(x) dP = \int f(x) dF(x) = \int fdF
+\]
+
+\BeginKnitrBlock{proposition}[Linearity of Integrals]
+\protect\hypertarget{prp:int-linearity}{}{\label{prp:int-linearity}
+\iffalse (Linearity of Integrals) \fi{} } Let \((\Omega, \F, \nu)\) be a
+measure space, and \(f\) and \(g\) be Borel functions.
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\tightlist
+\item
+  If \(\int fd\nu\) exists, then for any \(a \in \R\), \(\int (af)d\nu\)
+  exists, and
+\end{enumerate}
+
+\[ \int (af)d\nu = a \int f d\nu \]
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  If \(\int f d\nu\) and \(\int g d\nu\) both are well defined, then
+  \(\int (f+g) d\nu\) exists and
+\end{enumerate}
+
+\[ \int (f+g) d\nu = \int f d\nu + \int g d\nu \]
+\EndKnitrBlock{proposition}
+
+\BeginKnitrBlock{proof}
+\iffalse{} {Proof. } \fi{} Show that it holds for indicator functions,
+simple functions, non-negative functions, and then all functions.
+\EndKnitrBlock{proof}
+
+\BeginKnitrBlock{definition}[Almost Everywhere or Almost Surely]
+\protect\hypertarget{def:unnamed-chunk-12}{}{\label{def:unnamed-chunk-12}
+\iffalse (Almost Everywhere or Almost Surely) \fi{} } A statement is
+said to be true \(\nu\)-a.e. (or \(\nu\)-a.s.) if it is true for all
+\(\omega \notin N\) and \(\nu(N) = 0\).
+\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{proposition}[a.e. for integrals]
+\protect\hypertarget{prp:unnamed-chunk-13}{}{\label{prp:unnamed-chunk-13}
+\iffalse (a.e. for integrals) \fi{} }Let \((\Omega, \F, \nu)\) be a
+measure space, and \(f\) and \(g\) be Borel functions.
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\tightlist
+\item
+  If \(f\leq g\) \(\nu\)-a.e., then \(\int f d\nu \le \int g d\nu\),
+  given that both integrals exist
+\item
+  If \(f \ge 0\) \(\nu\)-a.e. and \(\int f d\nu = 0\), then \(f = 0\)
+  \(\nu\)-a.e.
+\end{enumerate}
+\EndKnitrBlock{proposition}
+
+\BeginKnitrBlock{proof}
+\iffalse{} {Proof. } \fi{} ii) Let \(A = \{f>0\}\) and
+\(A_n = \{f \ge n^{-1}\}\), \(n=1,2,\ldots\). Then \(A_n \subset A\) for
+any \(n\) and \(\lim_{n \rightarrow \infty} A_n = \cup A_n = A\)
+(\textbf{show that this holds}).
+
+Then, by (iii) of \ref{prp:properties-of-measures},
+\(\lim_{n \rightarrow \infty} \nu(A_n) = \nu(A)\). By part (i) and
+proposition \ref{prp:int-linearity}, we get that, for any n,
+
+\begin{align*}
+  n^{-1} \nu(A_n) = \int n^{-1} I_{A_n} d\nu \le \int f I_{A_n} d\nu \le \int f d\nu = 0.
+\end{align*}
+\EndKnitrBlock{proof}
+
+\subsection{Radon-Nikodym Derivatives}\label{radon-nikodym-derivatives}
+
+\section{Lecture 3: 9/13}\label{lecture-3-913}
+
+Proof of Ex 1.11: for any borel set A: if A = (-infty, x), it holds. If
+not, then\ldots{}
+
+\textbf{\(\pi\)- and \(\lambda\)-systems.}
+
+\textbf{Definition: \(\pi\)-system}
+
+If \(\C\) is a collection of subsets, and it holds that
+\(A,B \in \C \Rightarrow A \cap B \in \C\).
+
+For a pi system, \(\sigma(\C) = \B\)
+
+\BeginKnitrBlock{proposition}[Calculus with Radon-Nikodym Derivatives]
+\protect\hypertarget{prp:calc-radon-nikodym}{}{\label{prp:calc-radon-nikodym}
+\iffalse (Calculus with Radon-Nikodym Derivatives) \fi{} }Let \(\nu\) be
+a \(\sigma\)-finite measure on a measure space \((\Omega, \F)\). All
+other measures discussed in the following are defined on
+\((\Omega, \F)\).
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\tightlist
+\item
+  If \(\lambda\) is a meaure, \(\lambda << \nu\), and \(f\ge 0\), then
+  \[\int f d\lambda = \int f \frac{d\lambda}{d\nu}d\nu.\]
+\item
+  If \(\lambda_i\), \(i=1,2\), are measures and \(\lambda_i << \nu\),
+  then \(\lambda_1 + \lambda_2 << \nu\) and
+  \[\frac{d(\lambda_1 + \lambda_2)}{d\nu} = \frac{d\lambda_1}{d\nu} + \frac{d\lambda_2}{d\nu}\quad \nu\text{-a.e.}\]
+\item
+  If \(\tau\) is a measure, \(\lambda\) a \(\sigma\)-finite measure, and
+  \(\tau << \lambda << \nu\), then
+  \[\frac{d\tau}{d\nu} = \frac{d\tau}{d\lambda}\frac{d\lambda}{d\nu}\quad \nu\text{-a.e.}.\]
+\item
+  Let \((\Omega_i, \F_i, \nu_i)\) be a measure space and \(\nu_i\) be
+  \(\sigma\)-finite, \(i=1,2\). Let \(\lambda_i\) be a \(\sigma\)-finite
+  measure on \((\Omega_i, \F_i)\) and \(\lambda << \nu_i\), \(i=1,2\).
+  Then \(\lambda_1 \times \lambda_2 << \nu_1 \times \nu_2\) and
+  \[\frac{d(\lambda_1 \times \lambda_2)}{d(\nu_1 \times \nu_2)}(\omega_1,\omega_2) = \frac{d\lambda_1}{d\nu_1}(\omega_1)\frac{d\lambda_2}{d\nu_2}(\omega_2)\quad \nu_1\times \nu_2\text{-a.e.}\].
+\end{enumerate}
+\EndKnitrBlock{proposition}
+
+\chapter{Discussion Notes}\label{discussion-notes}
+
+\section{Discussion 1: 5/14}\label{discussion-1-514}
+
+\subsection{\texorpdfstring{\(\sigma\)-fields}{\textbackslash{}sigma-fields}}\label{sigma-fields-1}
+
+\BeginKnitrBlock{exercise}[Countable intersection/union of $\sigma$-fields]
+\protect\hypertarget{exr:ex11}{}{\label{exr:ex11} \iffalse (Countable
+intersection/union of \(\sigma\)-fields) \fi{} }Let
+\(\F_n, n=1,2,\ldots\) be a sequance of \(\sigma\)-fields on \(\Omega\).
+Show the following:
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  \(\cap_{i=1}^\infty \F_n\) is a \(\sigma\)-field.
+\item
+  If \(\F_1 \subset \F_2 \subset \dots\), then
+  \(\cup_{i=1}^\infty \F_n\) is not necessarily a \(\sigma\)-field.
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}[\@ref(exr:ex11) a)]
+\iffalse{} {Solution (\ref{exr:ex11} a)). } \fi{}We need to show
+(i)-(iii) from definition \ref{def:sigmaField}.
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\tightlist
+\item
+  Since \(\F_n\) are all \(\sigma\)-fields, \(\emptyset \in \F_n\) for
+  all \(n=1,2,\ldots\). Hence,
+  \(\emptyset \in \cap_{i=1}^{\infty} \F_n\).
+\item
+  As (i).
+\item
+  Let \(\{A_i\}_{i=1}^\infty\) be a sequence of subsets from
+  \(\cap_{i=1}^{\infty} \F_n\). Then, for all \(i\), \(A_i \in \F_n\)
+  for all \(n\). Since \(F_n\) is a \(\sigma\)-field,
+  \(\cup_{i=1}^\infty A_i \in \F_n\) for all \(n\), and so
+  \(\cup_{i=1}^\infty A_i \in \cap_{i=1}^\infty \F_n\).
+\end{enumerate}
+
+Hence, \(\cap_{i=1}^\infty \F_n\) is a \(\sigma\)-field.
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{solution}[\@ref(exr:ex11) b)]
+\iffalse{} {Solution (\ref{exr:ex11} b)). } \fi{} Let
+\(\Omega = [0,1]\), and
+\(\F_n = \sigma \left\{[0,\tfrac{1}{2^n}),[\tfrac{1}{2^n},\tfrac{2}{2^n}), \ldots, [\tfrac{2^{n-1}}{2^n}, 1)\right\}\).
+
+Now, consider the set \(B_n = [0, \tfrac{1}{2^n})\). Clearly
+\(B_n \in \F_n\) for all \(n\), hence
+\(B_n \in \cup_{i=1}^\infty \F_n\). Hower,
+\(\cap_{i = 1}^{\infty} B_n = \{0\} \notin \cup_{i=1}^\infty \F_n\). So
+\(\cup_{i=1}^\infty \F_n\) is not closed under countable intersection,
+i.e.~it is not a \(\sigma\)-algebra.
+\EndKnitrBlock{solution}
+
+\subsection{\texorpdfstring{\(\pi-\lambda\)
+systems}{\textbackslash{}pi-\textbackslash{}lambda systems}}\label{pi-lambda-systems}
+
+\BeginKnitrBlock{definition}[$\pi$-system]
+\protect\hypertarget{def:pi-system}{}{\label{def:pi-system}
+\iffalse (\(\pi\)-system) \fi{} }Let \(\mathcal{D}\) be a collection of
+subsets of \(\Omega\). \(\mathcal{D}\) is said to be a
+\textbf{\emph{\(\pi\)-system}} if it is closed under intersection,
+i.e.~if
+
+\[
+  A,B \in \mathcal{D} \Rightarrow A \cup B \in \mathcal{D}.
+\]
+\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{definition}[$\lambda$-system]
+\protect\hypertarget{def:lambda-system}{}{\label{def:lambda-system}
+\iffalse (\(\lambda\)-system) \fi{} }Let \(\mathcal{L}\) be a collection
+of subsets of \(\Omega\). \(\mathcal{L}\) is said to be a
+\textbf{\emph{\(\lambda\)-system}} if it satisfies that
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\tightlist
+\item
+  \(\Omega \in \mathcal{L}\),
+\item
+  If \(A,B \in \Omega\) with \(A \subset B\), then
+  \(B\setminus A \in \Omega\)
+\item
+  If \(A_n \in \mathcal{L}\) and \(A_n \subset A_{n+1}\) for all \(n\),
+  then
+\end{enumerate}
+
+\[
+  \cup_{i=1}^{\infty} A_n \in \mathcal{L}  
+\]
+\EndKnitrBlock{definition}
+
+\BeginKnitrBlock{theorem}[$\pi-\lambda$ Theorem]
+\protect\hypertarget{thm:pi-lambda}{}{\label{thm:pi-lambda}
+\iffalse (\(\pi-\lambda\) Theorem) \fi{} }If \(\mathcal{D}\) is a
+\(\pi\)-system and \(\mathcal{L}\) is a \(\lambda\)-system s.t.
+\(\mathcal{D} \subset \mathcal{L}\), the
+\(\sigma\{\mathcal(D)\} \subset \mathcal{L}\).
+\EndKnitrBlock{theorem}
+
+\BeginKnitrBlock{exercise}[Proof of the $\pi-\lambda$ Theorem]
+\protect\hypertarget{exr:unnamed-chunk-17}{}{\label{exr:unnamed-chunk-17}
+\iffalse (Proof of the \(\pi-\lambda\) Theorem) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}Proof hints:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\tightlist
+\item
+  If \(\mathcal{L}_t\) is \(\lambda\)-system for all \(t \in I\),
+  \(\mathcal{D} \subset \mathcal{L}_t\), then
+  \(\cap_{t \in I} \mathcal{L}_t\) is a \(\lambda\)-system. Denote this
+  \(\mathcal{L}(\mathcal{D})\) (smallest \(\lambda\)-system containing
+  \(\mathcal{D}\)).
+\item
+  If \(\mathcal{L}\) is a \(\pi\)-system AND a \(\lambda\)-system, then
+  \(\mathcal{L}\) is a \(\sigma\)-field.
+\item
+  If \(\mathcal{D}\) is \(\pi\)-system, then
+  \(\mathcal{L}(\mathcal{D})\) is \(\pi\)-system.
+\end{enumerate}
+
+By 1)-3), \(\mathcal{L} = \sigma(\mathcal{D})\), which implies \ldots{}
+\EndKnitrBlock{solution}
+
+\subsection{\texorpdfstring{The ``Good Sets''
+Principle}{The Good Sets Principle}}\label{the-good-sets-principle}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:good-sets}{}{\label{exr:good-sets} }Let
+\(\mathcal{P}\) be a \(\pi\)-system, and \(\nu_1\) and \(\nu_2\) two
+measures that agree on \(\mathcal{P}\), i.e.
+
+\[
+  \nu_1(A) = \nu_2(A) \text{ for all } A \in \mathcal{P}.
+\]
+
+Assume there is a sequence of sets \(A_n \in \mathcal{P}\) with
+\(A_n \uparrow \Omega\) and \(\nu_i(A_n) < \infty\) for all \(n\).
+
+Use the \(\pi-\lambda\) theorem to prove that \(\nu_1\) and \(\nu_2\)
+agree on \(\sigma(\mathcal{P})\).
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}Let \(\F_n\) be given by
+
+\[
+  \F_n = \left \{A \in \sigma(\mathcal{P}) \left | \nu_1(A \cap A_n) = \nu_2(A \cap A_n) \forall n \right \} \right .
+\]
+
+Let \(A \in \mathcal{P}\). Since \(A_n \in \mathcal{P}\) for all \(n\)
+and \(\mathcal{P}\) is a \(\pi\)-system, \(A \cap A_n \in \mathcal{P}\).
+So \(\nu_1(A \cap A_n) = \nu_2(A \cap A_n)\), hence
+\(\mathcal{P} \subset \F_n\).
+
+By definition, \(\F_n \subset \sigma(\mathcal{P})\), so
+\(\mathcal{P} \subset \F_n \subset \sigma(\mathcal{P})\).
+
+Now, if we can prove that \(\F_n\) is a \(\lambda\)-system for all
+\(n\), then by the \(\pi-\lambda\) theorem (theorem
+\ref{thm:pi-lambda}), we have that \(\sigma(\mathcal{P}) \subset \F_n\),
+which combined with the paragraph above gives us that
+\(\sigma(\mathcal{P}) = \F_n\), hence \(\nu_1\) and \(\nu_2\) agree on
+\(\sigma(\mathcal{P})\).
+
+So let us show that \(\F_n\) is indeed a \(\lambda\)-system:
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\tightlist
+\item
+  \(\Omega \in \F_n\). Since \(A_n \uparrow \Omega\), we can use
+  continuity of measure (proposition \ref{prp:properties-of-measures})
+  to conclude that
+\end{enumerate}
+
+\begin{align*}
+  \lim_{n \rightarrow \infty} \nu_i(A_n) &= \nu_i(\lim_{n \rightarrow \infty} A_n) \\
+    &= \nu_i(\Omega).
+\end{align*}
+
+Since \(\nu_1(A_n) = \nu_2(A_n)\) (\(A_n \in \mathcal{P}\)), it holds
+that \(\nu_1(\Omega) = \nu_2(\Omega)\), so
+\(\Omega \in \P \subset \F_n\).
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Let \(A,B \in \F_n\) with \(A \subset B\). So,
+\end{enumerate}
+
+\begin{align*}
+  \nu_1((A\setminus B) \cap A_n) &= \nu_1(A\cap A_n) - \nu_1(B\cap A_n) \\
+    &= \nu_2(A\cap A_n) - \nu_2(B\cap A_n) \\
+    &= \nu_2((A\setminus B) \cap A_n),
+\end{align*}
+
+which means that \(A\setminus B \in \F_n\).
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Let \(B_i \in \F_n\) s.t. \(B_i \subset B_{i+1}\). Then, once again
+  using continuity of measures to move limits around, we have
+\end{enumerate}
+
+\begin{align}
+  \nu_1\left(\cup_{i=1}^\infty B_i \cap A_n \right) &= \nu_1\left(\cup_{i=1}^\infty (B_i \cap A_n) \right) \\
+    &= \lim_{i \rightarrow \infty} \nu_1(B_i \cap A_n) \\
+    &= \lim_{i \rightarrow \infty} \nu_2(B_i \cap A_n) \\
+    &= \nu_2\left(\cup_{i=1}^\infty (B_i \cap A_n) \right) \\
+    &= \nu_2\left(\cup_{i=1}^\infty B_i \cap A_n \right),
+\end{align}
+
+which gives us that \(\cup_{i = 1}^\infty B_i \in \F_n\), hence \(\F_n\)
+is a \(\lambda\)-system.
+\EndKnitrBlock{solution}
+
+\subsection{From Indicator Function to General (Borel)
+Function}\label{from-indicator-function-to-general-borel-function}
+
+When we deine the Lebesgue integral, we define it in three steps.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\tightlist
+\item
+  First for indicator functions, which in turn is generalized to simple
+  non-negative functions (i.e.~linear combinations of indicator
+  functions).
+\item
+  Second for any non-negative functions (which is done by utilizing that
+  any such function can be described as the limit of a sequence of
+  simple functions)
+\item
+  A general function (by separating the positive and negative parts)
+\end{enumerate}
+
+\BeginKnitrBlock{exercise}
+\protect\hypertarget{exr:unnamed-chunk-19}{}{\label{exr:unnamed-chunk-19}
+}Let \(\Omega = \left\{\omega_1, \omega_2, \ldots \right\}\) be a
+countable set, \(\F\) all subsets of \(\Omega\), and \(\nu\) the
+counting measure on \(\Omega\). Show that for any Borel function \(f\),
+the integral of \(f\) with respect to \(\nu\) is
+
+\begin{equation}
+  \int f d\nu = \sum_{i=1}^\infty f(\omega_i)  \label{eq:ex14}
+\end{equation}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}Let \(A \in \F\) and define \(f = 1_A\).
+Then
+
+\begin{align*}
+  \int f d\nu &= \int_A d\nu \\
+              &= \nu(A) \\
+              &= \sum_{i=1}^\infty 1_A(\omega_i)
+\end{align*}
+
+I.e. \eqref{eq:ex14} holds for indicator functions, and hence also for
+simple functions.
+
+Now, let \(f\) be a non-negative Borel function. Then we know that there
+exists a sequence \((f_n)_i^{\infty}\) of simple functions such that
+\(f_n \uparrow f\). Then
+
+\begin{align*}
+  \int f d\nu &= \int \lim_{n \rightarrow \infty} f_n d\nu \\
+              &= \lim_{n\rightarrow \infty} \int f_n d\nu.
+\end{align*}
+
+Since \(f_n\) is a simple function, we know that @ref\{eq:ex14\} holds.
+Hence,
+
+\begin{align*}
+  \int f d\nu &= \lim_{n \rightarrow \infty} \sum_{i=1}^\infty f_n(\omega_i) \\
+  &= \sum_{i=1}^\infty \lim_{n \rightarrow \infty} f_n(\omega_i) \\
+  &= \sum_{i=1}^\infty f(\omega_i),
+\end{align*}
+
+and so @ref\{eq:ex14\} holds for non-negative Borel functions.
+
+Finally, let \(f\) be any Borel function. Then we can write
+\(f = f_+ - f_-\), where \(f_+ = \max(f,0)\) and \(f_- = \max(-f, 0)\).
+Then both \(f_+\) and \(f_-\) are non-negative Borel functions, hence
+@ref\{eq:ex14\} holds for both. So
+
+\begin{align*}
+  \int f d\nu &= \int f_+ d\nu - \int f_- d\nu \\
+              &= \sum_{i=1}^\infty f_+(\omega_i) - \sum_{i=1}^\infty f_-(\omega_i) \\
+              &= \sum_{i=1}^\infty f_+(\omega_i) - f_-(\omega_i) \\
+              &= \sum_{i=1}^\infty f(\omega_i).
+\end{align*}
+
+So \eqref{eq:ex14} holds for all Borel functions.
+\EndKnitrBlock{solution}
+
+\subsection{Switch the Order of Integration and
+Limit}\label{switch-the-order-of-integration-and-limit}
+
+\BeginKnitrBlock{exercise}[Generalized Dominated Convergence Theorem]
+\protect\hypertarget{exr:unnamed-chunk-21}{}{\label{exr:unnamed-chunk-21}
+\iffalse (Generalized Dominated Convergence Theorem) \fi{} }If
+\(\lim f_n = f\) and there exists a sequence of integrable functions
+\(g_1, g_2, g_3, \ldots\) such that
+
+\begin{itemize}
+\tightlist
+\item
+  \(|f_n| \leq g_n\) a.e.
+\item
+  \(g_n \rightarrow g\) a.e.
+\item
+  \(\lim_{n \rightarrow \infty} \int g_n d\nu = \int g d\nu\)
+\end{itemize}
+
+then
+
+\begin{equation}
+  \int \lim_{n \rightarrow \infty} f_n d\nu = \lim_{n \rightarrow \infty} \int f_n d\nu \label{eq:ex15}
+\end{equation}
+\EndKnitrBlock{exercise}
+
+\chapter{Homework}\label{homework}
+
+\section{Chapter 1}\label{chapter-1}
+
+\subsection{First Exam Period}\label{first-exam-period}
+
+\BeginKnitrBlock{exercise}[Ex 2]
+\protect\hypertarget{exr:unnamed-chunk-22}{}{\label{exr:unnamed-chunk-22}
+\iffalse (Ex 2) \fi{} }Let \(\C\) be a collection of subsets of
+\(\Omega\) and let
+\(\Gamma = \{ \F | \F \text{ is a } \sigma \text{-field on } \Omega \text{ and } \C \subset \F \}\).
+Show that \(\Gamma \neq \emptyset\) and
+\(\sigma(\C) = \cap_{\F \in \Gamma} \F\).
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}[Ex 2]
+\iffalse{} {Solution (Ex 2). } \fi{}Let \(\P(\Omega)\) be the collection
+of all subsets of \(\Omega\). We know that this is a \(\sigma\)-field.
+It also contains \(\C\). Hence, \(\Gamma \neq \emptyset\).
+
+By definition, \(\sigma(\C)\) is the smallest \(\sigma\)-field that
+contains \(\C\), hence \(\sigma(\C) \in \Gamma\) and
+\(\sigma(\C) \subset \F\) for all \(\F \in \Gamma\). Therefore,
+\(\sigma(\C) \subset \cap_{\F \in \Gamma} \F\). But since
+\(\sigma(\C) \in \Gamma\), \(\sigma(\C) \in \cap_{\F \in \Gamma} \F\),
+which in turn ensures that
+\(\cap_{\F \in \Gamma} \F \subset \sigma(\C)\).
+
+Hence \(\sigma(\C) = \cap_{\F \in \Gamma} \F\).
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{exercise}[Ex 3]
+\protect\hypertarget{exr:unnamed-chunk-24}{}{\label{exr:unnamed-chunk-24}
+\iffalse (Ex 3) \fi{} }Let \(\Omega, \F_j)\), \(j=1,2,\ldots\), be
+measurable spaces such that \(\F_j \subset \F_{j+1}\). Is
+\(\cup_j \F_j\) a \(\sigma\)-field?
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}[Ex 3]
+\iffalse{} {Solution (Ex 3). } \fi{}No.
+
+Let \(\Omega = [0,1]\), and
+\(\F_n = \sigma \left\{[0,\tfrac{1}{2^n}),[\tfrac{1}{2^n},\tfrac{2}{2^n}), \ldots, [\tfrac{2^{n-1}}{2^n}, 1)\right\}\).
+
+Now, consider the set \(B_n = [0, \tfrac{1}{2^n})\). Clearly
+\(B_n \in \F_n\) for all \(n\), hence
+\(B_n \in \cup_{i=1}^\infty \F_i\). Hower,
+\(\cap_{i = 1}^{\infty} B_i = \{0\} \notin \cup_{i=1}^\infty \F_i\). So
+\(\cup_{i=1}^\infty \F_i\) is not closed under countable intersection,
+i.e.~it is not a \(\sigma\)-algebra.
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{exercise}[Ex 5]
+\protect\hypertarget{exr:unnamed-chunk-26}{}{\label{exr:unnamed-chunk-26}
+\iffalse (Ex 5) \fi{} }a) Let \(\C\) be a \(\pi\)-system and
+\(\mathcal{D}\) be a \(\lambda\)-system such that
+\(\C \subset \mathcal{D}\). Show that
+\(\sigma(\C) \subset \mathcal{D}\).
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}[Ex 6]
+\iffalse{} {Solution (Ex 6). } \fi{}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{exercise}[Ex 6]
+\protect\hypertarget{exr:unnamed-chunk-28}{}{\label{exr:unnamed-chunk-28}
+\iffalse (Ex 6) \fi{} }Prove part (ii) and (iii) of proposition
+\ref{prp:properties-of-measures}.
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}[Ex 6]
+\iffalse{} {Solution (Ex 6). } \fi{} i) Let \(A \subset B\). Then
+\(B \setminus A \cap A = \emptyset\), hence
+\(\nu(B) = \nu((B\setminus A) \cup A) = \nu(B\setminus A) + \nu(A) \geq \nu(A)\).
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Let \(A_1, A_2, \ldots\) be a sequence of sets. Define
+  \(B_i = A_i \setminus \left(\cup_{k = 1}^{i-1} A_k \right)\). Then the
+  \(B_i\)s are pairwise disjoint. Hence,
+\end{enumerate}
+
+\begin{align*}
+  \nu\left(\cup_{i = 1}^\infty A_i\right) &= \nu\left(\cup_{i=1}^\infty B_i\right) \\
+                                          &= \sum_{i=1}^\infty \nu(B_i) \\
+                                          &= \sum_{i=1}^\infty \nu\left(A_i \setminus \left(\cup_{k=1}^{i-1} A_k \right ) \right ).
+\end{align*}
+
+Since \(A_i \setminus \left(\cup_{k=1}^{i-1} A_k \right) \subset A_i\),
+we use (i) to get the result:
+
+\begin{align*}
+  \sum_{i=1}^\infty \nu\left(A_i \setminus \left(\cup_{k=1}^{i-1} A_k \right ) \right ) \leq \sum_{i=1}^\infty \nu\left(A_i \right )
+\end{align*}
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Let \(A_1 \subset A_2 \subset A_3 \subset \dots\). Define
+  \(B_i = A_i \setminus A_{i-1}\). Then \(B_1, B_2, \ldots\) is a
+  sequence of pairwise disjoint sets, and
+  \(\cup_{i = 1}^\infty B_i = \cup_{i=1}^\infty A_i\). Hence,
+\end{enumerate}
+
+\begin{align*}
+  \nu\left(\cup_{i=1}^k A_i\right) &= \nu\left(\cup_{i=1}^k B_i\right) \\
+                                   &= \sum_{i=1}^k \nu(B_i) \\
+                                   &= \sum_{i=1}^k \nu(A_i\setminus A_{i-1}) \\
+                                   &= \sum_{i=1}^k \nu(A_i) - \nu(A_{i-1}) \\
+                                   &= \nu(A_k). 
+\end{align*}
+
+Taking the limit on both sides gives us
+
+\[
+  \nu\left(\cup_{i=1}^k A_i \right) = \lim_{n \rightarrow \infty} \nu(A_n).
+\]
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{exercise}[Ex 12]
+\protect\hypertarget{exr:unnamed-chunk-30}{}{\label{exr:unnamed-chunk-30}
+\iffalse (Ex 12) \fi{} }Let \(\nu\) and \(\lambda\) be two measures on
+\((\Omega, \F)\) such that \(\nu(A) = \lambda(A)\) for any
+\(A \in \C \subset \F\), where \(\C\) is a \(\pi\)-system
+(\ref{def:pi-system}). Assume that \(\nu\) is \(\sigma\)-finite
+(\ref{def:sigma-finite}).
+
+Show that \(\nu(A) = \lambda(A)\) for all \(A \in \sigma(\C)\).
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}[Ex 12]
+\iffalse{} {Solution (Ex 12). } \fi{}Let
+\(\F = \{A \in \sigma(\C) | \nu(A) = \lambda(A)\}\). Then
+\(\C \subset \F\). If we can show that \(\F\) is a \(\sigma\)-field,
+then \(\sigma(\C) \subset \F\) (since \(\sigma(\C)\) is the smallest
+\(\sigma\)-field that contains \(\C\)), which proves that
+\(\nu(A) = \lambda(A)\) for all \(A \in \sigma(\C)\).
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{exercise}[Ex 14]
+\protect\hypertarget{exr:unnamed-chunk-32}{}{\label{exr:unnamed-chunk-32}
+\iffalse (Ex 14) \fi{} }Prove proposition 1.4
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 15]
+\protect\hypertarget{exr:unnamed-chunk-33}{}{\label{exr:unnamed-chunk-33}
+\iffalse (Ex 15) \fi{} }Show that a monotone function from \(\R\) to
+\(\R\) is Borel, and a c.d.f. on \(\R^k\) is Borel.
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 17]
+\protect\hypertarget{exr:unnamed-chunk-34}{}{\label{exr:unnamed-chunk-34}
+\iffalse (Ex 17) \fi{} }Let \(f\) be a non-negative Borel function on
+\((\Omega, \F)\). Show that \(f\) is the limit of a sequence of simple
+functions \(\{\phi_n \}\) on \((\Omega, \F)\) with
+\(0 \le \phi_1 \le \phi_2 \le \dots \le f\).
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 19]
+\protect\hypertarget{exr:unnamed-chunk-35}{}{\label{exr:unnamed-chunk-35}
+\iffalse (Ex 19) \fi{} } Let \(\{f_n\}\) be a sequence of Borel
+functions on a measurable space. Show that
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  \(\sigma(f_1, f_2, \ldots) = \sigma(\cup_{j=1}^{\infty} \sigma(f_j)) = \sigma(\cup_{j=1}^\infty \sigma(f_1,\ldots, f_j)).\)
+\item
+  \(\sigma(\lim \sup_n f_n) \subset \cap_{n=1}^\infty \sigma(f_n, f_{n+1},\ldots).\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 24]
+\protect\hypertarget{exr:unnamed-chunk-36}{}{\label{exr:unnamed-chunk-36}
+\iffalse (Ex 24) \fi{} } Let \(f\) be an integrable function on
+\((\Omega, \F, \nu)\). Show that for each \(\epsilon > 0\), there exists
+a \(\delta_\epsilon\) such that for \(A \in \F\):
+
+\[
+  \nu(A) < \delta_\epsilon \Rightarrow \int_A |f| d\nu < \epsilon. 
+\]
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}Let \(\epsilon > 0\), \(A \in \F\) with
+\(\nu(A) < \delta_\epsilon = \frac{\epsilon}{\max_{\omega \in A} |f(\omega)|}\).
+Then
+
+\begin{align*}
+  \int_A |f| d\nu &\leq \int_A \max_{\omega \in A} |f(\omega)| d\nu \\
+                  &= \max_{\omega \in A} |f(\omega)| \nu(A) \\
+                  &< \epsilon.
+\end{align*}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{exercise}[Ex 30]
+\protect\hypertarget{exr:unnamed-chunk-38}{}{\label{exr:unnamed-chunk-38}
+\iffalse (Ex 30) \fi{} }For any c.d.f. \(F\) and any \(a \ge 0\), show
+that \(\int [F(x+a) - F(x)] dx = a\)
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{exercise}[Ex 34]
+\protect\hypertarget{exr:unnamed-chunk-40}{}{\label{exr:unnamed-chunk-40}
+\iffalse (Ex 34) \fi{} }Prove proposition \ref{prp:calc-radon-nikodym}\}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}[Ex 34 i)]
+\iffalse{} {Solution (Ex 34 i)). } \fi{}Let \(g\) be the unique function
+denoted by \(\frac{d\lambda}{d\nu}\). Assume \(f = 1_A\) for some
+\(A\in \F\). Since \(\lambda << \nu\), we know that
+\(\lambda(A) = \int_A g d\nu\). So,
+
+\begin{align*}
+  \int f d\lambda &= \int 1_A d\lambda \\
+                  &= \lambda(A) \\
+                  &= \int_A g d\nu \\
+                  &= \int 1_A g d\nu = \int f g d\nu.
+\end{align*}
+
+Hence, (i) is true for all indicator functions, and so by linearity of
+integrals (\ref{prp:int-linearity}) for all non-negative simple
+functions.
+
+Now, let \(f\) be a general non-negative Borel function. Then we know
+that there exists a sequence of simple functions
+\(\phi_1, \phi_2, \ldots\) such that \(\phi_n \uparrow f\). Hence,
+utilizing the monotone convergence theorem and the fact that we know (i)
+holds for simple functions,
+
+\begin{align*}
+  \int f d\lambda &= \int \lim_{n \rightarrow \infty} \phi_n d\lambda \\
+                  &= \lim_{n \rightarrow \infty} \int \phi_n d\lambda \\
+                  &= \lim_{n \rightarrow \infty} \int \phi_n g d\nu \\
+                  &= \int \lim_{n \rightarrow \infty} \phi_n g d\nu \\
+                  &= \int f g d\nu,
+\end{align*}
+
+and so we have shown that (i) holds for any non-negative Borel function.
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{solution}[Ex 34 ii)]
+\iffalse{} {Solution (Ex 34 ii)). } \fi{}Assume \(\lambda_1 << \nu\) and
+\(\lambda_2 << \nu\). Then
+
+\begin{align*}
+  (\lambda_1 + \lambda_2)(A) &= \lambda_1(A) + \lambda_2(A) \\
+                             &= \int_A g_1 d\nu + \int_A g_2 d\nu \\
+                             &= \int_A (g_1 + g_2)d\nu,
+\end{align*}
+
+so \(\lambda_1 + \lambda_2 << \nu\), and
+
+\[\frac{d(\lambda_1 + \lambda_2)}{d\nu} = g_1 + g_2 = \frac{d\lambda_1}{d\nu} + \frac{d\lambda_2}{d\nu}.\]
+\EndKnitrBlock{solution}
+
+
+\end{document}
