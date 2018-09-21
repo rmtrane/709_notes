@@ -375,3 +375,4 @@ iii) If $\tau$ is a measure, $\lambda$ a $\sigma$-finite measure, and $\tau << \
 iv) Let $(\Omega_i, \F_i, \nu_i)$ be a measure space and $\nu_i$ be $\sigma$-finite, $i=1,2$. Let $\lambda_i$ be a $\sigma$-finite measure on $(\Omega_i, \F_i)$ and $\lambda << \nu_i$, $i=1,2$. Then $\lambda_1 \times \lambda_2 << \nu_1 \times \nu_2$ and $$\frac{d(\lambda_1 \times \lambda_2)}{d(\nu_1 \times \nu_2)}(\omega_1,\omega_2) = \frac{d\lambda_1}{d\nu_1}(\omega_1)\frac{d\lambda_2}{d\nu_2}(\omega_2)\quad \nu_1\times \nu_2\text{-a.e.}$$. 
 
 ```
+

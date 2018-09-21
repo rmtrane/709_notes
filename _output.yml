@@ -1,6 +1,4 @@
-bookdown::gitbook: 
-  includes:
-    before_body: 
+bookdown::gitbook: default
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
