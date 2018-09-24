@@ -699,7 +699,7 @@ other measures discussed in the following are defined on
 \item
   Let \((\Omega_i, \F_i, \nu_i)\) be a measure space and \(\nu_i\) be
   \(\sigma\)-finite, \(i=1,2\). Let \(\lambda_i\) be a \(\sigma\)-finite
-  measure on \((\Omega_i, \F_i)\) and \(\lambda << \nu_i\), \(i=1,2\).
+  measure on \((\Omega_i, \F_i)\) and \(\lambda_1 << \nu_i\), \(i=1,2\).
   Then \(\lambda_1 \times \lambda_2 << \nu_1 \times \nu_2\) and
   \[\frac{d(\lambda_1 \times \lambda_2)}{d(\nu_1 \times \nu_2)}(\omega_1,\omega_2) = \frac{d\lambda_1}{d\nu_1}(\omega_1)\frac{d\lambda_2}{d\nu_2}(\omega_2)\quad \nu_1\times \nu_2\text{-a.e.}\].
 \end{enumerate}
@@ -1046,9 +1046,9 @@ then
 
 \chapter{Homework}\label{homework}
 
-\section{Chapter 1}\label{chapter-1}
+\section{First Exam Period}\label{first-exam-period}
 
-\subsection{First Exam Period}\label{first-exam-period}
+\subsection{Assigned Problems}\label{assigned-problems}
 
 \BeginKnitrBlock{exercise}[Ex 2]
 \protect\hypertarget{exr:unnamed-chunk-21}{}{\label{exr:unnamed-chunk-21}
@@ -1075,8 +1075,521 @@ which in turn ensures that
 Hence \(\sigma(\C) = \cap_{\F \in \Gamma} \F\).
 \EndKnitrBlock{solution}
 
-\BeginKnitrBlock{exercise}[Ex 3]
+\BeginKnitrBlock{exercise}[Ex 5]
 \protect\hypertarget{exr:unnamed-chunk-23}{}{\label{exr:unnamed-chunk-23}
+\iffalse (Ex 5) \fi{} }a) Let \(\C\) be a \(\pi\)-system and
+\(\mathcal{D}\) be a \(\lambda\)-system such that
+\(\C \subset \mathcal{D}\). Show that
+\(\sigma(\C) \subset \mathcal{D}\).
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}[Ex 5]
+\iffalse{} {Solution (Ex 5). } \fi{}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{exercise}[Ex 12]
+\protect\hypertarget{exr:unnamed-chunk-25}{}{\label{exr:unnamed-chunk-25}
+\iffalse (Ex 12) \fi{} }Let \(\nu\) and \(\lambda\) be two measures on
+\((\Omega, \F)\) such that \(\nu(A) = \lambda(A)\) for any
+\(A \in \C \subset \F\), where \(\C\) is a \(\pi\)-system
+(\ref{def:pi-system}). Assume that \(\nu\) is \(\sigma\)-finite
+(\ref{def:sigma-finite}).
+
+Show that \(\nu(A) = \lambda(A)\) for all \(A \in \sigma(\C)\).
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}[Ex 12]
+\iffalse{} {Solution (Ex 12). } \fi{}Let
+\(\F = \{A \in \sigma(\C) | \nu(A) = \lambda(A)\}\). Then
+\(\C \subset \F\). If we can show that \(\F\) is a \(\sigma\)-field,
+then \(\sigma(\C) \subset \F\) (since \(\sigma(\C)\) is the smallest
+\(\sigma\)-field that contains \(\C\)), which proves that
+\(\nu(A) = \lambda(A)\) for all \(A \in \sigma(\C)\).
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{exercise}[Ex 14]
+\protect\hypertarget{exr:unnamed-chunk-27}{}{\label{exr:unnamed-chunk-27}
+\iffalse (Ex 14) \fi{} }Prove proposition 1.4 (proposition
+\ref{prp:borel-function-properties})
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}[Ex 14 (i)]
+\iffalse{} {Solution (Ex 14 (i)). } \fi{} Assume \(f\) is Borel. Then
+\(f^{-1}(A) \in \F\) for all open sets \(A \in \B\), hence
+\(f^{-1}(a, \infty) \in \F\).
+
+Now assume \(f^{-1}(a, \infty) \in \F\) for all \(a \in \R\), and let
+\(\mathcal{G} = \{ A \in \B | f^{-1}(A) \in \F \}\). So,
+\((a, \infty) \in \mathcal{G}\) for all \(a \in \R\). If we can show
+that \(\mathcal{G}\) is a \(\sigma\)-field, then we will have that
+\(\sigma((a, \infty)) = \B \subset \mathcal{G}\), hence
+\(f^{-1}(B) \in \F\) for all \(B \in \B\), meaning that \(f\) is
+measurable.
+
+So let us prove that \(\mathcal{G}\) is a \(\sigma\)-field.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  First of all, \(f^{-1}(\emptyset) = \emptyset \in \F\).
+\item
+  Second, let \(A \in \mathcal{G}\). Since
+  \(f^{-1}(A^C) = (f^{-1}(A))^C \in \F\) (\(\F\) is a \(\sigma\)-field
+  and \(f^{-1}(A) \in \F\), so \((f^{-1}(A))(^C) \in \F\)).
+\item
+  Finally, let \(A_1, A_2, \ldots\) be a sequence of sets such that
+  \(A_i \in \mathcal{G}\) for all \(i\). Then
+  \(f^{-1}\left(\cup_{i=1}^\infty A_i \right) = \cup_{i=1}^\infty f^{-1}(A_i)\).
+  Since \(f^{-1}(A_i) \in \F\) for all \(i\) and \(\F\) is a
+  \(\sigma\)-field, \(\cup_{i=1}^\infty f^{-1}(A_i) \in \F\), so
+  \(\cup_{i=1}^\infty A_i \in \mathcal{G}\).
+\end{enumerate}
+
+So \(\mathcal{G}\) is a \(\sigma\)-field, which concludes the proof.
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{solution}[Ex 14 (ii)]
+\iffalse{} {Solution (Ex 14 (ii)). } \fi{}Assume \(f\) and \(g\) are
+Borel functions. Let \(a,b \in \R\). \(af\) is Borel, since
+
+\[
+  (af)^{-1}((c,\infty)) = \left\{ \omega \in \Omega : a\cdot f(\omega) \in (c, \infty) \right\}.
+\]
+
+If \(a \neq 0\),
+
+\[\begin{aligned}
+ (af)^{-1}((c,\infty)) &= \left\{ \omega \in \Omega : f(\omega) \in (\tfrac{c}{a}, \infty) \right\} \\
+                       &= f^{-1}(\tfrac{c}{a}, \infty).
+\end{aligned}\]
+
+Since \(f\) is Borel, this is a measurable set (by (i)). If \(a = 0\),
+then
+
+\[(af)^{-1}((c,\infty)) = 
+  \left\{ 
+    \begin{matrix} 
+      \Omega & \text{ if } c \le 0 \\ 
+      \emptyset & \text{ if } c < 0 
+    \end{matrix}
+  \right .
+\]
+
+In either case, \((af)^{-1}((c, \infty)) \in \F\). Since it holds that
+for all \(a,c \in \R\) that \((af)^{-1}((c,\infty)) \in \F\), \(af\) is
+measurable by (i).
+
+Let \(c \in \R\). Now consider the sum of \(f\) and \(g\):
+
+\[\begin{aligned}
+  (f + g)^{-1}((c, \infty)) &= \left\{ \omega \in \Omega : f(\omega) + g(\omega) > c \right\} \\.
+                            &= \cup_{t \in \mb{Q}} \{\omega \in \Omega : f(\omega) > c - t \} \cap \{\omega \in \Omega : g(\omega) > t \} \\
+                            &= \cup_{t \in \mb{Q}} f^{-1}((c-t, \infty)) \cap g^{-1}((t, \infty)).
+\end{aligned}\]
+
+Since \(f\) and \(g\) are both measurable,
+\(f^{-1}((c-t, \infty)) \in \F\) and \(g^{-1}((t, \infty))\in \F\) for
+all \(t \in \R\). Hence, the intersection of the two is measurable for
+any \(t \in \R\), which in turn implies that the union over all rational
+numbers is measurable (countable union of measurable sets). Hence,
+\(f+g\) is measurable.
+
+Combine the two results to get the final result.\footnote{Note: This
+  could be done in one step, but I found it easier to split up into two.}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{solution}[Ex 14 (iii)]
+\iffalse{} {Solution (Ex 14 (iii)). } \fi{}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{solution}[Ex 14 (iv)]
+\iffalse{} {Solution (Ex 14 (iv)). } \fi{}Assume \(f\) is measurable
+from \((\Omega, \F)\) to \((\Lambda, \mathcal{G})\), and \(g\)
+measureable from \((\Lambda, \mathcal{G})\) to
+\((\Delta, \mathcal{H})\). Let \(H \in \mathcal{H}\). We want to show
+that \((g \circ f)^{-1}(H) \in \F\), since this would mean \(g \circ f\)
+is measurable. So,
+
+\[\begin{aligned}
+  (g \circ f)^{-1}(H) &= \left\{ \omega \in \Omega | g(f(\omega)) \in H \right\} \\ 
+                      &= \left\{ \omega \in \Omega | f(\omega) \in g^{-1}(H) \right\} \\ 
+                      &= f^{-1}(g^{-1}(H)).
+\end{aligned}\]
+
+Since \(g\) is measurable, \(g^{-1}(H) \in \mathcal{G}\), and since
+\(f\) is measurable, \(f^{-1}(g^{-1}(H)) \in \F\). So, \(g \circ f\) is
+measurable.
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{solution}[Ex 14 (v)]
+\iffalse{} {Solution (Ex 14 (v)). } \fi{}Let
+\(f: \Omega \rightarrow \R^p\), where \(\Omega\) is a borel set. Assume
+\(f\) is continuous. Then, if \(A\) is an open set, \(f^{-1}(A)\) is an
+open set, and therefore borel. Hence, \(f^{-1}((a,\infty))\) is a borel
+set for all \(a\), and by \((i)\) we have that \(f\) is a borel
+function.
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{exercise}[Ex 19]
+\protect\hypertarget{exr:unnamed-chunk-33}{}{\label{exr:unnamed-chunk-33}
+\iffalse (Ex 19) \fi{} } Let \(\{f_n\}\) be a sequence of Borel
+functions on a measurable space. Show that
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  \(\sigma(f_1, f_2, \ldots) = \sigma(\cup_{j=1}^{\infty} \sigma(f_j)) = \sigma(\cup_{j=1}^\infty \sigma(f_1,\ldots, f_j)).\)
+\item
+  \(\sigma(\lim \sup_n f_n) \subset \cap_{n=1}^\infty \sigma(f_n, f_{n+1},\ldots).\)
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}[Ex 19]
+\iffalse{} {Solution (Ex 19). } \fi{}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{exercise}[Ex 24]
+\protect\hypertarget{exr:unnamed-chunk-35}{}{\label{exr:unnamed-chunk-35}
+\iffalse (Ex 24) \fi{} } Let \(f\) be an integrable function on
+\((\Omega, \F, \nu)\). Show that for each \(\epsilon > 0\), there exists
+a \(\delta_\epsilon\) such that for \(A \in \F\):
+
+\[
+  \nu(A) < \delta_\epsilon \Rightarrow \int_A |f| d\nu < \epsilon. 
+\]
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}Let \(\epsilon > 0\), \(A \in \F\) with
+\(\nu(A) < \delta_\epsilon = \frac{\epsilon}{\sup_{\omega \in A} |f(\omega)|}\).
+Then
+
+\begin{align*}
+  \int_A |f| d\nu &\leq \int_A \sup_{\omega \in A} |f(\omega)| d\nu \\
+                  &= \sup_{\omega \in A} |f(\omega)| \nu(A) \\
+                  &< \epsilon.
+\end{align*}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{exercise}[Ex 30]
+\protect\hypertarget{exr:unnamed-chunk-37}{}{\label{exr:unnamed-chunk-37}
+\iffalse (Ex 30) \fi{} }For any c.d.f. \(F\) and any \(a \ge 0\), show
+that \(\int [F(x+a) - F(x)] dx = a\)
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{exercise}[Ex 34]
+\protect\hypertarget{exr:unnamed-chunk-39}{}{\label{exr:unnamed-chunk-39}
+\iffalse (Ex 34) \fi{} }Prove proposition \ref{prp:calc-radon-nikodym}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}[Ex 34 i)]
+\iffalse{} {Solution (Ex 34 i)). } \fi{}Let \(g\) be the unique function
+denoted by \(\frac{d\lambda}{d\nu}\). Assume \(f = 1_A\) for some
+\(A\in \F\). Since \(\lambda << \nu\), we know that
+\(\lambda(A) = \int_A g d\nu\). So,
+
+\begin{align*}
+  \int f d\lambda &= \int 1_A d\lambda \\
+                  &= \lambda(A) \\
+                  &= \int_A g d\nu \\
+                  &= \int 1_A g d\nu = \int f g d\nu.
+\end{align*}
+
+Hence, (i) is true for all indicator functions, and so by linearity of
+integrals (\ref{prp:int-linearity}) for all non-negative simple
+functions.
+
+Now, let \(f\) be a general non-negative Borel function. Then we know
+that there exists a sequence of simple functions
+\(\phi_1, \phi_2, \ldots\) such that \(\phi_n \uparrow f\). Hence,
+utilizing the monotone convergence theorem and the fact that we know (i)
+holds for simple functions,
+
+\begin{align*}
+  \int f d\lambda &= \int \lim_{n \rightarrow \infty} \phi_n d\lambda \\
+                  &= \lim_{n \rightarrow \infty} \int \phi_n d\lambda \\
+                  &= \lim_{n \rightarrow \infty} \int \phi_n g d\nu \\
+                  &= \int \lim_{n \rightarrow \infty} \phi_n g d\nu \\
+                  &= \int f g d\nu,
+\end{align*}
+
+and so we have shown that (i) holds for any non-negative Borel function.
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{solution}[Ex 34 ii)]
+\iffalse{} {Solution (Ex 34 ii)). } \fi{}Assume \(\lambda_1 << \nu\) and
+\(\lambda_2 << \nu\). Then
+
+\begin{align*}
+  (\lambda_1 + \lambda_2)(A) &= \lambda_1(A) + \lambda_2(A) \\
+                             &= \int_A g_1 d\nu + \int_A g_2 d\nu \\
+                             &= \int_A (g_1 + g_2)d\nu,
+\end{align*}
+
+so \(\lambda_1 + \lambda_2 << \nu\), and
+
+\[\frac{d(\lambda_1 + \lambda_2)}{d\nu} = g_1 + g_2 = \frac{d\lambda_1}{d\nu} + \frac{d\lambda_2}{d\nu}.\]
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{solution}[Ex 34 iii)]
+\iffalse{} {Solution (Ex 34 iii)). } \fi{}Since \(\tau << \lambda\),
+
+\[\tau(A) = \int_A \frac{d\tau}{d\lambda}d\lambda.\]
+
+Since \(\lambda << \nu\), we can use (i) with
+\(f = \frac{d\tau}{d\lambda}\), to get
+
+\[\tau(A) = \int_A \frac{d\tau}{d\lambda}\frac{d\lambda}{d\tau} d\tau,\]
+
+which tells us that \(\tau << \nu\) and
+
+\[\frac{d\tau}{d\nu} = \frac{d\tau}{d\lambda}\frac{d\lambda}{d\tau}.\]
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{solution}[Ex 34 iv)]
+\iffalse{} {Solution (Ex 34 iv)). } \fi{} By definition,
+\((\lambda_1 \times \lambda_2)(A) = \int_A d(\lambda_1 \times \lambda_2) = \int 1_A d(\lambda_1 \times \lambda_2)\).
+Since \(1_A \ge 0\), we can use Fubini to get
+
+\[ (\lambda_1 \times \lambda_2)(A) = \int \int 1_A d\lambda_1 d\lambda_2. \]
+
+Since \(\lambda_1 << \nu_1\), we can use (i) with \(f = 1_A\) (\(1_A\)
+is non-negative) to obtain that
+
+\[(\lambda_1 \times \lambda_2)(A) = \int \int 1_A \frac{d\lambda_1}{d\nu_1}d\nu_1 d\lambda_2,\]
+
+and then, since \(\lambda_2 << \nu_2\), using (i) again with
+\(f = \int 1_A \frac{d\lambda_1}{d\nu_1}d\nu_1\) (which is non-negative)
+to get
+
+\[(\lambda_1 \times \lambda_2)(A) = \int \int 1_A \frac{d\lambda_1}{d\nu_1}d\nu_1 \frac{d\lambda_2}{d\nu_2}d\nu_2.\]
+
+Finally, using Fubini again we get
+
+\[\begin{aligned}
+  (\lambda_1 \times \lambda_2)(A) &= \int \int 1_A \frac{d\lambda_1}{d\nu_1}\frac{d\lambda_2}{d\nu_2} d\nu_1 d\nu_2 \\
+                                  &= \int_A \frac{d\lambda_1}{d\nu_1}\frac{d\lambda_2}{d\nu_2} d(\nu_1\times\nu_2).
+\end{aligned}\]
+
+I.e. \(\lambda_1 \times \lambda_2 << \nu_1 \times \nu_2\) and
+\(\frac{d(\lambda_1 \times \lambda_2)}{d(\nu_1 \times \nu_2)} = \frac{d\lambda_1}{d\nu_1}\frac{d\lambda_2}{d\nu_2}\).
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{exercise}[Ex 35]
+\protect\hypertarget{exr:unnamed-chunk-44}{}{\label{exr:unnamed-chunk-44}
+\iffalse (Ex 35) \fi{} }Let \(\{a_n\}\) be a sequence of positive
+numbser with \(\sum_{i=1}^\infty a_n = 1\), and \(\{P_n\}\) a sequence
+of probability measure on a common measurable space, \((\Omega, \F)\).
+Define \(P = \sum_{n=1}^\infty P_n\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  Show that \(P\) is a probability measure.
+\item
+  Let \(\nu\) be a \(\sigma\)-finite measure. Show that
+\end{enumerate}
+
+\[P_n << \nu \text{ for all } n \in \mb{N}\quad \iff \quad P << \nu.\]
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Derive the Lebesgue p.d.f. of \(P\) when \(P_n\) is the gamma
+  distribution \(\Gamma(\alpha, n^{-1})\) with \(\alpha > 1\) and
+  \(a_n \propto n^{-\alpha}\).
+\end{enumerate}
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}[Ex 35 a)]
+\iffalse{} {Solution (Ex 35 a)). } \fi{}Need to show that
+\(P = \sum_{n=1}^{\infty} a_n P_n\) is a probability measure. So we
+check the three properties for a probability measure
+(\ref{def:measure}), with the extra property that \(P(\Omega) = 1\):
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi})}
+\tightlist
+\item
+  \(P(A) = \sum_{n=1}^\infty a_n P_n(A) \geq 0\) for all \(A\) since
+  \(a_n > 0\) for all \(n\) by assumption, and \(P_n(A) \ge 0\) for all
+  \(n\), since \(P_n\) is a probability measure. Furthermore,
+  \(P(\Omega) = \sum_{n=1}^\infty a_n P_n(\Omega) = \sum_{n=1}^\infty a_n = 1\),
+  where the second equality holds since \(P_n\) is a probability measure
+  (by assumption), and the last equality is exactly the assumption we
+  made about the \(a_n\)s. I.e. \(0 \le P(A) \le 1\).
+\item
+  Since \(P_n(\emptyset) = 0\),
+  \(P(\emptyset) = \sum_{n=1}^\infty a_n P_n(\emptyset) = 0\).
+\item
+  Let \(A_1, A_2,\ldots\) be a countable sequence of pairwise disjoint
+  sets. Then using that \(P_n\) is a measure for all \(n\),
+\end{enumerate}
+
+\[\begin{aligned}
+  P(\cup_{i=1}^\infty A_i) &= \sum_{n=1}^\infty a_nP_n\left(\cup_{i=1}^\infty A_i\right) \\
+                           &= \sum_{n=1}^\infty a_n\sum_{i=1}^\infty P_n(A_i) \\
+                           &= \sum_{i=1}^\infty \sum_{n=1}^\infty a_n P_n(A_i) \\
+                           &= \sum_{i=1}^\infty P(A_i).
+\end{aligned}\]
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{solution}[Ex 35 b)]
+\iffalse{} {Solution (Ex 35 b)). } \fi{}Assume \(P << \nu\). Let
+\(A \in \F\) with \(\nu(A) = 0\). Assume there exists \(n \in \mb{N}\)
+such that \(P_n(A) > 0\). Then \(P(A) > a_n P_n(A) > 0\). But
+\(P << \nu\) implies that \(P(A) = 0\), so by contradiction,
+\(P_n(A) = 0\) for all \(n \in \mb{N}\).
+
+Now assume \(P_n << \nu\). Let \(A \in \F\) with \(\nu(A) = 0\). Then
+\(P_n(A) = 0\) for all \(n \in \mb{N}\). Hence,
+\(P(A) = \sum_{n=1}^\infty a_n P_n(A) = 0\), which means that
+\(P << \nu\).
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{exercise}[Ex 50]
+\protect\hypertarget{exr:unnamed-chunk-47}{}{\label{exr:unnamed-chunk-47}
+\iffalse (Ex 50) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 55]
+\protect\hypertarget{exr:unnamed-chunk-48}{}{\label{exr:unnamed-chunk-48}
+\iffalse (Ex 55) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 56]
+\protect\hypertarget{exr:unnamed-chunk-49}{}{\label{exr:unnamed-chunk-49}
+\iffalse (Ex 56) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 65]
+\protect\hypertarget{exr:unnamed-chunk-50}{}{\label{exr:unnamed-chunk-50}
+\iffalse (Ex 65) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 74]
+\protect\hypertarget{exr:unnamed-chunk-51}{}{\label{exr:unnamed-chunk-51}
+\iffalse (Ex 74) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 83]
+\protect\hypertarget{exr:unnamed-chunk-52}{}{\label{exr:unnamed-chunk-52}
+\iffalse (Ex 83) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 85]
+\protect\hypertarget{exr:unnamed-chunk-53}{}{\label{exr:unnamed-chunk-53}
+\iffalse (Ex 85) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 93]
+\protect\hypertarget{exr:unnamed-chunk-54}{}{\label{exr:unnamed-chunk-54}
+\iffalse (Ex 93) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 99]
+\protect\hypertarget{exr:unnamed-chunk-55}{}{\label{exr:unnamed-chunk-55}
+\iffalse (Ex 99) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 101]
+\protect\hypertarget{exr:unnamed-chunk-56}{}{\label{exr:unnamed-chunk-56}
+\iffalse (Ex 101) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 106]
+\protect\hypertarget{exr:unnamed-chunk-57}{}{\label{exr:unnamed-chunk-57}
+\iffalse (Ex 106) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 115]
+\protect\hypertarget{exr:unnamed-chunk-58}{}{\label{exr:unnamed-chunk-58}
+\iffalse (Ex 115) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 117]
+\protect\hypertarget{exr:unnamed-chunk-59}{}{\label{exr:unnamed-chunk-59}
+\iffalse (Ex 117) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 126]
+\protect\hypertarget{exr:unnamed-chunk-60}{}{\label{exr:unnamed-chunk-60}
+\iffalse (Ex 126) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 127]
+\protect\hypertarget{exr:unnamed-chunk-61}{}{\label{exr:unnamed-chunk-61}
+\iffalse (Ex 127) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 128]
+\protect\hypertarget{exr:unnamed-chunk-62}{}{\label{exr:unnamed-chunk-62}
+\iffalse (Ex 128) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 137]
+\protect\hypertarget{exr:unnamed-chunk-63}{}{\label{exr:unnamed-chunk-63}
+\iffalse (Ex 137) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 138]
+\protect\hypertarget{exr:unnamed-chunk-64}{}{\label{exr:unnamed-chunk-64}
+\iffalse (Ex 138) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 140]
+\protect\hypertarget{exr:unnamed-chunk-65}{}{\label{exr:unnamed-chunk-65}
+\iffalse (Ex 140) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 142]
+\protect\hypertarget{exr:unnamed-chunk-66}{}{\label{exr:unnamed-chunk-66}
+\iffalse (Ex 142) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 146]
+\protect\hypertarget{exr:unnamed-chunk-67}{}{\label{exr:unnamed-chunk-67}
+\iffalse (Ex 146) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 149]
+\protect\hypertarget{exr:unnamed-chunk-68}{}{\label{exr:unnamed-chunk-68}
+\iffalse (Ex 149) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 152]
+\protect\hypertarget{exr:unnamed-chunk-69}{}{\label{exr:unnamed-chunk-69}
+\iffalse (Ex 152) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 153]
+\protect\hypertarget{exr:unnamed-chunk-70}{}{\label{exr:unnamed-chunk-70}
+\iffalse (Ex 153) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 163]
+\protect\hypertarget{exr:unnamed-chunk-71}{}{\label{exr:unnamed-chunk-71}
+\iffalse (Ex 163) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 164]
+\protect\hypertarget{exr:unnamed-chunk-72}{}{\label{exr:unnamed-chunk-72}
+\iffalse (Ex 164) \fi{} }
+\EndKnitrBlock{exercise}
+
+\subsection{Suggested Problems}\label{suggested-problems}
+
+\BeginKnitrBlock{exercise}[Ex 3]
+\protect\hypertarget{exr:unnamed-chunk-73}{}{\label{exr:unnamed-chunk-73}
 \iffalse (Ex 3) \fi{} }Let \(\Omega, \F_j)\), \(j=1,2,\ldots\), be
 measurable spaces such that \(\F_j \subset \F_{j+1}\). Is
 \(\cup_j \F_j\) a \(\sigma\)-field?
@@ -1096,20 +1609,8 @@ Now, consider the set \(B_n = [0, \tfrac{1}{2^n})\). Clearly
 i.e.~it is not a \(\sigma\)-algebra.
 \EndKnitrBlock{solution}
 
-\BeginKnitrBlock{exercise}[Ex 5]
-\protect\hypertarget{exr:unnamed-chunk-25}{}{\label{exr:unnamed-chunk-25}
-\iffalse (Ex 5) \fi{} }a) Let \(\C\) be a \(\pi\)-system and
-\(\mathcal{D}\) be a \(\lambda\)-system such that
-\(\C \subset \mathcal{D}\). Show that
-\(\sigma(\C) \subset \mathcal{D}\).
-\EndKnitrBlock{exercise}
-
-\BeginKnitrBlock{solution}[Ex 6]
-\iffalse{} {Solution (Ex 6). } \fi{}
-\EndKnitrBlock{solution}
-
 \BeginKnitrBlock{exercise}[Ex 6]
-\protect\hypertarget{exr:unnamed-chunk-27}{}{\label{exr:unnamed-chunk-27}
+\protect\hypertarget{exr:unnamed-chunk-75}{}{\label{exr:unnamed-chunk-75}
 \iffalse (Ex 6) \fi{} }Prove part (ii) and (iii) of proposition
 \ref{prp:properties-of-measures}.
 \EndKnitrBlock{exercise}
@@ -1168,256 +1669,214 @@ Taking the limit on both sides gives us
 \]
 \EndKnitrBlock{solution}
 
-\BeginKnitrBlock{exercise}[Ex 12]
-\protect\hypertarget{exr:unnamed-chunk-29}{}{\label{exr:unnamed-chunk-29}
-\iffalse (Ex 12) \fi{} }Let \(\nu\) and \(\lambda\) be two measures on
-\((\Omega, \F)\) such that \(\nu(A) = \lambda(A)\) for any
-\(A \in \C \subset \F\), where \(\C\) is a \(\pi\)-system
-(\ref{def:pi-system}). Assume that \(\nu\) is \(\sigma\)-finite
-(\ref{def:sigma-finite}).
-
-Show that \(\nu(A) = \lambda(A)\) for all \(A \in \sigma(\C)\).
-\EndKnitrBlock{exercise}
-
-\BeginKnitrBlock{solution}[Ex 12]
-\iffalse{} {Solution (Ex 12). } \fi{}Let
-\(\F = \{A \in \sigma(\C) | \nu(A) = \lambda(A)\}\). Then
-\(\C \subset \F\). If we can show that \(\F\) is a \(\sigma\)-field,
-then \(\sigma(\C) \subset \F\) (since \(\sigma(\C)\) is the smallest
-\(\sigma\)-field that contains \(\C\)), which proves that
-\(\nu(A) = \lambda(A)\) for all \(A \in \sigma(\C)\).
-\EndKnitrBlock{solution}
-
-\BeginKnitrBlock{exercise}[Ex 14]
-\protect\hypertarget{exr:unnamed-chunk-31}{}{\label{exr:unnamed-chunk-31}
-\iffalse (Ex 14) \fi{} }Prove proposition 1.4 (proposition
-\ref{prp:borel-function-properties})
-\EndKnitrBlock{exercise}
-
-\BeginKnitrBlock{solution}
-\iffalse{} {Solution. } \fi{} \emph{i}) Assume \(f\) is Borel. Then
-\(f^{-1}(A) \in \F\) for all open sets \(A \in \B\), hence
-\(f^{-1}(a, \infty) \in \F\).
-
-Now assume \(f^{-1}(a, \infty) \in \F\) for all \(a \in \R\), and let
-\(\mathcal{G} = \{ A \in \B | f^{-1}(A) \in \F \}\). So,
-\((a, \infty) \in \mathcal{G}\) for all \(a \in \R\). If we can show
-that \(\mathcal{G}\) is a \(\sigma\)-field, then we will have that
-\(\sigma((a, \infty)) = \B \subset \mathcal{G}\), hence
-\(f^{-1}(B) \in \F\) for all \(B \in \B\), meaning that \(f\) is
-measurable.
-
-So let us prove that \(\mathcal{G}\) is a \(\sigma\)-field.
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi})}
-\tightlist
-\item
-  First of all, \(f^{-1}(\emptyset) = \emptyset \in \F\).
-\item
-  Second, let \(A \in \mathcal{G}\). Since
-  \(f^{-1}(A^C) = (f^{-1}(A))^C \in \F\) (\(\F\) is a \(\sigma\)-field
-  and \(f^{-1}(A) \in \F\), so \((f^{-1}(A))(^C) \in \F\)).
-\item
-  Finally, let \(A_1, A_2, \ldots\) be a sequence of sets such that
-  \(A_i \in \mathcal{G}\) for all \(i\). Then
-  \(f^{-1}\left(\cup_{i=1}^\infty A_i \right) = \cup_{i=1}^\infty f^{-1}(A_i)\).
-  Since \(f^{-1}(A_i) \in \F\) for all \(i\) and \(\F\) is a
-  \(\sigma\)-field, \(\cup_{i=1}^\infty f^{-1}(A_i) \in \F\), so
-  \(\cup_{i=1}^\infty A_i \in \mathcal{G}\).
-\end{enumerate}
-
-So \(\mathcal{G}\) is a \(\sigma\)-field, which concludes the proof.
-
-\emph{ii}) Assume \(f\) and \(g\) are Borel functions. Let
-\(a,b \in \R\). \(af\) is Borel, since
-
-\[
-  (af)^{-1}((c,\infty)) = \left\{ \omega \in \Omega : a\cdot f(\omega) \in (c, \infty) \right\}.
-\]
-
-If \(a \neq 0\),
-
-\[\begin{aligned}
- (af)^{-1}((c,\infty)) &= \left\{ \omega \in \Omega : f(\omega) \in (\tfrac{c}{a}, \infty) \right\} \\
-                       &= f^{-1}(\tfrac{c}{a}, \infty).
-\end{aligned}\]
-
-Since \(f\) is Borel, this is a measurable set (by (i)). If \(a = 0\),
-then
-
-\[(af)^{-1}((c,\infty)) = 
-  \left\{ 
-    \begin{matrix} 
-      \Omega & \text{ if } c \le 0 \\ 
-      \emptyset & \text{ if } c < 0 
-    \end{matrix}
-  \right .
-\]
-
-In either case, \((af)^{-1}((c, \infty)) \in \F\). Since it holds that
-for all \(a,c \in \R\) that \((af)^{-1}((c,\infty)) \in \F\), \(af\) is
-measurable by (i).
-
-Let \(c \in \R\). Now consider the sum of \(f\) and \(g\):
-
-\[\begin{aligned}
-  (f + g)^{-1}((c, \infty)) &= \left\{ \omega \in \Omega : f(\omega) + g(\omega) > c \right\} \\.
-                            &= \cup_{t \in \mb{Q}} \{\omega \in \Omega : f(\omega) > c - t \} \cap \{\omega \in \Omega : g(\omega) > t \} \\
-                            &= \cup_{t \in \mb{Q}} f^{-1}((c-t, \infty)) \cap g^{-1}((t, \infty)).
-\end{aligned}\]
-
-Since \(f\) and \(g\) are both measurable,
-\(f^{-1}((c-t, \infty)) \in \F\) and \(g^{-1}((t, \infty))\in \F\) for
-all \(t \in \R\). Hence, the intersection of the two is measurable for
-any \(t \in \R\), which in turn implies that the union over all rational
-numbers is measurable (countable union of measurable sets). Hence,
-\(f+g\) is measurable.
-
-Combine the two results to get the final result.\footnote{Note: This
-  could be done in one step, but I found it easier to split up into two.}
-
-\emph{iii})
-
-\emph{iv}) Assume \(f\) is measurable from \((\Omega, \F)\) to
-\((\Lambda, \mathcal{G})\), and \(g\) measureable from
-\((\Lambda, \mathcal{G})\) to \((\Delta, \mathcal{H})\). Let
-\(H \in \mathcal{H}\). We want to show that
-\((g \circ f)^{-1}(H) \in \F\), since this would mean \(g \circ f\) is
-measurable. So,
-
-\[\begin{aligned}
-  (g \circ f)^{-1}(H) &= \left\{ \omega \in \Omega | g(f(\omega)) \in H \right\} \\ 
-                      &= \left\{ \omega \in \Omega | f(\omega) \in g^{-1}(H) \right\} \\ 
-                      &= f^{-1}(g^{-1}(H)).
-\end{aligned}\]
-
-Since \(g\) is measurable, \(g^{-1}(H) \in \mathcal{G}\), and since
-\(f\) is measurable, \(f^{-1}(g^{-1}(H)) \in \F\). So, \(g \circ f\) is
-measurable.
-
-\emph{v}) Let \(f: \Omega \rightarrow \R^p\), where \(\Omega\) is a
-borel set. Assume \(f\) is continuous. Then, if \(A\) is an open set,
-\(f^{-1}(A)\) is an open set, and therefore borel. Hence,
-\(f^{-1}((a,\infty))\) is a borel set for all \(a\), and by \((i)\) we
-have that \(f\) is a borel function.
-\EndKnitrBlock{solution}
-
 \BeginKnitrBlock{exercise}[Ex 15]
-\protect\hypertarget{exr:unnamed-chunk-33}{}{\label{exr:unnamed-chunk-33}
+\protect\hypertarget{exr:unnamed-chunk-77}{}{\label{exr:unnamed-chunk-77}
 \iffalse (Ex 15) \fi{} }Show that a monotone function from \(\R\) to
 \(\R\) is Borel, and a c.d.f. on \(\R^k\) is Borel.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 17]
-\protect\hypertarget{exr:unnamed-chunk-34}{}{\label{exr:unnamed-chunk-34}
+\protect\hypertarget{exr:unnamed-chunk-78}{}{\label{exr:unnamed-chunk-78}
 \iffalse (Ex 17) \fi{} }Let \(f\) be a non-negative Borel function on
 \((\Omega, \F)\). Show that \(f\) is the limit of a sequence of simple
 functions \(\{\phi_n \}\) on \((\Omega, \F)\) with
 \(0 \le \phi_1 \le \phi_2 \le \dots \le f\).
 \EndKnitrBlock{exercise}
 
-\BeginKnitrBlock{exercise}[Ex 19]
-\protect\hypertarget{exr:unnamed-chunk-35}{}{\label{exr:unnamed-chunk-35}
-\iffalse (Ex 19) \fi{} } Let \(\{f_n\}\) be a sequence of Borel
-functions on a measurable space. Show that
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi})}
-\tightlist
-\item
-  \(\sigma(f_1, f_2, \ldots) = \sigma(\cup_{j=1}^{\infty} \sigma(f_j)) = \sigma(\cup_{j=1}^\infty \sigma(f_1,\ldots, f_j)).\)
-\item
-  \(\sigma(\lim \sup_n f_n) \subset \cap_{n=1}^\infty \sigma(f_n, f_{n+1},\ldots).\)
-\end{enumerate}
+\BeginKnitrBlock{exercise}[Ex 23]
+\protect\hypertarget{exr:unnamed-chunk-79}{}{\label{exr:unnamed-chunk-79}
+\iffalse (Ex 23) \fi{} }
 \EndKnitrBlock{exercise}
 
-\BeginKnitrBlock{exercise}[Ex 24]
-\protect\hypertarget{exr:unnamed-chunk-36}{}{\label{exr:unnamed-chunk-36}
-\iffalse (Ex 24) \fi{} } Let \(f\) be an integrable function on
-\((\Omega, \F, \nu)\). Show that for each \(\epsilon > 0\), there exists
-a \(\delta_\epsilon\) such that for \(A \in \F\):
-
-\[
-  \nu(A) < \delta_\epsilon \Rightarrow \int_A |f| d\nu < \epsilon. 
-\]
+\BeginKnitrBlock{exercise}[Ex 25]
+\protect\hypertarget{exr:unnamed-chunk-80}{}{\label{exr:unnamed-chunk-80}
+\iffalse (Ex 25) \fi{} }
 \EndKnitrBlock{exercise}
 
-\BeginKnitrBlock{solution}
-\iffalse{} {Solution. } \fi{}Let \(\epsilon > 0\), \(A \in \F\) with
-\(\nu(A) < \delta_\epsilon = \frac{\epsilon}{\max_{\omega \in A} |f(\omega)|}\).
-Then
-
-\begin{align*}
-  \int_A |f| d\nu &\leq \int_A \max_{\omega \in A} |f(\omega)| d\nu \\
-                  &= \max_{\omega \in A} |f(\omega)| \nu(A) \\
-                  &< \epsilon.
-\end{align*}
-\EndKnitrBlock{solution}
-
-\BeginKnitrBlock{exercise}[Ex 30]
-\protect\hypertarget{exr:unnamed-chunk-38}{}{\label{exr:unnamed-chunk-38}
-\iffalse (Ex 30) \fi{} }For any c.d.f. \(F\) and any \(a \ge 0\), show
-that \(\int [F(x+a) - F(x)] dx = a\)
+\BeginKnitrBlock{exercise}[Ex 31]
+\protect\hypertarget{exr:unnamed-chunk-81}{}{\label{exr:unnamed-chunk-81}
+\iffalse (Ex 31) \fi{} }
 \EndKnitrBlock{exercise}
 
-\BeginKnitrBlock{solution}
-\iffalse{} {Solution. } \fi{}
-\EndKnitrBlock{solution}
-
-\BeginKnitrBlock{exercise}[Ex 34]
-\protect\hypertarget{exr:unnamed-chunk-40}{}{\label{exr:unnamed-chunk-40}
-\iffalse (Ex 34) \fi{} }Prove proposition \ref{prp:calc-radon-nikodym}
+\BeginKnitrBlock{exercise}[Ex 36]
+\protect\hypertarget{exr:unnamed-chunk-82}{}{\label{exr:unnamed-chunk-82}
+\iffalse (Ex 36) \fi{} }
 \EndKnitrBlock{exercise}
 
-\BeginKnitrBlock{solution}[Ex 34 i)]
-\iffalse{} {Solution (Ex 34 i)). } \fi{}Let \(g\) be the unique function
-denoted by \(\frac{d\lambda}{d\nu}\). Assume \(f = 1_A\) for some
-\(A\in \F\). Since \(\lambda << \nu\), we know that
-\(\lambda(A) = \int_A g d\nu\). So,
+\BeginKnitrBlock{exercise}[Ex 46]
+\protect\hypertarget{exr:unnamed-chunk-83}{}{\label{exr:unnamed-chunk-83}
+\iffalse (Ex 46) \fi{} }
+\EndKnitrBlock{exercise}
 
-\begin{align*}
-  \int f d\lambda &= \int 1_A d\lambda \\
-                  &= \lambda(A) \\
-                  &= \int_A g d\nu \\
-                  &= \int 1_A g d\nu = \int f g d\nu.
-\end{align*}
+\BeginKnitrBlock{exercise}[Ex 53]
+\protect\hypertarget{exr:unnamed-chunk-84}{}{\label{exr:unnamed-chunk-84}
+\iffalse (Ex 53) \fi{} }
+\EndKnitrBlock{exercise}
 
-Hence, (i) is true for all indicator functions, and so by linearity of
-integrals (\ref{prp:int-linearity}) for all non-negative simple
-functions.
+\BeginKnitrBlock{exercise}[Ex 57]
+\protect\hypertarget{exr:unnamed-chunk-85}{}{\label{exr:unnamed-chunk-85}
+\iffalse (Ex 57) \fi{} }
+\EndKnitrBlock{exercise}
 
-Now, let \(f\) be a general non-negative Borel function. Then we know
-that there exists a sequence of simple functions
-\(\phi_1, \phi_2, \ldots\) such that \(\phi_n \uparrow f\). Hence,
-utilizing the monotone convergence theorem and the fact that we know (i)
-holds for simple functions,
+\BeginKnitrBlock{exercise}[Ex 61]
+\protect\hypertarget{exr:unnamed-chunk-86}{}{\label{exr:unnamed-chunk-86}
+\iffalse (Ex 61) \fi{} }
+\EndKnitrBlock{exercise}
 
-\begin{align*}
-  \int f d\lambda &= \int \lim_{n \rightarrow \infty} \phi_n d\lambda \\
-                  &= \lim_{n \rightarrow \infty} \int \phi_n d\lambda \\
-                  &= \lim_{n \rightarrow \infty} \int \phi_n g d\nu \\
-                  &= \int \lim_{n \rightarrow \infty} \phi_n g d\nu \\
-                  &= \int f g d\nu,
-\end{align*}
+\BeginKnitrBlock{exercise}[Ex 66]
+\protect\hypertarget{exr:unnamed-chunk-87}{}{\label{exr:unnamed-chunk-87}
+\iffalse (Ex 66) \fi{} }
+\EndKnitrBlock{exercise}
 
-and so we have shown that (i) holds for any non-negative Borel function.
-\EndKnitrBlock{solution}
+\BeginKnitrBlock{exercise}[Ex 70]
+\protect\hypertarget{exr:unnamed-chunk-88}{}{\label{exr:unnamed-chunk-88}
+\iffalse (Ex 70) \fi{} }
+\EndKnitrBlock{exercise}
 
-\BeginKnitrBlock{solution}[Ex 34 ii)]
-\iffalse{} {Solution (Ex 34 ii)). } \fi{}Assume \(\lambda_1 << \nu\) and
-\(\lambda_2 << \nu\). Then
+\BeginKnitrBlock{exercise}[Ex 73]
+\protect\hypertarget{exr:unnamed-chunk-89}{}{\label{exr:unnamed-chunk-89}
+\iffalse (Ex 73) \fi{} }
+\EndKnitrBlock{exercise}
 
-\begin{align*}
-  (\lambda_1 + \lambda_2)(A) &= \lambda_1(A) + \lambda_2(A) \\
-                             &= \int_A g_1 d\nu + \int_A g_2 d\nu \\
-                             &= \int_A (g_1 + g_2)d\nu,
-\end{align*}
+\BeginKnitrBlock{exercise}[Ex 78]
+\protect\hypertarget{exr:unnamed-chunk-90}{}{\label{exr:unnamed-chunk-90}
+\iffalse (Ex 78) \fi{} }
+\EndKnitrBlock{exercise}
 
-so \(\lambda_1 + \lambda_2 << \nu\), and
+\BeginKnitrBlock{exercise}[Ex 79]
+\protect\hypertarget{exr:unnamed-chunk-91}{}{\label{exr:unnamed-chunk-91}
+\iffalse (Ex 79) \fi{} }
+\EndKnitrBlock{exercise}
 
-\[\frac{d(\lambda_1 + \lambda_2)}{d\nu} = g_1 + g_2 = \frac{d\lambda_1}{d\nu} + \frac{d\lambda_2}{d\nu}.\]
-\EndKnitrBlock{solution}
+\BeginKnitrBlock{exercise}[Ex 81]
+\protect\hypertarget{exr:unnamed-chunk-92}{}{\label{exr:unnamed-chunk-92}
+\iffalse (Ex 81) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 82]
+\protect\hypertarget{exr:unnamed-chunk-93}{}{\label{exr:unnamed-chunk-93}
+\iffalse (Ex 82) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 86]
+\protect\hypertarget{exr:unnamed-chunk-94}{}{\label{exr:unnamed-chunk-94}
+\iffalse (Ex 86) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 88]
+\protect\hypertarget{exr:unnamed-chunk-95}{}{\label{exr:unnamed-chunk-95}
+\iffalse (Ex 88) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 91]
+\protect\hypertarget{exr:unnamed-chunk-96}{}{\label{exr:unnamed-chunk-96}
+\iffalse (Ex 91) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 97]
+\protect\hypertarget{exr:unnamed-chunk-97}{}{\label{exr:unnamed-chunk-97}
+\iffalse (Ex 97) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 98]
+\protect\hypertarget{exr:unnamed-chunk-98}{}{\label{exr:unnamed-chunk-98}
+\iffalse (Ex 98) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 102]
+\protect\hypertarget{exr:unnamed-chunk-99}{}{\label{exr:unnamed-chunk-99}
+\iffalse (Ex 102) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 104]
+\protect\hypertarget{exr:unnamed-chunk-100}{}{\label{exr:unnamed-chunk-100}
+\iffalse (Ex 104) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 114]
+\protect\hypertarget{exr:unnamed-chunk-101}{}{\label{exr:unnamed-chunk-101}
+\iffalse (Ex 114) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 116]
+\protect\hypertarget{exr:unnamed-chunk-102}{}{\label{exr:unnamed-chunk-102}
+\iffalse (Ex 116) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 116]
+\protect\hypertarget{exr:unnamed-chunk-103}{}{\label{exr:unnamed-chunk-103}
+\iffalse (Ex 116) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 118]
+\protect\hypertarget{exr:unnamed-chunk-104}{}{\label{exr:unnamed-chunk-104}
+\iffalse (Ex 118) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 119]
+\protect\hypertarget{exr:unnamed-chunk-105}{}{\label{exr:unnamed-chunk-105}
+\iffalse (Ex 119) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 121]
+\protect\hypertarget{exr:unnamed-chunk-106}{}{\label{exr:unnamed-chunk-106}
+\iffalse (Ex 121) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 122]
+\protect\hypertarget{exr:unnamed-chunk-107}{}{\label{exr:unnamed-chunk-107}
+\iffalse (Ex 122) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 125]
+\protect\hypertarget{exr:unnamed-chunk-108}{}{\label{exr:unnamed-chunk-108}
+\iffalse (Ex 125) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 136]
+\protect\hypertarget{exr:unnamed-chunk-109}{}{\label{exr:unnamed-chunk-109}
+\iffalse (Ex 136) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 141]
+\protect\hypertarget{exr:unnamed-chunk-110}{}{\label{exr:unnamed-chunk-110}
+\iffalse (Ex 141) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 144]
+\protect\hypertarget{exr:unnamed-chunk-111}{}{\label{exr:unnamed-chunk-111}
+\iffalse (Ex 144) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 145]
+\protect\hypertarget{exr:unnamed-chunk-112}{}{\label{exr:unnamed-chunk-112}
+\iffalse (Ex 145) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 150]
+\protect\hypertarget{exr:unnamed-chunk-113}{}{\label{exr:unnamed-chunk-113}
+\iffalse (Ex 150) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 154]
+\protect\hypertarget{exr:unnamed-chunk-114}{}{\label{exr:unnamed-chunk-114}
+\iffalse (Ex 154) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 156]
+\protect\hypertarget{exr:unnamed-chunk-115}{}{\label{exr:unnamed-chunk-115}
+\iffalse (Ex 156) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 161]
+\protect\hypertarget{exr:unnamed-chunk-116}{}{\label{exr:unnamed-chunk-116}
+\iffalse (Ex 161) \fi{} }
+\EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{exercise}[Ex 166]
+\protect\hypertarget{exr:unnamed-chunk-117}{}{\label{exr:unnamed-chunk-117}
+\iffalse (Ex 166) \fi{} }
+\EndKnitrBlock{exercise}
 
 
 \end{document}

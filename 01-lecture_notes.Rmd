@@ -374,7 +374,7 @@ Let $\nu$ be a $\sigma$-finite measure on a measure space $(\Omega, \F)$. All ot
 i) If $\lambda$ is a meaure, $\lambda << \nu$, and $f\ge 0$, then $$\int f d\lambda = \int f \frac{d\lambda}{d\nu}d\nu.$$
 ii) If $\lambda_i$, $i=1,2$, are measures and $\lambda_i << \nu$, then $\lambda_1 + \lambda_2 << \nu$ and $$\frac{d(\lambda_1 + \lambda_2)}{d\nu} = \frac{d\lambda_1}{d\nu} + \frac{d\lambda_2}{d\nu}\quad \nu\text{-a.e.}$$
 iii) If $\tau$ is a measure, $\lambda$ a $\sigma$-finite measure, and $\tau << \lambda << \nu$, then $$\frac{d\tau}{d\nu} = \frac{d\tau}{d\lambda}\frac{d\lambda}{d\nu}\quad \nu\text{-a.e.}.$$
-iv) Let $(\Omega_i, \F_i, \nu_i)$ be a measure space and $\nu_i$ be $\sigma$-finite, $i=1,2$. Let $\lambda_i$ be a $\sigma$-finite measure on $(\Omega_i, \F_i)$ and $\lambda << \nu_i$, $i=1,2$. Then $\lambda_1 \times \lambda_2 << \nu_1 \times \nu_2$ and $$\frac{d(\lambda_1 \times \lambda_2)}{d(\nu_1 \times \nu_2)}(\omega_1,\omega_2) = \frac{d\lambda_1}{d\nu_1}(\omega_1)\frac{d\lambda_2}{d\nu_2}(\omega_2)\quad \nu_1\times \nu_2\text{-a.e.}$$. 
+iv) Let $(\Omega_i, \F_i, \nu_i)$ be a measure space and $\nu_i$ be $\sigma$-finite, $i=1,2$. Let $\lambda_i$ be a $\sigma$-finite measure on $(\Omega_i, \F_i)$ and $\lambda_1 << \nu_i$, $i=1,2$. Then $\lambda_1 \times \lambda_2 << \nu_1 \times \nu_2$ and $$\frac{d(\lambda_1 \times \lambda_2)}{d(\nu_1 \times \nu_2)}(\omega_1,\omega_2) = \frac{d\lambda_1}{d\nu_1}(\omega_1)\frac{d\lambda_2}{d\nu_2}(\omega_2)\quad \nu_1\times \nu_2\text{-a.e.}$$. 
 
 ```
 

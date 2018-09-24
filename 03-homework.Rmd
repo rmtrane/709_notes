@@ -1,8 +1,8 @@
 # Homework
 
-## Chapter 1
+## First Exam Period
 
-### First Exam Period
+### Assigned Problems
 
 ```{exercise, name = "Ex 2"}
 Let $\C$ be a collection of subsets of $\Omega$ and let $\Gamma = \{ \F | \F \text{ is a } \sigma \text{-field on } \Omega \text{ and } \C \subset \F \}$. Show that $\Gamma \neq \emptyset$ and $\sigma(\C) = \cap_{\F \in \Gamma} \F$. 
@@ -18,67 +18,11 @@ Hence $\sigma(\C) = \cap_{\F \in \Gamma} \F$.
 ```
 
 
-```{exercise, name = "Ex 3"}
-Let $\Omega, \F_j)$, $j=1,2,\ldots$, be measurable spaces such that $\F_j \subset \F_{j+1}$. Is $\cup_j \F_j$ a $\sigma$-field?
-```
-
-```{solution, name = "Ex 3"}
-No.
-
-Let $\Omega = [0,1]$, and $\F_n = \sigma \left\{[0,\tfrac{1}{2^n}),[\tfrac{1}{2^n},\tfrac{2}{2^n}), \ldots, [\tfrac{2^{n-1}}{2^n}, 1)\right\}$. 
-
-Now, consider the set $B_n = [0, \tfrac{1}{2^n})$. Clearly $B_n \in \F_n$ for all $n$, hence $B_n \in \cup_{i=1}^\infty \F_i$. Hower, $\cap_{i = 1}^{\infty} B_i = \{0\} \notin \cup_{i=1}^\infty \F_i$. So $\cup_{i=1}^\infty \F_i$ is not closed under countable intersection, i.e. it is not a $\sigma$-algebra. 
-
-```
-
-
 ```{exercise, name = "Ex 5"}
 a) Let $\C$ be a $\pi$-system and $\mathcal{D}$ be a $\lambda$-system such that $\C \subset \mathcal{D}$. Show that $\sigma(\C) \subset \mathcal{D}$. 
 ```
 
-```{solution, name = "Ex 6"}
-
-```
-
-
-```{exercise, name = "Ex 6"}
-Prove part (ii) and (iii) of proposition \@ref(prp:properties-of-measures). 
-```
-
-```{solution, name = "Ex 6"}
-
-i) Let $A \subset B$. Then $B \setminus A \cap A = \emptyset$, hence $\nu(B) = \nu((B\setminus A) \cup A) = \nu(B\setminus A) + \nu(A) \geq \nu(A)$. 
-
-ii) Let $A_1, A_2, \ldots$ be a sequence of sets. Define $B_i = A_i \setminus \left(\cup_{k = 1}^{i-1} A_k \right)$. Then the $B_i$s are pairwise disjoint. Hence, 
-
-\begin{align*}
-  \nu\left(\cup_{i = 1}^\infty A_i\right) &= \nu\left(\cup_{i=1}^\infty B_i\right) \\
-                                          &= \sum_{i=1}^\infty \nu(B_i) \\
-                                          &= \sum_{i=1}^\infty \nu\left(A_i \setminus \left(\cup_{k=1}^{i-1} A_k \right ) \right ).
-\end{align*}
-
-Since $A_i \setminus \left(\cup_{k=1}^{i-1} A_k \right) \subset A_i$, we use (i) to get the result:
-  
-\begin{align*}
-  \sum_{i=1}^\infty \nu\left(A_i \setminus \left(\cup_{k=1}^{i-1} A_k \right ) \right ) \leq \sum_{i=1}^\infty \nu\left(A_i \right )
-\end{align*}
-
-
-iii) Let $A_1 \subset A_2 \subset A_3 \subset \dots$. Define $B_i = A_i \setminus A_{i-1}$. Then $B_1, B_2, \ldots$ is a sequence of pairwise disjoint sets, and $\cup_{i = 1}^\infty B_i = \cup_{i=1}^\infty A_i$. Hence,
-
-\begin{align*}
-  \nu\left(\cup_{i=1}^k A_i\right) &= \nu\left(\cup_{i=1}^k B_i\right) \\
-                                   &= \sum_{i=1}^k \nu(B_i) \\
-                                   &= \sum_{i=1}^k \nu(A_i\setminus A_{i-1}) \\
-                                   &= \sum_{i=1}^k \nu(A_i) - \nu(A_{i-1}) \\
-                                   &= \nu(A_k). 
-\end{align*}
-                                   
-Taking the limit on both sides gives us 
-
-$$
-  \nu\left(\cup_{i=1}^k A_i \right) = \lim_{n \rightarrow \infty} \nu(A_n).
-$$
+```{solution, name = "Ex 5"}
 
 ```
 
@@ -99,9 +43,9 @@ Let $\F = \{A \in \sigma(\C) | \nu(A) = \lambda(A)\}$. Then $\C \subset \F$. If 
 Prove proposition 1.4 (proposition \@ref(prp:borel-function-properties))
 ```
 
-```{solution}
+```{solution, name = "Ex 14 (i)"}
 
-i) Assume $f$ is Borel. Then $f^{-1}(A) \in \F$ for all open sets $A \in \B$, hence $f^{-1}(a, \infty) \in \F$. 
+Assume $f$ is Borel. Then $f^{-1}(A) \in \F$ for all open sets $A \in \B$, hence $f^{-1}(a, \infty) \in \F$. 
 
 Now assume $f^{-1}(a, \infty) \in \F$ for all $a \in \R$, and let $\mathcal{G} = \{ A \in \B | f^{-1}(A) \in \F \}$. So, $(a, \infty) \in \mathcal{G}$ for all $a \in \R$. If we can show that $\mathcal{G}$ is a $\sigma$-field, then we will have that $\sigma((a, \infty)) = \B \subset \mathcal{G}$, hence $f^{-1}(B) \in \F$ for all $B \in \B$, meaning that $f$ is measurable. 
 
@@ -113,7 +57,10 @@ c) Finally, let $A_1, A_2, \ldots$ be a sequence of sets such that $A_i \in \mat
 
 So $\mathcal{G}$ is a $\sigma$-field, which concludes the proof.
 
-ii) Assume $f$ and $g$ are Borel functions. Let $a,b \in \R$. $af$ is Borel, since 
+```
+
+```{solution, name = "Ex 14 (ii)"}
+Assume $f$ and $g$ are Borel functions. Let $a,b \in \R$. $af$ is Borel, since 
 
 $$
   (af)^{-1}((c,\infty)) = \left\{ \omega \in \Omega : a\cdot f(\omega) \in (c, \infty) \right\}.
@@ -150,11 +97,14 @@ $$\begin{aligned}
 Since $f$ and $g$ are both measurable, $f^{-1}((c-t, \infty)) \in \F$ and $g^{-1}((t, \infty))\in \F$ for all $t \in \R$. Hence, the intersection of the two is measurable for any $t \in \R$, which in turn implies that the union over all rational numbers is measurable (countable union of measurable sets). Hence, $f+g$ is measurable. 
 
 Combine the two results to get the final result.^[Note: This could be done in one step, but I found it easier to split up into two.]
+```
 
+```{solution, name = "Ex 14 (iii)"}
 
-iii)
+```
 
-iv) Assume $f$ is measurable from $(\Omega, \F)$ to $(\Lambda, \mathcal{G})$, and $g$ measureable from $(\Lambda, \mathcal{G})$ to $(\Delta, \mathcal{H})$. Let $H \in \mathcal{H}$. We want to show that $(g \circ f)^{-1}(H) \in \F$, since this would mean $g \circ f$ is measurable. So,
+```{solution, name = "Ex 14 (iv)"}
+Assume $f$ is measurable from $(\Omega, \F)$ to $(\Lambda, \mathcal{G})$, and $g$ measureable from $(\Lambda, \mathcal{G})$ to $(\Delta, \mathcal{H})$. Let $H \in \mathcal{H}$. We want to show that $(g \circ f)^{-1}(H) \in \F$, since this would mean $g \circ f$ is measurable. So,
 
 $$\begin{aligned}
   (g \circ f)^{-1}(H) &= \left\{ \omega \in \Omega | g(f(\omega)) \in H \right\} \\ 
@@ -164,16 +114,10 @@ $$\begin{aligned}
                         
 Since $g$ is measurable, $g^{-1}(H) \in \mathcal{G}$, and since $f$ is measurable, $f^{-1}(g^{-1}(H)) \in \F$. So, $g \circ f$ is measurable. 
 
-v) Let $f: \Omega \rightarrow \R^p$, where $\Omega$ is a borel set. Assume $f$ is continuous. Then, if $A$ is an open set, $f^{-1}(A)$ is an open set, and therefore borel. Hence, $f^{-1}((a,\infty))$ is a borel set for all $a$, and by $(i)$ we have that $f$ is a borel function. 
-
 ```
 
-```{exercise, name = "Ex 15"}
-Show that a monotone function from $\R$ to $\R$ is Borel, and a c.d.f. on $\R^k$ is Borel.
-```
-
-```{exercise, name = "Ex 17"}
-Let $f$ be a non-negative Borel function on $(\Omega, \F)$. Show that $f$ is the limit of a sequence of simple functions $\{\phi_n \}$ on $(\Omega, \F)$ with $0 \le \phi_1 \le \phi_2 \le \dots \le f$. 
+```{solution, name = "Ex 14 (v)"}
+Let $f: \Omega \rightarrow \R^p$, where $\Omega$ is a borel set. Assume $f$ is continuous. Then, if $A$ is an open set, $f^{-1}(A)$ is an open set, and therefore borel. Hence, $f^{-1}((a,\infty))$ is a borel set for all $a$, and by $(i)$ we have that $f$ is a borel function. 
 ```
 
 
@@ -184,6 +128,10 @@ Let $\{f_n\}$ be a sequence of Borel functions on a measurable space. Show that
 a) $\sigma(f_1, f_2, \ldots) = \sigma(\cup_{j=1}^{\infty} \sigma(f_j)) = \sigma(\cup_{j=1}^\infty \sigma(f_1,\ldots, f_j)).$
 b) $\sigma(\lim \sup_n f_n) \subset \cap_{n=1}^\infty \sigma(f_n, f_{n+1},\ldots).$
   
+
+```
+
+```{solution, name = "Ex 19"}
 
 ```
 
@@ -200,11 +148,11 @@ $$
 
 
 ```{solution}
-Let $\epsilon > 0$, $A \in \F$ with $\nu(A) < \delta_\epsilon = \frac{\epsilon}{\max_{\omega \in A} |f(\omega)|}$. Then
+Let $\epsilon > 0$, $A \in \F$ with $\nu(A) < \delta_\epsilon = \frac{\epsilon}{\sup_{\omega \in A} |f(\omega)|}$. Then
 
 \begin{align*}
-  \int_A |f| d\nu &\leq \int_A \max_{\omega \in A} |f(\omega)| d\nu \\
-                  &= \max_{\omega \in A} |f(\omega)| \nu(A) \\
+  \int_A |f| d\nu &\leq \int_A \sup_{\omega \in A} |f(\omega)| d\nu \\
+                  &= \sup_{\omega \in A} |f(\omega)| \nu(A) \\
                   &< \epsilon.
 \end{align*}
 
@@ -264,4 +212,339 @@ $$\frac{d(\lambda_1 + \lambda_2)}{d\nu} = g_1 + g_2 = \frac{d\lambda_1}{d\nu} + 
   
 ```
 
+```{solution, name = "Ex 34 iii)"}
+Since $\tau << \lambda$, 
+
+$$\tau(A) = \int_A \frac{d\tau}{d\lambda}d\lambda.$$ 
+  
+Since $\lambda << \nu$, we can use (i) with $f = \frac{d\tau}{d\lambda}$, to get 
+
+$$\tau(A) = \int_A \frac{d\tau}{d\lambda}\frac{d\lambda}{d\tau} d\tau,$$
+
+which tells us that $\tau << \nu$ and 
+
+$$\frac{d\tau}{d\nu} = \frac{d\tau}{d\lambda}\frac{d\lambda}{d\tau}.$$
+
+```
+
+```{solution, name = "Ex 34 iv)"}
+
+By definition, $(\lambda_1 \times \lambda_2)(A) = \int_A d(\lambda_1 \times \lambda_2) = \int 1_A d(\lambda_1 \times \lambda_2)$. Since $1_A \ge 0$, we can use Fubini to get
+
+$$ (\lambda_1 \times \lambda_2)(A) = \int \int 1_A d\lambda_1 d\lambda_2. $$
+
+Since $\lambda_1 << \nu_1$, we can use (i) with $f = 1_A$ ($1_A$ is non-negative) to obtain that 
+
+$$(\lambda_1 \times \lambda_2)(A) = \int \int 1_A \frac{d\lambda_1}{d\nu_1}d\nu_1 d\lambda_2,$$ 
+
+and then, since $\lambda_2 << \nu_2$, using (i) again with $f = \int 1_A \frac{d\lambda_1}{d\nu_1}d\nu_1$ (which is non-negative) to get 
+
+$$(\lambda_1 \times \lambda_2)(A) = \int \int 1_A \frac{d\lambda_1}{d\nu_1}d\nu_1 \frac{d\lambda_2}{d\nu_2}d\nu_2.$$ 
+  
+Finally, using Fubini again we get
+
+$$\begin{aligned}
+  (\lambda_1 \times \lambda_2)(A) &= \int \int 1_A \frac{d\lambda_1}{d\nu_1}\frac{d\lambda_2}{d\nu_2} d\nu_1 d\nu_2 \\
+                                  &= \int_A \frac{d\lambda_1}{d\nu_1}\frac{d\lambda_2}{d\nu_2} d(\nu_1\times\nu_2).
+\end{aligned}$$
+  
+I.e. $\lambda_1 \times \lambda_2 << \nu_1 \times \nu_2$ and $\frac{d(\lambda_1 \times \lambda_2)}{d(\nu_1 \times \nu_2)} = \frac{d\lambda_1}{d\nu_1}\frac{d\lambda_2}{d\nu_2}$. 
+          
+
+```
+
 ```{exercise, name = "Ex 35"}
+Let $\{a_n\}$ be a sequence of positive numbser with $\sum_{i=1}^\infty a_n = 1$, and $\{P_n\}$ a sequence of probability measure on a common measurable space, $(\Omega, \F)$. Define $P = \sum_{n=1}^\infty P_n$.
+
+a) Show that $P$ is a probability measure.
+b) Let $\nu$ be a $\sigma$-finite measure. Show that 
+
+$$P_n << \nu \text{ for all } n \in \mb{N}\quad \iff \quad P << \nu.$$
+
+c) Derive the Lebesgue p.d.f. of $P$ when $P_n$ is the gamma distribution $\Gamma(\alpha, n^{-1})$ with $\alpha > 1$ and $a_n \propto n^{-\alpha}$.
+
+```
+
+```{solution, name = "Ex 35 a)"}
+Need to show that $P = \sum_{n=1}^{\infty} a_n P_n$ is a probability measure. So we check the three properties for a probability measure (\@ref(def:measure)), with the extra property that $P(\Omega) = 1$:
+
+i) $P(A) = \sum_{n=1}^\infty a_n P_n(A) \geq 0$ for all $A$ since $a_n > 0$ for all $n$ by assumption, and $P_n(A) \ge 0$ for all $n$, since $P_n$ is a probability measure. Furthermore, $P(\Omega) = \sum_{n=1}^\infty a_n P_n(\Omega) = \sum_{n=1}^\infty a_n = 1$, where the second equality holds since $P_n$ is a probability measure (by assumption), and the last equality is exactly the assumption we made about the $a_n$s. I.e. $0 \le P(A) \le 1$. 
+ii) Since $P_n(\emptyset) = 0$, $P(\emptyset) = \sum_{n=1}^\infty a_n P_n(\emptyset) = 0$.
+iii) Let $A_1, A_2,\ldots$ be a countable sequence of pairwise disjoint sets. Then using that $P_n$ is a measure for all $n$,
+
+$$\begin{aligned}
+  P(\cup_{i=1}^\infty A_i) &= \sum_{n=1}^\infty a_nP_n\left(\cup_{i=1}^\infty A_i\right) \\
+                           &= \sum_{n=1}^\infty a_n\sum_{i=1}^\infty P_n(A_i) \\
+                           &= \sum_{i=1}^\infty \sum_{n=1}^\infty a_n P_n(A_i) \\
+                           &= \sum_{i=1}^\infty P(A_i).
+\end{aligned}$$
+
+```
+
+```{solution, name = "Ex 35 b)"}
+Assume $P << \nu$. Let $A \in \F$ with $\nu(A) = 0$. Assume there exists $n \in \mb{N}$ such that $P_n(A) > 0$. Then $P(A) > a_n P_n(A) > 0$. But $P << \nu$ implies that $P(A) = 0$, so by contradiction, $P_n(A) = 0$ for all $n \in \mb{N}$. 
+
+Now assume $P_n << \nu$. Let $A \in \F$ with $\nu(A) = 0$. Then $P_n(A) = 0$ for all $n \in \mb{N}$. Hence, $P(A) = \sum_{n=1}^\infty a_n P_n(A) = 0$, which means that $P << \nu$. 
+
+```
+
+```{exercise, name = "Ex 50"}
+```
+
+```{exercise, name = "Ex 55"}
+```
+
+```{exercise, name = "Ex 56"}
+```
+
+```{exercise, name = "Ex 65"}
+```
+
+```{exercise, name = "Ex 74"}
+```
+
+```{exercise, name = "Ex 83"}
+```
+
+```{exercise, name = "Ex 85"}
+```
+
+```{exercise, name = "Ex 93"}
+```
+
+```{exercise, name = "Ex 99"}
+```
+
+```{exercise, name = "Ex 101"}
+```
+
+```{exercise, name = "Ex 106"}
+```
+
+```{exercise, name = "Ex 115"}
+```
+
+```{exercise, name = "Ex 117"}
+```
+
+```{exercise, name = "Ex 126"}
+```
+
+```{exercise, name = "Ex 127"}
+```
+
+```{exercise, name = "Ex 128"}
+```
+
+```{exercise, name = "Ex 137"}
+```
+
+```{exercise, name = "Ex 138"}
+```
+
+```{exercise, name = "Ex 140"}
+```
+
+```{exercise, name = "Ex 142"}
+```
+
+```{exercise, name = "Ex 146"}
+```
+
+```{exercise, name = "Ex 149"}
+```
+
+```{exercise, name = "Ex 152"}
+```
+
+```{exercise, name = "Ex 153"}
+```
+
+```{exercise, name = "Ex 163"}
+```
+
+```{exercise, name = "Ex 164"}
+```
+
+
+### Suggested Problems
+
+```{exercise, name = "Ex 3"}
+Let $\Omega, \F_j)$, $j=1,2,\ldots$, be measurable spaces such that $\F_j \subset \F_{j+1}$. Is $\cup_j \F_j$ a $\sigma$-field?
+```
+
+```{solution, name = "Ex 3"}
+No.
+
+Let $\Omega = [0,1]$, and $\F_n = \sigma \left\{[0,\tfrac{1}{2^n}),[\tfrac{1}{2^n},\tfrac{2}{2^n}), \ldots, [\tfrac{2^{n-1}}{2^n}, 1)\right\}$. 
+
+Now, consider the set $B_n = [0, \tfrac{1}{2^n})$. Clearly $B_n \in \F_n$ for all $n$, hence $B_n \in \cup_{i=1}^\infty \F_i$. Hower, $\cap_{i = 1}^{\infty} B_i = \{0\} \notin \cup_{i=1}^\infty \F_i$. So $\cup_{i=1}^\infty \F_i$ is not closed under countable intersection, i.e. it is not a $\sigma$-algebra. 
+
+```
+
+```{exercise, name = "Ex 6"}
+Prove part (ii) and (iii) of proposition \@ref(prp:properties-of-measures). 
+```
+
+```{solution, name = "Ex 6"}
+
+i) Let $A \subset B$. Then $B \setminus A \cap A = \emptyset$, hence $\nu(B) = \nu((B\setminus A) \cup A) = \nu(B\setminus A) + \nu(A) \geq \nu(A)$. 
+
+ii) Let $A_1, A_2, \ldots$ be a sequence of sets. Define $B_i = A_i \setminus \left(\cup_{k = 1}^{i-1} A_k \right)$. Then the $B_i$s are pairwise disjoint. Hence, 
+
+\begin{align*}
+  \nu\left(\cup_{i = 1}^\infty A_i\right) &= \nu\left(\cup_{i=1}^\infty B_i\right) \\
+                                          &= \sum_{i=1}^\infty \nu(B_i) \\
+                                          &= \sum_{i=1}^\infty \nu\left(A_i \setminus \left(\cup_{k=1}^{i-1} A_k \right ) \right ).
+\end{align*}
+
+Since $A_i \setminus \left(\cup_{k=1}^{i-1} A_k \right) \subset A_i$, we use (i) to get the result:
+  
+\begin{align*}
+  \sum_{i=1}^\infty \nu\left(A_i \setminus \left(\cup_{k=1}^{i-1} A_k \right ) \right ) \leq \sum_{i=1}^\infty \nu\left(A_i \right )
+\end{align*}
+
+
+iii) Let $A_1 \subset A_2 \subset A_3 \subset \dots$. Define $B_i = A_i \setminus A_{i-1}$. Then $B_1, B_2, \ldots$ is a sequence of pairwise disjoint sets, and $\cup_{i = 1}^\infty B_i = \cup_{i=1}^\infty A_i$. Hence,
+
+\begin{align*}
+  \nu\left(\cup_{i=1}^k A_i\right) &= \nu\left(\cup_{i=1}^k B_i\right) \\
+                                   &= \sum_{i=1}^k \nu(B_i) \\
+                                   &= \sum_{i=1}^k \nu(A_i\setminus A_{i-1}) \\
+                                   &= \sum_{i=1}^k \nu(A_i) - \nu(A_{i-1}) \\
+                                   &= \nu(A_k). 
+\end{align*}
+                                   
+Taking the limit on both sides gives us 
+
+$$
+  \nu\left(\cup_{i=1}^k A_i \right) = \lim_{n \rightarrow \infty} \nu(A_n).
+$$
+
+```
+
+```{exercise, name = "Ex 15"}
+Show that a monotone function from $\R$ to $\R$ is Borel, and a c.d.f. on $\R^k$ is Borel.
+```
+
+```{exercise, name = "Ex 17"}
+Let $f$ be a non-negative Borel function on $(\Omega, \F)$. Show that $f$ is the limit of a sequence of simple functions $\{\phi_n \}$ on $(\Omega, \F)$ with $0 \le \phi_1 \le \phi_2 \le \dots \le f$. 
+```
+
+
+```{exercise, name = "Ex 23"}
+```
+
+```{exercise, name = "Ex 25"}
+```
+
+```{exercise, name = "Ex 31"}
+```
+
+```{exercise, name = "Ex 36"}
+```
+
+```{exercise, name = "Ex 46"}
+```
+
+```{exercise, name = "Ex 53"}
+```
+
+```{exercise, name = "Ex 57"}
+```
+
+```{exercise, name = "Ex 61"}
+```
+
+```{exercise, name = "Ex 66"}
+```
+
+```{exercise, name = "Ex 70"}
+```
+
+```{exercise, name = "Ex 73"}
+```
+
+```{exercise, name = "Ex 78"}
+```
+
+```{exercise, name = "Ex 79"}
+```
+
+```{exercise, name = "Ex 81"}
+```
+
+```{exercise, name = "Ex 82"}
+```
+
+```{exercise, name = "Ex 86"}
+```
+
+```{exercise, name = "Ex 88"}
+```
+
+```{exercise, name = "Ex 91"}
+```
+
+```{exercise, name = "Ex 97"}
+```
+
+```{exercise, name = "Ex 98"}
+```
+
+```{exercise, name = "Ex 102"}
+```
+
+```{exercise, name = "Ex 104"}
+```
+
+```{exercise, name = "Ex 114"}
+```
+
+```{exercise, name = "Ex 116"}
+```
+
+```{exercise, name = "Ex 116"}
+```
+
+```{exercise, name = "Ex 118"}
+```
+
+```{exercise, name = "Ex 119"}
+```
+
+```{exercise, name = "Ex 121"}
+```
+
+```{exercise, name = "Ex 122"}
+```
+
+```{exercise, name = "Ex 125"}
+```
+
+```{exercise, name = "Ex 136"}
+```
+
+```{exercise, name = "Ex 141"}
+```
+
+```{exercise, name = "Ex 144"}
+```
+
+```{exercise, name = "Ex 145"}
+```
+
+```{exercise, name = "Ex 150"}
+```
+
+```{exercise, name = "Ex 154"}
+```
+
+```{exercise, name = "Ex 156"}
+```
+
+```{exercise, name = "Ex 161"}
+```
+
+```{exercise, name = "Ex 166"}
+```
