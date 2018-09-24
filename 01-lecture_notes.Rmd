@@ -176,13 +176,15 @@ Let $f$ be as in \@ref{measurable-function}. Then $f^{-1}(\mathcal{G})$ is a sub
 
 ```
 
-```{definition, name = "Borel Functions", label = 'borelfunctions'}
+```{definition, name = "Borel Functions", label = 'borel-functions'}
 
 A function from $(\Omega, \F)$ to $(\R, \B)$ is called a *Borel function$ if it is measurable.
 
 ```
 
-```{proposition, name = "Properties of Borel Functions"}
+```{proposition, name = "Properties of Borel Functions", label = "borel-function-properties"}
+
+Let $(\Omega, \F)$ be a measurable space. 
 
 i) A function is Borel if and only if $f^{-1}(a,\infty) \in \F$ for all $a \in \R$.
 

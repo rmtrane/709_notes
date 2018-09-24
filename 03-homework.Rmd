@@ -96,9 +96,77 @@ Let $\F = \{A \in \sigma(\C) | \nu(A) = \lambda(A)\}$. Then $\C \subset \F$. If 
 
 
 ```{exercise, name = "Ex 14"}
-Prove proposition 1.4
+Prove proposition 1.4 (proposition \@ref(prp:borel-function-properties))
 ```
 
+```{solution}
+
+i) Assume $f$ is Borel. Then $f^{-1}(A) \in \F$ for all open sets $A \in \B$, hence $f^{-1}(a, \infty) \in \F$. 
+
+Now assume $f^{-1}(a, \infty) \in \F$ for all $a \in \R$, and let $\mathcal{G} = \{ A \in \B | f^{-1}(A) \in \F \}$. So, $(a, \infty) \in \mathcal{G}$ for all $a \in \R$. If we can show that $\mathcal{G}$ is a $\sigma$-field, then we will have that $\sigma((a, \infty)) = \B \subset \mathcal{G}$, hence $f^{-1}(B) \in \F$ for all $B \in \B$, meaning that $f$ is measurable. 
+
+So let us prove that $\mathcal{G}$ is a $\sigma$-field. 
+
+a) First of all, $f^{-1}(\emptyset) = \emptyset \in \F$. 
+b) Second, let $A \in \mathcal{G}$. Since $f^{-1}(A^C) = (f^{-1}(A))^C \in \F$ ($\F$ is a $\sigma$-field and $f^{-1}(A) \in \F$, so $(f^{-1}(A))(^C) \in \F$). 
+c) Finally, let $A_1, A_2, \ldots$ be a sequence of sets such that $A_i \in \mathcal{G}$ for all $i$. Then $f^{-1}\left(\cup_{i=1}^\infty A_i \right) = \cup_{i=1}^\infty f^{-1}(A_i)$. Since $f^{-1}(A_i) \in \F$ for all $i$ and $\F$ is a $\sigma$-field, $\cup_{i=1}^\infty f^{-1}(A_i) \in \F$, so $\cup_{i=1}^\infty A_i \in \mathcal{G}$. 
+
+So $\mathcal{G}$ is a $\sigma$-field, which concludes the proof.
+
+ii) Assume $f$ and $g$ are Borel functions. Let $a,b \in \R$. $af$ is Borel, since 
+
+$$
+  (af)^{-1}((c,\infty)) = \left\{ \omega \in \Omega : a\cdot f(\omega) \in (c, \infty) \right\}.
+$$
+    
+If $a \neq 0$,
+
+$$\begin{aligned}
+ (af)^{-1}((c,\infty)) &= \left\{ \omega \in \Omega : f(\omega) \in (\tfrac{c}{a}, \infty) \right\} \\
+                       &= f^{-1}(\tfrac{c}{a}, \infty).
+\end{aligned}$$
+
+Since $f$ is Borel, this is a measurable set (by (i)). If $a = 0$, then 
+
+$$(af)^{-1}((c,\infty)) = 
+  \left\{ 
+    \begin{matrix} 
+      \Omega & \text{ if } c \le 0 \\ 
+      \emptyset & \text{ if } c < 0 
+    \end{matrix}
+  \right .
+$$
+
+In either case, $(af)^{-1}((c, \infty)) \in \F$. Since it holds that for all $a,c \in \R$ that $(af)^{-1}((c,\infty)) \in \F$, $af$ is measurable by (i). 
+
+Let $c \in \R$. Now consider the sum of $f$ and $g$:
+  
+$$\begin{aligned}
+  (f + g)^{-1}((c, \infty)) &= \left\{ \omega \in \Omega : f(\omega) + g(\omega) > c \right\} \\.
+                            &= \cup_{t \in \mb{Q}} \{\omega \in \Omega : f(\omega) > c - t \} \cap \{\omega \in \Omega : g(\omega) > t \} \\
+                            &= \cup_{t \in \mb{Q}} f^{-1}((c-t, \infty)) \cap g^{-1}((t, \infty)).
+\end{aligned}$$
+  
+Since $f$ and $g$ are both measurable, $f^{-1}((c-t, \infty)) \in \F$ and $g^{-1}((t, \infty))\in \F$ for all $t \in \R$. Hence, the intersection of the two is measurable for any $t \in \R$, which in turn implies that the union over all rational numbers is measurable (countable union of measurable sets). Hence, $f+g$ is measurable. 
+
+Combine the two results to get the final result.^[Note: This could be done in one step, but I found it easier to split up into two.]
+
+
+iii)
+
+iv) Assume $f$ is measurable from $(\Omega, \F)$ to $(\Lambda, \mathcal{G})$, and $g$ measureable from $(\Lambda, \mathcal{G})$ to $(\Delta, \mathcal{H})$. Let $H \in \mathcal{H}$. We want to show that $(g \circ f)^{-1}(H) \in \F$, since this would mean $g \circ f$ is measurable. So,
+
+$$\begin{aligned}
+  (g \circ f)^{-1}(H) &= \left\{ \omega \in \Omega | g(f(\omega)) \in H \right\} \\ 
+                      &= \left\{ \omega \in \Omega | f(\omega) \in g^{-1}(H) \right\} \\ 
+                      &= f^{-1}(g^{-1}(H)).
+\end{aligned}$$
+                        
+Since $g$ is measurable, $g^{-1}(H) \in \mathcal{G}$, and since $f$ is measurable, $f^{-1}(g^{-1}(H)) \in \F$. So, $g \circ f$ is measurable. 
+
+v) Let $f: \Omega \rightarrow \R^p$, where $\Omega$ is a borel set. Assume $f$ is continuous. Then, if $A$ is an open set, $f^{-1}(A)$ is an open set, and therefore borel. Hence, $f^{-1}((a,\infty))$ is a borel set for all $a$, and by $(i)$ we have that $f$ is a borel function. 
+
+```
 
 ```{exercise, name = "Ex 15"}
 Show that a monotone function from $\R$ to $\R$ is Borel, and a c.d.f. on $\R^k$ is Borel.
@@ -152,7 +220,7 @@ For any c.d.f. $F$ and any $a \ge 0$, show that $\int [F(x+a) - F(x)] dx = a$
 
 
 ```{exercise, name = "Ex 34"}
-Prove proposition \@ref(prp:calc-radon-nikodym)}
+Prove proposition \@ref(prp:calc-radon-nikodym)
 ```
 
 ```{solution, name = "Ex 34 i)"}
@@ -195,3 +263,5 @@ so $\lambda_1 + \lambda_2 << \nu$, and
 $$\frac{d(\lambda_1 + \lambda_2)}{d\nu} = g_1 + g_2 = \frac{d\lambda_1}{d\nu} + \frac{d\lambda_2}{d\nu}.$$
   
 ```
+
+```{exercise, name = "Ex 35"}

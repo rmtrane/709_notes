@@ -270,13 +270,14 @@ F(x_1,\ldots, x_k) = P((-\infty, x_1]\times \dots \times (-\infty,x_k]), \quad x
 
 
 <div class="definition">
-<p><span id="def:borelfunctions" class="definition"><strong>Definition 2.12  (Borel Functions)  </strong></span> A function from <span class="math inline">\((\Omega, {\mathcal{F}})\)</span> to <span class="math inline">\(({\mathbb{R}}, {\mathcal{B}})\)</span> is called a *Borel function$ if it is measurable.</p>
+<p><span id="def:borel-functions" class="definition"><strong>Definition 2.12  (Borel Functions)  </strong></span> A function from <span class="math inline">\((\Omega, {\mathcal{F}})\)</span> to <span class="math inline">\(({\mathbb{R}}, {\mathcal{B}})\)</span> is called a *Borel function$ if it is measurable.</p>
 </div>
 
 
 <div class="proposition">
-<p><span id="prp:unnamed-chunk-9" class="proposition"><strong>Proposition 2.4  (Properties of Borel Functions)  </strong></span> i) A function is Borel if and only if <span class="math inline">\(f^{-1}(a,\infty) \in {\mathcal{F}}\)</span> for all <span class="math inline">\(a \in {\mathbb{R}}\)</span>.</p>
-<ol start="2" style="list-style-type: lower-roman">
+<p><span id="prp:borel-function-properties" class="proposition"><strong>Proposition 2.4  (Properties of Borel Functions)  </strong></span> Let <span class="math inline">\((\Omega, {\mathcal{F}})\)</span> be a measurable space.</p>
+<ol style="list-style-type: lower-roman">
+<li><p>A function is Borel if and only if <span class="math inline">\(f^{-1}(a,\infty) \in {\mathcal{F}}\)</span> for all <span class="math inline">\(a \in {\mathbb{R}}\)</span>.</p></li>
 <li><p>If <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are Borel, then so are <span class="math inline">\(fg\)</span> and <span class="math inline">\(af + bg\)</span>, where <span class="math inline">\(a,b \in {\mathbb{R}}\)</span>. Also, if <span class="math inline">\(g(\omega) \neq 0\)</span> for all <span class="math inline">\(\omega \in \Omega\)</span>, then <span class="math inline">\(f/g\)</span> is also Borel.</p></li>
 <li><p>If <span class="math inline">\(f_1, f_2, \ldots\)</span> are all Borel functions, then so are <span class="math inline">\(\sup_n f_n\)</span>, <span class="math inline">\(\inf_n f_n\)</span>, <span class="math inline">\(\lim \sup_n f_n\)</span>, and <span class="math inline">\(\lim \inf_n f_n\)</span>. Furthermore, the set <span class="math display">\[ 
   A = \left\{ \omega \in \Omega | \lim_{n \rightarrow \infty} f_n(\omega) \text{ exists} \right \}
@@ -295,7 +296,7 @@ F(x_1,\ldots, x_k) = P((-\infty, x_1]\times \dots \times (-\infty,x_k]), \quad x
 
 
 <div class="proposition">
-<p><span id="prp:unnamed-chunk-10" class="proposition"><strong>Proposition 2.5  </strong></span>For any non-negative Borel function <span class="math inline">\(f\)</span> there exists a sequence of non-negative simple functions <span class="math inline">\(f_1, f_2, \ldots\)</span> such that</p>
+<p><span id="prp:unnamed-chunk-9" class="proposition"><strong>Proposition 2.5  </strong></span>For any non-negative Borel function <span class="math inline">\(f\)</span> there exists a sequence of non-negative simple functions <span class="math inline">\(f_1, f_2, \ldots\)</span> such that</p>
 <span class="math display">\[f_n \rightarrow f \text{ for } n \rightarrow \infty\]</span>
 </div>
 
@@ -386,12 +387,12 @@ If <span class="math inline">\(\nu\)</span> is a probability measure and <span c
 
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-12" class="definition"><strong>Definition 2.19  (Almost Everywhere or Almost Surely)  </strong></span> A statement is said to be true <span class="math inline">\(\nu\)</span>-a.e. (or <span class="math inline">\(\nu\)</span>-a.s.) if it is true for all <span class="math inline">\(\omega \notin N\)</span> and <span class="math inline">\(\nu(N) = 0\)</span>.</p>
+<p><span id="def:unnamed-chunk-11" class="definition"><strong>Definition 2.19  (Almost Everywhere or Almost Surely)  </strong></span> A statement is said to be true <span class="math inline">\(\nu\)</span>-a.e. (or <span class="math inline">\(\nu\)</span>-a.s.) if it is true for all <span class="math inline">\(\omega \notin N\)</span> and <span class="math inline">\(\nu(N) = 0\)</span>.</p>
 </div>
 
 
 <div class="proposition">
-<p><span id="prp:unnamed-chunk-13" class="proposition"><strong>Proposition 2.7  (a.e. for integrals)  </strong></span>Let <span class="math inline">\((\Omega, {\mathcal{F}}, \nu)\)</span> be a measure space, and <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be Borel functions.</p>
+<p><span id="prp:unnamed-chunk-12" class="proposition"><strong>Proposition 2.7  (a.e. for integrals)  </strong></span>Let <span class="math inline">\((\Omega, {\mathcal{F}}, \nu)\)</span> be a measure space, and <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be Borel functions.</p>
 <ol style="list-style-type: lower-roman">
 <li>If <span class="math inline">\(f\leq g\)</span> <span class="math inline">\(\nu\)</span>-a.e., then <span class="math inline">\(\int f d\nu \le \int g d\nu\)</span>, given that both integrals exist</li>
 <li>If <span class="math inline">\(f \ge 0\)</span> <span class="math inline">\(\nu\)</span>-a.e. and <span class="math inline">\(\int f d\nu = 0\)</span>, then <span class="math inline">\(f = 0\)</span> <span class="math inline">\(\nu\)</span>-a.e.</li>
