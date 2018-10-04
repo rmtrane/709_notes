@@ -203,7 +203,8 @@ $$
     \end{array}
   \right .
 $$
-
+      
+is borel.
       
 iv) Suppose that $f$ is measurable from $(\Omega, \F)$ to $(\Lambda, \mathcal{G})$ and $g$ is measurable from $(\Lambda, \mathcal{G})$ to $(\Delta, \mathcal{H})$. Then the composite function $g \circ f$ is measurable from $(\Omega, \F)$ to $(\Delta, \mathcal{H})$. 
 

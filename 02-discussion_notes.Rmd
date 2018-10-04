@@ -37,7 +37,7 @@ Now, consider the set $B_n = [0, \tfrac{1}{2^n})$. Clearly $B_n \in \F_n$ for al
 Let $\mathcal{D}$ be a collection of subsets of $\Omega$. $\mathcal{D}$ is said to be a ***$\pi$-system*** if it is closed under intersection, i.e. if 
 
 $$
-  A,B \in \mathcal{D} \Rightarrow A \cup B \in \mathcal{D}.
+  A,B \in \mathcal{D} \Rightarrow A \cap B \in \mathcal{D}.
 $$
   
 ```
