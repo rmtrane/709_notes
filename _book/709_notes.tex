@@ -85,7 +85,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{Fall 2018 (compiled 2018-10-06)}
+    \date{Fall 2018 (compiled 2018-10-08)}
 
 \usepackage{booktabs}
 
@@ -120,6 +120,7 @@
 \newcommand{\mb}[1]{\mathbb{#1}}
 \renewcommand{\P}{\mathbb{P}}
 \newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
 
 \newcommand{\norm}[1]{\left | \left | #1 \right | \right |}
 
@@ -1288,7 +1289,7 @@ that \(\int [F(x+a) - F(x)] dx = a\)
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{solution}
-\iffalse{} {Solution. } \fi{}
+\iffalse{} {Solution. } \fi{}ALEX!
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{exercise}[Ex 34]
@@ -1471,27 +1472,27 @@ Now assume \(P_n << \nu\). Let \(A \in \F\) with \(\nu(A) = 0\). Then
 
 \BeginKnitrBlock{exercise}[Ex 55]
 \protect\hypertarget{exr:unnamed-chunk-48}{}{\label{exr:unnamed-chunk-48}
-\iffalse (Ex 55) \fi{} }
+\iffalse (Ex 55) \fi{} }ALEX
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 56]
 \protect\hypertarget{exr:unnamed-chunk-49}{}{\label{exr:unnamed-chunk-49}
-\iffalse (Ex 56) \fi{} }
+\iffalse (Ex 56) \fi{} }ALEX
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 65]
 \protect\hypertarget{exr:unnamed-chunk-50}{}{\label{exr:unnamed-chunk-50}
-\iffalse (Ex 65) \fi{} }
+\iffalse (Ex 65) \fi{} }ALEX
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 74]
 \protect\hypertarget{exr:unnamed-chunk-51}{}{\label{exr:unnamed-chunk-51}
-\iffalse (Ex 74) \fi{} }
+\iffalse (Ex 74) \fi{} }ALEX
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 83]
 \protect\hypertarget{exr:unnamed-chunk-52}{}{\label{exr:unnamed-chunk-52}
-\iffalse (Ex 83) \fi{} }
+\iffalse (Ex 83) \fi{} }ALEX
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 85]
@@ -1501,12 +1502,12 @@ Now assume \(P_n << \nu\). Let \(A \in \F\) with \(\nu(A) = 0\). Then
 
 \BeginKnitrBlock{exercise}[Ex 93]
 \protect\hypertarget{exr:unnamed-chunk-54}{}{\label{exr:unnamed-chunk-54}
-\iffalse (Ex 93) \fi{} }
+\iffalse (Ex 93) \fi{} }ALEX
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 99]
 \protect\hypertarget{exr:unnamed-chunk-55}{}{\label{exr:unnamed-chunk-55}
-\iffalse (Ex 99) \fi{} }
+\iffalse (Ex 99) \fi{} }ALEX
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 101]
@@ -1516,7 +1517,7 @@ Now assume \(P_n << \nu\). Let \(A \in \F\) with \(\nu(A) = 0\). Then
 
 \BeginKnitrBlock{exercise}[Ex 106]
 \protect\hypertarget{exr:unnamed-chunk-57}{}{\label{exr:unnamed-chunk-57}
-\iffalse (Ex 106) \fi{} }
+\iffalse (Ex 106) \fi{} }ALEX
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 115]
@@ -1564,18 +1565,43 @@ sequence of numbers \(\{x_n\}\), where \(X\) and \(Y\) are independent
 random variables. Show that \(X_n + Y_n \rightarrow_d X + Y\).
 \EndKnitrBlock{exercise}
 
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{} \[
+  P_{Y_n,X_n} = P_{Y_n|X_n}\cdot P_{X_n} \rightarrow P_Y P_X = P_{Y,X},
+\]
+
+where the last equality holds due to independence of \(X\) and \(Y\).
+\EndKnitrBlock{solution}
+
 \BeginKnitrBlock{exercise}[Ex 138]
-\protect\hypertarget{exr:unnamed-chunk-65}{}{\label{exr:unnamed-chunk-65}
+\protect\hypertarget{exr:unnamed-chunk-66}{}{\label{exr:unnamed-chunk-66}
 \iffalse (Ex 138) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 140]
-\protect\hypertarget{exr:unnamed-chunk-66}{}{\label{exr:unnamed-chunk-66}
-\iffalse (Ex 140) \fi{} }FILL OUT!
+\protect\hypertarget{exr:unnamed-chunk-67}{}{\label{exr:unnamed-chunk-67}
+\iffalse (Ex 140) \fi{} }\(X_n \sim N(\mu_n, \sigma^2_n, n \in \N\) and
+\(X \sim N(\mu, \sigma^2)\). Show that
+\(X_n \to_d X \iff \mu_n \to \mu\) and \(\sigma_n \to \sigma\).
 \EndKnitrBlock{exercise}
 
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}Assume \(\mu_n \to \mu\) and
+\(\sigma_n \to \sigma\). Then
+\(f_n(x) = \frac{1}{\sqrt{2\pi}\sigma_n}e^{\tfrac{-(x-\mu_n)^2}{\sigma_n}} \to f(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{\tfrac{-(x-\mu)^2}{\sigma}}\)
+for all \(x\). Hence, \(X_n \to_d X\).
+
+Assume \(X_n \to_d X\), and assume for contradiciton that
+\((\mu_n, \sigma^2_n) \to (a,b^2) \neq (\mu, \sigma^2)\). This implies
+that
+\(f_n = \frac{1}{\sqrt{2\pi}\sigma_n}e^{\tfrac{-(x-\mu_n)^2}{\sigma_n}} \to f = \frac{1}{\sqrt{2\pi}b}e^{\tfrac{-(x-a)^2}{b}}\),
+hence \(X_n \to_d Y\) where \(Y \sim N(a,b^2)\). Since
+\((a,b) \neq (\mu, \sigma^2)\), and we know the limiting distribution is
+unique, this contradicts our assumption.
+\EndKnitrBlock{solution}
+
 \BeginKnitrBlock{exercise}[Ex 142]
-\protect\hypertarget{exr:unnamed-chunk-67}{}{\label{exr:unnamed-chunk-67}
+\protect\hypertarget{exr:unnamed-chunk-69}{}{\label{exr:unnamed-chunk-69}
 \iffalse (Ex 142) \fi{} }\(f_n\) is the Lebesgue p.d.f. of the
 t-distribution \(t_n\). Show that \(f_n(x) \rightarrow f(x)\) for all
 \(x \in \R\), where \(f\) is the Lebesgue p.d.f. for standard normal.
@@ -1606,39 +1632,185 @@ So
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{exercise}[Ex 146]
-\protect\hypertarget{exr:unnamed-chunk-69}{}{\label{exr:unnamed-chunk-69}
-\iffalse (Ex 146) \fi{} }FILL OUT!
+\protect\hypertarget{exr:unnamed-chunk-71}{}{\label{exr:unnamed-chunk-71}
+\iffalse (Ex 146) \fi{} }Let \(U_1, U_2, \ldots\) be i.i.d. random
+variables, \(U_i \sim U[0,1]\). Let
+\(Y_n = (\prod_{i=1}^n U_i)^{-1/n}\). Show that
+\(\sqrt{n}(Y_n - e) \to_d N(0,e^2)\).
 \EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}Let \(X_i = -log(U_i)\). Then
+\(EX_1 = \text{Var}(X_1) = 1\), and implies \(U_i = e^{-X_i}\). So
+
+\[\begin{aligned}
+  Y_n &= \left(\prod_{i=1}^n e^{-X_u} \right)^{-1/n} \\
+      &= e^{\tfrac{1}{n}\sum_{i=1}^n X_i}.
+\end{aligned}\]
+
+By the CLT (corollary 1.2; page 69),
+\(\tfrac{1}{\sqrt{n}}\sum_{i=1}^n (X_i - EX_1) = \tfrac{n}{\sqrt{n}}\left(\tfrac{1}{n}\sum_{i=1}^n X_i - 1\right) \to_d N(0, 1)\).
+
+Let \(g = e^{x}\). Then \(g^\prime(x) = g(x)\), and \(U_i = g(X_i)\).
+Using the delta method (specifically corollary 1.1; page 61), we get
+that
+
+\[
+  \sqrt{n}\left(Y_n - e\right) = \tfrac{n}{\sqrt{n}}\left(g\left(\tfrac{1}{n}\sum_{i=1}^n X_i\right) - g(1)\right) \to_d N(0,g(1)^2) = N(0, e^2).
+\]
+\EndKnitrBlock{solution}
 
 \BeginKnitrBlock{exercise}[Ex 149]
-\protect\hypertarget{exr:unnamed-chunk-70}{}{\label{exr:unnamed-chunk-70}
-\iffalse (Ex 149) \fi{} }FILL OUT!
+\protect\hypertarget{exr:unnamed-chunk-73}{}{\label{exr:unnamed-chunk-73}
+\iffalse (Ex 149) \fi{} }Let \(X_1, \ldots X_n\) be i.i.d. random
+variables such that for \(x = 3,4,\ldots\),
+\(P(X_1 = \pm x) = (2cx^2 \log(x))^{-1}\), where
+\(c = \sum_{x=3}^\infty \tfrac{x^{-2}}{\log(x)}\).
+
+Show that \(E|X_1| = \infty\), but
+\(\tfrac{1}{n} \sum_{i=1}^n X_i \to_p 0\), using Theorem 1.13(i).
 \EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}Notice that
+
+\[
+  E|X_1| = \sum_{x=3}^\infty 2\frac{x}{2cx^2\log(x)} = \frac{1}{c}\sum_{x=3}^\infty \frac{1}{x\log(x)} \ge \tfrac{1}{c} \int_3^\infty \frac{1}{x\log(x)}dx = \infty,
+\]
+
+and that \(EX_1 = 0\). (To see that the inequality above holds, draw
+it!)
+
+Consider \(nP(|X_1| > n)\):
+
+\[
+  \begin{aligned}
+    nP(|X_1| > n) &= n\sum(x=n)^\infty \frac{1}{2cx^2\log(x)} \\
+                  &\le \frac{n}{c} \int_n^\infty \frac{1}{x^2\log(x)} dx \\
+                  &\le \frac{n}{c\log(n)} \int_n^\infty \frac{1}{x^2} dx \\
+                  &= \frac{n}{c\log(n)} \frac{1}{n} \to 0 \text{ as } n \to \infty.
+  \end{aligned}
+\]
+
+So by theorem 1.13(i), we \(\frac{1}{n}\sum_{i=1}^n X_i - a_n \to_p 0\),
+where \(a_n = E(X_1 I_{\left\{|X_1| \le n\right\}}) \to 0\) (can be seen
+using an argument as above).
+\EndKnitrBlock{solution}
 
 \BeginKnitrBlock{exercise}[Ex 152]
-\protect\hypertarget{exr:unnamed-chunk-71}{}{\label{exr:unnamed-chunk-71}
-\iffalse (Ex 152) \fi{} }
+\protect\hypertarget{exr:unnamed-chunk-75}{}{\label{exr:unnamed-chunk-75}
+\iffalse (Ex 152) \fi{} }Let \(T_n = \sum_{i=1}^n X_i\), where
+\(X_1,X_2,\ldots\) are independent and \(P(X_n = \pm n^\theta) = 0.5\)
+for some \(\theta > 0\).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  Show that when \(\theta < 0.5\), then \(T_n/n \to_{a.s.} 0\)
+\item
+  Show that when \(\theta \ge 1\), then \(T_n/n \to_{p} 0\) does NOT
+  hold
+\end{enumerate}
 \EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}(a)
+
+Since \(\theta < 0.5\), \(2(\theta - 1) < -1\). So
+
+\[
+  \begin{aligned}
+    \sum_{n=1}^\infty \frac{E|X_n|^2}{n^2} &= \sum_{n=1}^\infty \frac{(n^\theta)^2}{n^2} \\
+                                           &= \sum_{n=1}^\infty n^{2(\theta - 1)} < \infty.
+  \end{aligned}
+\]
+
+By SLLN,
+\(T_n/n = \frac{1}{n} \sum_{i=1}^\infty X_i \to_{a.s.} EX_1 = 0\).
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{1}
+\item
+\end{enumerate}
+
+Note that the p.d.f. of \(X_n\) is
+\(F_n(x) = 0 1_{X_n < -n^\theta} + \tfrac{1}{2}1_{-n^\theta \le X_n < n^\theta} + 1_{X_n \ge n^\theta}\).
+By definition, \(X_n \to_d 0\) if and only if
+\(F_n(x) \to F(x) = 1_{(X \ge 0)}\) for all \(x\) continuity points of
+\(F\). For any \(n > 1\),
+\(F_n(\tfrac{-n^\theta}{2}) = 0.5 \neq F(\tfrac{-n^\theta}{2}) = 0\). So
+\(X_n\) does not converge to \(0\) in distribution. By theorem 1.8(iii),
+this means that \(X_n\) does not converge to \(0\) in probability (since
+convergence in probability implies convergence in distribution).
+\EndKnitrBlock{solution}
 
 \BeginKnitrBlock{exercise}[Ex 153]
-\protect\hypertarget{exr:unnamed-chunk-72}{}{\label{exr:unnamed-chunk-72}
-\iffalse (Ex 153) \fi{} }
+\protect\hypertarget{exr:unnamed-chunk-77}{}{\label{exr:unnamed-chunk-77}
+\iffalse (Ex 153) \fi{} }Let \(X_2, X_3, \ldots\) be independent random
+variables with \(P(X_n = \pm \sqrt{n/\log(n)}) = 0.5\). Show that
+\(\sum_{k=1}^\infty \frac{E|X_k|^p}{k^p} = \infty\) for all
+\(p \in [1,2]\), but
+\(\lim_{n \to \infty}\frac{1}{n^2} \sum_{i = 1}^\infty E|X_i|^2 = 0\).
 \EndKnitrBlock{exercise}
 
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. } \fi{}For any \(p\in [1,2]\):
+
+\[
+  \sum_{n=2}^\infty \frac{E|X_n|^p}{n^p} = \sum_{n=2}^\infty \frac{(n/\log(n))^{p/2}}{n^p} = \sum_{n=2}^/infty \frac{1}{(n\log(n))^{p/2}} = \infty.
+\]
+
+Use that \(\log(x)\) is an increasing function:
+
+\[\begin{aligned}
+  \lim_{n \to \infty} \frac{1}{n^2} \sum_{k=2}^n E|X_k|^2 &= \lim_{n \to \infty} \frac{1}{n^2} \sum_{k=2}^\infty \frac{k}{\log(k)} \\
+                                                          &\leq \lim_{n \to \infty} \frac{(n-1)\tfrac{n}{\log(n)}}{n^2} \\
+                                                          &\leq \lim_{n \to \infty} \frac{n \tfrac{n}{\log(n)}}{n^2} \\
+                                                          &\leq \lim_{n \to \infty} \frac{1}{\log(n)} = 0.
+\end{aligned}\]
+\EndKnitrBlock{solution}
+
 \BeginKnitrBlock{exercise}[Ex 163]
-\protect\hypertarget{exr:unnamed-chunk-73}{}{\label{exr:unnamed-chunk-73}
+\protect\hypertarget{exr:unnamed-chunk-79}{}{\label{exr:unnamed-chunk-79}
 \iffalse (Ex 163) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 164]
-\protect\hypertarget{exr:unnamed-chunk-74}{}{\label{exr:unnamed-chunk-74}
-\iffalse (Ex 164) \fi{} }
+\protect\hypertarget{exr:unnamed-chunk-80}{}{\label{exr:unnamed-chunk-80}
+\iffalse (Ex 164) \fi{} }Let \(X_1, X_2, \ldots\) be independent
+variables with \(P(X_j = \pm j^a) = P(X_j = 0) = \tfrac{1}{3}\), where
+\(a > 0\), \(j=1,2,\ldots\). Does Liapounov's condition hold?
 \EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}
+\iffalse{} {Solution. }
+\fi{}\(\sigma_n^ = \sqrt{\sum_{j=1}^n \frac{2j^{2a}}{3}}\). So, want to
+see if
+
+\[
+  \frac{\sum_{j=1}^n E|X_j - EX_j|^{2+\delta}}{\sigma_n^{2+\delta}} \to 0.
+\]
+
+So,
+
+\[\begin{aligned}
+  \frac{\sum_{j=1}^n \left(\tfrac{2}{3}j^{2a}\right)^{2+\delta}}{\left(\tfrac{2}{3}\sum_{j=1}^n j^{2a}\right)^{(2+\delta)/2}} &= \frac{(\tfrac{2}{3})^{2+\delta}}{(\tfrac{2}{3})^{(2+\delta)/2}} \frac{\sum_{j=1}^\infty j^{(2+\delta)a}}{\left(\sum_{j=1}^\infty j^{2a}\right)^{(2+\delta)/2}}.
+\end{aligned}\]
+
+Choose \(\delta = 2\). Using Jensens inequality with \(\phi(x) = x^2\)
+and the ratio test, we see that
+
+\[
+\frac{(\tfrac{2}{3})^4}{(\tfrac{2}{3})^2} \frac{\sum_{j=1}^\infty ((j^a)^2)^2}{\left(\sum_{j=1}^\infty j^{2a}\right)^{2}} \to 0
+\]
+\EndKnitrBlock{solution}
 
 \subsection{Suggested Problems}\label{suggested-problems}
 
 \BeginKnitrBlock{exercise}[Ex 3]
-\protect\hypertarget{exr:unnamed-chunk-75}{}{\label{exr:unnamed-chunk-75}
+\protect\hypertarget{exr:unnamed-chunk-82}{}{\label{exr:unnamed-chunk-82}
 \iffalse (Ex 3) \fi{} }Let \(\Omega, \F_j)\), \(j=1,2,\ldots\), be
 measurable spaces such that \(\F_j \subset \F_{j+1}\). Is
 \(\cup_j \F_j\) a \(\sigma\)-field?
@@ -1659,7 +1831,7 @@ i.e.~it is not a \(\sigma\)-algebra.
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{exercise}[Ex 6]
-\protect\hypertarget{exr:unnamed-chunk-77}{}{\label{exr:unnamed-chunk-77}
+\protect\hypertarget{exr:unnamed-chunk-84}{}{\label{exr:unnamed-chunk-84}
 \iffalse (Ex 6) \fi{} }Prove part (ii) and (iii) of proposition
 \ref{prp:properties-of-measures}.
 \EndKnitrBlock{exercise}
@@ -1719,13 +1891,13 @@ Taking the limit on both sides gives us
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{exercise}[Ex 15]
-\protect\hypertarget{exr:unnamed-chunk-79}{}{\label{exr:unnamed-chunk-79}
+\protect\hypertarget{exr:unnamed-chunk-86}{}{\label{exr:unnamed-chunk-86}
 \iffalse (Ex 15) \fi{} }Show that a monotone function from \(\R\) to
 \(\R\) is Borel, and a c.d.f. on \(\R^k\) is Borel.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 17]
-\protect\hypertarget{exr:unnamed-chunk-80}{}{\label{exr:unnamed-chunk-80}
+\protect\hypertarget{exr:unnamed-chunk-87}{}{\label{exr:unnamed-chunk-87}
 \iffalse (Ex 17) \fi{} }Let \(f\) be a non-negative Borel function on
 \((\Omega, \F)\). Show that \(f\) is the limit of a sequence of simple
 functions \(\{\phi_n \}\) on \((\Omega, \F)\) with
@@ -1733,197 +1905,197 @@ functions \(\{\phi_n \}\) on \((\Omega, \F)\) with
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 23]
-\protect\hypertarget{exr:unnamed-chunk-81}{}{\label{exr:unnamed-chunk-81}
+\protect\hypertarget{exr:unnamed-chunk-88}{}{\label{exr:unnamed-chunk-88}
 \iffalse (Ex 23) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 25]
-\protect\hypertarget{exr:unnamed-chunk-82}{}{\label{exr:unnamed-chunk-82}
+\protect\hypertarget{exr:unnamed-chunk-89}{}{\label{exr:unnamed-chunk-89}
 \iffalse (Ex 25) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 31]
-\protect\hypertarget{exr:unnamed-chunk-83}{}{\label{exr:unnamed-chunk-83}
+\protect\hypertarget{exr:unnamed-chunk-90}{}{\label{exr:unnamed-chunk-90}
 \iffalse (Ex 31) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 36]
-\protect\hypertarget{exr:unnamed-chunk-84}{}{\label{exr:unnamed-chunk-84}
+\protect\hypertarget{exr:unnamed-chunk-91}{}{\label{exr:unnamed-chunk-91}
 \iffalse (Ex 36) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 46]
-\protect\hypertarget{exr:unnamed-chunk-85}{}{\label{exr:unnamed-chunk-85}
+\protect\hypertarget{exr:unnamed-chunk-92}{}{\label{exr:unnamed-chunk-92}
 \iffalse (Ex 46) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 53]
-\protect\hypertarget{exr:unnamed-chunk-86}{}{\label{exr:unnamed-chunk-86}
+\protect\hypertarget{exr:unnamed-chunk-93}{}{\label{exr:unnamed-chunk-93}
 \iffalse (Ex 53) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 57]
-\protect\hypertarget{exr:unnamed-chunk-87}{}{\label{exr:unnamed-chunk-87}
+\protect\hypertarget{exr:unnamed-chunk-94}{}{\label{exr:unnamed-chunk-94}
 \iffalse (Ex 57) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 61]
-\protect\hypertarget{exr:unnamed-chunk-88}{}{\label{exr:unnamed-chunk-88}
+\protect\hypertarget{exr:unnamed-chunk-95}{}{\label{exr:unnamed-chunk-95}
 \iffalse (Ex 61) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 66]
-\protect\hypertarget{exr:unnamed-chunk-89}{}{\label{exr:unnamed-chunk-89}
+\protect\hypertarget{exr:unnamed-chunk-96}{}{\label{exr:unnamed-chunk-96}
 \iffalse (Ex 66) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 70]
-\protect\hypertarget{exr:unnamed-chunk-90}{}{\label{exr:unnamed-chunk-90}
+\protect\hypertarget{exr:unnamed-chunk-97}{}{\label{exr:unnamed-chunk-97}
 \iffalse (Ex 70) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 73]
-\protect\hypertarget{exr:unnamed-chunk-91}{}{\label{exr:unnamed-chunk-91}
+\protect\hypertarget{exr:unnamed-chunk-98}{}{\label{exr:unnamed-chunk-98}
 \iffalse (Ex 73) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 78]
-\protect\hypertarget{exr:unnamed-chunk-92}{}{\label{exr:unnamed-chunk-92}
+\protect\hypertarget{exr:unnamed-chunk-99}{}{\label{exr:unnamed-chunk-99}
 \iffalse (Ex 78) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 79]
-\protect\hypertarget{exr:unnamed-chunk-93}{}{\label{exr:unnamed-chunk-93}
+\protect\hypertarget{exr:unnamed-chunk-100}{}{\label{exr:unnamed-chunk-100}
 \iffalse (Ex 79) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 81]
-\protect\hypertarget{exr:unnamed-chunk-94}{}{\label{exr:unnamed-chunk-94}
+\protect\hypertarget{exr:unnamed-chunk-101}{}{\label{exr:unnamed-chunk-101}
 \iffalse (Ex 81) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 82]
-\protect\hypertarget{exr:unnamed-chunk-95}{}{\label{exr:unnamed-chunk-95}
+\protect\hypertarget{exr:unnamed-chunk-102}{}{\label{exr:unnamed-chunk-102}
 \iffalse (Ex 82) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 86]
-\protect\hypertarget{exr:unnamed-chunk-96}{}{\label{exr:unnamed-chunk-96}
+\protect\hypertarget{exr:unnamed-chunk-103}{}{\label{exr:unnamed-chunk-103}
 \iffalse (Ex 86) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 88]
-\protect\hypertarget{exr:unnamed-chunk-97}{}{\label{exr:unnamed-chunk-97}
+\protect\hypertarget{exr:unnamed-chunk-104}{}{\label{exr:unnamed-chunk-104}
 \iffalse (Ex 88) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 91]
-\protect\hypertarget{exr:unnamed-chunk-98}{}{\label{exr:unnamed-chunk-98}
+\protect\hypertarget{exr:unnamed-chunk-105}{}{\label{exr:unnamed-chunk-105}
 \iffalse (Ex 91) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 97]
-\protect\hypertarget{exr:unnamed-chunk-99}{}{\label{exr:unnamed-chunk-99}
+\protect\hypertarget{exr:unnamed-chunk-106}{}{\label{exr:unnamed-chunk-106}
 \iffalse (Ex 97) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 98]
-\protect\hypertarget{exr:unnamed-chunk-100}{}{\label{exr:unnamed-chunk-100}
+\protect\hypertarget{exr:unnamed-chunk-107}{}{\label{exr:unnamed-chunk-107}
 \iffalse (Ex 98) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 102]
-\protect\hypertarget{exr:unnamed-chunk-101}{}{\label{exr:unnamed-chunk-101}
+\protect\hypertarget{exr:unnamed-chunk-108}{}{\label{exr:unnamed-chunk-108}
 \iffalse (Ex 102) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 104]
-\protect\hypertarget{exr:unnamed-chunk-102}{}{\label{exr:unnamed-chunk-102}
+\protect\hypertarget{exr:unnamed-chunk-109}{}{\label{exr:unnamed-chunk-109}
 \iffalse (Ex 104) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 114]
-\protect\hypertarget{exr:unnamed-chunk-103}{}{\label{exr:unnamed-chunk-103}
+\protect\hypertarget{exr:unnamed-chunk-110}{}{\label{exr:unnamed-chunk-110}
 \iffalse (Ex 114) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 116]
-\protect\hypertarget{exr:unnamed-chunk-104}{}{\label{exr:unnamed-chunk-104}
+\protect\hypertarget{exr:unnamed-chunk-111}{}{\label{exr:unnamed-chunk-111}
 \iffalse (Ex 116) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 116]
-\protect\hypertarget{exr:unnamed-chunk-105}{}{\label{exr:unnamed-chunk-105}
+\protect\hypertarget{exr:unnamed-chunk-112}{}{\label{exr:unnamed-chunk-112}
 \iffalse (Ex 116) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 118]
-\protect\hypertarget{exr:unnamed-chunk-106}{}{\label{exr:unnamed-chunk-106}
+\protect\hypertarget{exr:unnamed-chunk-113}{}{\label{exr:unnamed-chunk-113}
 \iffalse (Ex 118) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 119]
-\protect\hypertarget{exr:unnamed-chunk-107}{}{\label{exr:unnamed-chunk-107}
+\protect\hypertarget{exr:unnamed-chunk-114}{}{\label{exr:unnamed-chunk-114}
 \iffalse (Ex 119) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 121]
-\protect\hypertarget{exr:unnamed-chunk-108}{}{\label{exr:unnamed-chunk-108}
+\protect\hypertarget{exr:unnamed-chunk-115}{}{\label{exr:unnamed-chunk-115}
 \iffalse (Ex 121) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 122]
-\protect\hypertarget{exr:unnamed-chunk-109}{}{\label{exr:unnamed-chunk-109}
+\protect\hypertarget{exr:unnamed-chunk-116}{}{\label{exr:unnamed-chunk-116}
 \iffalse (Ex 122) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 125]
-\protect\hypertarget{exr:unnamed-chunk-110}{}{\label{exr:unnamed-chunk-110}
+\protect\hypertarget{exr:unnamed-chunk-117}{}{\label{exr:unnamed-chunk-117}
 \iffalse (Ex 125) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 136]
-\protect\hypertarget{exr:unnamed-chunk-111}{}{\label{exr:unnamed-chunk-111}
+\protect\hypertarget{exr:unnamed-chunk-118}{}{\label{exr:unnamed-chunk-118}
 \iffalse (Ex 136) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 141]
-\protect\hypertarget{exr:unnamed-chunk-112}{}{\label{exr:unnamed-chunk-112}
+\protect\hypertarget{exr:unnamed-chunk-119}{}{\label{exr:unnamed-chunk-119}
 \iffalse (Ex 141) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 144]
-\protect\hypertarget{exr:unnamed-chunk-113}{}{\label{exr:unnamed-chunk-113}
+\protect\hypertarget{exr:unnamed-chunk-120}{}{\label{exr:unnamed-chunk-120}
 \iffalse (Ex 144) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 145]
-\protect\hypertarget{exr:unnamed-chunk-114}{}{\label{exr:unnamed-chunk-114}
+\protect\hypertarget{exr:unnamed-chunk-121}{}{\label{exr:unnamed-chunk-121}
 \iffalse (Ex 145) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 150]
-\protect\hypertarget{exr:unnamed-chunk-115}{}{\label{exr:unnamed-chunk-115}
+\protect\hypertarget{exr:unnamed-chunk-122}{}{\label{exr:unnamed-chunk-122}
 \iffalse (Ex 150) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 154]
-\protect\hypertarget{exr:unnamed-chunk-116}{}{\label{exr:unnamed-chunk-116}
+\protect\hypertarget{exr:unnamed-chunk-123}{}{\label{exr:unnamed-chunk-123}
 \iffalse (Ex 154) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 156]
-\protect\hypertarget{exr:unnamed-chunk-117}{}{\label{exr:unnamed-chunk-117}
+\protect\hypertarget{exr:unnamed-chunk-124}{}{\label{exr:unnamed-chunk-124}
 \iffalse (Ex 156) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 161]
-\protect\hypertarget{exr:unnamed-chunk-118}{}{\label{exr:unnamed-chunk-118}
+\protect\hypertarget{exr:unnamed-chunk-125}{}{\label{exr:unnamed-chunk-125}
 \iffalse (Ex 161) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 166]
-\protect\hypertarget{exr:unnamed-chunk-119}{}{\label{exr:unnamed-chunk-119}
+\protect\hypertarget{exr:unnamed-chunk-126}{}{\label{exr:unnamed-chunk-126}
 \iffalse (Ex 166) \fi{} }
 \EndKnitrBlock{exercise}
 
