@@ -19,6 +19,7 @@ description: "This is my collection of notes for the STAT 709 class taught at UW
 \renewcommand{\P}{\mathbb{P}}
 \newcommand{\R}{\mathbb{R}}
 
+\newcommand{\norm}[1]{\left | \left | #1 \right | \right |}
 
 # Intro
 

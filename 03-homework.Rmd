@@ -328,6 +328,18 @@ Now assume $P_n << \nu$. Let $A \in \F$ with $\nu(A) = 0$. Then $P_n(A) = 0$ for
 ```
 
 ```{exercise, name = "Ex 126"}
+Prove (vii) of Theorem 1.8
+```
+
+```{solution}
+Let $X_n \rightarrow d X$, $P(X = c) = 1$. 
+
+Apply triangle inequality and assumption:
+  
+$$
+  \lim_{n \rightarrow \infty} P(\norm{X_n - c} > \epsilon) \le \lim_{n \rightarrow \infty} P(\norm{X_n - X} > \epsilon) + \lim_{n \rightarrow \infty} P(\norm{X - c} > \epsilon) = 0.
+$$
+
 ```
 
 ```{exercise, name = "Ex 127"}
@@ -337,33 +349,78 @@ Now assume $P_n << \nu$. Let $A \in \F$ with $\nu(A) = 0$. Then $P_n(A) = 0$ for
 ```
 
 ```{exercise, name = "Ex 137"}
+Let $\{X_n\}$ and $\{Y_n\}$ be two sequences of R.Vs. Assume $X_n \rightarrow_d X$ and $P_{Y_n | X_n = x_n} \rightarrow_w P_Y$ almost surely for every sequence of numbers $\{x_n\}$, where $X$ and $Y$ are independent random variables. Show that $X_n + Y_n \rightarrow_d X + Y$. 
+```
+
+```{solution}
+
+$$
+  P_{Y_n,X_n} = P_{Y_n|X_n}\cdot P_{X_n} \rightarrow P_Y P_X = P_{Y,X},
+$$
+  
+where the last equality holds due to independence of $X$ and $Y$. 
+
+
+  
 ```
 
 ```{exercise, name = "Ex 138"}
+
 ```
 
 ```{exercise, name = "Ex 140"}
+FILL OUT!
 ```
 
 ```{exercise, name = "Ex 142"}
+$f_n$ is the Lebesgue p.d.f. of the t-distribution $t_n$. Show that $f_n(x) \rightarrow f(x)$ for all $x \in \R$, where $f$ is the Lebesgue p.d.f. for standard normal.
+```
+
+```{solution}
+By definition, $f_n(x) = \frac{\Gamma(\tfrac{n+1}{2})}{\sqrt{n\pi} \Gamma(\tfrac{n}{2})}\left(1 + \frac{x^2}{n}\right)^{\tfrac{-(n+1)}{2}}$.
+
+Note that $\lim_{n \rightarrow \infty}\left(1+\frac{x}{n}\right)^n = e^x$. So, since $\sqrt{1+\tfrac{x^2}{n}} \rightarrow 0$, 
+
+$$\left(1 + \frac{x^2}{n}\right)^{\tfrac{-(n+1)}{2}} = \frac{1}{\left(1+\tfrac{x^2/2}{n/2}\right)^{-n/2}\sqrt{1+\tfrac{x^2}{n}}} \rightarrow e^{-x^2/2}.$$
+
+  
+Since $\lim_{n \rightarrow \infty} \frac{\Gamma(n + c)}{\Gamma(n)n^c} = 1$, 
+
+$$\lim_{n \rightarrow \infty} \frac{\Gamma(\tfrac{n}{2} + \tfrac{1}{2})}{\Gamma(\tfrac{n}{2})\sqrt{n/2}} = 1.$$
+
+So
+
+$$\begin{aligned}
+  \lim_{n \rightarrow \infty} f_n(x) &= \lim_{n\rightarrow \infty} \frac{\Gamma(\tfrac{n+1}{2})}{\sqrt{n\pi} \Gamma(\tfrac{n}{2})}\left(1 + \frac{x^2}{n}\right)^{\tfrac{-(n+1)}{2}} \\
+                                     &= \frac{1}{\sqrt{2\pi}}e^{-x^2/2}\lim_{n\rightarrow \infty}\frac{\Gamma(\tfrac{n}{2} + \tfrac{1}{2})}{\Gamma(\tfrac{n}{2})\sqrt{n/2}} \\
+                                     &= \frac{1}{\sqrt{2\pi}}e^{-x^2/2}.
+\end{aligned}$$
+        
+
+
 ```
 
 ```{exercise, name = "Ex 146"}
+FILL OUT!
 ```
 
 ```{exercise, name = "Ex 149"}
+FILL OUT!
 ```
 
 ```{exercise, name = "Ex 152"}
+FILL OUT!
 ```
 
 ```{exercise, name = "Ex 153"}
+FILL OUT!
 ```
 
 ```{exercise, name = "Ex 163"}
 ```
 
 ```{exercise, name = "Ex 164"}
+FILL OUT!
 ```
 
 

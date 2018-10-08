@@ -424,67 +424,91 @@ Combine the two results to get the final result.<a href="#fn1" class="footnoteRe
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-60" class="exercise"><strong>Exercise 4.23  (Ex 126)  </strong></span>
+<span id="exr:unnamed-chunk-60" class="exercise"><strong>Exercise 4.23  (Ex 126)  </strong></span>Prove (vii) of Theorem 1.8
+</div>
+
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> Let <span class="math inline">\(X_n \rightarrow d X\)</span>, <span class="math inline">\(P(X = c) = 1\)</span>.</p>
+<p>Apply triangle inequality and assumption:</p>
+<p><span class="math display">\[
+  \lim_{n \rightarrow \infty} P({\left | \left | X_n - c \right | \right |} &gt; \epsilon) \le \lim_{n \rightarrow \infty} P({\left | \left | X_n - X \right | \right |} &gt; \epsilon) + \lim_{n \rightarrow \infty} P({\left | \left | X - c \right | \right |} &gt; \epsilon) = 0.
+\]</span></p>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-61" class="exercise"><strong>Exercise 4.24  (Ex 127)  </strong></span>
+<span id="exr:unnamed-chunk-62" class="exercise"><strong>Exercise 4.24  (Ex 127)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-62" class="exercise"><strong>Exercise 4.25  (Ex 128)  </strong></span>
+<span id="exr:unnamed-chunk-63" class="exercise"><strong>Exercise 4.25  (Ex 128)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-63" class="exercise"><strong>Exercise 4.26  (Ex 137)  </strong></span>
+<span id="exr:unnamed-chunk-64" class="exercise"><strong>Exercise 4.26  (Ex 137)  </strong></span>Let <span class="math inline">\(\{X_n\}\)</span> and <span class="math inline">\(\{Y_n\}\)</span> be two sequences of R.Vs. Assume <span class="math inline">\(X_n \rightarrow_d X\)</span> and <span class="math inline">\(P_{Y_n | X_n = x_n} \rightarrow_w P_Y\)</span> almost surely for every sequence of numbers <span class="math inline">\(\{x_n\}\)</span>, where <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent random variables. Show that <span class="math inline">\(X_n + Y_n \rightarrow_d X + Y\)</span>.
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-64" class="exercise"><strong>Exercise 4.27  (Ex 138)  </strong></span>
+<span id="exr:unnamed-chunk-65" class="exercise"><strong>Exercise 4.27  (Ex 138)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-65" class="exercise"><strong>Exercise 4.28  (Ex 140)  </strong></span>
+<span id="exr:unnamed-chunk-66" class="exercise"><strong>Exercise 4.28  (Ex 140)  </strong></span>FILL OUT!
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-66" class="exercise"><strong>Exercise 4.29  (Ex 142)  </strong></span>
+<span id="exr:unnamed-chunk-67" class="exercise"><strong>Exercise 4.29  (Ex 142)  </strong></span><span class="math inline">\(f_n\)</span> is the Lebesgue p.d.f. of the t-distribution <span class="math inline">\(t_n\)</span>. Show that <span class="math inline">\(f_n(x) \rightarrow f(x)\)</span> for all <span class="math inline">\(x \in {\mathbb{R}}\)</span>, where <span class="math inline">\(f\)</span> is the Lebesgue p.d.f. for standard normal.
+</div>
+
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> By definition, <span class="math inline">\(f_n(x) = \frac{\Gamma(\tfrac{n+1}{2})}{\sqrt{n\pi} \Gamma(\tfrac{n}{2})}\left(1 + \frac{x^2}{n}\right)^{\tfrac{-(n+1)}{2}}\)</span>.</p>
+<p>Note that <span class="math inline">\(\lim_{n \rightarrow \infty}\left(1+\frac{x}{n}\right)^n = e^x\)</span>. So, since <span class="math inline">\(\sqrt{1+\tfrac{x^2}{n}} \rightarrow 0\)</span>,</p>
+<p><span class="math display">\[\left(1 + \frac{x^2}{n}\right)^{\tfrac{-(n+1)}{2}} = \frac{1}{\left(1+\tfrac{x^2/2}{n/2}\right)^{-n/2}\sqrt{1+\tfrac{x^2}{n}}} \rightarrow e^{-x^2/2}.\]</span></p>
+<p>Since <span class="math inline">\(\lim_{n \rightarrow \infty} \frac{\Gamma(n + c)}{\Gamma(n)n^c} = 1\)</span>,</p>
+<p><span class="math display">\[\lim_{n \rightarrow \infty} \frac{\Gamma(\tfrac{n}{2} + \tfrac{1}{2})}{\Gamma(\tfrac{n}{2})\sqrt{n/2}} = 1.\]</span></p>
+<p>So</p>
+<p><span class="math display">\[\begin{aligned}
+  \lim_{n \rightarrow \infty} f_n(x) &amp;= \lim_{n\rightarrow \infty} \frac{\Gamma(\tfrac{n+1}{2})}{\sqrt{n\pi} \Gamma(\tfrac{n}{2})}\left(1 + \frac{x^2}{n}\right)^{\tfrac{-(n+1)}{2}} \\
+                                     &amp;= \frac{1}{\sqrt{2\pi}}e^{-x^2/2}\lim_{n\rightarrow \infty}\frac{\Gamma(\tfrac{n}{2} + \tfrac{1}{2})}{\Gamma(\tfrac{n}{2})\sqrt{n/2}} \\
+                                     &amp;= \frac{1}{\sqrt{2\pi}}e^{-x^2/2}.
+\end{aligned}\]</span></p>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-67" class="exercise"><strong>Exercise 4.30  (Ex 146)  </strong></span>
+<span id="exr:unnamed-chunk-69" class="exercise"><strong>Exercise 4.30  (Ex 146)  </strong></span>FILL OUT!
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-68" class="exercise"><strong>Exercise 4.31  (Ex 149)  </strong></span>
+<span id="exr:unnamed-chunk-70" class="exercise"><strong>Exercise 4.31  (Ex 149)  </strong></span>FILL OUT!
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-69" class="exercise"><strong>Exercise 4.32  (Ex 152)  </strong></span>
+<span id="exr:unnamed-chunk-71" class="exercise"><strong>Exercise 4.32  (Ex 152)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-70" class="exercise"><strong>Exercise 4.33  (Ex 153)  </strong></span>
+<span id="exr:unnamed-chunk-72" class="exercise"><strong>Exercise 4.33  (Ex 153)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-71" class="exercise"><strong>Exercise 4.34  (Ex 163)  </strong></span>
+<span id="exr:unnamed-chunk-73" class="exercise"><strong>Exercise 4.34  (Ex 163)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-72" class="exercise"><strong>Exercise 4.35  (Ex 164)  </strong></span>
+<span id="exr:unnamed-chunk-74" class="exercise"><strong>Exercise 4.35  (Ex 164)  </strong></span>
 </div>
 
 </div>
@@ -492,7 +516,7 @@ Combine the two results to get the final result.<a href="#fn1" class="footnoteRe
 <h3><span class="header-section-number">4.1.2</span> Suggested Problems</h3>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-73" class="exercise"><strong>Exercise 4.36  (Ex 3)  </strong></span>Let <span class="math inline">\(\Omega, {\mathcal{F}}_j)\)</span>, <span class="math inline">\(j=1,2,\ldots\)</span>, be measurable spaces such that <span class="math inline">\({\mathcal{F}}_j \subset {\mathcal{F}}_{j+1}\)</span>. Is <span class="math inline">\(\cup_j {\mathcal{F}}_j\)</span> a <span class="math inline">\(\sigma\)</span>-field?
+<span id="exr:unnamed-chunk-75" class="exercise"><strong>Exercise 4.36  (Ex 3)  </strong></span>Let <span class="math inline">\(\Omega, {\mathcal{F}}_j)\)</span>, <span class="math inline">\(j=1,2,\ldots\)</span>, be measurable spaces such that <span class="math inline">\({\mathcal{F}}_j \subset {\mathcal{F}}_{j+1}\)</span>. Is <span class="math inline">\(\cup_j {\mathcal{F}}_j\)</span> a <span class="math inline">\(\sigma\)</span>-field?
 </div>
 
 
@@ -504,7 +528,7 @@ Combine the two results to get the final result.<a href="#fn1" class="footnoteRe
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-75" class="exercise"><strong>Exercise 4.37  (Ex 6)  </strong></span>Prove part (ii) and (iii) of proposition <a href="lectures.html#prp:properties-of-measures">2.1</a>.
+<span id="exr:unnamed-chunk-77" class="exercise"><strong>Exercise 4.37  (Ex 6)  </strong></span>Prove part (ii) and (iii) of proposition <a href="lectures.html#prp:properties-of-measures">2.1</a>.
 </div>
 
 
@@ -540,207 +564,207 @@ Combine the two results to get the final result.<a href="#fn1" class="footnoteRe
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-77" class="exercise"><strong>Exercise 4.38  (Ex 15)  </strong></span>Show that a monotone function from <span class="math inline">\({\mathbb{R}}\)</span> to <span class="math inline">\({\mathbb{R}}\)</span> is Borel, and a c.d.f. on <span class="math inline">\({\mathbb{R}}^k\)</span> is Borel.
+<span id="exr:unnamed-chunk-79" class="exercise"><strong>Exercise 4.38  (Ex 15)  </strong></span>Show that a monotone function from <span class="math inline">\({\mathbb{R}}\)</span> to <span class="math inline">\({\mathbb{R}}\)</span> is Borel, and a c.d.f. on <span class="math inline">\({\mathbb{R}}^k\)</span> is Borel.
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-78" class="exercise"><strong>Exercise 4.39  (Ex 17)  </strong></span>Let <span class="math inline">\(f\)</span> be a non-negative Borel function on <span class="math inline">\((\Omega, {\mathcal{F}})\)</span>. Show that <span class="math inline">\(f\)</span> is the limit of a sequence of simple functions <span class="math inline">\(\{\phi_n \}\)</span> on <span class="math inline">\((\Omega, {\mathcal{F}})\)</span> with <span class="math inline">\(0 \le \phi_1 \le \phi_2 \le \dots \le f\)</span>.
+<span id="exr:unnamed-chunk-80" class="exercise"><strong>Exercise 4.39  (Ex 17)  </strong></span>Let <span class="math inline">\(f\)</span> be a non-negative Borel function on <span class="math inline">\((\Omega, {\mathcal{F}})\)</span>. Show that <span class="math inline">\(f\)</span> is the limit of a sequence of simple functions <span class="math inline">\(\{\phi_n \}\)</span> on <span class="math inline">\((\Omega, {\mathcal{F}})\)</span> with <span class="math inline">\(0 \le \phi_1 \le \phi_2 \le \dots \le f\)</span>.
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-79" class="exercise"><strong>Exercise 4.40  (Ex 23)  </strong></span>
+<span id="exr:unnamed-chunk-81" class="exercise"><strong>Exercise 4.40  (Ex 23)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-80" class="exercise"><strong>Exercise 4.41  (Ex 25)  </strong></span>
+<span id="exr:unnamed-chunk-82" class="exercise"><strong>Exercise 4.41  (Ex 25)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-81" class="exercise"><strong>Exercise 4.42  (Ex 31)  </strong></span>
+<span id="exr:unnamed-chunk-83" class="exercise"><strong>Exercise 4.42  (Ex 31)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-82" class="exercise"><strong>Exercise 4.43  (Ex 36)  </strong></span>
+<span id="exr:unnamed-chunk-84" class="exercise"><strong>Exercise 4.43  (Ex 36)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-83" class="exercise"><strong>Exercise 4.44  (Ex 46)  </strong></span>
+<span id="exr:unnamed-chunk-85" class="exercise"><strong>Exercise 4.44  (Ex 46)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-84" class="exercise"><strong>Exercise 4.45  (Ex 53)  </strong></span>
+<span id="exr:unnamed-chunk-86" class="exercise"><strong>Exercise 4.45  (Ex 53)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-85" class="exercise"><strong>Exercise 4.46  (Ex 57)  </strong></span>
+<span id="exr:unnamed-chunk-87" class="exercise"><strong>Exercise 4.46  (Ex 57)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-86" class="exercise"><strong>Exercise 4.47  (Ex 61)  </strong></span>
+<span id="exr:unnamed-chunk-88" class="exercise"><strong>Exercise 4.47  (Ex 61)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-87" class="exercise"><strong>Exercise 4.48  (Ex 66)  </strong></span>
+<span id="exr:unnamed-chunk-89" class="exercise"><strong>Exercise 4.48  (Ex 66)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-88" class="exercise"><strong>Exercise 4.49  (Ex 70)  </strong></span>
+<span id="exr:unnamed-chunk-90" class="exercise"><strong>Exercise 4.49  (Ex 70)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-89" class="exercise"><strong>Exercise 4.50  (Ex 73)  </strong></span>
+<span id="exr:unnamed-chunk-91" class="exercise"><strong>Exercise 4.50  (Ex 73)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-90" class="exercise"><strong>Exercise 4.51  (Ex 78)  </strong></span>
+<span id="exr:unnamed-chunk-92" class="exercise"><strong>Exercise 4.51  (Ex 78)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-91" class="exercise"><strong>Exercise 4.52  (Ex 79)  </strong></span>
+<span id="exr:unnamed-chunk-93" class="exercise"><strong>Exercise 4.52  (Ex 79)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-92" class="exercise"><strong>Exercise 4.53  (Ex 81)  </strong></span>
+<span id="exr:unnamed-chunk-94" class="exercise"><strong>Exercise 4.53  (Ex 81)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-93" class="exercise"><strong>Exercise 4.54  (Ex 82)  </strong></span>
+<span id="exr:unnamed-chunk-95" class="exercise"><strong>Exercise 4.54  (Ex 82)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-94" class="exercise"><strong>Exercise 4.55  (Ex 86)  </strong></span>
+<span id="exr:unnamed-chunk-96" class="exercise"><strong>Exercise 4.55  (Ex 86)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-95" class="exercise"><strong>Exercise 4.56  (Ex 88)  </strong></span>
+<span id="exr:unnamed-chunk-97" class="exercise"><strong>Exercise 4.56  (Ex 88)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-96" class="exercise"><strong>Exercise 4.57  (Ex 91)  </strong></span>
+<span id="exr:unnamed-chunk-98" class="exercise"><strong>Exercise 4.57  (Ex 91)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-97" class="exercise"><strong>Exercise 4.58  (Ex 97)  </strong></span>
+<span id="exr:unnamed-chunk-99" class="exercise"><strong>Exercise 4.58  (Ex 97)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-98" class="exercise"><strong>Exercise 4.59  (Ex 98)  </strong></span>
+<span id="exr:unnamed-chunk-100" class="exercise"><strong>Exercise 4.59  (Ex 98)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-99" class="exercise"><strong>Exercise 4.60  (Ex 102)  </strong></span>
+<span id="exr:unnamed-chunk-101" class="exercise"><strong>Exercise 4.60  (Ex 102)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-100" class="exercise"><strong>Exercise 4.61  (Ex 104)  </strong></span>
+<span id="exr:unnamed-chunk-102" class="exercise"><strong>Exercise 4.61  (Ex 104)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-101" class="exercise"><strong>Exercise 4.62  (Ex 114)  </strong></span>
+<span id="exr:unnamed-chunk-103" class="exercise"><strong>Exercise 4.62  (Ex 114)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-102" class="exercise"><strong>Exercise 4.63  (Ex 116)  </strong></span>
+<span id="exr:unnamed-chunk-104" class="exercise"><strong>Exercise 4.63  (Ex 116)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-103" class="exercise"><strong>Exercise 4.64  (Ex 116)  </strong></span>
+<span id="exr:unnamed-chunk-105" class="exercise"><strong>Exercise 4.64  (Ex 116)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-104" class="exercise"><strong>Exercise 4.65  (Ex 118)  </strong></span>
+<span id="exr:unnamed-chunk-106" class="exercise"><strong>Exercise 4.65  (Ex 118)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-105" class="exercise"><strong>Exercise 4.66  (Ex 119)  </strong></span>
+<span id="exr:unnamed-chunk-107" class="exercise"><strong>Exercise 4.66  (Ex 119)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-106" class="exercise"><strong>Exercise 4.67  (Ex 121)  </strong></span>
+<span id="exr:unnamed-chunk-108" class="exercise"><strong>Exercise 4.67  (Ex 121)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-107" class="exercise"><strong>Exercise 4.68  (Ex 122)  </strong></span>
+<span id="exr:unnamed-chunk-109" class="exercise"><strong>Exercise 4.68  (Ex 122)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-108" class="exercise"><strong>Exercise 4.69  (Ex 125)  </strong></span>
+<span id="exr:unnamed-chunk-110" class="exercise"><strong>Exercise 4.69  (Ex 125)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-109" class="exercise"><strong>Exercise 4.70  (Ex 136)  </strong></span>
+<span id="exr:unnamed-chunk-111" class="exercise"><strong>Exercise 4.70  (Ex 136)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-110" class="exercise"><strong>Exercise 4.71  (Ex 141)  </strong></span>
+<span id="exr:unnamed-chunk-112" class="exercise"><strong>Exercise 4.71  (Ex 141)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-111" class="exercise"><strong>Exercise 4.72  (Ex 144)  </strong></span>
+<span id="exr:unnamed-chunk-113" class="exercise"><strong>Exercise 4.72  (Ex 144)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-112" class="exercise"><strong>Exercise 4.73  (Ex 145)  </strong></span>
+<span id="exr:unnamed-chunk-114" class="exercise"><strong>Exercise 4.73  (Ex 145)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-113" class="exercise"><strong>Exercise 4.74  (Ex 150)  </strong></span>
+<span id="exr:unnamed-chunk-115" class="exercise"><strong>Exercise 4.74  (Ex 150)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-114" class="exercise"><strong>Exercise 4.75  (Ex 154)  </strong></span>
+<span id="exr:unnamed-chunk-116" class="exercise"><strong>Exercise 4.75  (Ex 154)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-115" class="exercise"><strong>Exercise 4.76  (Ex 156)  </strong></span>
+<span id="exr:unnamed-chunk-117" class="exercise"><strong>Exercise 4.76  (Ex 156)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-116" class="exercise"><strong>Exercise 4.77  (Ex 161)  </strong></span>
+<span id="exr:unnamed-chunk-118" class="exercise"><strong>Exercise 4.77  (Ex 161)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-117" class="exercise"><strong>Exercise 4.78  (Ex 166)  </strong></span>
+<span id="exr:unnamed-chunk-119" class="exercise"><strong>Exercise 4.78  (Ex 166)  </strong></span>
 </div>
 
 
