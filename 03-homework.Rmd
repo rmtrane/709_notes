@@ -119,7 +119,7 @@ Since $g$ is measurable, $g^{-1}(H) \in \mathcal{G}$, and since $f$ is measurabl
 ```
 
 ```{solution, name = "Ex 14 (v)"}
-Let $f: \Omega \rightarrow \R^p$, where $\Omega$ is a borel set. Assume $f$ is continuous. Then, if $A$ is an open set, $f^{-1}(A)$ is an open set, and therefore borel. Hence, $f^{-1}((a,\infty))$ is a borel set for all $a$, and by $(i)$ we have that $f$ is a borel function. 
+Let $f: \Omega \to \R^p$, where $\Omega$ is a borel set. Assume $f$ is continuous. Then, if $A$ is an open set, $f^{-1}(A)$ is an open set, and therefore borel. Hence, $f^{-1}((a,\infty))$ is a borel set for all $a$, and by $(i)$ we have that $f$ is a borel function. 
 ```
 
 
@@ -143,7 +143,7 @@ TODO
 Let $f$ be an integrable function on $(\Omega, \F, \nu)$. Show that for each $\epsilon > 0$, there exists a $\delta_\epsilon$ such that for $A \in \F$:
 
 $$
-  \nu(A) < \delta_\epsilon \Rightarrow \int_A |f| d\nu < \epsilon. 
+  \nu(A) < \delta_\epsilon \to \int_A |f| d\nu < \epsilon. 
 $$
 
 ```
@@ -197,10 +197,10 @@ Hence, (i) is true for all indicator functions, and so by linearity of integrals
 Now, let $f$ be a general non-negative Borel function. Then we know that there exists a sequence of simple functions $\phi_1, \phi_2, \ldots$ such that $\phi_n \uparrow f$. Hence, utilizing the monotone convergence theorem and the fact that we know (i) holds for simple functions,
 
 \begin{align*}
-  \int f d\lambda &= \int \lim_{n \rightarrow \infty} \phi_n d\lambda \\
-                  &= \lim_{n \rightarrow \infty} \int \phi_n d\lambda \\
-                  &= \lim_{n \rightarrow \infty} \int \phi_n g d\nu \\
-                  &= \int \lim_{n \rightarrow \infty} \phi_n g d\nu \\
+  \int f d\lambda &= \int \lim_{n \to \infty} \phi_n d\lambda \\
+                  &= \lim_{n \to \infty} \int \phi_n d\lambda \\
+                  &= \lim_{n \to \infty} \int \phi_n g d\nu \\
+                  &= \int \lim_{n \to \infty} \phi_n g d\nu \\
                   &= \int f g d\nu,
 \end{align*}
 
@@ -300,6 +300,7 @@ Now assume $P_n << \nu$. Let $A \in \F$ with $\nu(A) = 0$. Then $P_n(A) = 0$ for
 ```
 
 ```{exercise, name = "Ex 50"}
+
 ```
 
 ```{exercise, name = "Ex 55"}
@@ -326,10 +327,6 @@ $$
 &= E X
 \end{aligned}
 $$
-```
-
-```{solution, name = "EX 55 (b)"}
-TODO
 ```
 
 ```{exercise, name = "Ex 56"}
@@ -363,7 +360,7 @@ $$
 ```
 
 ```{exercise, name = "Ex 83"}
-TODO
+
 ```
 
 ```{exercise, name = "Ex 85"}
@@ -484,6 +481,18 @@ The condition that $E |X_1|$ converges and being identical gives us that that $ 
 
 
 ```{exercise, name = "Ex 126"}
+Prove (vii) of Theorem 1.8
+```
+
+```{solution}
+Let $X_n \to d X$, $P(X = c) = 1$. 
+
+Apply triangle inequality and assumption:
+  
+$$
+  \lim_{n \to \infty} P(\norm{X_n - c} > \epsilon) \le \lim_{n \to \infty} P(\norm{X_n - X} > \epsilon) + \lim_{n \to \infty} P(\norm{X - c} > \epsilon) = 0.
+$$
+
 ```
 
 ```{exercise, name = "Ex 127"}
@@ -500,33 +509,191 @@ Suppose X_n converge in distribution to X. For large enough M, we have $P(|X| > 
 ```
 
 ```{exercise, name = "Ex 137"}
+Let $\{X_n\}$ and $\{Y_n\}$ be two sequences of R.Vs. Assume $X_n \to_d X$ and $P_{Y_n | X_n = x_n} \to_w P_Y$ almost surely for every sequence of numbers $\{x_n\}$, where $X$ and $Y$ are independent random variables. Show that $X_n + Y_n \to_d X + Y$. 
+```
+
+```{solution}
+
+$$
+  P_{Y_n,X_n} = P_{Y_n|X_n}\cdot P_{X_n} \to P_Y P_X = P_{Y,X},
+$$
+  
+where the last equality holds due to independence of $X$ and $Y$. 
+
+
+  
 ```
 
 ```{exercise, name = "Ex 138"}
+
 ```
 
 ```{exercise, name = "Ex 140"}
+$X_n \sim N(\mu_n, \sigma^2_n, n \in \N$ and $X \sim N(\mu, \sigma^2)$. Show that $X_n \to_d X \iff \mu_n \to \mu$ and $\sigma_n \to \sigma$. 
+```
+
+```{solution}
+Assume $\mu_n \to \mu$ and $\sigma_n \to \sigma$. Then $f_n(x) = \frac{1}{\sqrt{2\pi}\sigma_n}e^{\tfrac{-(x-\mu_n)^2}{\sigma_n}} \to f(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{\tfrac{-(x-\mu)^2}{\sigma}}$ for all $x$. Hence, $X_n \to_d X$. 
+
+Assume $X_n \to_d X$, and assume for contradiciton that $(\mu_n, \sigma^2_n) \to (a,b^2) \neq (\mu, \sigma^2)$. This implies that $f_n = \frac{1}{\sqrt{2\pi}\sigma_n}e^{\tfrac{-(x-\mu_n)^2}{\sigma_n}} \to f = \frac{1}{\sqrt{2\pi}b}e^{\tfrac{-(x-a)^2}{b}}$, hence $X_n \to_d Y$ where $Y \sim N(a,b^2)$. Since $(a,b) \neq (\mu, \sigma^2)$, and we know the limiting distribution is unique, this contradicts our assumption. 
 ```
 
 ```{exercise, name = "Ex 142"}
+$f_n$ is the Lebesgue p.d.f. of the t-distribution $t_n$. Show that $f_n(x) \to f(x)$ for all $x \in \R$, where $f$ is the Lebesgue p.d.f. for standard normal.
+```
+
+```{solution}
+By definition, $f_n(x) = \frac{\Gamma(\tfrac{n+1}{2})}{\sqrt{n\pi} \Gamma(\tfrac{n}{2})}\left(1 + \frac{x^2}{n}\right)^{\tfrac{-(n+1)}{2}}$.
+
+Note that $\lim_{n \to \infty}\left(1+\frac{x}{n}\right)^n = e^x$. So, since $\sqrt{1+\tfrac{x^2}{n}} \to 0$, 
+
+$$\left(1 + \frac{x^2}{n}\right)^{\tfrac{-(n+1)}{2}} = \frac{1}{\left(1+\tfrac{x^2/2}{n/2}\right)^{-n/2}\sqrt{1+\tfrac{x^2}{n}}} \to e^{-x^2/2}.$$
+
+  
+Since $\lim_{n \to \infty} \frac{\Gamma(n + c)}{\Gamma(n)n^c} = 1$, 
+
+$$\lim_{n \to \infty} \frac{\Gamma(\tfrac{n}{2} + \tfrac{1}{2})}{\Gamma(\tfrac{n}{2})\sqrt{n/2}} = 1.$$
+
+So
+
+$$\begin{aligned}
+  \lim_{n \to \infty} f_n(x) &= \lim_{n\to \infty} \frac{\Gamma(\tfrac{n+1}{2})}{\sqrt{n\pi} \Gamma(\tfrac{n}{2})}\left(1 + \frac{x^2}{n}\right)^{\tfrac{-(n+1)}{2}} \\
+                                     &= \frac{1}{\sqrt{2\pi}}e^{-x^2/2}\lim_{n\to \infty}\frac{\Gamma(\tfrac{n}{2} + \tfrac{1}{2})}{\Gamma(\tfrac{n}{2})\sqrt{n/2}} \\
+                                     &= \frac{1}{\sqrt{2\pi}}e^{-x^2/2}.
+\end{aligned}$$
+        
+
+
 ```
 
 ```{exercise, name = "Ex 146"}
+Let $U_1, U_2, \ldots$ be i.i.d. random variables, $U_i \sim U[0,1]$. Let $Y_n = (\prod_{i=1}^n U_i)^{-1/n}$. Show that $\sqrt{n}(Y_n - e) \to_d N(0,e^2)$. 
+```
+
+```{solution}
+Let $X_i = -log(U_i)$. Then $EX_1 = \text{Var}(X_1) = 1$, and implies $U_i = e^{-X_i}$. So
+
+$$\begin{aligned}
+  Y_n &= \left(\prod_{i=1}^n e^{-X_u} \right)^{-1/n} \\
+      &= e^{\tfrac{1}{n}\sum_{i=1}^n X_i}.
+\end{aligned}$$
+
+By the CLT (corollary 1.2; page 69), $\tfrac{1}{\sqrt{n}}\sum_{i=1}^n (X_i - EX_1) = \tfrac{n}{\sqrt{n}}\left(\tfrac{1}{n}\sum_{i=1}^n X_i - 1\right) \to_d N(0, 1)$. 
+  
+Let $g = e^{x}$. Then $g^\prime(x) = g(x)$, and $U_i = g(X_i)$. Using the delta method (specifically corollary 1.1; page 61), we get that 
+
+$$
+  \sqrt{n}\left(Y_n - e\right) = \tfrac{n}{\sqrt{n}}\left(g\left(\tfrac{1}{n}\sum_{i=1}^n X_i\right) - g(1)\right) \to_d N(0,g(1)^2) = N(0, e^2).
+$$
+
 ```
 
 ```{exercise, name = "Ex 149"}
+Let $X_1, \ldots X_n$ be i.i.d. random variables such that for $x = 3,4,\ldots$, $P(X_1 = \pm x) = (2cx^2 \log(x))^{-1}$, where $c = \sum_{x=3}^\infty \tfrac{x^{-2}}{\log(x)}$. 
+
+Show that $E|X_1| = \infty$, but $\tfrac{1}{n} \sum_{i=1}^n X_i \to_p 0$, using Theorem 1.13(i). 
+```
+
+```{solution}
+Notice that 
+
+$$
+  E|X_1| = \sum_{x=3}^\infty 2\frac{x}{2cx^2\log(x)} = \frac{1}{c}\sum_{x=3}^\infty \frac{1}{x\log(x)} \ge \tfrac{1}{c} \int_3^\infty \frac{1}{x\log(x)}dx = \infty,
+$$
+  
+and that $EX_1 = 0$. (To see that the inequality above holds, draw it!)
+
+Consider $nP(|X_1| > n)$:
+  
+$$
+  \begin{aligned}
+    nP(|X_1| > n) &= n\sum(x=n)^\infty \frac{1}{2cx^2\log(x)} \\
+                  &\le \frac{n}{c} \int_n^\infty \frac{1}{x^2\log(x)} dx \\
+                  &\le \frac{n}{c\log(n)} \int_n^\infty \frac{1}{x^2} dx \\
+                  &= \frac{n}{c\log(n)} \frac{1}{n} \to 0 \text{ as } n \to \infty.
+  \end{aligned}
+$$
+
+So by theorem 1.13(i), we $\frac{1}{n}\sum_{i=1}^n X_i - a_n \to_p 0$, where $a_n = E(X_1 I_{\left\{|X_1| \le n\right\}}) \to 0$ (can be seen using an argument as above).
+    
 ```
 
 ```{exercise, name = "Ex 152"}
+Let $T_n = \sum_{i=1}^n X_i$, where $X_1,X_2,\ldots$ are independent and $P(X_n = \pm n^\theta) = 0.5$ for some $\theta > 0$. 
+
+a) Show that when $\theta < 0.5$, then $T_n/n \to_{a.s.} 0$
+b) Show that when $\theta \ge 1$, then $T_n/n \to_{p} 0$ does NOT hold
+
+```
+
+```{solution}
+(a) 
+
+Since $\theta < 0.5$, $2(\theta - 1) < -1$. So
+
+$$
+  \begin{aligned}
+    \sum_{n=1}^\infty \frac{E|X_n|^2}{n^2} &= \sum_{n=1}^\infty \frac{(n^\theta)^2}{n^2} \\
+                                           &= \sum_{n=1}^\infty n^{2(\theta - 1)} < \infty.
+  \end{aligned}
+$$
+
+By SLLN, $T_n/n = \frac{1}{n} \sum_{i=1}^\infty X_i \to_{a.s.} EX_1 = 0$. 
+
+(b) 
+
+Note that the p.d.f. of $X_n$ is $F_n(x) = 0 1_{X_n < -n^\theta} + \tfrac{1}{2}1_{-n^\theta \le X_n < n^\theta} + 1_{X_n \ge n^\theta}$. By definition, $X_n \to_d 0$ if and only if $F_n(x) \to F(x) = 1_{(X \ge 0)}$ for all $x$ continuity points of $F$. For any $n > 1$, $F_n(\tfrac{-n^\theta}{2}) = 0.5 \neq F(\tfrac{-n^\theta}{2}) = 0$. So $X_n$ does not converge to $0$ in distribution. By theorem 1.8(iii), this means that $X_n$ does not converge to $0$ in probability (since convergence in probability implies convergence in distribution).
+
 ```
 
 ```{exercise, name = "Ex 153"}
+Let $X_2, X_3, \ldots$ be independent random variables with $P(X_n = \pm \sqrt{n/\log(n)}) = 0.5$. Show that $\sum_{k=1}^\infty \frac{E|X_k|^p}{k^p} = \infty$ for all $p \in [1,2]$, but $\lim_{n \to \infty}\frac{1}{n^2} \sum_{i = 1}^\infty E|X_i|^2 = 0$.
+```
+
+```{solution}
+For any $p\in [1,2]$:
+
+$$
+  \sum_{n=2}^\infty \frac{E|X_n|^p}{n^p} = \sum_{n=2}^\infty \frac{(n/\log(n))^{p/2}}{n^p} = \sum_{n=2}^/infty \frac{1}{(n\log(n))^{p/2}} = \infty.
+$$
+  
+Use that $\log(x)$ is an increasing function:   
+  
+$$\begin{aligned}
+  \lim_{n \to \infty} \frac{1}{n^2} \sum_{k=2}^n E|X_k|^2 &= \lim_{n \to \infty} \frac{1}{n^2} \sum_{k=2}^\infty \frac{k}{\log(k)} \\
+                                                          &\leq \lim_{n \to \infty} \frac{(n-1)\tfrac{n}{\log(n)}}{n^2} \\
+                                                          &\leq \lim_{n \to \infty} \frac{n \tfrac{n}{\log(n)}}{n^2} \\
+                                                          &\leq \lim_{n \to \infty} \frac{1}{\log(n)} = 0.
+\end{aligned}$$
+
 ```
 
 ```{exercise, name = "Ex 163"}
 ```
 
 ```{exercise, name = "Ex 164"}
+Let $X_1, X_2, \ldots$ be independent variables with $P(X_j = \pm j^a) = P(X_j = 0) = \tfrac{1}{3}$, where $a > 0$, $j=1,2,\ldots$. Does Liapounov's condition hold?
+```
+
+```{solution}
+$\sigma_n^ = \sqrt{\sum_{j=1}^n \frac{2j^{2a}}{3}}$. So, want to see if 
+
+$$
+  \frac{\sum_{j=1}^n E|X_j - EX_j|^{2+\delta}}{\sigma_n^{2+\delta}} \to 0.
+$$
+  
+So,
+
+$$\begin{aligned}
+  \frac{\sum_{j=1}^n \left(\tfrac{2}{3}j^{2a}\right)^{2+\delta}}{\left(\tfrac{2}{3}\sum_{j=1}^n j^{2a}\right)^{(2+\delta)/2}} &= \frac{(\tfrac{2}{3})^{2+\delta}}{(\tfrac{2}{3})^{(2+\delta)/2}} \frac{\sum_{j=1}^\infty j^{(2+\delta)a}}{\left(\sum_{j=1}^\infty j^{2a}\right)^{(2+\delta)/2}}.
+\end{aligned}$$
+  
+Choose $\delta = 2$. Using Jensens inequality with $\phi(x) = x^2$ and the ratio test, we see that 
+  
+$$
+\frac{(\tfrac{2}{3})^4}{(\tfrac{2}{3})^2} \frac{\sum_{j=1}^\infty ((j^a)^2)^2}{\left(\sum_{j=1}^\infty j^{2a}\right)^{2}} \to 0.
+$$
+
 ```
 
 
@@ -581,7 +748,7 @@ iii) Let $A_1 \subset A_2 \subset A_3 \subset \dots$. Define $B_i = A_i \setminu
 Taking the limit on both sides gives us 
 
 $$
-  \nu\left(\cup_{i=1}^k A_i \right) = \lim_{n \rightarrow \infty} \nu(A_n).
+  \nu\left(\cup_{i=1}^k A_i \right) = \lim_{n \to \infty} \nu(A_n).
 $$
 
 ```

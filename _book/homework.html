@@ -215,7 +215,7 @@ Combine the two results to get the final result.<a href="#fn1" class="footnote-r
 
 
 <div class="solution">
- <span class="solution"><em>Solution</em> (Ex 14 (v)). </span> Let <span class="math inline">\(f: \Omega \rightarrow \R^p\)</span>, where <span class="math inline">\(\Omega\)</span> is a borel set. Assume <span class="math inline">\(f\)</span> is continuous. Then, if <span class="math inline">\(A\)</span> is an open set, <span class="math inline">\(f^{-1}(A)\)</span> is an open set, and therefore borel. Hence, <span class="math inline">\(f^{-1}((a,\infty))\)</span> is a borel set for all <span class="math inline">\(a\)</span>, and by <span class="math inline">\((i)\)</span> we have that <span class="math inline">\(f\)</span> is a borel function.
+ <span class="solution"><em>Solution</em> (Ex 14 (v)). </span> Let <span class="math inline">\(f: \Omega \to \R^p\)</span>, where <span class="math inline">\(\Omega\)</span> is a borel set. Assume <span class="math inline">\(f\)</span> is continuous. Then, if <span class="math inline">\(A\)</span> is an open set, <span class="math inline">\(f^{-1}(A)\)</span> is an open set, and therefore borel. Hence, <span class="math inline">\(f^{-1}((a,\infty))\)</span> is a borel set for all <span class="math inline">\(a\)</span>, and by <span class="math inline">\((i)\)</span> we have that <span class="math inline">\(f\)</span> is a borel function.
 </div>
 
 
@@ -238,7 +238,7 @@ Let <span class="math inline">\(\{f_n\}\)</span> be a sequence of Borel function
 <p><span id="exr:unnamed-chunk-15" class="exercise"><strong>Exercise 4.6  (Ex 24)  </strong></span>
 Let <span class="math inline">\(f\)</span> be an integrable function on <span class="math inline">\((\Omega, \F, \nu)\)</span>. Show that for each <span class="math inline">\(\epsilon &gt; 0\)</span>, there exists a <span class="math inline">\(\delta_\epsilon\)</span> such that for <span class="math inline">\(A \in \F\)</span>:</p>
 <p><span class="math display">\[
-  \nu(A) &lt; \delta_\epsilon \Rightarrow \int_A |f| d\nu &lt; \epsilon. 
+  \nu(A) &lt; \delta_\epsilon \to \int_A |f| d\nu &lt; \epsilon. 
 \]</span></p>
 </div>
 
@@ -287,10 +287,10 @@ Let <span class="math inline">\(f\)</span> be an integrable function on <span cl
 <p>Hence, (i) is true for all indicator functions, and so by linearity of integrals (<a href="#prp:int-linearity"><strong>??</strong></a>) for all non-negative simple functions.</p>
 <p>Now, let <span class="math inline">\(f\)</span> be a general non-negative Borel function. Then we know that there exists a sequence of simple functions <span class="math inline">\(\phi_1, \phi_2, \ldots\)</span> such that <span class="math inline">\(\phi_n \uparrow f\)</span>. Hence, utilizing the monotone convergence theorem and the fact that we know (i) holds for simple functions,</p>
 <p><span class="math display">\[\begin{align*}
-  \int f d\lambda &amp;= \int \lim_{n \rightarrow \infty} \phi_n d\lambda \\
-                  &amp;= \lim_{n \rightarrow \infty} \int \phi_n d\lambda \\
-                  &amp;= \lim_{n \rightarrow \infty} \int \phi_n g d\nu \\
-                  &amp;= \int \lim_{n \rightarrow \infty} \phi_n g d\nu \\
+  \int f d\lambda &amp;= \int \lim_{n \to \infty} \phi_n d\lambda \\
+                  &amp;= \lim_{n \to \infty} \int \phi_n d\lambda \\
+                  &amp;= \lim_{n \to \infty} \int \phi_n g d\nu \\
+                  &amp;= \int \lim_{n \to \infty} \phi_n g d\nu \\
                   &amp;= \int f g d\nu,
 \end{align*}\]</span></p>
 <p>and so we have shown that (i) holds for any non-negative Borel function.</p>
@@ -399,13 +399,8 @@ By definition, <span class="math inline">\((\lambda_1 \times \lambda_2)(A) = \in
 </div>
 
 
-<div class="solution">
- <span class="solution"><em>Solution</em> (EX 55 (b)). </span> TODO
-</div>
-
-
 <div class="exercise">
-<span id="exr:unnamed-chunk-31" class="exercise"><strong>Exercise 4.12  (Ex 56)  </strong></span>Calculate the expectation and variance of the noncentral t distribution.
+<span id="exr:unnamed-chunk-30" class="exercise"><strong>Exercise 4.12  (Ex 56)  </strong></span>Calculate the expectation and variance of the noncentral t distribution.
 </div>
 
 
@@ -415,12 +410,12 @@ By definition, <span class="math inline">\((\lambda_1 \times \lambda_2)(A) = \in
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-33" class="exercise"><strong>Exercise 4.13  (Ex 65)  </strong></span>TODO
+<span id="exr:unnamed-chunk-32" class="exercise"><strong>Exercise 4.13  (Ex 65)  </strong></span>TODO
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-34" class="exercise"><strong>Exercise 4.14  (Ex 74)  </strong></span>Let <span class="math inline">\(\phi_n\)</span> be a the chf of a probability measure <span class="math inline">\(P_n, n = 1, 2, ...\)</span>. Let <span class="math inline">\(\{a_n\}\)</span> be a sequence of nonnegative numbers with <span class="math inline">\(\sum_{n=1}^\infty a_n = 1\)</span>. Show that <span class="math inline">\(\sum_{n=1}^\infty a_n \phi_n\)</span> is a ch.f. and find its corresponding probability measure.
+<span id="exr:unnamed-chunk-33" class="exercise"><strong>Exercise 4.14  (Ex 74)  </strong></span>Let <span class="math inline">\(\phi_n\)</span> be a the chf of a probability measure <span class="math inline">\(P_n, n = 1, 2, ...\)</span>. Let <span class="math inline">\(\{a_n\}\)</span> be a sequence of nonnegative numbers with <span class="math inline">\(\sum_{n=1}^\infty a_n = 1\)</span>. Show that <span class="math inline">\(\sum_{n=1}^\infty a_n \phi_n\)</span> is a ch.f. and find its corresponding probability measure.
 </div>
 
 
@@ -438,22 +433,22 @@ By definition, <span class="math inline">\((\lambda_1 \times \lambda_2)(A) = \in
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-36" class="exercise"><strong>Exercise 4.15  (Ex 83)  </strong></span>TODO
+<span id="exr:unnamed-chunk-35" class="exercise"><strong>Exercise 4.15  (Ex 83)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-37" class="exercise"><strong>Exercise 4.16  (Ex 85)  </strong></span>TODO
+<span id="exr:unnamed-chunk-36" class="exercise"><strong>Exercise 4.16  (Ex 85)  </strong></span>TODO
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-38" class="exercise"><strong>Exercise 4.17  (Ex 93)  </strong></span>TODO
+<span id="exr:unnamed-chunk-37" class="exercise"><strong>Exercise 4.17  (Ex 93)  </strong></span>TODO
 </div>
 
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-39" class="exercise"><strong>Exercise 4.18  (Ex 99)  </strong></span>LEt <span class="math inline">\(X_1, X_2, ...\)</span> be i.i.d random variables and let <span class="math inline">\(Y\)</span> be a discrete random variable taking positive integer values. Assume that <span class="math inline">\(X_i\)</span> and <span class="math inline">\(Y\)</span> are independent.</p>
+<p><span id="exr:unnamed-chunk-38" class="exercise"><strong>Exercise 4.18  (Ex 99)  </strong></span>LEt <span class="math inline">\(X_1, X_2, ...\)</span> be i.i.d random variables and let <span class="math inline">\(Y\)</span> be a discrete random variable taking positive integer values. Assume that <span class="math inline">\(X_i\)</span> and <span class="math inline">\(Y\)</span> are independent.</p>
 <ol style="list-style-type: lower-alpha">
 <li>Obtain the ch.f. of Z</li>
 <li>Show <span class="math inline">\(E Z = E Y E X_1\)</span></li>
@@ -492,12 +487,12 @@ Var Z &amp;= Var(E(Z | Y)) + E(Var(Z | Y)) \\
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-43" class="exercise"><strong>Exercise 4.19  (Ex 101)  </strong></span>TODO
+<span id="exr:unnamed-chunk-42" class="exercise"><strong>Exercise 4.19  (Ex 101)  </strong></span>TODO
 </div>
 
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-44" class="exercise"><strong>Exercise 4.20  (Ex 106)  </strong></span>Let <span class="math inline">\(\{Y_n\}\)</span> be a sequence of independent random. Show that the following are martingales:</p>
+<p><span id="exr:unnamed-chunk-43" class="exercise"><strong>Exercise 4.20  (Ex 106)  </strong></span>Let <span class="math inline">\(\{Y_n\}\)</span> be a sequence of independent random. Show that the following are martingales:</p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(X_1 = Y_1\)</span>, <span class="math inline">\(X_{n+1} = X_n + Y_{n+1} h_n(X_1, ..., X_n)\)</span> where <span class="math inline">\(h_n\)</span> are Borel.</li>
 <li>Suppose <span class="math inline">\(E Y_n = 0\)</span> and <span class="math inline">\(Var Y_n = \sigma^2\)</span> for all <span class="math inline">\(n\)</span>. <span class="math inline">\(X_n = (sum_{j=1}^n Y_j)^2 - n \sigma^2\)</span></li>
@@ -543,7 +538,7 @@ E( Y_1 \cdot ... \cdot Y_n \cdot Y_{n+1} | X_1, ..., X_n) &amp;= Y_1 \cdot ... \
 
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-48" class="exercise"><strong>Exercise 4.21  (Ex 115)  </strong></span>Let <span class="math inline">\(X_1, X_2, ...\)</span> be a sequence of identically distributed random variables with finite <span class="math inline">\(E |X_1|\)</span> and let <span class="math inline">\(Y_n = n^{-1} \max_{i \le n} |X_i|\)</span>.</p>
+<p><span id="exr:unnamed-chunk-47" class="exercise"><strong>Exercise 4.21  (Ex 115)  </strong></span>Let <span class="math inline">\(X_1, X_2, ...\)</span> be a sequence of identically distributed random variables with finite <span class="math inline">\(E |X_1|\)</span> and let <span class="math inline">\(Y_n = n^{-1} \max_{i \le n} |X_i|\)</span>.</p>
 <ol style="list-style-type: lower-alpha">
 <li>Show that <span class="math inline">\(Y_n \to 0\)</span> in <span class="math inline">\(L_1\)</span></li>
 <li>Show that <span class="math inline">\(Y_n \to 0\)</span> almost surely
@@ -564,12 +559,21 @@ E( Y_1 \cdot ... \cdot Y_n \cdot Y_{n+1} | X_1, ..., X_n) &amp;= Y_1 \cdot ... \
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-51" class="exercise"><strong>Exercise 4.22  (Ex 117)  </strong></span>
+<span id="exr:unnamed-chunk-50" class="exercise"><strong>Exercise 4.22  (Ex 117)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-52" class="exercise"><strong>Exercise 4.23  (Ex 126)  </strong></span>
+<span id="exr:unnamed-chunk-51" class="exercise"><strong>Exercise 4.23  (Ex 126)  </strong></span>Prove (vii) of Theorem 1.8
+</div>
+
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> Let <span class="math inline">\(X_n \to d X\)</span>, <span class="math inline">\(P(X = c) = 1\)</span>.</p>
+<p>Apply triangle inequality and assumption:</p>
+<p><span class="math display">\[
+  \lim_{n \to \infty} P(\norm{X_n - c} &gt; \epsilon) \le \lim_{n \to \infty} P(\norm{X_n - X} &gt; \epsilon) + \lim_{n \to \infty} P(\norm{X - c} &gt; \epsilon) = 0.
+\]</span></p>
 </div>
 
 
@@ -590,52 +594,168 @@ E( Y_1 \cdot ... \cdot Y_n \cdot Y_{n+1} | X_1, ..., X_n) &amp;= Y_1 \cdot ... \
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-56" class="exercise"><strong>Exercise 4.26  (Ex 137)  </strong></span>
+<span id="exr:unnamed-chunk-56" class="exercise"><strong>Exercise 4.26  (Ex 137)  </strong></span>Let <span class="math inline">\(\{X_n\}\)</span> and <span class="math inline">\(\{Y_n\}\)</span> be two sequences of R.Vs. Assume <span class="math inline">\(X_n \to_d X\)</span> and <span class="math inline">\(P_{Y_n | X_n = x_n} \to_w P_Y\)</span> almost surely for every sequence of numbers <span class="math inline">\(\{x_n\}\)</span>, where <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent random variables. Show that <span class="math inline">\(X_n + Y_n \to_d X + Y\)</span>.
+</div>
+
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> 
+<span class="math display">\[
+  P_{Y_n,X_n} = P_{Y_n|X_n}\cdot P_{X_n} \to P_Y P_X = P_{Y,X},
+\]</span></p>
+<p>where the last equality holds due to independence of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>.</p>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-57" class="exercise"><strong>Exercise 4.27  (Ex 138)  </strong></span>
+<span id="exr:unnamed-chunk-58" class="exercise"><strong>Exercise 4.27  (Ex 138)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-58" class="exercise"><strong>Exercise 4.28  (Ex 140)  </strong></span>
+<span id="exr:unnamed-chunk-59" class="exercise"><strong>Exercise 4.28  (Ex 140)  </strong></span><span class="math inline">\(X_n \sim N(\mu_n, \sigma^2_n, n \in \N\)</span> and <span class="math inline">\(X \sim N(\mu, \sigma^2)\)</span>. Show that <span class="math inline">\(X_n \to_d X \iff \mu_n \to \mu\)</span> and <span class="math inline">\(\sigma_n \to \sigma\)</span>.
+</div>
+
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> Assume <span class="math inline">\(\mu_n \to \mu\)</span> and <span class="math inline">\(\sigma_n \to \sigma\)</span>. Then <span class="math inline">\(f_n(x) = \frac{1}{\sqrt{2\pi}\sigma_n}e^{\tfrac{-(x-\mu_n)^2}{\sigma_n}} \to f(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{\tfrac{-(x-\mu)^2}{\sigma}}\)</span> for all <span class="math inline">\(x\)</span>. Hence, <span class="math inline">\(X_n \to_d X\)</span>.</p>
+Assume <span class="math inline">\(X_n \to_d X\)</span>, and assume for contradiciton that <span class="math inline">\((\mu_n, \sigma^2_n) \to (a,b^2) \neq (\mu, \sigma^2)\)</span>. This implies that <span class="math inline">\(f_n = \frac{1}{\sqrt{2\pi}\sigma_n}e^{\tfrac{-(x-\mu_n)^2}{\sigma_n}} \to f = \frac{1}{\sqrt{2\pi}b}e^{\tfrac{-(x-a)^2}{b}}\)</span>, hence <span class="math inline">\(X_n \to_d Y\)</span> where <span class="math inline">\(Y \sim N(a,b^2)\)</span>. Since <span class="math inline">\((a,b) \neq (\mu, \sigma^2)\)</span>, and we know the limiting distribution is unique, this contradicts our assumption.
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-59" class="exercise"><strong>Exercise 4.29  (Ex 142)  </strong></span>
+<span id="exr:unnamed-chunk-61" class="exercise"><strong>Exercise 4.29  (Ex 142)  </strong></span><span class="math inline">\(f_n\)</span> is the Lebesgue p.d.f. of the t-distribution <span class="math inline">\(t_n\)</span>. Show that <span class="math inline">\(f_n(x) \to f(x)\)</span> for all <span class="math inline">\(x \in \R\)</span>, where <span class="math inline">\(f\)</span> is the Lebesgue p.d.f. for standard normal.
+</div>
+
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> By definition, <span class="math inline">\(f_n(x) = \frac{\Gamma(\tfrac{n+1}{2})}{\sqrt{n\pi} \Gamma(\tfrac{n}{2})}\left(1 + \frac{x^2}{n}\right)^{\tfrac{-(n+1)}{2}}\)</span>.</p>
+<p>Note that <span class="math inline">\(\lim_{n \to \infty}\left(1+\frac{x}{n}\right)^n = e^x\)</span>. So, since <span class="math inline">\(\sqrt{1+\tfrac{x^2}{n}} \to 0\)</span>,</p>
+<p><span class="math display">\[\left(1 + \frac{x^2}{n}\right)^{\tfrac{-(n+1)}{2}} = \frac{1}{\left(1+\tfrac{x^2/2}{n/2}\right)^{-n/2}\sqrt{1+\tfrac{x^2}{n}}} \to e^{-x^2/2}.\]</span></p>
+<p>Since <span class="math inline">\(\lim_{n \to \infty} \frac{\Gamma(n + c)}{\Gamma(n)n^c} = 1\)</span>,</p>
+<p><span class="math display">\[\lim_{n \to \infty} \frac{\Gamma(\tfrac{n}{2} + \tfrac{1}{2})}{\Gamma(\tfrac{n}{2})\sqrt{n/2}} = 1.\]</span></p>
+<p>So</p>
+<p><span class="math display">\[\begin{aligned}
+  \lim_{n \to \infty} f_n(x) &amp;= \lim_{n\to \infty} \frac{\Gamma(\tfrac{n+1}{2})}{\sqrt{n\pi} \Gamma(\tfrac{n}{2})}\left(1 + \frac{x^2}{n}\right)^{\tfrac{-(n+1)}{2}} \\
+                                     &amp;= \frac{1}{\sqrt{2\pi}}e^{-x^2/2}\lim_{n\to \infty}\frac{\Gamma(\tfrac{n}{2} + \tfrac{1}{2})}{\Gamma(\tfrac{n}{2})\sqrt{n/2}} \\
+                                     &amp;= \frac{1}{\sqrt{2\pi}}e^{-x^2/2}.
+\end{aligned}\]</span></p>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-60" class="exercise"><strong>Exercise 4.30  (Ex 146)  </strong></span>
+<span id="exr:unnamed-chunk-63" class="exercise"><strong>Exercise 4.30  (Ex 146)  </strong></span>Let <span class="math inline">\(U_1, U_2, \ldots\)</span> be i.i.d. random variables, <span class="math inline">\(U_i \sim U[0,1]\)</span>. Let <span class="math inline">\(Y_n = (\prod_{i=1}^n U_i)^{-1/n}\)</span>. Show that <span class="math inline">\(\sqrt{n}(Y_n - e) \to_d N(0,e^2)\)</span>.
+</div>
+
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> Let <span class="math inline">\(X_i = -log(U_i)\)</span>. Then <span class="math inline">\(EX_1 = \text{Var}(X_1) = 1\)</span>, and implies <span class="math inline">\(U_i = e^{-X_i}\)</span>. So</p>
+<p><span class="math display">\[\begin{aligned}
+  Y_n &amp;= \left(\prod_{i=1}^n e^{-X_u} \right)^{-1/n} \\
+      &amp;= e^{\tfrac{1}{n}\sum_{i=1}^n X_i}.
+\end{aligned}\]</span></p>
+<p>By the CLT (corollary 1.2; page 69), <span class="math inline">\(\tfrac{1}{\sqrt{n}}\sum_{i=1}^n (X_i - EX_1) = \tfrac{n}{\sqrt{n}}\left(\tfrac{1}{n}\sum_{i=1}^n X_i - 1\right) \to_d N(0, 1)\)</span>.</p>
+<p>Let <span class="math inline">\(g = e^{x}\)</span>. Then <span class="math inline">\(g^\prime(x) = g(x)\)</span>, and <span class="math inline">\(U_i = g(X_i)\)</span>. Using the delta method (specifically corollary 1.1; page 61), we get that</p>
+<p><span class="math display">\[
+  \sqrt{n}\left(Y_n - e\right) = \tfrac{n}{\sqrt{n}}\left(g\left(\tfrac{1}{n}\sum_{i=1}^n X_i\right) - g(1)\right) \to_d N(0,g(1)^2) = N(0, e^2).
+\]</span></p>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-61" class="exercise"><strong>Exercise 4.31  (Ex 149)  </strong></span>
+<p><span id="exr:unnamed-chunk-65" class="exercise"><strong>Exercise 4.31  (Ex 149)  </strong></span>Let <span class="math inline">\(X_1, \ldots X_n\)</span> be i.i.d. random variables such that for <span class="math inline">\(x = 3,4,\ldots\)</span>, <span class="math inline">\(P(X_1 = \pm x) = (2cx^2 \log(x))^{-1}\)</span>, where <span class="math inline">\(c = \sum_{x=3}^\infty \tfrac{x^{-2}}{\log(x)}\)</span>.</p>
+Show that <span class="math inline">\(E|X_1| = \infty\)</span>, but <span class="math inline">\(\tfrac{1}{n} \sum_{i=1}^n X_i \to_p 0\)</span>, using Theorem 1.13(i).
+</div>
+
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> Notice that</p>
+<p><span class="math display">\[
+  E|X_1| = \sum_{x=3}^\infty 2\frac{x}{2cx^2\log(x)} = \frac{1}{c}\sum_{x=3}^\infty \frac{1}{x\log(x)} \ge \tfrac{1}{c} \int_3^\infty \frac{1}{x\log(x)}dx = \infty,
+\]</span></p>
+<p>and that <span class="math inline">\(EX_1 = 0\)</span>. (To see that the inequality above holds, draw it!)</p>
+<p>Consider <span class="math inline">\(nP(|X_1| &gt; n)\)</span>:</p>
+<p><span class="math display">\[
+  \begin{aligned}
+    nP(|X_1| &gt; n) &amp;= n\sum(x=n)^\infty \frac{1}{2cx^2\log(x)} \\
+                  &amp;\le \frac{n}{c} \int_n^\infty \frac{1}{x^2\log(x)} dx \\
+                  &amp;\le \frac{n}{c\log(n)} \int_n^\infty \frac{1}{x^2} dx \\
+                  &amp;= \frac{n}{c\log(n)} \frac{1}{n} \to 0 \text{ as } n \to \infty.
+  \end{aligned}
+\]</span></p>
+So by theorem 1.13(i), we <span class="math inline">\(\frac{1}{n}\sum_{i=1}^n X_i - a_n \to_p 0\)</span>, where <span class="math inline">\(a_n = E(X_1 I_{\left\{|X_1| \le n\right\}}) \to 0\)</span> (can be seen using an argument as above).
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-62" class="exercise"><strong>Exercise 4.32  (Ex 152)  </strong></span>
+<p><span id="exr:unnamed-chunk-67" class="exercise"><strong>Exercise 4.32  (Ex 152)  </strong></span>Let <span class="math inline">\(T_n = \sum_{i=1}^n X_i\)</span>, where <span class="math inline">\(X_1,X_2,\ldots\)</span> are independent and <span class="math inline">\(P(X_n = \pm n^\theta) = 0.5\)</span> for some <span class="math inline">\(\theta &gt; 0\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Show that when <span class="math inline">\(\theta &lt; 0.5\)</span>, then <span class="math inline">\(T_n/n \to_{a.s.} 0\)</span></li>
+<li>Show that when <span class="math inline">\(\theta \ge 1\)</span>, then <span class="math inline">\(T_n/n \to_{p} 0\)</span> does NOT hold</li>
+</ol>
+</div>
+
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> (a)</p>
+<p>Since <span class="math inline">\(\theta &lt; 0.5\)</span>, <span class="math inline">\(2(\theta - 1) &lt; -1\)</span>. So</p>
+<p><span class="math display">\[
+  \begin{aligned}
+    \sum_{n=1}^\infty \frac{E|X_n|^2}{n^2} &amp;= \sum_{n=1}^\infty \frac{(n^\theta)^2}{n^2} \\
+                                           &amp;= \sum_{n=1}^\infty n^{2(\theta - 1)} &lt; \infty.
+  \end{aligned}
+\]</span></p>
+<p>By SLLN, <span class="math inline">\(T_n/n = \frac{1}{n} \sum_{i=1}^\infty X_i \to_{a.s.} EX_1 = 0\)</span>.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<p>Note that the p.d.f. of <span class="math inline">\(X_n\)</span> is <span class="math inline">\(F_n(x) = 0 1_{X_n &lt; -n^\theta} + \tfrac{1}{2}1_{-n^\theta \le X_n &lt; n^\theta} + 1_{X_n \ge n^\theta}\)</span>. By definition, <span class="math inline">\(X_n \to_d 0\)</span> if and only if <span class="math inline">\(F_n(x) \to F(x) = 1_{(X \ge 0)}\)</span> for all <span class="math inline">\(x\)</span> continuity points of <span class="math inline">\(F\)</span>. For any <span class="math inline">\(n &gt; 1\)</span>, <span class="math inline">\(F_n(\tfrac{-n^\theta}{2}) = 0.5 \neq F(\tfrac{-n^\theta}{2}) = 0\)</span>. So <span class="math inline">\(X_n\)</span> does not converge to <span class="math inline">\(0\)</span> in distribution. By theorem 1.8(iii), this means that <span class="math inline">\(X_n\)</span> does not converge to <span class="math inline">\(0\)</span> in probability (since convergence in probability implies convergence in distribution).</p>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-63" class="exercise"><strong>Exercise 4.33  (Ex 153)  </strong></span>
+<span id="exr:unnamed-chunk-69" class="exercise"><strong>Exercise 4.33  (Ex 153)  </strong></span>Let <span class="math inline">\(X_2, X_3, \ldots\)</span> be independent random variables with <span class="math inline">\(P(X_n = \pm \sqrt{n/\log(n)}) = 0.5\)</span>. Show that <span class="math inline">\(\sum_{k=1}^\infty \frac{E|X_k|^p}{k^p} = \infty\)</span> for all <span class="math inline">\(p \in [1,2]\)</span>, but <span class="math inline">\(\lim_{n \to \infty}\frac{1}{n^2} \sum_{i = 1}^\infty E|X_i|^2 = 0\)</span>.
+</div>
+
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> For any <span class="math inline">\(p\in [1,2]\)</span>:</p>
+<p><span class="math display">\[
+  \sum_{n=2}^\infty \frac{E|X_n|^p}{n^p} = \sum_{n=2}^\infty \frac{(n/\log(n))^{p/2}}{n^p} = \sum_{n=2}^/infty \frac{1}{(n\log(n))^{p/2}} = \infty.
+\]</span></p>
+<p>Use that <span class="math inline">\(\log(x)\)</span> is an increasing function:</p>
+<p><span class="math display">\[\begin{aligned}
+  \lim_{n \to \infty} \frac{1}{n^2} \sum_{k=2}^n E|X_k|^2 &amp;= \lim_{n \to \infty} \frac{1}{n^2} \sum_{k=2}^\infty \frac{k}{\log(k)} \\
+                                                          &amp;\leq \lim_{n \to \infty} \frac{(n-1)\tfrac{n}{\log(n)}}{n^2} \\
+                                                          &amp;\leq \lim_{n \to \infty} \frac{n \tfrac{n}{\log(n)}}{n^2} \\
+                                                          &amp;\leq \lim_{n \to \infty} \frac{1}{\log(n)} = 0.
+\end{aligned}\]</span></p>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-64" class="exercise"><strong>Exercise 4.34  (Ex 163)  </strong></span>
+<span id="exr:unnamed-chunk-71" class="exercise"><strong>Exercise 4.34  (Ex 163)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-65" class="exercise"><strong>Exercise 4.35  (Ex 164)  </strong></span>
+<span id="exr:unnamed-chunk-72" class="exercise"><strong>Exercise 4.35  (Ex 164)  </strong></span>Let <span class="math inline">\(X_1, X_2, \ldots\)</span> be independent variables with <span class="math inline">\(P(X_j = \pm j^a) = P(X_j = 0) = \tfrac{1}{3}\)</span>, where <span class="math inline">\(a &gt; 0\)</span>, <span class="math inline">\(j=1,2,\ldots\)</span>. Does Liapounov’s condition hold?
+</div>
+
+
+<div class="solution">
+<p> <span class="solution"><em>Solution. </em></span> <span class="math inline">\(\sigma_n^ = \sqrt{\sum_{j=1}^n \frac{2j^{2a}}{3}}\)</span>. So, want to see if</p>
+<p><span class="math display">\[
+  \frac{\sum_{j=1}^n E|X_j - EX_j|^{2+\delta}}{\sigma_n^{2+\delta}} \to 0.
+\]</span></p>
+<p>So,</p>
+<p><span class="math display">\[\begin{aligned}
+  \frac{\sum_{j=1}^n \left(\tfrac{2}{3}j^{2a}\right)^{2+\delta}}{\left(\tfrac{2}{3}\sum_{j=1}^n j^{2a}\right)^{(2+\delta)/2}} &amp;= \frac{(\tfrac{2}{3})^{2+\delta}}{(\tfrac{2}{3})^{(2+\delta)/2}} \frac{\sum_{j=1}^\infty j^{(2+\delta)a}}{\left(\sum_{j=1}^\infty j^{2a}\right)^{(2+\delta)/2}}.
+\end{aligned}\]</span></p>
+<p>Choose <span class="math inline">\(\delta = 2\)</span>. Using Jensens inequality with <span class="math inline">\(\phi(x) = x^2\)</span> and the ratio test, we see that</p>
+<p><span class="math display">\[
+\frac{(\tfrac{2}{3})^4}{(\tfrac{2}{3})^2} \frac{\sum_{j=1}^\infty ((j^a)^2)^2}{\left(\sum_{j=1}^\infty j^{2a}\right)^{2}} \to 0.
+\]</span></p>
 </div>
 
 </div>
@@ -643,7 +763,7 @@ E( Y_1 \cdot ... \cdot Y_n \cdot Y_{n+1} | X_1, ..., X_n) &amp;= Y_1 \cdot ... \
 <h3><span class="header-section-number">4.1.2</span> Suggested Problems</h3>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-66" class="exercise"><strong>Exercise 4.36  (Ex 3)  </strong></span>Let <span class="math inline">\(\Omega, \F_j)\)</span>, <span class="math inline">\(j=1,2,\ldots\)</span>, be measurable spaces such that <span class="math inline">\(\F_j \subset \F_{j+1}\)</span>. Is <span class="math inline">\(\cup_j \F_j\)</span> a <span class="math inline">\(\sigma\)</span>-field?
+<span id="exr:unnamed-chunk-74" class="exercise"><strong>Exercise 4.36  (Ex 3)  </strong></span>Let <span class="math inline">\(\Omega, \F_j)\)</span>, <span class="math inline">\(j=1,2,\ldots\)</span>, be measurable spaces such that <span class="math inline">\(\F_j \subset \F_{j+1}\)</span>. Is <span class="math inline">\(\cup_j \F_j\)</span> a <span class="math inline">\(\sigma\)</span>-field?
 </div>
 
 
@@ -655,7 +775,7 @@ E( Y_1 \cdot ... \cdot Y_n \cdot Y_{n+1} | X_1, ..., X_n) &amp;= Y_1 \cdot ... \
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-68" class="exercise"><strong>Exercise 4.37  (Ex 6)  </strong></span>Prove part (ii) and (iii) of proposition <a href="#prp:properties-of-measures"><strong>??</strong></a>.
+<span id="exr:unnamed-chunk-76" class="exercise"><strong>Exercise 4.37  (Ex 6)  </strong></span>Prove part (ii) and (iii) of proposition <a href="#prp:properties-of-measures"><strong>??</strong></a>.
 </div>
 
 
@@ -686,213 +806,213 @@ i) Let <span class="math inline">\(A \subset B\)</span>. Then <span class="math 
 \end{align*}\]</span></p>
 <p>Taking the limit on both sides gives us</p>
 <p><span class="math display">\[
-  \nu\left(\cup_{i=1}^k A_i \right) = \lim_{n \rightarrow \infty} \nu(A_n).
+  \nu\left(\cup_{i=1}^k A_i \right) = \lim_{n \to \infty} \nu(A_n).
 \]</span></p>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-70" class="exercise"><strong>Exercise 4.38  (Ex 15)  </strong></span>Show that a monotone function from <span class="math inline">\(\R\)</span> to <span class="math inline">\(\R\)</span> is Borel, and a c.d.f. on <span class="math inline">\(\R^k\)</span> is Borel.
+<span id="exr:unnamed-chunk-78" class="exercise"><strong>Exercise 4.38  (Ex 15)  </strong></span>Show that a monotone function from <span class="math inline">\(\R\)</span> to <span class="math inline">\(\R\)</span> is Borel, and a c.d.f. on <span class="math inline">\(\R^k\)</span> is Borel.
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-71" class="exercise"><strong>Exercise 4.39  (Ex 17)  </strong></span>Let <span class="math inline">\(f\)</span> be a non-negative Borel function on <span class="math inline">\((\Omega, \F)\)</span>. Show that <span class="math inline">\(f\)</span> is the limit of a sequence of simple functions <span class="math inline">\(\{\phi_n \}\)</span> on <span class="math inline">\((\Omega, \F)\)</span> with <span class="math inline">\(0 \le \phi_1 \le \phi_2 \le \dots \le f\)</span>.
+<span id="exr:unnamed-chunk-79" class="exercise"><strong>Exercise 4.39  (Ex 17)  </strong></span>Let <span class="math inline">\(f\)</span> be a non-negative Borel function on <span class="math inline">\((\Omega, \F)\)</span>. Show that <span class="math inline">\(f\)</span> is the limit of a sequence of simple functions <span class="math inline">\(\{\phi_n \}\)</span> on <span class="math inline">\((\Omega, \F)\)</span> with <span class="math inline">\(0 \le \phi_1 \le \phi_2 \le \dots \le f\)</span>.
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-72" class="exercise"><strong>Exercise 4.40  (Ex 23)  </strong></span>
+<span id="exr:unnamed-chunk-80" class="exercise"><strong>Exercise 4.40  (Ex 23)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-73" class="exercise"><strong>Exercise 4.41  (Ex 25)  </strong></span>
+<span id="exr:unnamed-chunk-81" class="exercise"><strong>Exercise 4.41  (Ex 25)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-74" class="exercise"><strong>Exercise 4.42  (Ex 31)  </strong></span>
+<span id="exr:unnamed-chunk-82" class="exercise"><strong>Exercise 4.42  (Ex 31)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-75" class="exercise"><strong>Exercise 4.43  (Ex 36)  </strong></span>
+<span id="exr:unnamed-chunk-83" class="exercise"><strong>Exercise 4.43  (Ex 36)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-76" class="exercise"><strong>Exercise 4.44  (Ex 46)  </strong></span>
+<span id="exr:unnamed-chunk-84" class="exercise"><strong>Exercise 4.44  (Ex 46)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-77" class="exercise"><strong>Exercise 4.45  (Ex 53)  </strong></span>
+<span id="exr:unnamed-chunk-85" class="exercise"><strong>Exercise 4.45  (Ex 53)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-78" class="exercise"><strong>Exercise 4.46  (Ex 57)  </strong></span>
+<span id="exr:unnamed-chunk-86" class="exercise"><strong>Exercise 4.46  (Ex 57)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-79" class="exercise"><strong>Exercise 4.47  (Ex 61)  </strong></span>
+<span id="exr:unnamed-chunk-87" class="exercise"><strong>Exercise 4.47  (Ex 61)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-80" class="exercise"><strong>Exercise 4.48  (Ex 66)  </strong></span>
+<span id="exr:unnamed-chunk-88" class="exercise"><strong>Exercise 4.48  (Ex 66)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-81" class="exercise"><strong>Exercise 4.49  (Ex 70)  </strong></span>
+<span id="exr:unnamed-chunk-89" class="exercise"><strong>Exercise 4.49  (Ex 70)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-82" class="exercise"><strong>Exercise 4.50  (Ex 73)  </strong></span>
+<span id="exr:unnamed-chunk-90" class="exercise"><strong>Exercise 4.50  (Ex 73)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-83" class="exercise"><strong>Exercise 4.51  (Ex 78)  </strong></span>
+<span id="exr:unnamed-chunk-91" class="exercise"><strong>Exercise 4.51  (Ex 78)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-84" class="exercise"><strong>Exercise 4.52  (Ex 79)  </strong></span>
+<span id="exr:unnamed-chunk-92" class="exercise"><strong>Exercise 4.52  (Ex 79)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-85" class="exercise"><strong>Exercise 4.53  (Ex 81)  </strong></span>
+<span id="exr:unnamed-chunk-93" class="exercise"><strong>Exercise 4.53  (Ex 81)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-86" class="exercise"><strong>Exercise 4.54  (Ex 82)  </strong></span>
+<span id="exr:unnamed-chunk-94" class="exercise"><strong>Exercise 4.54  (Ex 82)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-87" class="exercise"><strong>Exercise 4.55  (Ex 86)  </strong></span>
+<span id="exr:unnamed-chunk-95" class="exercise"><strong>Exercise 4.55  (Ex 86)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-88" class="exercise"><strong>Exercise 4.56  (Ex 88)  </strong></span>
+<span id="exr:unnamed-chunk-96" class="exercise"><strong>Exercise 4.56  (Ex 88)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-89" class="exercise"><strong>Exercise 4.57  (Ex 91)  </strong></span>
+<span id="exr:unnamed-chunk-97" class="exercise"><strong>Exercise 4.57  (Ex 91)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-90" class="exercise"><strong>Exercise 4.58  (Ex 97)  </strong></span>
+<span id="exr:unnamed-chunk-98" class="exercise"><strong>Exercise 4.58  (Ex 97)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-91" class="exercise"><strong>Exercise 4.59  (Ex 98)  </strong></span>
+<span id="exr:unnamed-chunk-99" class="exercise"><strong>Exercise 4.59  (Ex 98)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-92" class="exercise"><strong>Exercise 4.60  (Ex 102)  </strong></span>
+<span id="exr:unnamed-chunk-100" class="exercise"><strong>Exercise 4.60  (Ex 102)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-93" class="exercise"><strong>Exercise 4.61  (Ex 104)  </strong></span>
+<span id="exr:unnamed-chunk-101" class="exercise"><strong>Exercise 4.61  (Ex 104)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-94" class="exercise"><strong>Exercise 4.62  (Ex 114)  </strong></span>
+<span id="exr:unnamed-chunk-102" class="exercise"><strong>Exercise 4.62  (Ex 114)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-95" class="exercise"><strong>Exercise 4.63  (Ex 116)  </strong></span>
+<span id="exr:unnamed-chunk-103" class="exercise"><strong>Exercise 4.63  (Ex 116)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-96" class="exercise"><strong>Exercise 4.64  (Ex 116)  </strong></span>
+<span id="exr:unnamed-chunk-104" class="exercise"><strong>Exercise 4.64  (Ex 116)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-97" class="exercise"><strong>Exercise 4.65  (Ex 118)  </strong></span>
+<span id="exr:unnamed-chunk-105" class="exercise"><strong>Exercise 4.65  (Ex 118)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-98" class="exercise"><strong>Exercise 4.66  (Ex 119)  </strong></span>
+<span id="exr:unnamed-chunk-106" class="exercise"><strong>Exercise 4.66  (Ex 119)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-99" class="exercise"><strong>Exercise 4.67  (Ex 121)  </strong></span>
+<span id="exr:unnamed-chunk-107" class="exercise"><strong>Exercise 4.67  (Ex 121)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-100" class="exercise"><strong>Exercise 4.68  (Ex 122)  </strong></span>TODO - Alex
+<span id="exr:unnamed-chunk-108" class="exercise"><strong>Exercise 4.68  (Ex 122)  </strong></span>TODO - Alex
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-101" class="exercise"><strong>Exercise 4.69  (Ex 125)  </strong></span>
+<span id="exr:unnamed-chunk-109" class="exercise"><strong>Exercise 4.69  (Ex 125)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-102" class="exercise"><strong>Exercise 4.70  (Ex 136)  </strong></span>
+<span id="exr:unnamed-chunk-110" class="exercise"><strong>Exercise 4.70  (Ex 136)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-103" class="exercise"><strong>Exercise 4.71  (Ex 141)  </strong></span>
+<span id="exr:unnamed-chunk-111" class="exercise"><strong>Exercise 4.71  (Ex 141)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-104" class="exercise"><strong>Exercise 4.72  (Ex 144)  </strong></span>
+<span id="exr:unnamed-chunk-112" class="exercise"><strong>Exercise 4.72  (Ex 144)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-105" class="exercise"><strong>Exercise 4.73  (Ex 145)  </strong></span>
+<span id="exr:unnamed-chunk-113" class="exercise"><strong>Exercise 4.73  (Ex 145)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-106" class="exercise"><strong>Exercise 4.74  (Ex 150)  </strong></span>
+<span id="exr:unnamed-chunk-114" class="exercise"><strong>Exercise 4.74  (Ex 150)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-107" class="exercise"><strong>Exercise 4.75  (Ex 154)  </strong></span>
+<span id="exr:unnamed-chunk-115" class="exercise"><strong>Exercise 4.75  (Ex 154)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-108" class="exercise"><strong>Exercise 4.76  (Ex 156)  </strong></span>
+<span id="exr:unnamed-chunk-116" class="exercise"><strong>Exercise 4.76  (Ex 156)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-109" class="exercise"><strong>Exercise 4.77  (Ex 161)  </strong></span>
+<span id="exr:unnamed-chunk-117" class="exercise"><strong>Exercise 4.77  (Ex 161)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-110" class="exercise"><strong>Exercise 4.78  (Ex 166)  </strong></span>
+<span id="exr:unnamed-chunk-118" class="exercise"><strong>Exercise 4.78  (Ex 166)  </strong></span>
 </div>
 
 
