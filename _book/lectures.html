@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>STAT 709: My notes</title>
   <meta name="description" content="This is my collection of notes for the STAT 709 class taught at UW-Madison.">
-  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
   <meta property="og:title" content="STAT 709: My notes" />
   <meta property="og:type" content="book" />
@@ -117,52 +117,53 @@
 <h4><span class="header-section-number">2.1.1.1</span> <span class="math inline">\(\sigma\)</span>-fields</h4>
 
 <div class="definition">
-<p><span id="def:sigmaField" class="definition"><strong>Definition 2.1  (<span class="math inline">\(\sigma\)</span>-field (or <span class="math inline">\(\sigma\)</span>-algebra))  </strong></span>A <span class="math inline">\({\mathcal{F}}\)</span> collection of subsets of <span class="math inline">\(\Omega\)</span> is called a <span class="math inline">\(\sigma\)</span>-field (or <span class="math inline">\(\sigma\)</span>-algebra) if the following three conditions hold:</p>
+<p><span id="def:sigmaField" class="definition"><strong>Definition 2.1  (<span class="math inline">\(\sigma\)</span>-field (or <span class="math inline">\(\sigma\)</span>-algebra))  </strong></span>A <span class="math inline">\(\mathcal{F}\)</span> collection of subsets of <span class="math inline">\(\Omega\)</span> is called a <span class="math inline">\(\sigma\)</span>-field (or <span class="math inline">\(\sigma\)</span>-algebra) if the following three conditions hold:</p>
 <ol style="list-style-type: lower-roman">
-<li><span class="math inline">\(\emptyset \in {\mathcal{F}}\)</span></li>
-<li><span class="math inline">\(A \in {\mathcal{F}}\Rightarrow A^{c} \in {\mathcal{F}}\)</span></li>
-<li>If <span class="math inline">\(A_i \in {\mathcal{F}}\)</span> for all <span class="math inline">\(i = 1,2,\ldots\)</span>, then <span class="math inline">\(\bigcup_i A_i \in {\mathcal{F}}\)</span>.</li>
+<li><span class="math inline">\(\emptyset \in \mathcal{F}\)</span></li>
+<li><span class="math inline">\(A \in \mathcal{F}\Rightarrow A^{c} \in \mathcal{F}\)</span></li>
+<li>If <span class="math inline">\(A_i \in \mathcal{F}\)</span> for all <span class="math inline">\(i = 1,2,\ldots\)</span>, then <span class="math inline">\(\bigcup_i A_i \in \mathcal{F}\)</span>.</li>
 </ol>
 </div>
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-1" class="example"><strong>Example 2.1  (A Few <span class="math inline">\(\sigma\)</span>-fields)  </strong></span>There are some trivial examples. One is the example where <span class="math inline">\({\mathcal{F}}= \{\emptyset,\Omega\}\)</span>. It is easy to check that the three conditions are met for this collection of subsets. Another trivial example would be <span class="math inline">\({\mathcal{F}}= {\mathbb{P}}(\Omega)\)</span>.</p>
-<p>The simplest non-trivial example is <span class="math inline">\({\mathcal{F}}= \left\{\emptyset, A, A^C, \Omega\right\}\)</span> where <span class="math inline">\(A \subset \Omega\)</span>. Since this collection of subsets is so small, it is easy to check the three conditions mentioned above.</p>
+<p><span id="exm:unnamed-chunk-1" class="example"><strong>Example 2.1  (A Few <span class="math inline">\(\sigma\)</span>-fields)  </strong></span>There are some trivial examples. One is the example where <span class="math inline">\(\mathcal{F}= \{\emptyset,\Omega\}\)</span>. It is easy to check that the three conditions are met for this collection of subsets. Another trivial example would be <span class="math inline">\(\mathcal{F}= \mathbb{P}(\Omega)\)</span>.</p>
+<p>The simplest non-trivial example is <span class="math inline">\(\mathcal{F}= \left\{\emptyset, A, A^C, \Omega\right\}\)</span> where <span class="math inline">\(A \subset \Omega\)</span>. Since this collection of subsets is so small, it is easy to check the three conditions mentioned above.</p>
 </div>
 
 
 <div class="definition">
-<span id="def:measurableSpace" class="definition"><strong>Definition 2.2  (Measurable Space)  </strong></span>If <span class="math inline">\({\mathcal{F}}\)</span> is a <span class="math inline">\(\sigma\)</span>-field on <span class="math inline">\(\Omega\)</span>, then we call <span class="math inline">\(\left(\Omega, {\mathcal{F}}\right)\)</span> a <strong><em>measurable space</em></strong>.
+<span id="def:measurableSpace" class="definition"><strong>Definition 2.2  (Measurable Space)  </strong></span>If <span class="math inline">\(\mathcal{F}\)</span> is a <span class="math inline">\(\sigma\)</span>-field on <span class="math inline">\(\Omega\)</span>, then we call <span class="math inline">\(\left(\Omega, \mathcal{F}\right)\)</span> a <strong><em>measurable space</em></strong>.
 </div>
 
 </div>
 <div id="sigma-field-generated-by-a-collection-of-subsets" class="section level4">
 <h4><span class="header-section-number">2.1.1.2</span> <span class="math inline">\(\sigma\)</span>-field generated by a collection of subsets</h4>
-<p>Sometimes we are interested in a specific collection of subsets, <span class="math inline">\({\mathcal{C}}\)</span>, that is NOT a <span class="math inline">\(\sigma\)</span>-field. But since all the machinery we will develop works with <span class="math inline">\(\sigma\)</span>-fields, we are interested in creating a <span class="math inline">\(\sigma\)</span>-field that contains <span class="math inline">\({\mathcal{C}}\)</span>. So we introduce the notion of a <em><span class="math inline">\(\sigma\)</span>-field generated by a collection of subsets</em>.</p>
+<p>Sometimes we are interested in a specific collection of subsets, <span class="math inline">\(\mathcal{C}\)</span>, that is NOT a <span class="math inline">\(\sigma\)</span>-field. But since all the machinery we will develop works with <span class="math inline">\(\sigma\)</span>-fields, we are interested in creating a <span class="math inline">\(\sigma\)</span>-field that contains <span class="math inline">\(\mathcal{C}\)</span>. So we introduce the notion of a <em><span class="math inline">\(\sigma\)</span>-field generated by a collection of subsets</em>.</p>
 
 <div class="definition">
-<span id="def:unnamed-chunk-2" class="definition"><strong>Definition 2.3  (Generated <span class="math inline">\(\sigma\)</span>-field)  </strong></span>The smallest <span class="math inline">\(\sigma\)</span>-field containing a collection of subsets, <span class="math inline">\({\mathcal{C}}\)</span>, is called the <span class="math inline">\(\sigma\)</span>-field generated by <span class="math inline">\({\mathcal{C}}\)</span>.
+<span id="def:unnamed-chunk-2" class="definition"><strong>Definition 2.3  (Generated <span class="math inline">\(\sigma\)</span>-field)  </strong></span>The smallest <span class="math inline">\(\sigma\)</span>-field containing a collection of subsets, <span class="math inline">\(\mathcal{C}\)</span>, is called the <span class="math inline">\(\sigma\)</span>-field generated by <span class="math inline">\(\mathcal{C}\)</span>.
 </div>
 
-<p><span class="math inline">\(\sigma\left({\mathcal{C}}\right)\)</span> is used to denote the <span class="math inline">\(\sigma\)</span>-field generated by <span class="math inline">\({\mathcal{C}}\)</span>, and is by definition the smallest <span class="math inline">\(\sigma\)</span>-field that contains <span class="math inline">\({\mathcal{C}}\)</span>: if <span class="math inline">\({\mathcal{F}}\)</span> is a <span class="math inline">\(\sigma\)</span>-field with <span class="math inline">\({\mathcal{C}}\subset {\mathcal{F}}\)</span>, then <span class="math inline">\(\sigma\left({\mathcal{C}}\right) \subseteq {\mathcal{F}}\)</span>.</p>
+<p><span class="math inline">\(\sigma\left(\mathcal{C}\right)\)</span> is used to denote the <span class="math inline">\(\sigma\)</span>-field generated by <span class="math inline">\(\mathcal{C}\)</span>, and is by definition the smallest <span class="math inline">\(\sigma\)</span>-field that contains <span class="math inline">\(\mathcal{C}\)</span>: if <span class="math inline">\(\mathcal{F}\)</span> is a <span class="math inline">\(\sigma\)</span>-field with <span class="math inline">\(\mathcal{C}\subset \mathcal{F}\)</span>, then <span class="math inline">\(\sigma\left(\mathcal{C}\right) \subseteq \mathcal{F}\)</span>.</p>
 </div>
 <div id="borel-sigma-field" class="section level4">
 <h4><span class="header-section-number">2.1.1.3</span> Borel <span class="math inline">\(\sigma\)</span>-field</h4>
-<p>A particular important <span class="math inline">\(\sigma\)</span>-field is the Borel <span class="math inline">\(\sigma\)</span>-field. In general, this is defined as the <span class="math inline">\(\sigma\)</span>-field generated by the collection of all open subsets of a specific topology. In particular, if we consider <span class="math inline">\({\mathbb{R}}^k\)</span> is the <span class="math inline">\(k\)</span>-dimensional Euclidean space, <span class="math inline">\({\mathcal{O}} = \left\{O \subseteq {\mathbb{R}}^k \left | O\ \text{open set} \right\}\right.\)</span>, then <span class="math inline">\(\sigma\left({\mathcal{O}}\right) = {\mathcal{B}}^k\)</span> (the Borel <span class="math inline">\(\sigma\)</span>-field on <span class="math inline">\({\mathbb{R}}^k\)</span>).</p>
+<p>A particular important <span class="math inline">\(\sigma\)</span>-field is the Borel <span class="math inline">\(\sigma\)</span>-field. In general, this is defined as the <span class="math inline">\(\sigma\)</span>-field generated by the collection of all open subsets of a specific topology. In particular, if we consider <span class="math inline">\(\mathbb{R}^k\)</span> is the <span class="math inline">\(k\)</span>-dimensional Euclidean space, <span class="math inline">\(\mathcal{O} = \left\{O \subseteq \mathbb{R}^k \left | O\ \text{open set} \right\}\right.\)</span>, then <span class="math inline">\(\sigma\left(\mathcal{O}\right) = \mathcal{B}^k\)</span> (the Borel <span class="math inline">\(\sigma\)</span>-field on <span class="math inline">\(\mathbb{R}^k\)</span>).</p>
 <p>It can be shown that the <span class="math inline">\(\sigma\)</span>-field generated by the collection of all closed sets is also the Borel <span class="math inline">\(\sigma\)</span>-field.</p>
-<p>Sometimes it is useful to be able to limit ourselves to a subspace of <span class="math inline">\({\mathbb{R}}^k\)</span>. In such cases, we can create the Borel <span class="math inline">\(\sigma\)</span>-field on that subspace in the following way: if <span class="math inline">\(C \in {\mathcal{B}}^k\)</span>, then <span class="math inline">\({\mathcal{B}}_C = \left\{ C\cap B \left | B \in {\mathcal{B}}^k \right\}\right.\)</span> is the Borel <span class="math inline">\(\sigma\)</span>-field on <span class="math inline">\(C\)</span>.</p>
+<p>Sometimes it is useful to be able to limit ourselves to a subspace of <span class="math inline">\(\mathbb{R}^k\)</span>. In such cases, we can create the Borel <span class="math inline">\(\sigma\)</span>-field on that subspace in the following way: if <span class="math inline">\(C \in \mathcal{B}^k\)</span>, then <span class="math inline">\(\mathcal{B}_C = \left\{ C\cap B \left | B \in \mathcal{B}^k \right\}\right.\)</span> is the Borel <span class="math inline">\(\sigma\)</span>-field on <span class="math inline">\(C\)</span>.</p>
 </div>
 <div id="measures" class="section level4">
 <h4><span class="header-section-number">2.1.1.4</span> Measures</h4>
 
 <div class="definition">
-<p><span id="def:measure" class="definition"><strong>Definition 2.4  (Measure)  </strong></span>Let <span class="math inline">\(\left( \Omega, {\mathcal{F}}\right)\)</span> is a measurable space</p>
-<p><span class="math inline">\(\nu: {\mathcal{F}}\rightarrow {\mathbb{R}}\cup\{\infty\}\)</span> is said to be a <strong><em>measure</em></strong> if</p>
+<p><span id="def:measure" class="definition"><strong>Definition 2.4  (Measure)  </strong></span>Let <span class="math inline">\(\left( \Omega, \mathcal{F}\right)\)</span> is a measurable space</p>
+<p><span class="math inline">\(\nu: \mathcal{F}\rightarrow \mathbb{R}\cup\{\infty\}\)</span> is said to be a <strong><em>measure</em></strong> if</p>
 <ol style="list-style-type: lower-roman">
-<li><span class="math inline">\(0 \leq \nu(A) \leq \infty\)</span> for all <span class="math inline">\(A \in {\mathcal{F}}\)</span></li>
+<li><span class="math inline">\(0 \leq \nu(A) \leq \infty\)</span> for all <span class="math inline">\(A \in \mathcal{F}\)</span></li>
 <li><span class="math inline">\(\nu(\emptyset) = 0\)</span></li>
-<li>If <span class="math inline">\(A_i \in {\mathcal{F}}\)</span> for <span class="math inline">\(i=1,2,...\)</span>, and <span class="math inline">\(A_i \cap A_j = \emptyset, \forall i \neq j\)</span> (i.e. <span class="math inline">\(A_i\)</span>’s are pairwise disjoint), then it must hold that <span class="math display">\[\nu\left(\bigcup_{i=1}^\infty A_i \right) = \sum_{i=1}^\infty \nu(A_i)\]</span></li>
+<li>If <span class="math inline">\(A_i \in \mathcal{F}\)</span> for <span class="math inline">\(i=1,2,...\)</span>, and <span class="math inline">\(A_i \cap A_j = \emptyset, \forall i \neq j\)</span> (i.e. <span class="math inline">\(A_i\)</span>’s are pairwise disjoint), then it must hold that
+<span class="math display">\[\nu\left(\bigcup_{i=1}^\infty A_i \right) = \sum_{i=1}^\infty \nu(A_i)\]</span></li>
 </ol>
 </div>
 
@@ -173,7 +174,7 @@
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-4" class="example"><strong>Example 2.3  (Lebesgue Measure)  </strong></span>The measure <span class="math inline">\(m: {\mathbb{R}}\rightarrow {\mathbb{R}}\)</span> satisfying that for all intervals <span class="math inline">\([a,b], a &lt; b\)</span>,</p>
+<p><span id="exm:unnamed-chunk-4" class="example"><strong>Example 2.3  (Lebesgue Measure)  </strong></span>The measure <span class="math inline">\(m: \mathbb{R}\rightarrow \mathbb{R}\)</span> satisfying that for all intervals <span class="math inline">\([a,b], a &lt; b\)</span>,</p>
 <p><span class="math display">\[m([a,b]) = b-a,\]</span></p>
 <p>is called the <em>lebesgue measure</em>. This measure is unique.</p>
 </div>
@@ -185,7 +186,7 @@
 
 
 <div class="definition">
-<span id="def:unnamed-chunk-5" class="definition"><strong>Definition 2.6  (Measure Space)  </strong></span>If <span class="math inline">\(\nu\)</span> is a measure on <span class="math inline">\({\mathcal{F}}\)</span>, and <span class="math inline">\((\Omega, {\mathcal{F}})\)</span> is a measurable space, then <span class="math inline">\((\Omega, {\mathcal{F}}, \nu)\)</span> is a <strong><em>measure space</em></strong>.
+<span id="def:unnamed-chunk-5" class="definition"><strong>Definition 2.6  (Measure Space)  </strong></span>If <span class="math inline">\(\nu\)</span> is a measure on <span class="math inline">\(\mathcal{F}\)</span>, and <span class="math inline">\((\Omega, \mathcal{F})\)</span> is a measurable space, then <span class="math inline">\((\Omega, \mathcal{F}, \nu)\)</span> is a <strong><em>measure space</em></strong>.
 </div>
 
 
@@ -196,12 +197,12 @@ The counting measure is <span class="math inline">\(\sigma\)</span>-finite if an
 
 
 <div class="definition">
-<span id="def:unnamed-chunk-7" class="definition"><strong>Definition 2.7  (Probability Space)  </strong></span>If <span class="math inline">\((\Omega, {\mathcal{F}}, \nu)\)</span> is a measurable space with <span class="math inline">\(\nu(\Omega) = 1\)</span>, then it is called a <strong><em>probability space</em></strong>.
+<span id="def:unnamed-chunk-7" class="definition"><strong>Definition 2.7  (Probability Space)  </strong></span>If <span class="math inline">\((\Omega, \mathcal{F}, \nu)\)</span> is a measurable space with <span class="math inline">\(\nu(\Omega) = 1\)</span>, then it is called a <strong><em>probability space</em></strong>.
 </div>
 
 
 <div class="proposition">
-<p><span id="prp:properties-of-measures" class="proposition"><strong>Proposition 2.1  (Properties of measures)  </strong></span>Let <span class="math inline">\((\Omega, {\mathcal{F}}, \nu)\)</span> be a measure space. Then the following holds:</p>
+<p><span id="prp:properties-of-measures" class="proposition"><strong>Proposition 2.1  (Properties of measures)  </strong></span>Let <span class="math inline">\((\Omega, \mathcal{F}, \nu)\)</span> be a measure space. Then the following holds:</p>
 <ol style="list-style-type: lower-roman">
 <li><strong>Monotonicity:</strong> if <span class="math inline">\(A \subseteq B\)</span>, then <span class="math inline">\(\nu(A) \leq \nu(B)\)</span></li>
 <li><strong>Subadditivity:</strong> for any sequence, <span class="math inline">\(A_1,A_2,\ldots\)</span>,</li>
@@ -214,7 +215,8 @@ The counting measure is <span class="math inline">\(\sigma\)</span>-finite if an
 </ol>
 <p><span class="math display">\[
 \nu\left(\lim_{n\rightarrow \infty}A_n\right) = \lim_{n\rightarrow\infty}\nu\left(A_n\right),
-\]</span> where</p>
+\]</span>
+where</p>
 <p><span class="math display">\[
 \lim_{n\rightarrow\infty}A_n = \bigcup_{i=1}^\infty A_i \left(\text{or} = \bigcap_{i=1}^\infty A_i\right)
 \]</span></p>
@@ -222,30 +224,36 @@ The counting measure is <span class="math inline">\(\sigma\)</span>-finite if an
 
 
 <div class="definition">
-<p><span id="def:cdf" class="definition"><strong>Definition 2.8  (Cumulative Distribution Function)  </strong></span>The <em>cumulative distribution function</em> (c.d.f.) of a measure <span class="math inline">\(\nu\)</span> is defined as <span class="math display">\[F(x) = \nu((-\infty,x]), x\in{\mathbb{R}}.\]</span></p>
+<p><span id="def:cdf" class="definition"><strong>Definition 2.8  (Cumulative Distribution Function)  </strong></span>The <em>cumulative distribution function</em> (c.d.f.) of a measure <span class="math inline">\(\nu\)</span> is defined as <span class="math display">\[F(x) = \nu((-\infty,x]), x\in\mathbb{R}.\]</span></p>
 </div>
 
-<p>There is a one-to-one correpsondence between probability measures on <span class="math inline">\(({\mathbb{R}}, {\mathcal{B}})\)</span> and the set of c.d.f.’s.</p>
+<p>There is a one-to-one correpsondence between probability measures on <span class="math inline">\((\mathbb{R}, \mathcal{B})\)</span> and the set of c.d.f.’s.</p>
 
 <div class="proposition">
-<span id="prp:cdfProperties" class="proposition"><strong>Proposition 2.2  (Properties of c.d.f.’s)  </strong></span> i) For a c.d.f, <span class="math inline">\({\mathcal{F}}\)</span>, on <span class="math inline">\({\mathbb{R}}\)</span>, it holds that: a) <span class="math inline">\(F(-\infty) = 0\)</span> b) <span class="math inline">\(F(\infty) = 1\)</span> c) <span class="math inline">\(x \leq y \Rightarrow F(x) \leq F(y)\)</span> (<em>non-decreasing</em>) d) <span class="math inline">\(\lim_{y\rightarrow x^+} F(y) = F(x)\)</span> (<em>right continuous</em>) ii) If a function <span class="math inline">\(F: {\mathbb{R}}\rightarrow {\mathbb{R}}\)</span> satisfies the four conditions above, it is a c.d.f. of a unique probability measure on <span class="math inline">\(({\mathbb{R}}, {\mathcal{B}})\)</span>.
+<span id="prp:cdfProperties" class="proposition"><strong>Proposition 2.2  (Properties of c.d.f.’s)  </strong></span>
+i) For a c.d.f, <span class="math inline">\(\mathcal{F}\)</span>, on <span class="math inline">\(\mathbb{R}\)</span>, it holds that:
+a) <span class="math inline">\(F(-\infty) = 0\)</span>
+b) <span class="math inline">\(F(\infty) = 1\)</span>
+c) <span class="math inline">\(x \leq y \Rightarrow F(x) \leq F(y)\)</span> (<em>non-decreasing</em>)
+d) <span class="math inline">\(\lim_{y\rightarrow x^+} F(y) = F(x)\)</span> (<em>right continuous</em>)
+ii) If a function <span class="math inline">\(F: \mathbb{R}\rightarrow \mathbb{R}\)</span> satisfies the four conditions above, it is a c.d.f. of a unique probability measure on <span class="math inline">\((\mathbb{R}, \mathcal{B})\)</span>.
 </div>
 
 
 <div class="proposition">
-<p><span id="prp:productMeasure" class="proposition"><strong>Proposition 2.3  (The Product Measure Theorem)  </strong></span>If <span class="math inline">\(\left(\Omega_i, {\mathcal{F}}_i, \nu_i\right), i = 1,\ldots,k\)</span> are measure spaces with <span class="math inline">\(\sigma\)</span>-finite measures. Then there exists a unique measure on the <span class="math inline">\(\sigma\)</span>-field <span class="math inline">\(\sigma({\mathcal{F}}_1 \times \dots {\mathcal{F}}_k)\)</span>:</p>
+<p><span id="prp:productMeasure" class="proposition"><strong>Proposition 2.3  (The Product Measure Theorem)  </strong></span>If <span class="math inline">\(\left(\Omega_i, \mathcal{F}_i, \nu_i\right), i = 1,\ldots,k\)</span> are measure spaces with <span class="math inline">\(\sigma\)</span>-finite measures. Then there exists a unique measure on the <span class="math inline">\(\sigma\)</span>-field <span class="math inline">\(\sigma(\mathcal{F}_1 \times \dots \mathcal{F}_k)\)</span>:</p>
 <p><span class="math display">\[
 \nu_1 \times \dots \times \nu_k(A_1 \times \dots \times A_k) = \nu_1(A_1)\dots \nu_k(A_k)
 \]</span></p>
-<p>for all <span class="math inline">\(A_i \in {\mathcal{F}}_i, i = 1,\ldots,k\)</span>.</p>
+<p>for all <span class="math inline">\(A_i \in \mathcal{F}_i, i = 1,\ldots,k\)</span>.</p>
 This measure is called the <em>product measure</em>.
 </div>
 
 
 <div class="definition">
-<p><span id="def:joint-marginal" class="definition"><strong>Definition 2.9  (Joint and Marginal c.d.f.’s)  </strong></span>The <em>join c.d.f.</em> of a probability measure on <span class="math inline">\(({\mathbb{R}}^k, {\mathcal{B}}^k)\)</span> is defined as</p>
+<p><span id="def:joint-marginal" class="definition"><strong>Definition 2.9  (Joint and Marginal c.d.f.’s)  </strong></span>The <em>join c.d.f.</em> of a probability measure on <span class="math inline">\((\mathbb{R}^k, \mathcal{B}^k)\)</span> is defined as</p>
 <p><span class="math display">\[
-F(x_1,\ldots, x_k) = P((-\infty, x_1]\times \dots \times (-\infty,x_k]), \quad x_i \in {\mathbb{R}}.
+F(x_1,\ldots, x_k) = P((-\infty, x_1]\times \dots \times (-\infty,x_k]), \quad x_i \in \mathbb{R}.
 \]</span></p>
 </div>
 
@@ -256,45 +264,57 @@ F(x_1,\ldots, x_k) = P((-\infty, x_1]\times \dots \times (-\infty,x_k]), \quad x
 <h2><span class="header-section-number">2.2</span> Lecture 2: 9/11</h2>
 
 <div class="definition">
-<p><span id="def:measurable-function" class="definition"><strong>Definition 2.10  (Measurable Function)  </strong></span> Let <span class="math inline">\((\Omega, {\mathcal{F}})\)</span> and <span class="math inline">\((\Lambda, \mathcal{G})\)</span> be measurable spaces. Let <span class="math inline">\(f: \Omega \rightarrow \Lambda\)</span>.</p>
+<p><span id="def:measurable-function" class="definition"><strong>Definition 2.10  (Measurable Function)  </strong></span>
+Let <span class="math inline">\((\Omega, \mathcal{F})\)</span> and <span class="math inline">\((\Lambda, \mathcal{G})\)</span> be measurable spaces. Let <span class="math inline">\(f: \Omega \rightarrow \Lambda\)</span>.</p>
 <p><span class="math inline">\(f\)</span> is called a <em>measurable function</em> if and only if</p>
 <p><span class="math display">\[
-  f^{-1}(\mathcal{G}) \subset {\mathcal{F}}(\text{i.e.} f^{-1}(G) \in {\mathcal{F}}\forall G \in \mathcal{G}).
+  f^{-1}(\mathcal{G}) \subset \mathcal{F}(\text{i.e.} f^{-1}(G) \in \mathcal{F}\forall G \in \mathcal{G}).
 \]</span></p>
 </div>
 
-<p>Note that if <span class="math inline">\({\mathcal{F}}\)</span> is the collection of all subsets of <span class="math inline">\(\Omega\)</span>, then all functions are measurable.</p>
+<p>Note that if <span class="math inline">\(\mathcal{F}\)</span> is the collection of all subsets of <span class="math inline">\(\Omega\)</span>, then all functions are measurable.</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-8" class="definition"><strong>Definition 2.11  (<span class="math inline">\(\sigma\)</span>-field generated by a function)  </strong></span> Let <span class="math inline">\(f\)</span> be as in @ref{measurable-function}. Then <span class="math inline">\(f^{-1}(\mathcal{G})\)</span> is a sub-<span class="math inline">\(\sigma\)</span>-field of <span class="math inline">\({\mathcal{F}}\)</span>. We call it the <span class="math inline">\(\sigma\)</span>-field generated by <span class="math inline">\(f\)</span>, and denote it by <span class="math inline">\(\sigma(f)\)</span>.</p>
+<p><span id="def:unnamed-chunk-8" class="definition"><strong>Definition 2.11  (<span class="math inline">\(\sigma\)</span>-field generated by a function)  </strong></span>
+Let <span class="math inline">\(f\)</span> be as in @ref{measurable-function}. Then <span class="math inline">\(f^{-1}(\mathcal{G})\)</span> is a sub-<span class="math inline">\(\sigma\)</span>-field of <span class="math inline">\(\mathcal{F}\)</span>. We call it the <span class="math inline">\(\sigma\)</span>-field generated by <span class="math inline">\(f\)</span>, and denote it by <span class="math inline">\(\sigma(f)\)</span>.</p>
 </div>
 
 
 <div class="definition">
-<p><span id="def:borel-functions" class="definition"><strong>Definition 2.12  (Borel Functions)  </strong></span> A function from <span class="math inline">\((\Omega, {\mathcal{F}})\)</span> to <span class="math inline">\(({\mathbb{R}}, {\mathcal{B}})\)</span> is called a *Borel function$ if it is measurable.</p>
+<p><span id="def:borel-functions" class="definition"><strong>Definition 2.12  (Borel Functions)  </strong></span>
+A function from <span class="math inline">\((\Omega, \mathcal{F})\)</span> to <span class="math inline">\((\mathbb{R}, \mathcal{B})\)</span> is called a *Borel function$ if it is measurable.</p>
 </div>
 
 
 <div class="proposition">
-<p><span id="prp:borel-function-properties" class="proposition"><strong>Proposition 2.4  (Properties of Borel Functions)  </strong></span> Let <span class="math inline">\((\Omega, {\mathcal{F}})\)</span> be a measurable space.</p>
+<p><span id="prp:borel-function-properties" class="proposition"><strong>Proposition 2.4  (Properties of Borel Functions)  </strong></span>
+Let <span class="math inline">\((\Omega, \mathcal{F})\)</span> be a measurable space.</p>
 <ol style="list-style-type: lower-roman">
-<li><p>A function is Borel if and only if <span class="math inline">\(f^{-1}(a,\infty) \in {\mathcal{F}}\)</span> for all <span class="math inline">\(a \in {\mathbb{R}}\)</span>.</p></li>
-<li><p>If <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are Borel, then so are <span class="math inline">\(fg\)</span> and <span class="math inline">\(af + bg\)</span>, where <span class="math inline">\(a,b \in {\mathbb{R}}\)</span>. Also, if <span class="math inline">\(g(\omega) \neq 0\)</span> for all <span class="math inline">\(\omega \in \Omega\)</span>, then <span class="math inline">\(f/g\)</span> is also Borel.</p></li>
-<li><p>If <span class="math inline">\(f_1, f_2, \ldots\)</span> are all Borel functions, then so are <span class="math inline">\(\sup_n f_n\)</span>, <span class="math inline">\(\inf_n f_n\)</span>, <span class="math inline">\(\lim \sup_n f_n\)</span>, and <span class="math inline">\(\lim \inf_n f_n\)</span>. Furthermore, the set <span class="math display">\[ 
+<li><p>A function is Borel if and only if <span class="math inline">\(f^{-1}(a,\infty) \in \mathcal{F}\)</span> for all <span class="math inline">\(a \in \mathbb{R}\)</span>.</p></li>
+<li><p>If <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are Borel, then so are <span class="math inline">\(fg\)</span> and <span class="math inline">\(af + bg\)</span>, where <span class="math inline">\(a,b \in \mathbb{R}\)</span>. Also, if <span class="math inline">\(g(\omega) \neq 0\)</span> for all <span class="math inline">\(\omega \in \Omega\)</span>, then <span class="math inline">\(f/g\)</span> is also Borel.</p></li>
+<li><p>If <span class="math inline">\(f_1, f_2, \ldots\)</span> are all Borel functions, then so are <span class="math inline">\(\sup_n f_n\)</span>, <span class="math inline">\(\inf_n f_n\)</span>, <span class="math inline">\(\lim \sup_n f_n\)</span>, and <span class="math inline">\(\lim \inf_n f_n\)</span>. Furthermore, the set
+<span class="math display">\[ 
   A = \left\{ \omega \in \Omega | \lim_{n \rightarrow \infty} f_n(\omega) \text{ exists} \right \}
-\]</span> is an event, and the function <span class="math display">\[
+\]</span>
+is an event, and the function
+<span class="math display">\[
   h(\omega) = \left\{ 
-\begin{array}{ll}
-  \lim_{n\rightarrow \infty} f_n \omega &amp; \quad \omega \in A \\
-  f_1(\omega) &amp; \quad \omega \notin A 
-\end{array}
+    \begin{array}{ll}
+ \lim_{n\rightarrow \infty} f_n \omega &amp; \quad \omega \in A \\
+ f_1(\omega) &amp; \quad \omega \notin A 
+    \end{array}
   \right .
 \]</span></p></li>
 </ol>
 <p>is borel.</p>
 <ol start="4" style="list-style-type: lower-roman">
+<<<<<<< HEAD
+<li><p>Suppose that <span class="math inline">\(f\)</span> is measurable from <span class="math inline">\((\Omega, \mathcal{F})\)</span> to <span class="math inline">\((\Lambda, \mathcal{G})\)</span> and <span class="math inline">\(g\)</span> is measurable from <span class="math inline">\((\Lambda, \mathcal{G})\)</span> to <span class="math inline">\((\Delta, \mathcal{H})\)</span>. Then the composite function <span class="math inline">\(g \circ f\)</span> is measurable from <span class="math inline">\((\Omega, \mathcal{F})\)</span> to <span class="math inline">\((\Delta, \mathcal{H})\)</span>.</p></li>
+<li>Let <span class="math inline">\(\Omega\)</span> be a Borel set in <span class="math inline">\(\mathbb{R}^p\)</span>. If <span class="math inline">\(f\)</span> is a continuous function from <span class="math inline">\(\Omega\)</span> to <span class="math inline">\(\mathbb{R}^q\)</span>, then <span class="math inline">\(f\)</span> is measurable.</li>
+=======
 <li><p>Suppose that <span class="math inline">\(f\)</span> is measurable from <span class="math inline">\((\Omega, {\mathcal{F}})\)</span> to <span class="math inline">\((\Lambda, \mathcal{G})\)</span> and <span class="math inline">\(g\)</span> is measurable from <span class="math inline">\((\Lambda, \mathcal{G})\)</span> to <span class="math inline">\((\Delta, \mathcal{H})\)</span>. Then the composite function <span class="math inline">\(g \circ f\)</span> is measurable from <span class="math inline">\((\Omega, {\mathcal{F}})\)</span> to <span class="math inline">\((\Delta, \mathcal{H})\)</span>.</p></li>
 <li>Let <span class="math inline">\(\Omega\)</span> be a Borel set in <span class="math inline">\({\mathbb{R}}^p\)</span>. If <span class="math inline">\(f\)</span> is a continuous function from <span class="math inline">\(\Omega\)</span> to <span class="math inline">\({\mathbb{R}}^q\)</span>, then <span class="math inline">\(f\)</span> is measurable.</li>
+>>>>>>> 8aa3a7a388e5fdb077ad20b69fb911e685a269f2
 </ol>
 </div>
 
@@ -306,7 +326,7 @@ F(x_1,\ldots, x_k) = P((-\infty, x_1]\times \dots \times (-\infty,x_k]), \quad x
 
 
 <div class="definition">
-<p><span id="def:distribution" class="definition"><strong>Definition 2.13  (Distribution)  </strong></span>Let <span class="math inline">\((\Omega, {\mathcal{F}}, \nu)\)</span> be a measure space, and <span class="math inline">\(f\)</span> a measurable function from this measure space into the measurable space <span class="math inline">\((\Lambda, \mathcal{G})\)</span>.</p>
+<p><span id="def:distribution" class="definition"><strong>Definition 2.13  (Distribution)  </strong></span>Let <span class="math inline">\((\Omega, \mathcal{F}, \nu)\)</span> be a measure space, and <span class="math inline">\(f\)</span> a measurable function from this measure space into the measurable space <span class="math inline">\((\Lambda, \mathcal{G})\)</span>.</p>
 <p>The measure defined as</p>
 <p><span class="math display">\[
   \nu \circ f^{-1}(B) = \nu(f\in B) = \nu(f^{-1}(B)), \quad B \in \mathcal{G} 
@@ -351,7 +371,8 @@ If <span class="math inline">\(\nu\)</span> is a probability measure and <span c
 \]</span></p>
 
 <div class="definition">
-<p><span id="def:int-borel" class="definition"><strong>Definition 2.17  (Integral of General Borel Function)  </strong></span> Let <span class="math inline">\(f\)</span> be a Borel function, and let <span class="math inline">\(f_+(\omega) = \max\{f(\omega), 0\}\)</span> (i.e. the positive part) and <span class="math inline">\(f_-(\omega) = \max\{-f(\omega), 0\}\)</span> (i.e. the negative part). If at least one of <span class="math inline">\(\int f_+ d\nu\)</span> and <span class="math inline">\(\int f_- d\nu\)</span> is finite, we say that <span class="math inline">\(\int f d\nu\)</span> exists and</p>
+<p><span id="def:int-borel" class="definition"><strong>Definition 2.17  (Integral of General Borel Function)  </strong></span>
+Let <span class="math inline">\(f\)</span> be a Borel function, and let <span class="math inline">\(f_+(\omega) = \max\{f(\omega), 0\}\)</span> (i.e. the positive part) and <span class="math inline">\(f_-(\omega) = \max\{-f(\omega), 0\}\)</span> (i.e. the negative part). If at least one of <span class="math inline">\(\int f_+ d\nu\)</span> and <span class="math inline">\(\int f_- d\nu\)</span> is finite, we say that <span class="math inline">\(\int f d\nu\)</span> exists and</p>
 <p><span class="math display">\[
   \int f d\nu = \int f_+ d\nu - \int f_- d\nu.
 \]</span></p>
@@ -359,7 +380,8 @@ If <span class="math inline">\(\nu\)</span> is a probability measure and <span c
 
 
 <div class="definition">
-<p><span id="def:int-function" class="definition"><strong>Definition 2.18  (Integrable Functions)  </strong></span> When <span class="math inline">\(\int f d\nu &lt; \infty\)</span>, i.e. the integral of both the positive and negative part of <span class="math inline">\(f\)</span> is finite, we say that <span class="math inline">\(f\)</span> is <em>integrable</em>.</p>
+<p><span id="def:int-function" class="definition"><strong>Definition 2.18  (Integrable Functions)  </strong></span>
+When <span class="math inline">\(\int f d\nu &lt; \infty\)</span>, i.e. the integral of both the positive and negative part of <span class="math inline">\(f\)</span> is finite, we say that <span class="math inline">\(f\)</span> is <em>integrable</em>.</p>
 </div>
 
 <p>Note: as a consequence of the definition of an integrable function we have that a Borel function is integrable if and only if <span class="math inline">\(|f|\)</span> is integrable. (This is true since <span class="math inline">\(|f| = f_+ + f_-\)</span>.)</p>
@@ -367,15 +389,16 @@ If <span class="math inline">\(\nu\)</span> is a probability measure and <span c
 <p><span class="math display">\[ 
   \int f d\nu = \int_\Omega f d\nu = \int f(\omega) d\nu = \int f(\omega) d\nu(\omega) = \int f(\omega) \nu(d\omega),
 \]</span></p>
-<p>and if <span class="math inline">\(F\)</span> is the c.d.f. (<a href="lectures.html#def:cdf">2.8</a>) of a probability measure P on <span class="math inline">\(({\mathbb{R}}^k, {\mathcal{B}}^k)\)</span>,</p>
+<p>and if <span class="math inline">\(F\)</span> is the c.d.f. (<a href="lectures.html#def:cdf">2.8</a>) of a probability measure P on <span class="math inline">\((\mathbb{R}^k, \mathcal{B}^k)\)</span>,</p>
 <p><span class="math display">\[
   \int f(x) dP = \int f(x) dF(x) = \int fdF
 \]</span></p>
 
 <div class="proposition">
-<p><span id="prp:int-linearity" class="proposition"><strong>Proposition 2.6  (Linearity of Integrals)  </strong></span> Let <span class="math inline">\((\Omega, {\mathcal{F}}, \nu)\)</span> be a measure space, and <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be Borel functions.</p>
+<p><span id="prp:int-linearity" class="proposition"><strong>Proposition 2.6  (Linearity of Integrals)  </strong></span>
+Let <span class="math inline">\((\Omega, \mathcal{F}, \nu)\)</span> be a measure space, and <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be Borel functions.</p>
 <ol style="list-style-type: lower-roman">
-<li>If <span class="math inline">\(\int fd\nu\)</span> exists, then for any <span class="math inline">\(a \in {\mathbb{R}}\)</span>, <span class="math inline">\(\int (af)d\nu\)</span> exists, and</li>
+<li>If <span class="math inline">\(\int fd\nu\)</span> exists, then for any <span class="math inline">\(a \in \mathbb{R}\)</span>, <span class="math inline">\(\int (af)d\nu\)</span> exists, and</li>
 </ol>
 <p><span class="math display">\[ \int (af)d\nu = a \int f d\nu \]</span></p>
 <ol start="2" style="list-style-type: lower-roman">
@@ -386,17 +409,19 @@ If <span class="math inline">\(\nu\)</span> is a probability measure and <span c
 
 
 <div class="proof">
-<p> <span class="proof"><em>Proof. </em></span>  Show that it holds for indicator functions, simple functions, non-negative functions, and then all functions.</p>
+<p> <span class="proof"><em>Proof. </em></span> 
+Show that it holds for indicator functions, simple functions, non-negative functions, and then all functions.</p>
 </div>
 
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-11" class="definition"><strong>Definition 2.19  (Almost Everywhere or Almost Surely)  </strong></span> A statement is said to be true <span class="math inline">\(\nu\)</span>-a.e. (or <span class="math inline">\(\nu\)</span>-a.s.) if it is true for all <span class="math inline">\(\omega \notin N\)</span> and <span class="math inline">\(\nu(N) = 0\)</span>.</p>
+<p><span id="def:unnamed-chunk-11" class="definition"><strong>Definition 2.19  (Almost Everywhere or Almost Surely)  </strong></span>
+A statement is said to be true <span class="math inline">\(\nu\)</span>-a.e. (or <span class="math inline">\(\nu\)</span>-a.s.) if it is true for all <span class="math inline">\(\omega \notin N\)</span> and <span class="math inline">\(\nu(N) = 0\)</span>.</p>
 </div>
 
 
 <div class="proposition">
-<p><span id="prp:unnamed-chunk-12" class="proposition"><strong>Proposition 2.7  (a.e. for integrals)  </strong></span>Let <span class="math inline">\((\Omega, {\mathcal{F}}, \nu)\)</span> be a measure space, and <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be Borel functions.</p>
+<p><span id="prp:unnamed-chunk-12" class="proposition"><strong>Proposition 2.7  (a.e. for integrals)  </strong></span>Let <span class="math inline">\((\Omega, \mathcal{F}, \nu)\)</span> be a measure space, and <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be Borel functions.</p>
 <ol style="list-style-type: lower-roman">
 <li>If <span class="math inline">\(f\leq g\)</span> <span class="math inline">\(\nu\)</span>-a.e., then <span class="math inline">\(\int f d\nu \le \int g d\nu\)</span>, given that both integrals exist</li>
 <li>If <span class="math inline">\(f \ge 0\)</span> <span class="math inline">\(\nu\)</span>-a.e. and <span class="math inline">\(\int f d\nu = 0\)</span>, then <span class="math inline">\(f = 0\)</span> <span class="math inline">\(\nu\)</span>-a.e.</li>
@@ -405,11 +430,12 @@ If <span class="math inline">\(\nu\)</span> is a probability measure and <span c
 
 
 <div class="proof">
-<p> <span class="proof"><em>Proof. </em></span>  ii) Let <span class="math inline">\(A = \{f&gt;0\}\)</span> and <span class="math inline">\(A_n = \{f \ge n^{-1}\}\)</span>, <span class="math inline">\(n=1,2,\ldots\)</span>. Then <span class="math inline">\(A_n \subset A\)</span> for any <span class="math inline">\(n\)</span> and <span class="math inline">\(\lim_{n \rightarrow \infty} A_n = \cup A_n = A\)</span> (<strong>show that this holds</strong>).</p>
+<p> <span class="proof"><em>Proof. </em></span> 
+ii) Let <span class="math inline">\(A = \{f&gt;0\}\)</span> and <span class="math inline">\(A_n = \{f \ge n^{-1}\}\)</span>, <span class="math inline">\(n=1,2,\ldots\)</span>. Then <span class="math inline">\(A_n \subset A\)</span> for any <span class="math inline">\(n\)</span> and <span class="math inline">\(\lim_{n \rightarrow \infty} A_n = \cup A_n = A\)</span> (<strong>show that this holds</strong>).</p>
 <p>Then, by (iii) of <a href="lectures.html#prp:properties-of-measures">2.1</a>, <span class="math inline">\(\lim_{n \rightarrow \infty} \nu(A_n) = \nu(A)\)</span>. By part (i) and proposition <a href="lectures.html#prp:int-linearity">2.6</a>, we get that, for any n,</p>
-<span class="math display">\[\begin{align*}
+<p><span class="math display">\[\begin{align*}
   n^{-1} \nu(A_n) = \int n^{-1} I_{A_n} d\nu \le \int f I_{A_n} d\nu \le \int f d\nu = 0.
-\end{align*}\]</span>
+\end{align*}\]</span></p>
 </div>
 
 </div>
@@ -422,16 +448,16 @@ If <span class="math inline">\(\nu\)</span> is a probability measure and <span c
 <p>Proof of Ex 1.11: for any borel set A: if A = (-infty, x), it holds. If not, then…</p>
 <p><strong><span class="math inline">\(\pi\)</span>- and <span class="math inline">\(\lambda\)</span>-systems.</strong></p>
 <p><strong>Definition: <span class="math inline">\(\pi\)</span>-system</strong></p>
-<p>If <span class="math inline">\({\mathcal{C}}\)</span> is a collection of subsets, and it holds that <span class="math inline">\(A,B \in {\mathcal{C}}\Rightarrow A \cap B \in {\mathcal{C}}\)</span>.</p>
-<p>For a pi system, <span class="math inline">\(\sigma({\mathcal{C}}) = {\mathcal{B}}\)</span></p>
+<p>If <span class="math inline">\(\mathcal{C}\)</span> is a collection of subsets, and it holds that <span class="math inline">\(A,B \in \mathcal{C}\Rightarrow A \cap B \in \mathcal{C}\)</span>.</p>
+<p>For a pi system, <span class="math inline">\(\sigma(\mathcal{C}) = \mathcal{B}\)</span></p>
 
 <div class="proposition">
-<p><span id="prp:calc-radon-nikodym" class="proposition"><strong>Proposition 2.8  (Calculus with Radon-Nikodym Derivatives)  </strong></span>Let <span class="math inline">\(\nu\)</span> be a <span class="math inline">\(\sigma\)</span>-finite measure on a measure space <span class="math inline">\((\Omega, {\mathcal{F}})\)</span>. All other measures discussed in the following are defined on <span class="math inline">\((\Omega, {\mathcal{F}})\)</span>.</p>
+<p><span id="prp:calc-radon-nikodym" class="proposition"><strong>Proposition 2.8  (Calculus with Radon-Nikodym Derivatives)  </strong></span>Let <span class="math inline">\(\nu\)</span> be a <span class="math inline">\(\sigma\)</span>-finite measure on a measure space <span class="math inline">\((\Omega, \mathcal{F})\)</span>. All other measures discussed in the following are defined on <span class="math inline">\((\Omega, \mathcal{F})\)</span>.</p>
 <ol style="list-style-type: lower-roman">
 <li>If <span class="math inline">\(\lambda\)</span> is a meaure, <span class="math inline">\(\lambda &lt;&lt; \nu\)</span>, and <span class="math inline">\(f\ge 0\)</span>, then <span class="math display">\[\int f d\lambda = \int f \frac{d\lambda}{d\nu}d\nu.\]</span></li>
 <li>If <span class="math inline">\(\lambda_i\)</span>, <span class="math inline">\(i=1,2\)</span>, are measures and <span class="math inline">\(\lambda_i &lt;&lt; \nu\)</span>, then <span class="math inline">\(\lambda_1 + \lambda_2 &lt;&lt; \nu\)</span> and <span class="math display">\[\frac{d(\lambda_1 + \lambda_2)}{d\nu} = \frac{d\lambda_1}{d\nu} + \frac{d\lambda_2}{d\nu}\quad \nu\text{-a.e.}\]</span></li>
 <li>If <span class="math inline">\(\tau\)</span> is a measure, <span class="math inline">\(\lambda\)</span> a <span class="math inline">\(\sigma\)</span>-finite measure, and <span class="math inline">\(\tau &lt;&lt; \lambda &lt;&lt; \nu\)</span>, then <span class="math display">\[\frac{d\tau}{d\nu} = \frac{d\tau}{d\lambda}\frac{d\lambda}{d\nu}\quad \nu\text{-a.e.}.\]</span></li>
-<li>Let <span class="math inline">\((\Omega_i, {\mathcal{F}}_i, \nu_i)\)</span> be a measure space and <span class="math inline">\(\nu_i\)</span> be <span class="math inline">\(\sigma\)</span>-finite, <span class="math inline">\(i=1,2\)</span>. Let <span class="math inline">\(\lambda_i\)</span> be a <span class="math inline">\(\sigma\)</span>-finite measure on <span class="math inline">\((\Omega_i, {\mathcal{F}}_i)\)</span> and <span class="math inline">\(\lambda_1 &lt;&lt; \nu_i\)</span>, <span class="math inline">\(i=1,2\)</span>. Then <span class="math inline">\(\lambda_1 \times \lambda_2 &lt;&lt; \nu_1 \times \nu_2\)</span> and <span class="math display">\[\frac{d(\lambda_1 \times \lambda_2)}{d(\nu_1 \times \nu_2)}(\omega_1,\omega_2) = \frac{d\lambda_1}{d\nu_1}(\omega_1)\frac{d\lambda_2}{d\nu_2}(\omega_2)\quad \nu_1\times \nu_2\text{-a.e.}\]</span>.</li>
+<li>Let <span class="math inline">\((\Omega_i, \mathcal{F}_i, \nu_i)\)</span> be a measure space and <span class="math inline">\(\nu_i\)</span> be <span class="math inline">\(\sigma\)</span>-finite, <span class="math inline">\(i=1,2\)</span>. Let <span class="math inline">\(\lambda_i\)</span> be a <span class="math inline">\(\sigma\)</span>-finite measure on <span class="math inline">\((\Omega_i, \mathcal{F}_i)\)</span> and <span class="math inline">\(\lambda_1 &lt;&lt; \nu_i\)</span>, <span class="math inline">\(i=1,2\)</span>. Then <span class="math inline">\(\lambda_1 \times \lambda_2 &lt;&lt; \nu_1 \times \nu_2\)</span> and <span class="math display">\[\frac{d(\lambda_1 \times \lambda_2)}{d(\nu_1 \times \nu_2)}(\omega_1,\omega_2) = \frac{d\lambda_1}{d\nu_1}(\omega_1)\frac{d\lambda_2}{d\nu_2}(\omega_2)\quad \nu_1\times \nu_2\text{-a.e.}\]</span>.</li>
 </ol>
 </div>
 
@@ -490,7 +516,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
+    var src = "true";
     if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');

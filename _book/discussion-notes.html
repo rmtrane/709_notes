@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>STAT 709: My notes</title>
   <meta name="description" content="This is my collection of notes for the STAT 709 class taught at UW-Madison.">
-  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
   <meta property="og:title" content="STAT 709: My notes" />
   <meta property="og:type" content="book" />
@@ -115,10 +115,10 @@
 <h3><span class="header-section-number">3.1.1</span> <span class="math inline">\(\sigma\)</span>-fields</h3>
 
 <div class="exercise">
-<p><span id="exr:ex11" class="exercise"><strong>Exercise 3.1  (Countable intersection/union of <span class="math inline">\(\sigma\)</span>-fields)  </strong></span>Let <span class="math inline">\({\mathcal{F}}_n, n=1,2,\ldots\)</span> be a sequance of <span class="math inline">\(\sigma\)</span>-fields on <span class="math inline">\(\Omega\)</span>. Show the following:</p>
+<p><span id="exr:ex11" class="exercise"><strong>Exercise 3.1  (Countable intersection/union of <span class="math inline">\(\sigma\)</span>-fields)  </strong></span>Let <span class="math inline">\(\mathcal{F}_n, n=1,2,\ldots\)</span> be a sequance of <span class="math inline">\(\sigma\)</span>-fields on <span class="math inline">\(\Omega\)</span>. Show the following:</p>
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\cap_{i=1}^\infty {\mathcal{F}}_n\)</span> is a <span class="math inline">\(\sigma\)</span>-field.</li>
-<li>If <span class="math inline">\({\mathcal{F}}_1 \subset {\mathcal{F}}_2 \subset \dots\)</span>, then <span class="math inline">\(\cup_{i=1}^\infty {\mathcal{F}}_n\)</span> is not necessarily a <span class="math inline">\(\sigma\)</span>-field.</li>
+<li><span class="math inline">\(\cap_{i=1}^\infty \mathcal{F}_n\)</span> is a <span class="math inline">\(\sigma\)</span>-field.</li>
+<li>If <span class="math inline">\(\mathcal{F}_1 \subset \mathcal{F}_2 \subset \dots\)</span>, then <span class="math inline">\(\cup_{i=1}^\infty \mathcal{F}_n\)</span> is not necessarily a <span class="math inline">\(\sigma\)</span>-field.</li>
 </ol>
 </div>
 
@@ -126,17 +126,18 @@
 <div class="solution">
 <p> <span class="solution"><em>Solution</em> (<a href="discussion-notes.html#exr:ex11">3.1</a> a)). </span> We need to show (i)-(iii) from definition <a href="lectures.html#def:sigmaField">2.1</a>.</p>
 <ol style="list-style-type: lower-roman">
-<li>Since <span class="math inline">\({\mathcal{F}}_n\)</span> are all <span class="math inline">\(\sigma\)</span>-fields, <span class="math inline">\(\emptyset \in {\mathcal{F}}_n\)</span> for all <span class="math inline">\(n=1,2,\ldots\)</span>. Hence, <span class="math inline">\(\emptyset \in \cap_{i=1}^{\infty} {\mathcal{F}}_n\)</span>.</li>
+<li>Since <span class="math inline">\(\mathcal{F}_n\)</span> are all <span class="math inline">\(\sigma\)</span>-fields, <span class="math inline">\(\emptyset \in \mathcal{F}_n\)</span> for all <span class="math inline">\(n=1,2,\ldots\)</span>. Hence, <span class="math inline">\(\emptyset \in \cap_{i=1}^{\infty} \mathcal{F}_n\)</span>.</li>
 <li>As (i).</li>
-<li>Let <span class="math inline">\(\{A_i\}_{i=1}^\infty\)</span> be a sequence of subsets from <span class="math inline">\(\cap_{i=1}^{\infty} {\mathcal{F}}_n\)</span>. Then, for all <span class="math inline">\(i\)</span>, <span class="math inline">\(A_i \in {\mathcal{F}}_n\)</span> for all <span class="math inline">\(n\)</span>. Since <span class="math inline">\(F_n\)</span> is a <span class="math inline">\(\sigma\)</span>-field, <span class="math inline">\(\cup_{i=1}^\infty A_i \in {\mathcal{F}}_n\)</span> for all <span class="math inline">\(n\)</span>, and so <span class="math inline">\(\cup_{i=1}^\infty A_i \in \cap_{i=1}^\infty {\mathcal{F}}_n\)</span>.</li>
+<li>Let <span class="math inline">\(\{A_i\}_{i=1}^\infty\)</span> be a sequence of subsets from <span class="math inline">\(\cap_{i=1}^{\infty} \mathcal{F}_n\)</span>. Then, for all <span class="math inline">\(i\)</span>, <span class="math inline">\(A_i \in \mathcal{F}_n\)</span> for all <span class="math inline">\(n\)</span>. Since <span class="math inline">\(F_n\)</span> is a <span class="math inline">\(\sigma\)</span>-field, <span class="math inline">\(\cup_{i=1}^\infty A_i \in \mathcal{F}_n\)</span> for all <span class="math inline">\(n\)</span>, and so <span class="math inline">\(\cup_{i=1}^\infty A_i \in \cap_{i=1}^\infty \mathcal{F}_n\)</span>.</li>
 </ol>
-<p>Hence, <span class="math inline">\(\cap_{i=1}^\infty {\mathcal{F}}_n\)</span> is a <span class="math inline">\(\sigma\)</span>-field.</p>
+<p>Hence, <span class="math inline">\(\cap_{i=1}^\infty \mathcal{F}_n\)</span> is a <span class="math inline">\(\sigma\)</span>-field.</p>
 </div>
 
 
 <div class="solution">
-<p> <span class="solution"><em>Solution</em> (<a href="discussion-notes.html#exr:ex11">3.1</a> b)). </span>  Let <span class="math inline">\(\Omega = [0,1]\)</span>, and <span class="math inline">\({\mathcal{F}}_n = \sigma \left\{[0,\tfrac{1}{2^n}),[\tfrac{1}{2^n},\tfrac{2}{2^n}), \ldots, [\tfrac{2^{n-1}}{2^n}, 1)\right\}\)</span>.</p>
-<p>Now, consider the set <span class="math inline">\(B_n = [0, \tfrac{1}{2^n})\)</span>. Clearly <span class="math inline">\(B_n \in {\mathcal{F}}_n\)</span> for all <span class="math inline">\(n\)</span>, hence <span class="math inline">\(B_n \in \cup_{i=1}^\infty {\mathcal{F}}_n\)</span>. Hower, <span class="math inline">\(\cap_{i = 1}^{\infty} B_n = \{0\} \notin \cup_{i=1}^\infty {\mathcal{F}}_n\)</span>. So <span class="math inline">\(\cup_{i=1}^\infty {\mathcal{F}}_n\)</span> is not closed under countable intersection, i.e. it is not a <span class="math inline">\(\sigma\)</span>-algebra.</p>
+<p> <span class="solution"><em>Solution</em> (<a href="discussion-notes.html#exr:ex11">3.1</a> b)). </span> 
+Let <span class="math inline">\(\Omega = [0,1]\)</span>, and <span class="math inline">\(\mathcal{F}_n = \sigma \left\{[0,\tfrac{1}{2^n}),[\tfrac{1}{2^n},\tfrac{2}{2^n}), \ldots, [\tfrac{2^{n-1}}{2^n}, 1)\right\}\)</span>.</p>
+<p>Now, consider the set <span class="math inline">\(B_n = [0, \tfrac{1}{2^n})\)</span>. Clearly <span class="math inline">\(B_n \in \mathcal{F}_n\)</span> for all <span class="math inline">\(n\)</span>, hence <span class="math inline">\(B_n \in \cup_{i=1}^\infty \mathcal{F}_n\)</span>. Hower, <span class="math inline">\(\cap_{i = 1}^{\infty} B_n = \{0\} \notin \cup_{i=1}^\infty \mathcal{F}_n\)</span>. So <span class="math inline">\(\cup_{i=1}^\infty \mathcal{F}_n\)</span> is not closed under countable intersection, i.e. it is not a <span class="math inline">\(\sigma\)</span>-algebra.</p>
 </div>
 
 </div>
@@ -199,42 +200,42 @@
 
 
 <div class="solution">
-<p> <span class="solution"><em>Solution. </em></span> Let <span class="math inline">\({\mathcal{F}}_n\)</span> be given by</p>
+<p> <span class="solution"><em>Solution. </em></span> Let <span class="math inline">\(\mathcal{F}_n\)</span> be given by</p>
 <p><span class="math display">\[
-  {\mathcal{F}}_n = \left \{A \in \sigma(\mathcal{P}) \left | \nu_1(A \cap A_n) = \nu_2(A \cap A_n) \forall n \right \} \right .
+  \mathcal{F}_n = \left \{A \in \sigma(\mathcal{P}) \left | \nu_1(A \cap A_n) = \nu_2(A \cap A_n) \forall n \right \} \right .
 \]</span></p>
-<p>Let <span class="math inline">\(A \in \mathcal{P}\)</span>. Since <span class="math inline">\(A_n \in \mathcal{P}\)</span> for all <span class="math inline">\(n\)</span> and <span class="math inline">\(\mathcal{P}\)</span> is a <span class="math inline">\(\pi\)</span>-system, <span class="math inline">\(A \cap A_n \in \mathcal{P}\)</span>. So <span class="math inline">\(\nu_1(A \cap A_n) = \nu_2(A \cap A_n)\)</span>, hence <span class="math inline">\(\mathcal{P} \subset {\mathcal{F}}_n\)</span>.</p>
-<p>By definition, <span class="math inline">\({\mathcal{F}}_n \subset \sigma(\mathcal{P})\)</span>, so <span class="math inline">\(\mathcal{P} \subset {\mathcal{F}}_n \subset \sigma(\mathcal{P})\)</span>.</p>
-<p>Now, if we can prove that <span class="math inline">\({\mathcal{F}}_n\)</span> is a <span class="math inline">\(\lambda\)</span>-system for all <span class="math inline">\(n\)</span>, then by the <span class="math inline">\(\pi-\lambda\)</span> theorem (theorem <a href="discussion-notes.html#thm:pi-lambda">3.1</a>), we have that <span class="math inline">\(\sigma(\mathcal{P}) \subset {\mathcal{F}}_n\)</span>, which combined with the paragraph above gives us that <span class="math inline">\(\sigma(\mathcal{P}) = {\mathcal{F}}_n\)</span>, hence <span class="math inline">\(\nu_1\)</span> and <span class="math inline">\(\nu_2\)</span> agree on <span class="math inline">\(\sigma(\mathcal{P})\)</span>.</p>
-<p>So let us show that <span class="math inline">\({\mathcal{F}}_n\)</span> is indeed a <span class="math inline">\(\lambda\)</span>-system:</p>
+<p>Let <span class="math inline">\(A \in \mathcal{P}\)</span>. Since <span class="math inline">\(A_n \in \mathcal{P}\)</span> for all <span class="math inline">\(n\)</span> and <span class="math inline">\(\mathcal{P}\)</span> is a <span class="math inline">\(\pi\)</span>-system, <span class="math inline">\(A \cap A_n \in \mathcal{P}\)</span>. So <span class="math inline">\(\nu_1(A \cap A_n) = \nu_2(A \cap A_n)\)</span>, hence <span class="math inline">\(\mathcal{P} \subset \mathcal{F}_n\)</span>.</p>
+<p>By definition, <span class="math inline">\(\mathcal{F}_n \subset \sigma(\mathcal{P})\)</span>, so <span class="math inline">\(\mathcal{P} \subset \mathcal{F}_n \subset \sigma(\mathcal{P})\)</span>.</p>
+<p>Now, if we can prove that <span class="math inline">\(\mathcal{F}_n\)</span> is a <span class="math inline">\(\lambda\)</span>-system for all <span class="math inline">\(n\)</span>, then by the <span class="math inline">\(\pi-\lambda\)</span> theorem (theorem <a href="discussion-notes.html#thm:pi-lambda">3.1</a>), we have that <span class="math inline">\(\sigma(\mathcal{P}) \subset \mathcal{F}_n\)</span>, which combined with the paragraph above gives us that <span class="math inline">\(\sigma(\mathcal{P}) = \mathcal{F}_n\)</span>, hence <span class="math inline">\(\nu_1\)</span> and <span class="math inline">\(\nu_2\)</span> agree on <span class="math inline">\(\sigma(\mathcal{P})\)</span>.</p>
+<p>So let us show that <span class="math inline">\(\mathcal{F}_n\)</span> is indeed a <span class="math inline">\(\lambda\)</span>-system:</p>
 <ol style="list-style-type: lower-roman">
-<li><span class="math inline">\(\Omega \in {\mathcal{F}}_n\)</span>. Since <span class="math inline">\(A_n \uparrow \Omega\)</span>, we can use continuity of measure (proposition <a href="lectures.html#prp:properties-of-measures">2.1</a>) to conclude that</li>
+<li><span class="math inline">\(\Omega \in \mathcal{F}_n\)</span>. Since <span class="math inline">\(A_n \uparrow \Omega\)</span>, we can use continuity of measure (proposition <a href="lectures.html#prp:properties-of-measures">2.1</a>) to conclude that</li>
 </ol>
-<span class="math display">\[\begin{align*}
+<p><span class="math display">\[\begin{align*}
   \lim_{n \rightarrow \infty} \nu_i(A_n) &amp;= \nu_i(\lim_{n \rightarrow \infty} A_n) \\
     &amp;= \nu_i(\Omega).
-\end{align*}\]</span>
-<p>Since <span class="math inline">\(\nu_1(A_n) = \nu_2(A_n)\)</span> (<span class="math inline">\(A_n \in \mathcal{P}\)</span>), it holds that <span class="math inline">\(\nu_1(\Omega) = \nu_2(\Omega)\)</span>, so <span class="math inline">\(\Omega \in {\mathbb{P}}\subset {\mathcal{F}}_n\)</span>.</p>
+\end{align*}\]</span></p>
+<p>Since <span class="math inline">\(\nu_1(A_n) = \nu_2(A_n)\)</span> (<span class="math inline">\(A_n \in \mathcal{P}\)</span>), it holds that <span class="math inline">\(\nu_1(\Omega) = \nu_2(\Omega)\)</span>, so <span class="math inline">\(\Omega \in \mathbb{P}\subset \mathcal{F}_n\)</span>.</p>
 <ol start="2" style="list-style-type: lower-roman">
-<li>Let <span class="math inline">\(A,B \in {\mathcal{F}}_n\)</span> with <span class="math inline">\(A \subset B\)</span>. So,</li>
+<li>Let <span class="math inline">\(A,B \in \mathcal{F}_n\)</span> with <span class="math inline">\(A \subset B\)</span>. So,</li>
 </ol>
-<span class="math display">\[\begin{align*}
+<p><span class="math display">\[\begin{align*}
   \nu_1((A\setminus B) \cap A_n) &amp;= \nu_1(A\cap A_n) - \nu_1(B\cap A_n) \\
     &amp;= \nu_2(A\cap A_n) - \nu_2(B\cap A_n) \\
     &amp;= \nu_2((A\setminus B) \cap A_n),
-\end{align*}\]</span>
-<p>which means that <span class="math inline">\(A\setminus B \in {\mathcal{F}}_n\)</span>.</p>
+\end{align*}\]</span></p>
+<p>which means that <span class="math inline">\(A\setminus B \in \mathcal{F}_n\)</span>.</p>
 <ol start="3" style="list-style-type: lower-roman">
-<li>Let <span class="math inline">\(B_i \in {\mathcal{F}}_n\)</span> s.t. <span class="math inline">\(B_i \subset B_{i+1}\)</span>. Then, once again using continuity of measures to move limits around, we have</li>
+<li>Let <span class="math inline">\(B_i \in \mathcal{F}_n\)</span> s.t. <span class="math inline">\(B_i \subset B_{i+1}\)</span>. Then, once again using continuity of measures to move limits around, we have</li>
 </ol>
-<span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align}
   \nu_1\left(\cup_{i=1}^\infty B_i \cap A_n \right) &amp;= \nu_1\left(\cup_{i=1}^\infty (B_i \cap A_n) \right) \\
     &amp;= \lim_{i \rightarrow \infty} \nu_1(B_i \cap A_n) \\
     &amp;= \lim_{i \rightarrow \infty} \nu_2(B_i \cap A_n) \\
     &amp;= \nu_2\left(\cup_{i=1}^\infty (B_i \cap A_n) \right) \\
     &amp;= \nu_2\left(\cup_{i=1}^\infty B_i \cap A_n \right),
-\end{align}\]</span>
-which gives us that <span class="math inline">\(\cup_{i = 1}^\infty B_i \in {\mathcal{F}}_n\)</span>, hence <span class="math inline">\({\mathcal{F}}_n\)</span> is a <span class="math inline">\(\lambda\)</span>-system.
+\end{align}\]</span></p>
+which gives us that <span class="math inline">\(\cup_{i = 1}^\infty B_i \in \mathcal{F}_n\)</span>, hence <span class="math inline">\(\mathcal{F}_n\)</span> is a <span class="math inline">\(\lambda\)</span>-system.
 </div>
 
 </div>
@@ -248,7 +249,7 @@ which gives us that <span class="math inline">\(\cup_{i = 1}^\infty B_i \in {\ma
 </ol>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-18" class="exercise"><strong>Exercise 3.4  </strong></span>Let <span class="math inline">\(\Omega = \left\{\omega_1, \omega_2, \ldots \right\}\)</span> be a countable set, <span class="math inline">\({\mathcal{F}}\)</span> all subsets of <span class="math inline">\(\Omega\)</span>, and <span class="math inline">\(\nu\)</span> the counting measure on <span class="math inline">\(\Omega\)</span>. Show that for any Borel function <span class="math inline">\(f\)</span>, the integral of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(\nu\)</span> is</p>
+<p><span id="exr:unnamed-chunk-18" class="exercise"><strong>Exercise 3.4  </strong></span>Let <span class="math inline">\(\Omega = \left\{\omega_1, \omega_2, \ldots \right\}\)</span> be a countable set, <span class="math inline">\(\mathcal{F}\)</span> all subsets of <span class="math inline">\(\Omega\)</span>, and <span class="math inline">\(\nu\)</span> the counting measure on <span class="math inline">\(\Omega\)</span>. Show that for any Borel function <span class="math inline">\(f\)</span>, the integral of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(\nu\)</span> is</p>
 <span class="math display" id="eq:ex14">\[\begin{equation}
   \int f d\nu = \sum_{i=1}^\infty f(\omega_i)  \tag{3.1}
 \end{equation}\]</span>
@@ -256,32 +257,32 @@ which gives us that <span class="math inline">\(\cup_{i = 1}^\infty B_i \in {\ma
 
 
 <div class="solution">
-<p> <span class="solution"><em>Solution. </em></span> Let <span class="math inline">\(A \in {\mathcal{F}}\)</span> and define <span class="math inline">\(f = 1_A\)</span>. Then</p>
-<span class="math display">\[\begin{align*}
+<p> <span class="solution"><em>Solution. </em></span> Let <span class="math inline">\(A \in \mathcal{F}\)</span> and define <span class="math inline">\(f = 1_A\)</span>. Then</p>
+<p><span class="math display">\[\begin{align*}
   \int f d\nu &amp;= \int_A d\nu \\
               &amp;= \nu(A) \\
               &amp;= \sum_{i=1}^\infty 1_A(\omega_i)
-\end{align*}\]</span>
+\end{align*}\]</span></p>
 <p>I.e. <a href="discussion-notes.html#eq:ex14">(3.1)</a> holds for indicator functions, and hence also for simple functions.</p>
 <p>Now, let <span class="math inline">\(f\)</span> be a non-negative Borel function. Then we know that there exists a sequence <span class="math inline">\((f_n)_i^{\infty}\)</span> of simple functions such that <span class="math inline">\(f_n \uparrow f\)</span>. Then</p>
-<span class="math display">\[\begin{align*}
+<p><span class="math display">\[\begin{align*}
   \int f d\nu &amp;= \int \lim_{n \rightarrow \infty} f_n d\nu \\
               &amp;= \lim_{n\rightarrow \infty} \int f_n d\nu.
-\end{align*}\]</span>
+\end{align*}\]</span></p>
 <p>Since <span class="math inline">\(f_n\)</span> is a simple function, we know that @ref{eq:ex14} holds. Hence,</p>
-<span class="math display">\[\begin{align*}
+<p><span class="math display">\[\begin{align*}
   \int f d\nu &amp;= \lim_{n \rightarrow \infty} \sum_{i=1}^\infty f_n(\omega_i) \\
   &amp;= \sum_{i=1}^\infty \lim_{n \rightarrow \infty} f_n(\omega_i) \\
   &amp;= \sum_{i=1}^\infty f(\omega_i),
-\end{align*}\]</span>
+\end{align*}\]</span></p>
 <p>and so @ref{eq:ex14} holds for non-negative Borel functions.</p>
 <p>Finally, let <span class="math inline">\(f\)</span> be any Borel function. Then we can write <span class="math inline">\(f = f_+ - f_-\)</span>, where <span class="math inline">\(f_+ = \max(f,0)\)</span> and <span class="math inline">\(f_- = \max(-f, 0)\)</span>. Then both <span class="math inline">\(f_+\)</span> and <span class="math inline">\(f_-\)</span> are non-negative Borel functions, hence @ref{eq:ex14} holds for both. So</p>
-<span class="math display">\[\begin{align*}
+<p><span class="math display">\[\begin{align*}
   \int f d\nu &amp;= \int f_+ d\nu - \int f_- d\nu \\
               &amp;= \sum_{i=1}^\infty f_+(\omega_i) - \sum_{i=1}^\infty f_-(\omega_i) \\
               &amp;= \sum_{i=1}^\infty f_+(\omega_i) - f_-(\omega_i) \\
               &amp;= \sum_{i=1}^\infty f(\omega_i).
-\end{align*}\]</span>
+\end{align*}\]</span></p>
 <p>So <a href="discussion-notes.html#eq:ex14">(3.1)</a> holds for all Borel functions.</p>
 </div>
 
@@ -358,7 +359,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
+    var src = "true";
     if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
