@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>STAT 709: My notes</title>
   <meta name="description" content="This is my collection of notes for the STAT 709 class taught at UW-Madison.">
-  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
   <meta property="og:title" content="STAT 709: My notes" />
   <meta property="og:type" content="book" />
@@ -113,60 +113,62 @@
 <h2><span class="header-section-number">4.1</span> First Exam Period</h2>
 <div id="assigned-problems" class="section level3">
 <h3><span class="header-section-number">4.1.1</span> Assigned Problems</h3>
+<p>NOTE: This homework submission is for both Ralph Trane and Alex Hayes. For almost all of the problems here, we worked together on a whiteboard. We then took pictures or handwritten notes of the solutions and wrote them up here.</p>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-21" class="exercise"><strong>Exercise 4.1  (Ex 2)  </strong></span>Let <span class="math inline">\({\mathcal{C}}\)</span> be a collection of subsets of <span class="math inline">\(\Omega\)</span> and let <span class="math inline">\(\Gamma = \{ {\mathcal{F}}| {\mathcal{F}}\text{ is a } \sigma \text{-field on } \Omega \text{ and } {\mathcal{C}}\subset {\mathcal{F}}\}\)</span>. Show that <span class="math inline">\(\Gamma \neq \emptyset\)</span> and <span class="math inline">\(\sigma({\mathcal{C}}) = \cap_{{\mathcal{F}}\in \Gamma} {\mathcal{F}}\)</span>.
+<span id="exr:unnamed-chunk-1" class="exercise"><strong>Exercise 4.1  (Ex 2)  </strong></span>Let <span class="math inline">\(\C\)</span> be a collection of subsets of <span class="math inline">\(\Omega\)</span> and let <span class="math inline">\(\Gamma = \{ \F | \F \text{ is a } \sigma \text{-field on } \Omega \text{ and } \C \subset \F \}\)</span>. Show that <span class="math inline">\(\Gamma \neq \emptyset\)</span> and <span class="math inline">\(\sigma(\C) = \cap_{\F \in \Gamma} \F\)</span>.
 </div>
 
 
 <div class="solution">
-<p> <span class="solution"><em>Solution</em> (Ex 2). </span> Let <span class="math inline">\({\mathbb{P}}(\Omega)\)</span> be the collection of all subsets of <span class="math inline">\(\Omega\)</span>. We know that this is a <span class="math inline">\(\sigma\)</span>-field. It also contains <span class="math inline">\({\mathcal{C}}\)</span>. Hence, <span class="math inline">\(\Gamma \neq \emptyset\)</span>.</p>
-<p>By definition, <span class="math inline">\(\sigma({\mathcal{C}})\)</span> is the smallest <span class="math inline">\(\sigma\)</span>-field that contains <span class="math inline">\({\mathcal{C}}\)</span>, hence <span class="math inline">\(\sigma({\mathcal{C}}) \in \Gamma\)</span> and <span class="math inline">\(\sigma({\mathcal{C}}) \subset {\mathcal{F}}\)</span> for all <span class="math inline">\({\mathcal{F}}\in \Gamma\)</span>. Therefore, <span class="math inline">\(\sigma({\mathcal{C}}) \subset \cap_{{\mathcal{F}}\in \Gamma} {\mathcal{F}}\)</span>. But since <span class="math inline">\(\sigma({\mathcal{C}}) \in \Gamma\)</span>, <span class="math inline">\(\sigma({\mathcal{C}}) \in \cap_{{\mathcal{F}}\in \Gamma} {\mathcal{F}}\)</span>, which in turn ensures that <span class="math inline">\(\cap_{{\mathcal{F}}\in \Gamma} {\mathcal{F}}\subset \sigma({\mathcal{C}})\)</span>.</p>
-Hence <span class="math inline">\(\sigma({\mathcal{C}}) = \cap_{{\mathcal{F}}\in \Gamma} {\mathcal{F}}\)</span>.
+<p> <span class="solution"><em>Solution</em> (Ex 2). </span> Let <span class="math inline">\(\P(\Omega)\)</span> be the collection of all subsets of <span class="math inline">\(\Omega\)</span>. We know that this is a <span class="math inline">\(\sigma\)</span>-field. It also contains <span class="math inline">\(\C\)</span>. Hence, <span class="math inline">\(\Gamma \neq \emptyset\)</span>.</p>
+<p>By definition, <span class="math inline">\(\sigma(\C)\)</span> is the smallest <span class="math inline">\(\sigma\)</span>-field that contains <span class="math inline">\(\C\)</span>, hence <span class="math inline">\(\sigma(\C) \in \Gamma\)</span> and <span class="math inline">\(\sigma(\C) \subset \F\)</span> for all <span class="math inline">\(\F \in \Gamma\)</span>. Therefore, <span class="math inline">\(\sigma(\C) \subset \cap_{\F \in \Gamma} \F\)</span>. But since <span class="math inline">\(\sigma(\C) \in \Gamma\)</span>, <span class="math inline">\(\sigma(\C) \in \cap_{\F \in \Gamma} \F\)</span>, which in turn ensures that <span class="math inline">\(\cap_{\F \in \Gamma} \F \subset \sigma(\C)\)</span>.</p>
+Hence <span class="math inline">\(\sigma(\C) = \cap_{\F \in \Gamma} \F\)</span>.
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-23" class="exercise"><strong>Exercise 4.2  (Ex 5)  </strong></span>a) Let <span class="math inline">\({\mathcal{C}}\)</span> be a <span class="math inline">\(\pi\)</span>-system and <span class="math inline">\(\mathcal{D}\)</span> be a <span class="math inline">\(\lambda\)</span>-system such that <span class="math inline">\({\mathcal{C}}\subset \mathcal{D}\)</span>. Show that <span class="math inline">\(\sigma({\mathcal{C}}) \subset \mathcal{D}\)</span>.
+<span id="exr:unnamed-chunk-3" class="exercise"><strong>Exercise 4.2  (Ex 5)  </strong></span>a) Let <span class="math inline">\(\C\)</span> be a <span class="math inline">\(\pi\)</span>-system and <span class="math inline">\(\mathcal{D}\)</span> be a <span class="math inline">\(\lambda\)</span>-system such that <span class="math inline">\(\C \subset \mathcal{D}\)</span>. Show that <span class="math inline">\(\sigma(\C) \subset \mathcal{D}\)</span>.
 </div>
 
 
 <div class="solution">
- <span class="solution"><em>Solution</em> (Ex 5). </span> 
+ <span class="solution"><em>Solution</em> (Ex 5). </span> TODO
 </div>
 
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-25" class="exercise"><strong>Exercise 4.3  (Ex 12)  </strong></span>Let <span class="math inline">\(\nu\)</span> and <span class="math inline">\(\lambda\)</span> be two measures on <span class="math inline">\((\Omega, {\mathcal{F}})\)</span> such that <span class="math inline">\(\nu(A) = \lambda(A)\)</span> for any <span class="math inline">\(A \in {\mathcal{C}}\subset {\mathcal{F}}\)</span>, where <span class="math inline">\({\mathcal{C}}\)</span> is a <span class="math inline">\(\pi\)</span>-system (<a href="discussion-notes.html#def:pi-system">3.1</a>). Assume that <span class="math inline">\(\nu\)</span> is <span class="math inline">\(\sigma\)</span>-finite (<a href="lectures.html#def:sigma-finite">2.5</a>).</p>
-<p>Show that <span class="math inline">\(\nu(A) = \lambda(A)\)</span> for all <span class="math inline">\(A \in \sigma({\mathcal{C}})\)</span>.</p>
+<p><span id="exr:unnamed-chunk-5" class="exercise"><strong>Exercise 4.3  (Ex 12)  </strong></span>Let <span class="math inline">\(\nu\)</span> and <span class="math inline">\(\lambda\)</span> be two measures on <span class="math inline">\((\Omega, \F)\)</span> such that <span class="math inline">\(\nu(A) = \lambda(A)\)</span> for any <span class="math inline">\(A \in \C \subset \F\)</span>, where <span class="math inline">\(\C\)</span> is a <span class="math inline">\(\pi\)</span>-system (<a href="#def:pi-system"><strong>??</strong></a>). Assume that <span class="math inline">\(\nu\)</span> is <span class="math inline">\(\sigma\)</span>-finite (<a href="#def:sigma-finite"><strong>??</strong></a>).</p>
+<p>Show that <span class="math inline">\(\nu(A) = \lambda(A)\)</span> for all <span class="math inline">\(A \in \sigma(\C)\)</span>.</p>
 </div>
 
 
 <div class="solution">
-<p> <span class="solution"><em>Solution</em> (Ex 12). </span> Let <span class="math inline">\({\mathcal{F}}= \{A \in \sigma({\mathcal{C}}) | \nu(A) = \lambda(A)\}\)</span>. Then <span class="math inline">\({\mathcal{C}}\subset {\mathcal{F}}\)</span>. If we can show that <span class="math inline">\({\mathcal{F}}\)</span> is a <span class="math inline">\(\sigma\)</span>-field, then <span class="math inline">\(\sigma({\mathcal{C}}) \subset {\mathcal{F}}\)</span> (since <span class="math inline">\(\sigma({\mathcal{C}})\)</span> is the smallest <span class="math inline">\(\sigma\)</span>-field that contains <span class="math inline">\({\mathcal{C}}\)</span>), which proves that <span class="math inline">\(\nu(A) = \lambda(A)\)</span> for all <span class="math inline">\(A \in \sigma({\mathcal{C}})\)</span>.</p>
+<p> <span class="solution"><em>Solution</em> (Ex 12). </span> Let <span class="math inline">\(\F = \{A \in \sigma(\C) | \nu(A) = \lambda(A)\}\)</span>. Then <span class="math inline">\(\C \subset \F\)</span>. If we can show that <span class="math inline">\(\F\)</span> is a <span class="math inline">\(\sigma\)</span>-field, then <span class="math inline">\(\sigma(\C) \subset \F\)</span> (since <span class="math inline">\(\sigma(\C)\)</span> is the smallest <span class="math inline">\(\sigma\)</span>-field that contains <span class="math inline">\(\C\)</span>), which proves that <span class="math inline">\(\nu(A) = \lambda(A)\)</span> for all <span class="math inline">\(A \in \sigma(\C)\)</span>.</p>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-27" class="exercise"><strong>Exercise 4.4  (Ex 14)  </strong></span>Prove proposition 1.4 (proposition <a href="lectures.html#prp:borel-function-properties">2.4</a>)
+<span id="exr:unnamed-chunk-7" class="exercise"><strong>Exercise 4.4  (Ex 14)  </strong></span>Prove proposition 1.4 (proposition <a href="#prp:borel-function-properties"><strong>??</strong></a>)
 </div>
 
 
 <div class="solution">
-<p> <span class="solution"><em>Solution</em> (Ex 14 (i)). </span>  Assume <span class="math inline">\(f\)</span> is Borel. Then <span class="math inline">\(f^{-1}(A) \in {\mathcal{F}}\)</span> for all open sets <span class="math inline">\(A \in {\mathcal{B}}\)</span>, hence <span class="math inline">\(f^{-1}(a, \infty) \in {\mathcal{F}}\)</span>.</p>
-<p>Now assume <span class="math inline">\(f^{-1}(a, \infty) \in {\mathcal{F}}\)</span> for all <span class="math inline">\(a \in {\mathbb{R}}\)</span>, and let <span class="math inline">\(\mathcal{G} = \{ A \in {\mathcal{B}}| f^{-1}(A) \in {\mathcal{F}}\}\)</span>. So, <span class="math inline">\((a, \infty) \in \mathcal{G}\)</span> for all <span class="math inline">\(a \in {\mathbb{R}}\)</span>. If we can show that <span class="math inline">\(\mathcal{G}\)</span> is a <span class="math inline">\(\sigma\)</span>-field, then we will have that <span class="math inline">\(\sigma((a, \infty)) = {\mathcal{B}}\subset \mathcal{G}\)</span>, hence <span class="math inline">\(f^{-1}(B) \in {\mathcal{F}}\)</span> for all <span class="math inline">\(B \in {\mathcal{B}}\)</span>, meaning that <span class="math inline">\(f\)</span> is measurable.</p>
+<p> <span class="solution"><em>Solution</em> (Ex 14 (i)). </span> 
+Assume <span class="math inline">\(f\)</span> is Borel. Then <span class="math inline">\(f^{-1}(A) \in \F\)</span> for all open sets <span class="math inline">\(A \in \B\)</span>, hence <span class="math inline">\(f^{-1}(a, \infty) \in \F\)</span>.</p>
+<p>Now assume <span class="math inline">\(f^{-1}(a, \infty) \in \F\)</span> for all <span class="math inline">\(a \in \R\)</span>, and let <span class="math inline">\(\mathcal{G} = \{ A \in \B | f^{-1}(A) \in \F \}\)</span>. So, <span class="math inline">\((a, \infty) \in \mathcal{G}\)</span> for all <span class="math inline">\(a \in \R\)</span>. If we can show that <span class="math inline">\(\mathcal{G}\)</span> is a <span class="math inline">\(\sigma\)</span>-field, then we will have that <span class="math inline">\(\sigma((a, \infty)) = \B \subset \mathcal{G}\)</span>, hence <span class="math inline">\(f^{-1}(B) \in \F\)</span> for all <span class="math inline">\(B \in \B\)</span>, meaning that <span class="math inline">\(f\)</span> is measurable.</p>
 <p>So let us prove that <span class="math inline">\(\mathcal{G}\)</span> is a <span class="math inline">\(\sigma\)</span>-field.</p>
 <ol style="list-style-type: lower-alpha">
-<li>First of all, <span class="math inline">\(f^{-1}(\emptyset) = \emptyset \in {\mathcal{F}}\)</span>.</li>
-<li>Second, let <span class="math inline">\(A \in \mathcal{G}\)</span>. Since <span class="math inline">\(f^{-1}(A^C) = (f^{-1}(A))^C \in {\mathcal{F}}\)</span> (<span class="math inline">\({\mathcal{F}}\)</span> is a <span class="math inline">\(\sigma\)</span>-field and <span class="math inline">\(f^{-1}(A) \in {\mathcal{F}}\)</span>, so <span class="math inline">\((f^{-1}(A))(^C) \in {\mathcal{F}}\)</span>).</li>
-<li>Finally, let <span class="math inline">\(A_1, A_2, \ldots\)</span> be a sequence of sets such that <span class="math inline">\(A_i \in \mathcal{G}\)</span> for all <span class="math inline">\(i\)</span>. Then <span class="math inline">\(f^{-1}\left(\cup_{i=1}^\infty A_i \right) = \cup_{i=1}^\infty f^{-1}(A_i)\)</span>. Since <span class="math inline">\(f^{-1}(A_i) \in {\mathcal{F}}\)</span> for all <span class="math inline">\(i\)</span> and <span class="math inline">\({\mathcal{F}}\)</span> is a <span class="math inline">\(\sigma\)</span>-field, <span class="math inline">\(\cup_{i=1}^\infty f^{-1}(A_i) \in {\mathcal{F}}\)</span>, so <span class="math inline">\(\cup_{i=1}^\infty A_i \in \mathcal{G}\)</span>.</li>
+<li>First of all, <span class="math inline">\(f^{-1}(\emptyset) = \emptyset \in \F\)</span>.</li>
+<li>Second, let <span class="math inline">\(A \in \mathcal{G}\)</span>. Since <span class="math inline">\(f^{-1}(A^C) = (f^{-1}(A))^C \in \F\)</span> (<span class="math inline">\(\F\)</span> is a <span class="math inline">\(\sigma\)</span>-field and <span class="math inline">\(f^{-1}(A) \in \F\)</span>, so <span class="math inline">\((f^{-1}(A))(^C) \in \F\)</span>).</li>
+<li>Finally, let <span class="math inline">\(A_1, A_2, \ldots\)</span> be a sequence of sets such that <span class="math inline">\(A_i \in \mathcal{G}\)</span> for all <span class="math inline">\(i\)</span>. Then <span class="math inline">\(f^{-1}\left(\cup_{i=1}^\infty A_i \right) = \cup_{i=1}^\infty f^{-1}(A_i)\)</span>. Since <span class="math inline">\(f^{-1}(A_i) \in \F\)</span> for all <span class="math inline">\(i\)</span> and <span class="math inline">\(\F\)</span> is a <span class="math inline">\(\sigma\)</span>-field, <span class="math inline">\(\cup_{i=1}^\infty f^{-1}(A_i) \in \F\)</span>, so <span class="math inline">\(\cup_{i=1}^\infty A_i \in \mathcal{G}\)</span>.</li>
 </ol>
 <p>So <span class="math inline">\(\mathcal{G}\)</span> is a <span class="math inline">\(\sigma\)</span>-field, which concludes the proof.</p>
 </div>
 
 
 <div class="solution">
-<p> <span class="solution"><em>Solution</em> (Ex 14 (ii)). </span> Assume <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are Borel functions. Let <span class="math inline">\(a,b \in {\mathbb{R}}\)</span>. <span class="math inline">\(af\)</span> is Borel, since</p>
+<p> <span class="solution"><em>Solution</em> (Ex 14 (ii)). </span> Assume <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are Borel functions. Let <span class="math inline">\(a,b \in \R\)</span>. <span class="math inline">\(af\)</span> is Borel, since</p>
 <p><span class="math display">\[
   (af)^{-1}((c,\infty)) = \left\{ \omega \in \Omega : a\cdot f(\omega) \in (c, \infty) \right\}.
 \]</span></p>
@@ -184,41 +186,42 @@ Hence <span class="math inline">\(\sigma({\mathcal{C}}) = \cap_{{\mathcal{F}}\in
     \end{matrix}
   \right .
 \]</span></p>
-<p>In either case, <span class="math inline">\((af)^{-1}((c, \infty)) \in {\mathcal{F}}\)</span>. Since it holds that for all <span class="math inline">\(a,c \in {\mathbb{R}}\)</span> that <span class="math inline">\((af)^{-1}((c,\infty)) \in {\mathcal{F}}\)</span>, <span class="math inline">\(af\)</span> is measurable by (i).</p>
-<p>Let <span class="math inline">\(c \in {\mathbb{R}}\)</span>. Now consider the sum of <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span>:</p>
+<p>In either case, <span class="math inline">\((af)^{-1}((c, \infty)) \in \F\)</span>. Since it holds that for all <span class="math inline">\(a,c \in \R\)</span> that <span class="math inline">\((af)^{-1}((c,\infty)) \in \F\)</span>, <span class="math inline">\(af\)</span> is measurable by (i).</p>
+<p>Let <span class="math inline">\(c \in \R\)</span>. Now consider the sum of <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span>:</p>
 <p><span class="math display">\[\begin{aligned}
   (f + g)^{-1}((c, \infty)) &amp;= \left\{ \omega \in \Omega : f(\omega) + g(\omega) &gt; c \right\} \\.
-                            &amp;= \cup_{t \in {\mathbb{Q}}} \{\omega \in \Omega : f(\omega) &gt; c - t \} \cap \{\omega \in \Omega : g(\omega) &gt; t \} \\
-                            &amp;= \cup_{t \in {\mathbb{Q}}} f^{-1}((c-t, \infty)) \cap g^{-1}((t, \infty)).
+                            &amp;= \cup_{t \in \mb{Q}} \{\omega \in \Omega : f(\omega) &gt; c - t \} \cap \{\omega \in \Omega : g(\omega) &gt; t \} \\
+                            &amp;= \cup_{t \in \mb{Q}} f^{-1}((c-t, \infty)) \cap g^{-1}((t, \infty)).
 \end{aligned}\]</span></p>
-<p>Since <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are both measurable, <span class="math inline">\(f^{-1}((c-t, \infty)) \in {\mathcal{F}}\)</span> and <span class="math inline">\(g^{-1}((t, \infty))\in {\mathcal{F}}\)</span> for all <span class="math inline">\(t \in {\mathbb{R}}\)</span>. Hence, the intersection of the two is measurable for any <span class="math inline">\(t \in {\mathbb{R}}\)</span>, which in turn implies that the union over all rational numbers is measurable (countable union of measurable sets). Hence, <span class="math inline">\(f+g\)</span> is measurable.</p>
-Combine the two results to get the final result.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>
+<p>Since <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are both measurable, <span class="math inline">\(f^{-1}((c-t, \infty)) \in \F\)</span> and <span class="math inline">\(g^{-1}((t, \infty))\in \F\)</span> for all <span class="math inline">\(t \in \R\)</span>. Hence, the intersection of the two is measurable for any <span class="math inline">\(t \in \R\)</span>, which in turn implies that the union over all rational numbers is measurable (countable union of measurable sets). Hence, <span class="math inline">\(f+g\)</span> is measurable.</p>
+Combine the two results to get the final result.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>
 </div>
 
 
 <div class="solution">
- <span class="solution"><em>Solution</em> (Ex 14 (iii)). </span> 
+ <span class="solution"><em>Solution</em> (Ex 14 (iii)). </span> TODO
 </div>
 
 
 <div class="solution">
-<p> <span class="solution"><em>Solution</em> (Ex 14 (iv)). </span> Assume <span class="math inline">\(f\)</span> is measurable from <span class="math inline">\((\Omega, {\mathcal{F}})\)</span> to <span class="math inline">\((\Lambda, \mathcal{G})\)</span>, and <span class="math inline">\(g\)</span> measureable from <span class="math inline">\((\Lambda, \mathcal{G})\)</span> to <span class="math inline">\((\Delta, \mathcal{H})\)</span>. Let <span class="math inline">\(H \in \mathcal{H}\)</span>. We want to show that <span class="math inline">\((g \circ f)^{-1}(H) \in {\mathcal{F}}\)</span>, since this would mean <span class="math inline">\(g \circ f\)</span> is measurable. So,</p>
+<p> <span class="solution"><em>Solution</em> (Ex 14 (iv)). </span> Assume <span class="math inline">\(f\)</span> is measurable from <span class="math inline">\((\Omega, \F)\)</span> to <span class="math inline">\((\Lambda, \mathcal{G})\)</span>, and <span class="math inline">\(g\)</span> measureable from <span class="math inline">\((\Lambda, \mathcal{G})\)</span> to <span class="math inline">\((\Delta, \mathcal{H})\)</span>. Let <span class="math inline">\(H \in \mathcal{H}\)</span>. We want to show that <span class="math inline">\((g \circ f)^{-1}(H) \in \F\)</span>, since this would mean <span class="math inline">\(g \circ f\)</span> is measurable. So,</p>
 <p><span class="math display">\[\begin{aligned}
   (g \circ f)^{-1}(H) &amp;= \left\{ \omega \in \Omega | g(f(\omega)) \in H \right\} \\ 
                       &amp;= \left\{ \omega \in \Omega | f(\omega) \in g^{-1}(H) \right\} \\ 
                       &amp;= f^{-1}(g^{-1}(H)).
 \end{aligned}\]</span></p>
-<p>Since <span class="math inline">\(g\)</span> is measurable, <span class="math inline">\(g^{-1}(H) \in \mathcal{G}\)</span>, and since <span class="math inline">\(f\)</span> is measurable, <span class="math inline">\(f^{-1}(g^{-1}(H)) \in {\mathcal{F}}\)</span>. So, <span class="math inline">\(g \circ f\)</span> is measurable.</p>
+<p>Since <span class="math inline">\(g\)</span> is measurable, <span class="math inline">\(g^{-1}(H) \in \mathcal{G}\)</span>, and since <span class="math inline">\(f\)</span> is measurable, <span class="math inline">\(f^{-1}(g^{-1}(H)) \in \F\)</span>. So, <span class="math inline">\(g \circ f\)</span> is measurable.</p>
 </div>
 
 
 <div class="solution">
- <span class="solution"><em>Solution</em> (Ex 14 (v)). </span> Let <span class="math inline">\(f: \Omega \rightarrow {\mathbb{R}}^p\)</span>, where <span class="math inline">\(\Omega\)</span> is a borel set. Assume <span class="math inline">\(f\)</span> is continuous. Then, if <span class="math inline">\(A\)</span> is an open set, <span class="math inline">\(f^{-1}(A)\)</span> is an open set, and therefore borel. Hence, <span class="math inline">\(f^{-1}((a,\infty))\)</span> is a borel set for all <span class="math inline">\(a\)</span>, and by <span class="math inline">\((i)\)</span> we have that <span class="math inline">\(f\)</span> is a borel function.
+ <span class="solution"><em>Solution</em> (Ex 14 (v)). </span> Let <span class="math inline">\(f: \Omega \rightarrow \R^p\)</span>, where <span class="math inline">\(\Omega\)</span> is a borel set. Assume <span class="math inline">\(f\)</span> is continuous. Then, if <span class="math inline">\(A\)</span> is an open set, <span class="math inline">\(f^{-1}(A)\)</span> is an open set, and therefore borel. Hence, <span class="math inline">\(f^{-1}((a,\infty))\)</span> is a borel set for all <span class="math inline">\(a\)</span>, and by <span class="math inline">\((i)\)</span> we have that <span class="math inline">\(f\)</span> is a borel function.
 </div>
 
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-33" class="exercise"><strong>Exercise 4.5  (Ex 19)  </strong></span> Let <span class="math inline">\(\{f_n\}\)</span> be a sequence of Borel functions on a measurable space. Show that</p>
+<p><span id="exr:unnamed-chunk-13" class="exercise"><strong>Exercise 4.5  (Ex 19)  </strong></span>
+Let <span class="math inline">\(\{f_n\}\)</span> be a sequence of Borel functions on a measurable space. Show that</p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(\sigma(f_1, f_2, \ldots) = \sigma(\cup_{j=1}^{\infty} \sigma(f_j)) = \sigma(\cup_{j=1}^\infty \sigma(f_1,\ldots, f_j)).\)</span></li>
 <li><span class="math inline">\(\sigma(\lim \sup_n f_n) \subset \cap_{n=1}^\infty \sigma(f_n, f_{n+1},\ldots).\)</span></li>
@@ -227,12 +230,13 @@ Combine the two results to get the final result.<a href="#fn1" class="footnoteRe
 
 
 <div class="solution">
- <span class="solution"><em>Solution</em> (Ex 19). </span> 
+ <span class="solution"><em>Solution</em> (Ex 19). </span> TODO
 </div>
 
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-35" class="exercise"><strong>Exercise 4.6  (Ex 24)  </strong></span> Let <span class="math inline">\(f\)</span> be an integrable function on <span class="math inline">\((\Omega, {\mathcal{F}}, \nu)\)</span>. Show that for each <span class="math inline">\(\epsilon &gt; 0\)</span>, there exists a <span class="math inline">\(\delta_\epsilon\)</span> such that for <span class="math inline">\(A \in {\mathcal{F}}\)</span>:</p>
+<p><span id="exr:unnamed-chunk-15" class="exercise"><strong>Exercise 4.6  (Ex 24)  </strong></span>
+Let <span class="math inline">\(f\)</span> be an integrable function on <span class="math inline">\((\Omega, \F, \nu)\)</span>. Show that for each <span class="math inline">\(\epsilon &gt; 0\)</span>, there exists a <span class="math inline">\(\delta_\epsilon\)</span> such that for <span class="math inline">\(A \in \F\)</span>:</p>
 <p><span class="math display">\[
   \nu(A) &lt; \delta_\epsilon \Rightarrow \int_A |f| d\nu &lt; \epsilon. 
 \]</span></p>
@@ -240,58 +244,66 @@ Combine the two results to get the final result.<a href="#fn1" class="footnoteRe
 
 
 <div class="solution">
-<p> <span class="solution"><em>Solution. </em></span> Let <span class="math inline">\(\epsilon &gt; 0\)</span>, <span class="math inline">\(A \in {\mathcal{F}}\)</span> with <span class="math inline">\(\nu(A) &lt; \delta_\epsilon = \frac{\epsilon}{\sup_{\omega \in A} |f(\omega)|}\)</span>. Then</p>
-<span class="math display">\[\begin{align*}
+<p> <span class="solution"><em>Solution. </em></span> Let <span class="math inline">\(\epsilon &gt; 0\)</span>, <span class="math inline">\(A \in \F\)</span> with <span class="math inline">\(\nu(A) &lt; \delta_\epsilon = \frac{\epsilon}{\sup_{\omega \in A} |f(\omega)|}\)</span>. Then</p>
+<p><span class="math display">\[\begin{align*}
   \int_A |f| d\nu &amp;\leq \int_A \sup_{\omega \in A} |f(\omega)| d\nu \\
                   &amp;= \sup_{\omega \in A} |f(\omega)| \nu(A) \\
                   &amp;&lt; \epsilon.
-\end{align*}\]</span>
+\end{align*}\]</span></p>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-37" class="exercise"><strong>Exercise 4.7  (Ex 30)  </strong></span>For any c.d.f. <span class="math inline">\(F\)</span> and any <span class="math inline">\(a \ge 0\)</span>, show that <span class="math inline">\(\int [F(x+a) - F(x)] dx = a\)</span>
+<span id="exr:unnamed-chunk-17" class="exercise"><strong>Exercise 4.7  (Ex 30)  </strong></span>For any c.d.f. <span class="math inline">\(F\)</span> and any <span class="math inline">\(a \ge 0\)</span>, show that <span class="math inline">\(\int [F(x+a) - F(x)] dx = a\)</span>
 </div>
 
 
 <div class="solution">
- <span class="solution"><em>Solution. </em></span> 
+<p> <span class="solution"><em>Solution. </em></span> Note that <span class="math inline">\(F(X) = \int 1_{-\infty, x} dP\)</span>. Then</p>
+<span class="math display">\[
+\begin{aligned}
+\int [F(x+a) - F(x)] dx &amp;= \int_\R \left(\int 1_{-\infty, x + a} dP \right) -
+   \left(\int 1_{-\infty, x} dP \right) dx\\
+&amp;= \int_\R \int 1_{x, x + a} dx \\
+&amp;= a 
+\end{aligned}
+\]</span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-39" class="exercise"><strong>Exercise 4.8  (Ex 34)  </strong></span>Prove proposition <a href="lectures.html#prp:calc-radon-nikodym">2.8</a>
+<span id="exr:unnamed-chunk-19" class="exercise"><strong>Exercise 4.8  (Ex 34)  </strong></span>Prove proposition <a href="#prp:calc-radon-nikodym"><strong>??</strong></a>
 </div>
 
 
 <div class="solution">
-<p> <span class="solution"><em>Solution</em> (Ex 34 i)). </span> Let <span class="math inline">\(g\)</span> be the unique function denoted by <span class="math inline">\(\frac{d\lambda}{d\nu}\)</span>. Assume <span class="math inline">\(f = 1_A\)</span> for some <span class="math inline">\(A\in {\mathcal{F}}\)</span>. Since <span class="math inline">\(\lambda &lt;&lt; \nu\)</span>, we know that <span class="math inline">\(\lambda(A) = \int_A g d\nu\)</span>. So,</p>
-<span class="math display">\[\begin{align*}
+<p> <span class="solution"><em>Solution</em> (Ex 34 i)). </span> Let <span class="math inline">\(g\)</span> be the unique function denoted by <span class="math inline">\(\frac{d\lambda}{d\nu}\)</span>. Assume <span class="math inline">\(f = 1_A\)</span> for some <span class="math inline">\(A\in \F\)</span>. Since <span class="math inline">\(\lambda &lt;&lt; \nu\)</span>, we know that <span class="math inline">\(\lambda(A) = \int_A g d\nu\)</span>. So,</p>
+<p><span class="math display">\[\begin{align*}
   \int f d\lambda &amp;= \int 1_A d\lambda \\
                   &amp;= \lambda(A) \\
                   &amp;= \int_A g d\nu \\
                   &amp;= \int 1_A g d\nu = \int f g d\nu.
-\end{align*}\]</span>
-<p>Hence, (i) is true for all indicator functions, and so by linearity of integrals (<a href="lectures.html#prp:int-linearity">2.6</a>) for all non-negative simple functions.</p>
+\end{align*}\]</span></p>
+<p>Hence, (i) is true for all indicator functions, and so by linearity of integrals (<a href="#prp:int-linearity"><strong>??</strong></a>) for all non-negative simple functions.</p>
 <p>Now, let <span class="math inline">\(f\)</span> be a general non-negative Borel function. Then we know that there exists a sequence of simple functions <span class="math inline">\(\phi_1, \phi_2, \ldots\)</span> such that <span class="math inline">\(\phi_n \uparrow f\)</span>. Hence, utilizing the monotone convergence theorem and the fact that we know (i) holds for simple functions,</p>
-<span class="math display">\[\begin{align*}
+<p><span class="math display">\[\begin{align*}
   \int f d\lambda &amp;= \int \lim_{n \rightarrow \infty} \phi_n d\lambda \\
                   &amp;= \lim_{n \rightarrow \infty} \int \phi_n d\lambda \\
                   &amp;= \lim_{n \rightarrow \infty} \int \phi_n g d\nu \\
                   &amp;= \int \lim_{n \rightarrow \infty} \phi_n g d\nu \\
                   &amp;= \int f g d\nu,
-\end{align*}\]</span>
+\end{align*}\]</span></p>
 <p>and so we have shown that (i) holds for any non-negative Borel function.</p>
 </div>
 
 
 <div class="solution">
 <p> <span class="solution"><em>Solution</em> (Ex 34 ii)). </span> Assume <span class="math inline">\(\lambda_1 &lt;&lt; \nu\)</span> and <span class="math inline">\(\lambda_2 &lt;&lt; \nu\)</span>. Then</p>
-<span class="math display">\[\begin{align*}
+<p><span class="math display">\[\begin{align*}
   (\lambda_1 + \lambda_2)(A) &amp;= \lambda_1(A) + \lambda_2(A) \\
                              &amp;= \int_A g_1 d\nu + \int_A g_2 d\nu \\
                              &amp;= \int_A (g_1 + g_2)d\nu,
-\end{align*}\]</span>
+\end{align*}\]</span></p>
 <p>so <span class="math inline">\(\lambda_1 + \lambda_2 &lt;&lt; \nu\)</span>, and</p>
 <span class="math display">\[\frac{d(\lambda_1 + \lambda_2)}{d\nu} = g_1 + g_2 = \frac{d\lambda_1}{d\nu} + \frac{d\lambda_2}{d\nu}.\]</span>
 </div>
@@ -308,7 +320,8 @@ Combine the two results to get the final result.<a href="#fn1" class="footnoteRe
 
 
 <div class="solution">
-<p> <span class="solution"><em>Solution</em> (Ex 34 iv)). </span>  By definition, <span class="math inline">\((\lambda_1 \times \lambda_2)(A) = \int_A d(\lambda_1 \times \lambda_2) = \int 1_A d(\lambda_1 \times \lambda_2)\)</span>. Since <span class="math inline">\(1_A \ge 0\)</span>, we can use Fubini to get</p>
+<p> <span class="solution"><em>Solution</em> (Ex 34 iv)). </span> 
+By definition, <span class="math inline">\((\lambda_1 \times \lambda_2)(A) = \int_A d(\lambda_1 \times \lambda_2) = \int 1_A d(\lambda_1 \times \lambda_2)\)</span>. Since <span class="math inline">\(1_A \ge 0\)</span>, we can use Fubini to get</p>
 <p><span class="math display">\[ (\lambda_1 \times \lambda_2)(A) = \int \int 1_A d\lambda_1 d\lambda_2. \]</span></p>
 <p>Since <span class="math inline">\(\lambda_1 &lt;&lt; \nu_1\)</span>, we can use (i) with <span class="math inline">\(f = 1_A\)</span> (<span class="math inline">\(1_A\)</span> is non-negative) to obtain that</p>
 <p><span class="math display">\[(\lambda_1 \times \lambda_2)(A) = \int \int 1_A \frac{d\lambda_1}{d\nu_1}d\nu_1 d\lambda_2,\]</span></p>
@@ -324,12 +337,12 @@ Combine the two results to get the final result.<a href="#fn1" class="footnoteRe
 
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-44" class="exercise"><strong>Exercise 4.9  (Ex 35)  </strong></span>Let <span class="math inline">\(\{a_n\}\)</span> be a sequence of positive numbser with <span class="math inline">\(\sum_{i=1}^\infty a_n = 1\)</span>, and <span class="math inline">\(\{P_n\}\)</span> a sequence of probability measure on a common measurable space, <span class="math inline">\((\Omega, {\mathcal{F}})\)</span>. Define <span class="math inline">\(P = \sum_{n=1}^\infty P_n\)</span>.</p>
+<p><span id="exr:unnamed-chunk-24" class="exercise"><strong>Exercise 4.9  (Ex 35)  </strong></span>Let <span class="math inline">\(\{a_n\}\)</span> be a sequence of positive numbser with <span class="math inline">\(\sum_{i=1}^\infty a_n = 1\)</span>, and <span class="math inline">\(\{P_n\}\)</span> a sequence of probability measure on a common measurable space, <span class="math inline">\((\Omega, \F)\)</span>. Define <span class="math inline">\(P = \sum_{n=1}^\infty P_n\)</span>.</p>
 <ol style="list-style-type: lower-alpha">
 <li>Show that <span class="math inline">\(P\)</span> is a probability measure.</li>
 <li>Let <span class="math inline">\(\nu\)</span> be a <span class="math inline">\(\sigma\)</span>-finite measure. Show that</li>
 </ol>
-<p><span class="math display">\[P_n &lt;&lt; \nu \text{ for all } n \in {\mathbb{N}}\quad \iff \quad P &lt;&lt; \nu.\]</span></p>
+<p><span class="math display">\[P_n &lt;&lt; \nu \text{ for all } n \in \mb{N}\quad \iff \quad P &lt;&lt; \nu.\]</span></p>
 <ol start="3" style="list-style-type: lower-alpha">
 <li>Derive the Lebesgue p.d.f. of <span class="math inline">\(P\)</span> when <span class="math inline">\(P_n\)</span> is the gamma distribution <span class="math inline">\(\Gamma(\alpha, n^{-1})\)</span> with <span class="math inline">\(\alpha &gt; 1\)</span> and <span class="math inline">\(a_n \propto n^{-\alpha}\)</span>.</li>
 </ol>
@@ -337,7 +350,7 @@ Combine the two results to get the final result.<a href="#fn1" class="footnoteRe
 
 
 <div class="solution">
-<p> <span class="solution"><em>Solution</em> (Ex 35 a)). </span> Need to show that <span class="math inline">\(P = \sum_{n=1}^{\infty} a_n P_n\)</span> is a probability measure. So we check the three properties for a probability measure (<a href="lectures.html#def:measure">2.4</a>), with the extra property that <span class="math inline">\(P(\Omega) = 1\)</span>:</p>
+<p> <span class="solution"><em>Solution</em> (Ex 35 a)). </span> Need to show that <span class="math inline">\(P = \sum_{n=1}^{\infty} a_n P_n\)</span> is a probability measure. So we check the three properties for a probability measure (<a href="#def:measure"><strong>??</strong></a>), with the extra property that <span class="math inline">\(P(\Omega) = 1\)</span>:</p>
 <ol style="list-style-type: lower-roman">
 <li><span class="math inline">\(P(A) = \sum_{n=1}^\infty a_n P_n(A) \geq 0\)</span> for all <span class="math inline">\(A\)</span> since <span class="math inline">\(a_n &gt; 0\)</span> for all <span class="math inline">\(n\)</span> by assumption, and <span class="math inline">\(P_n(A) \ge 0\)</span> for all <span class="math inline">\(n\)</span>, since <span class="math inline">\(P_n\)</span> is a probability measure. Furthermore, <span class="math inline">\(P(\Omega) = \sum_{n=1}^\infty a_n P_n(\Omega) = \sum_{n=1}^\infty a_n = 1\)</span>, where the second equality holds since <span class="math inline">\(P_n\)</span> is a probability measure (by assumption), and the last equality is exactly the assumption we made about the <span class="math inline">\(a_n\)</span>s. I.e. <span class="math inline">\(0 \le P(A) \le 1\)</span>.</li>
 <li>Since <span class="math inline">\(P_n(\emptyset) = 0\)</span>, <span class="math inline">\(P(\emptyset) = \sum_{n=1}^\infty a_n P_n(\emptyset) = 0\)</span>.</li>
@@ -353,138 +366,276 @@ Combine the two results to get the final result.<a href="#fn1" class="footnoteRe
 
 
 <div class="solution">
-<p> <span class="solution"><em>Solution</em> (Ex 35 b)). </span> Assume <span class="math inline">\(P &lt;&lt; \nu\)</span>. Let <span class="math inline">\(A \in {\mathcal{F}}\)</span> with <span class="math inline">\(\nu(A) = 0\)</span>. Assume there exists <span class="math inline">\(n \in {\mathbb{N}}\)</span> such that <span class="math inline">\(P_n(A) &gt; 0\)</span>. Then <span class="math inline">\(P(A) &gt; a_n P_n(A) &gt; 0\)</span>. But <span class="math inline">\(P &lt;&lt; \nu\)</span> implies that <span class="math inline">\(P(A) = 0\)</span>, so by contradiction, <span class="math inline">\(P_n(A) = 0\)</span> for all <span class="math inline">\(n \in {\mathbb{N}}\)</span>.</p>
-<p>Now assume <span class="math inline">\(P_n &lt;&lt; \nu\)</span>. Let <span class="math inline">\(A \in {\mathcal{F}}\)</span> with <span class="math inline">\(\nu(A) = 0\)</span>. Then <span class="math inline">\(P_n(A) = 0\)</span> for all <span class="math inline">\(n \in {\mathbb{N}}\)</span>. Hence, <span class="math inline">\(P(A) = \sum_{n=1}^\infty a_n P_n(A) = 0\)</span>, which means that <span class="math inline">\(P &lt;&lt; \nu\)</span>.</p>
+<p> <span class="solution"><em>Solution</em> (Ex 35 b)). </span> Assume <span class="math inline">\(P &lt;&lt; \nu\)</span>. Let <span class="math inline">\(A \in \F\)</span> with <span class="math inline">\(\nu(A) = 0\)</span>. Assume there exists <span class="math inline">\(n \in \mb{N}\)</span> such that <span class="math inline">\(P_n(A) &gt; 0\)</span>. Then <span class="math inline">\(P(A) &gt; a_n P_n(A) &gt; 0\)</span>. But <span class="math inline">\(P &lt;&lt; \nu\)</span> implies that <span class="math inline">\(P(A) = 0\)</span>, so by contradiction, <span class="math inline">\(P_n(A) = 0\)</span> for all <span class="math inline">\(n \in \mb{N}\)</span>.</p>
+<p>Now assume <span class="math inline">\(P_n &lt;&lt; \nu\)</span>. Let <span class="math inline">\(A \in \F\)</span> with <span class="math inline">\(\nu(A) = 0\)</span>. Then <span class="math inline">\(P_n(A) = 0\)</span> for all <span class="math inline">\(n \in \mb{N}\)</span>. Hence, <span class="math inline">\(P(A) = \sum_{n=1}^\infty a_n P_n(A) = 0\)</span>, which means that <span class="math inline">\(P &lt;&lt; \nu\)</span>.</p>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-47" class="exercise"><strong>Exercise 4.10  (Ex 50)  </strong></span>
+<span id="exr:unnamed-chunk-27" class="exercise"><strong>Exercise 4.10  (Ex 50)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-48" class="exercise"><strong>Exercise 4.11  (Ex 55)  </strong></span>
+<p><span id="exr:unnamed-chunk-28" class="exercise"><strong>Exercise 4.11  (Ex 55)  </strong></span>Let <span class="math inline">\(X\)</span> be a random variable. Show that</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>If <span class="math inline">\(E X\)</span> exists, then <span class="math inline">\(E X = \int_0^\infty P(X &gt; x) dx - \int_{-\infty}^0 P(X \le x) dx\)</span>.</p></li>
+<li>If <span class="math inline">\(X\)</span> has range <span class="math inline">\(0, 1, 2, ...\)</span>, then <span class="math inline">\(E X = \sum_{n=1}^\infty  P(X \ge x)\)</span>
+</div></li>
+</ol>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution</em> (EX 55 (a)). </span> First rewrite the RHS in terms of PDFS</p>
+<p><span class="math display">\[\int_0^\infty \int_x^\infty f(y) dy dx - \int_{-\infty}^0 \int_{-\infty}^x f(y) dy dx\]</span></p>
+<p>Then we can use Fubini (since <span class="math inline">\(f\)</span> is positive) to switch the order of the integrals</p>
+<span class="math display">\[
+\begin{aligned}
+&amp;= \int_0^\infty \int_0^y f(y) dy dx - \int_{-\infty}^0 \int_{-y}^0 f(y) dy dx \\
+&amp;= \int_0^\infty f(y) \int_0^y 1 dx dy - \int_{-\infty}^0 f(y) \int_{-y}^0 1 dx dy \\
+&amp;= \int_0^\infty f(y) y dy dx - \int_{-\infty}^0 -y \cdot f(y) dy \\
+&amp;= E X
+\end{aligned}
+\]</span>
+</div>
+
+
+<div class="solution">
+ <span class="solution"><em>Solution</em> (EX 55 (b)). </span> TODO
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-49" class="exercise"><strong>Exercise 4.12  (Ex 56)  </strong></span>
+<span id="exr:unnamed-chunk-31" class="exercise"><strong>Exercise 4.12  (Ex 56)  </strong></span>Calculate the expectation and variance of the noncentral t distribution.
+</div>
+
+
+<div class="solution">
+ <span class="solution"><em>Solution</em> (Ex 56 (a)). </span> We did these. The integrals were hard. There were two. We don’t have time to write up the nasty calculus, but do know that we suffered to prove this result. YAY MAAAAATH! We may staple the ugly to the back to the back of the nice solutions.
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-50" class="exercise"><strong>Exercise 4.13  (Ex 65)  </strong></span>
+<span id="exr:unnamed-chunk-33" class="exercise"><strong>Exercise 4.13  (Ex 65)  </strong></span>TODO
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-51" class="exercise"><strong>Exercise 4.14  (Ex 74)  </strong></span>
+<span id="exr:unnamed-chunk-34" class="exercise"><strong>Exercise 4.14  (Ex 74)  </strong></span>Let <span class="math inline">\(\phi_n\)</span> be a the chf of a probability measure <span class="math inline">\(P_n, n = 1, 2, ...\)</span>. Let <span class="math inline">\(\{a_n\}\)</span> be a sequence of nonnegative numbers with <span class="math inline">\(\sum_{n=1}^\infty a_n = 1\)</span>. Show that <span class="math inline">\(\sum_{n=1}^\infty a_n \phi_n\)</span> is a ch.f. and find its corresponding probability measure.
+</div>
+
+
+<div class="solution">
+<p> <span class="solution"><em>Solution</em> (Ex 74). </span> Take <span class="math inline">\(P = \sum_n a_n P_n\)</span>. Note that <span class="math inline">\(P_n\)</span> is dominated by <span class="math inline">\(P\)</span>, so that there exists a density <span class="math inline">\(g_n = dP_n/dP\)</span> for each <span class="math inline">\(n\)</span> (exercise 35). Consider <span class="math inline">\(P(\Omega) = \int_\Omega \sum a_n g_n(x) dP = 1\)</span>, so that <span class="math inline">\(\sum a_n g_n(x) = 1\)</span> almost everywhere. Then</p>
+<span class="math display">\[
+\begin{aligned}
+\sum_n a_n \phi_n &amp;= \sum_n a_n \int e^{itx} g_n(x) dP \\
+&amp;= \int \sum_n a_n e^{itx} g_n(x) dP \qquad \text{Fubini} \\
+&amp;= \int e^{itx} dP \\
+&amp;= \phi(x)
+\end{aligned}
+\]</span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-52" class="exercise"><strong>Exercise 4.15  (Ex 83)  </strong></span>
+<span id="exr:unnamed-chunk-36" class="exercise"><strong>Exercise 4.15  (Ex 83)  </strong></span>TODO
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-53" class="exercise"><strong>Exercise 4.16  (Ex 85)  </strong></span>
+<span id="exr:unnamed-chunk-37" class="exercise"><strong>Exercise 4.16  (Ex 85)  </strong></span>TODO
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-54" class="exercise"><strong>Exercise 4.17  (Ex 93)  </strong></span>
+<span id="exr:unnamed-chunk-38" class="exercise"><strong>Exercise 4.17  (Ex 93)  </strong></span>TODO
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-55" class="exercise"><strong>Exercise 4.18  (Ex 99)  </strong></span>
+<p><span id="exr:unnamed-chunk-39" class="exercise"><strong>Exercise 4.18  (Ex 99)  </strong></span>LEt <span class="math inline">\(X_1, X_2, ...\)</span> be i.i.d random variables and let <span class="math inline">\(Y\)</span> be a discrete random variable taking positive integer values. Assume that <span class="math inline">\(X_i\)</span> and <span class="math inline">\(Y\)</span> are independent.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Obtain the ch.f. of Z</li>
+<li>Show <span class="math inline">\(E Z = E Y E X_1\)</span></li>
+<li>Show Var Z = E Y Var(X_1) + Var(Y) (E X_1)^2
+</div></li>
+</ol>
+
+<div class="solution">
+ <span class="solution"><em>Solution</em> (Ex 99 (a)). </span> TODO
+</div>
+
+
+<div class="solution">
+ <span class="solution"><em>Solution</em> (Ex 99 (b)). </span> <span class="math display">\[
+\begin{aligned}
+E Z &amp;= E(\sum_{i=1}^Y X_i) \\
+&amp;= E( E(\sum_{i=1}^Y X_i) | Y ) \\
+&amp;= E(Y E(X_1 | Y)) \\
+&amp;= EY E(E(X_1 | Y)) \\
+&amp;= EY E X_1
+\end{aligned}
+\]</span>
+</div>
+
+
+<div class="solution">
+ <span class="solution"><em>Solution</em> (Ex 99 (c)). </span> <span class="math display">\[
+\begin{aligned}
+Var Z &amp;= Var(E(Z | Y)) + E(Var(Z | Y)) \\
+&amp;= Var(E(Y X_1 | Y)) + E(Var(Y X_1)) \\
+&amp;= Var(Y E(X_1 | Y)) + E(Y^2 Var(X_1)) \\
+&amp;= (E(X_1))^2 Var(Y) + E(Y^2) Var(X_1)
+\end{aligned}
+\]</span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-56" class="exercise"><strong>Exercise 4.19  (Ex 101)  </strong></span>
+<span id="exr:unnamed-chunk-43" class="exercise"><strong>Exercise 4.19  (Ex 101)  </strong></span>TODO
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-57" class="exercise"><strong>Exercise 4.20  (Ex 106)  </strong></span>
+<p><span id="exr:unnamed-chunk-44" class="exercise"><strong>Exercise 4.20  (Ex 106)  </strong></span>Let <span class="math inline">\(\{Y_n\}\)</span> be a sequence of independent random. Show that the following are martingales:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(X_1 = Y_1\)</span>, <span class="math inline">\(X_{n+1} = X_n + Y_{n+1} h_n(X_1, ..., X_n)\)</span> where <span class="math inline">\(h_n\)</span> are Borel.</li>
+<li>Suppose <span class="math inline">\(E Y_n = 0\)</span> and <span class="math inline">\(Var Y_n = \sigma^2\)</span> for all <span class="math inline">\(n\)</span>. <span class="math inline">\(X_n = (sum_{j=1}^n Y_j)^2 - n \sigma^2\)</span></li>
+<li>Suppose <span class="math inline">\(Y_n &gt; 0\)</span> and <span class="math inline">\(E Y_n = 1\)</span> for all <span class="math inline">\(n\)</span>. <span class="math inline">\(X_n = Y_1 \cdot ... \cdot Y_n\)</span>.
+</div></li>
+</ol>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution</em> (Ex 106 (a)). </span> Recall that a sequence <span class="math inline">\(X_n\)</span> is a martingale if <span class="math inline">\(E(X_{n+1} | X_1, ..., X_n) = X_n\)</span>.</p>
+<span class="math display">\[
+\begin{aligned}
+E(X_{n+1} = X_n + Y_{n+1} h_n(X_1, ..., X_n) | X_1, ..., X_n) &amp;= 
+  X_n +  h_n(X_1, ..., X_n) E(Y_{n+1} | X_1, ..., X_n) \\
+&amp;= X_n +  h_n(X_1, ..., X_n) 0 \\
+&amp;= X_n
+\end{aligned}
+\]</span>
+</div>
+
+
+<div class="solution">
+ <span class="solution"><em>Solution</em> (Ex 106 (b)). </span> <span class="math display">\[
+\begin{aligned}
+E(\sum_{j=1}^{n+1} Y_j)^2 - (n + 1) \sigma^2 | X_1, ..., X_n) &amp;= 
+  E(\sum_{j=1}^{n} Y_j + Y_{n+1})^2  | X_1, ..., X_n) - (n + 1) \sigma^2 \\
+&amp;= E(\sum_{j=1}^{n} Y_j | X_1, ..., X_n)^2 + E(Y_{n+1} \cdot \sum_{j=1}^{n} Y_j | X_1, ..., X_n) + E(Y_{n+1}^2  | X_1, ..., X_n) - (n + 1) \sigma^2 \\
+&amp;= E(\sum_{j=1}^{n} Y_j | X_1, ..., X_n)^2 + E(Y_{n+1}) E(\sum_{j=1}^{n} Y_j | X_1, ..., X_n) + \sigma^2 - (n + 1) \sigma^2 \\
+&amp;= (\sum_{j=1}^{n} Y_j)^2 + n \sigma^2
+\end{aligned}
+\]</span>
+</div>
+
+
+<div class="solution">
+ <span class="solution"><em>Solution</em> (Ex 106 (c)). </span> <span class="math display">\[
+\begin{aligned}
+E( Y_1 \cdot ... \cdot Y_n \cdot Y_{n+1} | X_1, ..., X_n) &amp;= Y_1 \cdot ... \cdot Y_n E(Y_{n+1} | X_1, ..., X_n) \\
+&amp;= Y_1 \cdot ... \cdot Y_n \\
+&amp;= X_n
+\end{aligned}
+\]</span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-58" class="exercise"><strong>Exercise 4.21  (Ex 115)  </strong></span>
+<p><span id="exr:unnamed-chunk-48" class="exercise"><strong>Exercise 4.21  (Ex 115)  </strong></span>Let <span class="math inline">\(X_1, X_2, ...\)</span> be a sequence of identically distributed random variables with finite <span class="math inline">\(E |X_1|\)</span> and let <span class="math inline">\(Y_n = n^{-1} \max_{i \le n} |X_i|\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Show that <span class="math inline">\(Y_n \to 0\)</span> in <span class="math inline">\(L_1\)</span></li>
+<li>Show that <span class="math inline">\(Y_n \to 0\)</span> almost surely
+</div></li>
+</ol>
+
+<div class="solution">
+<p> <span class="solution"><em>Solution</em> (Ex 115 (a)). </span> <span class="math inline">\(E Y_n = \int_0^\infty {1 \over n} P(\max_{i \le n} |X_i| &gt; t) dt\)</span> by exercise 1.55. The integrand is then bounded by</p>
+<p><span class="math display">\[{1 \over n} \sum P(\max_{i \le n} |X_i| &gt; t)\]</span></p>
+<p>which equals <span class="math inline">\({1 \over n} P(|X_1| &gt; t)\)</span> since the <span class="math inline">\(X_i\)</span> are identical. This is finite by hypothesis. Thus we can apply the DCT to see that</p>
+<span class="math display">\[\lim E Y_n = \int_0^\infty \lim {1 \over n}  P(\max_{i \le n} |X_i| &gt; t) dt = 0\]</span>
+</div>
+
+
+<div class="solution">
+ <span class="solution"><em>Solution</em> (Ex 115 (b)). </span> The condition that <span class="math inline">\(E |X_1|\)</span> converges and being identical gives us that that $ X_n / n$ converges to zero almost surely. then we truncate. for some large enough N, <span class="math inline">\(X_n / n\)</span> must be less than epsilon. then for <span class="math inline">\(|X_n| / n\)</span> for n &lt; N, there are only finitely many cases and so the max exists and is bounded, and goes to zero by the <span class="math inline">\(n\)</span> in the denominator. this gives us that <span class="math inline">\(\lim Y_n\)</span> goes to zero as <span class="math inline">\(n\)</span> goes to zero. in fact it goes to zero almost everywhere, since the limit <span class="math inline">\(|X_n| / n\)</span> goes to zero almost everywhere by the hypothesis that <span class="math inline">\(X_n\)</span> is absolutely integrable. thus <span class="math inline">\(\lim Y_n\)</span> goes to zero almost surely.
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-59" class="exercise"><strong>Exercise 4.22  (Ex 117)  </strong></span>
+<span id="exr:unnamed-chunk-51" class="exercise"><strong>Exercise 4.22  (Ex 117)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-60" class="exercise"><strong>Exercise 4.23  (Ex 126)  </strong></span>
+<span id="exr:unnamed-chunk-52" class="exercise"><strong>Exercise 4.23  (Ex 126)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-61" class="exercise"><strong>Exercise 4.24  (Ex 127)  </strong></span>
+<span id="exr:unnamed-chunk-53" class="exercise"><strong>Exercise 4.24  (Ex 127)  </strong></span>(a) Suppose X_n converge in distribution to X. Show X_n is O_P(1).
+</div>
+
+
+<div class="solution">
+<p> <span class="solution"><em>Solution</em> (Ex 127 (a)). </span> Suppose X_n converge in distribution to X. For large enough M, we have <span class="math inline">\(P(|X| &gt; M) &lt; \epsilon_1\)</span> (i.e the tail probability is small). For large enough <span class="math inline">\(n\)</span>, $P(|X_n| &gt; _1) - P(|X| &gt; ) &lt; ) &lt; <span class="math inline">\(\epsilon_2\)</span>. Pick <span class="math inline">\(n\)</span> large enough so that <span class="math inline">\(\epsilon_2\)</span> is controlled.</p>
+<a href="http://users.ices.utexas.edu/~alen/articles/asymp-final.pdf" class="uri">http://users.ices.utexas.edu/~alen/articles/asymp-final.pdf</a> - page 7
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-62" class="exercise"><strong>Exercise 4.25  (Ex 128)  </strong></span>
+<span id="exr:unnamed-chunk-55" class="exercise"><strong>Exercise 4.25  (Ex 128)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-63" class="exercise"><strong>Exercise 4.26  (Ex 137)  </strong></span>
+<span id="exr:unnamed-chunk-56" class="exercise"><strong>Exercise 4.26  (Ex 137)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-64" class="exercise"><strong>Exercise 4.27  (Ex 138)  </strong></span>
+<span id="exr:unnamed-chunk-57" class="exercise"><strong>Exercise 4.27  (Ex 138)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-65" class="exercise"><strong>Exercise 4.28  (Ex 140)  </strong></span>
+<span id="exr:unnamed-chunk-58" class="exercise"><strong>Exercise 4.28  (Ex 140)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-66" class="exercise"><strong>Exercise 4.29  (Ex 142)  </strong></span>
+<span id="exr:unnamed-chunk-59" class="exercise"><strong>Exercise 4.29  (Ex 142)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-67" class="exercise"><strong>Exercise 4.30  (Ex 146)  </strong></span>
+<span id="exr:unnamed-chunk-60" class="exercise"><strong>Exercise 4.30  (Ex 146)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-68" class="exercise"><strong>Exercise 4.31  (Ex 149)  </strong></span>
+<span id="exr:unnamed-chunk-61" class="exercise"><strong>Exercise 4.31  (Ex 149)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-69" class="exercise"><strong>Exercise 4.32  (Ex 152)  </strong></span>
+<span id="exr:unnamed-chunk-62" class="exercise"><strong>Exercise 4.32  (Ex 152)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-70" class="exercise"><strong>Exercise 4.33  (Ex 153)  </strong></span>
+<span id="exr:unnamed-chunk-63" class="exercise"><strong>Exercise 4.33  (Ex 153)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-71" class="exercise"><strong>Exercise 4.34  (Ex 163)  </strong></span>
+<span id="exr:unnamed-chunk-64" class="exercise"><strong>Exercise 4.34  (Ex 163)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-72" class="exercise"><strong>Exercise 4.35  (Ex 164)  </strong></span>
+<span id="exr:unnamed-chunk-65" class="exercise"><strong>Exercise 4.35  (Ex 164)  </strong></span>
 </div>
 
 </div>
@@ -492,46 +643,47 @@ Combine the two results to get the final result.<a href="#fn1" class="footnoteRe
 <h3><span class="header-section-number">4.1.2</span> Suggested Problems</h3>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-73" class="exercise"><strong>Exercise 4.36  (Ex 3)  </strong></span>Let <span class="math inline">\(\Omega, {\mathcal{F}}_j)\)</span>, <span class="math inline">\(j=1,2,\ldots\)</span>, be measurable spaces such that <span class="math inline">\({\mathcal{F}}_j \subset {\mathcal{F}}_{j+1}\)</span>. Is <span class="math inline">\(\cup_j {\mathcal{F}}_j\)</span> a <span class="math inline">\(\sigma\)</span>-field?
+<span id="exr:unnamed-chunk-66" class="exercise"><strong>Exercise 4.36  (Ex 3)  </strong></span>Let <span class="math inline">\(\Omega, \F_j)\)</span>, <span class="math inline">\(j=1,2,\ldots\)</span>, be measurable spaces such that <span class="math inline">\(\F_j \subset \F_{j+1}\)</span>. Is <span class="math inline">\(\cup_j \F_j\)</span> a <span class="math inline">\(\sigma\)</span>-field?
 </div>
 
 
 <div class="solution">
 <p> <span class="solution"><em>Solution</em> (Ex 3). </span> No.</p>
-<p>Let <span class="math inline">\(\Omega = [0,1]\)</span>, and <span class="math inline">\({\mathcal{F}}_n = \sigma \left\{[0,\tfrac{1}{2^n}),[\tfrac{1}{2^n},\tfrac{2}{2^n}), \ldots, [\tfrac{2^{n-1}}{2^n}, 1)\right\}\)</span>.</p>
-<p>Now, consider the set <span class="math inline">\(B_n = [0, \tfrac{1}{2^n})\)</span>. Clearly <span class="math inline">\(B_n \in {\mathcal{F}}_n\)</span> for all <span class="math inline">\(n\)</span>, hence <span class="math inline">\(B_n \in \cup_{i=1}^\infty {\mathcal{F}}_i\)</span>. Hower, <span class="math inline">\(\cap_{i = 1}^{\infty} B_i = \{0\} \notin \cup_{i=1}^\infty {\mathcal{F}}_i\)</span>. So <span class="math inline">\(\cup_{i=1}^\infty {\mathcal{F}}_i\)</span> is not closed under countable intersection, i.e. it is not a <span class="math inline">\(\sigma\)</span>-algebra.</p>
+<p>Let <span class="math inline">\(\Omega = [0,1]\)</span>, and <span class="math inline">\(\F_n = \sigma \left\{[0,\tfrac{1}{2^n}),[\tfrac{1}{2^n},\tfrac{2}{2^n}), \ldots, [\tfrac{2^{n-1}}{2^n}, 1)\right\}\)</span>.</p>
+<p>Now, consider the set <span class="math inline">\(B_n = [0, \tfrac{1}{2^n})\)</span>. Clearly <span class="math inline">\(B_n \in \F_n\)</span> for all <span class="math inline">\(n\)</span>, hence <span class="math inline">\(B_n \in \cup_{i=1}^\infty \F_i\)</span>. Hower, <span class="math inline">\(\cap_{i = 1}^{\infty} B_i = \{0\} \notin \cup_{i=1}^\infty \F_i\)</span>. So <span class="math inline">\(\cup_{i=1}^\infty \F_i\)</span> is not closed under countable intersection, i.e. it is not a <span class="math inline">\(\sigma\)</span>-algebra.</p>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-75" class="exercise"><strong>Exercise 4.37  (Ex 6)  </strong></span>Prove part (ii) and (iii) of proposition <a href="lectures.html#prp:properties-of-measures">2.1</a>.
+<span id="exr:unnamed-chunk-68" class="exercise"><strong>Exercise 4.37  (Ex 6)  </strong></span>Prove part (ii) and (iii) of proposition <a href="#prp:properties-of-measures"><strong>??</strong></a>.
 </div>
 
 
 <div class="solution">
-<p> <span class="solution"><em>Solution</em> (Ex 6). </span>  i) Let <span class="math inline">\(A \subset B\)</span>. Then <span class="math inline">\(B \setminus A \cap A = \emptyset\)</span>, hence <span class="math inline">\(\nu(B) = \nu((B\setminus A) \cup A) = \nu(B\setminus A) + \nu(A) \geq \nu(A)\)</span>.</p>
+<p> <span class="solution"><em>Solution</em> (Ex 6). </span> 
+i) Let <span class="math inline">\(A \subset B\)</span>. Then <span class="math inline">\(B \setminus A \cap A = \emptyset\)</span>, hence <span class="math inline">\(\nu(B) = \nu((B\setminus A) \cup A) = \nu(B\setminus A) + \nu(A) \geq \nu(A)\)</span>.</p>
 <ol start="2" style="list-style-type: lower-roman">
 <li>Let <span class="math inline">\(A_1, A_2, \ldots\)</span> be a sequence of sets. Define <span class="math inline">\(B_i = A_i \setminus \left(\cup_{k = 1}^{i-1} A_k \right)\)</span>. Then the <span class="math inline">\(B_i\)</span>s are pairwise disjoint. Hence,</li>
 </ol>
-<span class="math display">\[\begin{align*}
+<p><span class="math display">\[\begin{align*}
   \nu\left(\cup_{i = 1}^\infty A_i\right) &amp;= \nu\left(\cup_{i=1}^\infty B_i\right) \\
                                           &amp;= \sum_{i=1}^\infty \nu(B_i) \\
                                           &amp;= \sum_{i=1}^\infty \nu\left(A_i \setminus \left(\cup_{k=1}^{i-1} A_k \right ) \right ).
-\end{align*}\]</span>
+\end{align*}\]</span></p>
 <p>Since <span class="math inline">\(A_i \setminus \left(\cup_{k=1}^{i-1} A_k \right) \subset A_i\)</span>, we use (i) to get the result:</p>
-<span class="math display">\[\begin{align*}
+<p><span class="math display">\[\begin{align*}
   \sum_{i=1}^\infty \nu\left(A_i \setminus \left(\cup_{k=1}^{i-1} A_k \right ) \right ) \leq \sum_{i=1}^\infty \nu\left(A_i \right )
-\end{align*}\]</span>
+\end{align*}\]</span></p>
 <ol start="3" style="list-style-type: lower-roman">
 <li>Let <span class="math inline">\(A_1 \subset A_2 \subset A_3 \subset \dots\)</span>. Define <span class="math inline">\(B_i = A_i \setminus A_{i-1}\)</span>. Then <span class="math inline">\(B_1, B_2, \ldots\)</span> is a sequence of pairwise disjoint sets, and <span class="math inline">\(\cup_{i = 1}^\infty B_i = \cup_{i=1}^\infty A_i\)</span>. Hence,</li>
 </ol>
-<span class="math display">\[\begin{align*}
+<p><span class="math display">\[\begin{align*}
   \nu\left(\cup_{i=1}^k A_i\right) &amp;= \nu\left(\cup_{i=1}^k B_i\right) \\
                                    &amp;= \sum_{i=1}^k \nu(B_i) \\
                                    &amp;= \sum_{i=1}^k \nu(A_i\setminus A_{i-1}) \\
                                    &amp;= \sum_{i=1}^k \nu(A_i) - \nu(A_{i-1}) \\
                                    &amp;= \nu(A_k). 
-\end{align*}\]</span>
+\end{align*}\]</span></p>
 <p>Taking the limit on both sides gives us</p>
 <p><span class="math display">\[
   \nu\left(\cup_{i=1}^k A_i \right) = \lim_{n \rightarrow \infty} \nu(A_n).
@@ -540,207 +692,207 @@ Combine the two results to get the final result.<a href="#fn1" class="footnoteRe
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-77" class="exercise"><strong>Exercise 4.38  (Ex 15)  </strong></span>Show that a monotone function from <span class="math inline">\({\mathbb{R}}\)</span> to <span class="math inline">\({\mathbb{R}}\)</span> is Borel, and a c.d.f. on <span class="math inline">\({\mathbb{R}}^k\)</span> is Borel.
+<span id="exr:unnamed-chunk-70" class="exercise"><strong>Exercise 4.38  (Ex 15)  </strong></span>Show that a monotone function from <span class="math inline">\(\R\)</span> to <span class="math inline">\(\R\)</span> is Borel, and a c.d.f. on <span class="math inline">\(\R^k\)</span> is Borel.
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-78" class="exercise"><strong>Exercise 4.39  (Ex 17)  </strong></span>Let <span class="math inline">\(f\)</span> be a non-negative Borel function on <span class="math inline">\((\Omega, {\mathcal{F}})\)</span>. Show that <span class="math inline">\(f\)</span> is the limit of a sequence of simple functions <span class="math inline">\(\{\phi_n \}\)</span> on <span class="math inline">\((\Omega, {\mathcal{F}})\)</span> with <span class="math inline">\(0 \le \phi_1 \le \phi_2 \le \dots \le f\)</span>.
+<span id="exr:unnamed-chunk-71" class="exercise"><strong>Exercise 4.39  (Ex 17)  </strong></span>Let <span class="math inline">\(f\)</span> be a non-negative Borel function on <span class="math inline">\((\Omega, \F)\)</span>. Show that <span class="math inline">\(f\)</span> is the limit of a sequence of simple functions <span class="math inline">\(\{\phi_n \}\)</span> on <span class="math inline">\((\Omega, \F)\)</span> with <span class="math inline">\(0 \le \phi_1 \le \phi_2 \le \dots \le f\)</span>.
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-79" class="exercise"><strong>Exercise 4.40  (Ex 23)  </strong></span>
+<span id="exr:unnamed-chunk-72" class="exercise"><strong>Exercise 4.40  (Ex 23)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-80" class="exercise"><strong>Exercise 4.41  (Ex 25)  </strong></span>
+<span id="exr:unnamed-chunk-73" class="exercise"><strong>Exercise 4.41  (Ex 25)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-81" class="exercise"><strong>Exercise 4.42  (Ex 31)  </strong></span>
+<span id="exr:unnamed-chunk-74" class="exercise"><strong>Exercise 4.42  (Ex 31)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-82" class="exercise"><strong>Exercise 4.43  (Ex 36)  </strong></span>
+<span id="exr:unnamed-chunk-75" class="exercise"><strong>Exercise 4.43  (Ex 36)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-83" class="exercise"><strong>Exercise 4.44  (Ex 46)  </strong></span>
+<span id="exr:unnamed-chunk-76" class="exercise"><strong>Exercise 4.44  (Ex 46)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-84" class="exercise"><strong>Exercise 4.45  (Ex 53)  </strong></span>
+<span id="exr:unnamed-chunk-77" class="exercise"><strong>Exercise 4.45  (Ex 53)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-85" class="exercise"><strong>Exercise 4.46  (Ex 57)  </strong></span>
+<span id="exr:unnamed-chunk-78" class="exercise"><strong>Exercise 4.46  (Ex 57)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-86" class="exercise"><strong>Exercise 4.47  (Ex 61)  </strong></span>
+<span id="exr:unnamed-chunk-79" class="exercise"><strong>Exercise 4.47  (Ex 61)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-87" class="exercise"><strong>Exercise 4.48  (Ex 66)  </strong></span>
+<span id="exr:unnamed-chunk-80" class="exercise"><strong>Exercise 4.48  (Ex 66)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-88" class="exercise"><strong>Exercise 4.49  (Ex 70)  </strong></span>
+<span id="exr:unnamed-chunk-81" class="exercise"><strong>Exercise 4.49  (Ex 70)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-89" class="exercise"><strong>Exercise 4.50  (Ex 73)  </strong></span>
+<span id="exr:unnamed-chunk-82" class="exercise"><strong>Exercise 4.50  (Ex 73)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-90" class="exercise"><strong>Exercise 4.51  (Ex 78)  </strong></span>
+<span id="exr:unnamed-chunk-83" class="exercise"><strong>Exercise 4.51  (Ex 78)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-91" class="exercise"><strong>Exercise 4.52  (Ex 79)  </strong></span>
+<span id="exr:unnamed-chunk-84" class="exercise"><strong>Exercise 4.52  (Ex 79)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-92" class="exercise"><strong>Exercise 4.53  (Ex 81)  </strong></span>
+<span id="exr:unnamed-chunk-85" class="exercise"><strong>Exercise 4.53  (Ex 81)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-93" class="exercise"><strong>Exercise 4.54  (Ex 82)  </strong></span>
+<span id="exr:unnamed-chunk-86" class="exercise"><strong>Exercise 4.54  (Ex 82)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-94" class="exercise"><strong>Exercise 4.55  (Ex 86)  </strong></span>
+<span id="exr:unnamed-chunk-87" class="exercise"><strong>Exercise 4.55  (Ex 86)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-95" class="exercise"><strong>Exercise 4.56  (Ex 88)  </strong></span>
+<span id="exr:unnamed-chunk-88" class="exercise"><strong>Exercise 4.56  (Ex 88)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-96" class="exercise"><strong>Exercise 4.57  (Ex 91)  </strong></span>
+<span id="exr:unnamed-chunk-89" class="exercise"><strong>Exercise 4.57  (Ex 91)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-97" class="exercise"><strong>Exercise 4.58  (Ex 97)  </strong></span>
+<span id="exr:unnamed-chunk-90" class="exercise"><strong>Exercise 4.58  (Ex 97)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-98" class="exercise"><strong>Exercise 4.59  (Ex 98)  </strong></span>
+<span id="exr:unnamed-chunk-91" class="exercise"><strong>Exercise 4.59  (Ex 98)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-99" class="exercise"><strong>Exercise 4.60  (Ex 102)  </strong></span>
+<span id="exr:unnamed-chunk-92" class="exercise"><strong>Exercise 4.60  (Ex 102)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-100" class="exercise"><strong>Exercise 4.61  (Ex 104)  </strong></span>
+<span id="exr:unnamed-chunk-93" class="exercise"><strong>Exercise 4.61  (Ex 104)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-101" class="exercise"><strong>Exercise 4.62  (Ex 114)  </strong></span>
+<span id="exr:unnamed-chunk-94" class="exercise"><strong>Exercise 4.62  (Ex 114)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-102" class="exercise"><strong>Exercise 4.63  (Ex 116)  </strong></span>
+<span id="exr:unnamed-chunk-95" class="exercise"><strong>Exercise 4.63  (Ex 116)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-103" class="exercise"><strong>Exercise 4.64  (Ex 116)  </strong></span>
+<span id="exr:unnamed-chunk-96" class="exercise"><strong>Exercise 4.64  (Ex 116)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-104" class="exercise"><strong>Exercise 4.65  (Ex 118)  </strong></span>
+<span id="exr:unnamed-chunk-97" class="exercise"><strong>Exercise 4.65  (Ex 118)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-105" class="exercise"><strong>Exercise 4.66  (Ex 119)  </strong></span>
+<span id="exr:unnamed-chunk-98" class="exercise"><strong>Exercise 4.66  (Ex 119)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-106" class="exercise"><strong>Exercise 4.67  (Ex 121)  </strong></span>
+<span id="exr:unnamed-chunk-99" class="exercise"><strong>Exercise 4.67  (Ex 121)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-107" class="exercise"><strong>Exercise 4.68  (Ex 122)  </strong></span>
+<span id="exr:unnamed-chunk-100" class="exercise"><strong>Exercise 4.68  (Ex 122)  </strong></span>TODO - Alex
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-108" class="exercise"><strong>Exercise 4.69  (Ex 125)  </strong></span>
+<span id="exr:unnamed-chunk-101" class="exercise"><strong>Exercise 4.69  (Ex 125)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-109" class="exercise"><strong>Exercise 4.70  (Ex 136)  </strong></span>
+<span id="exr:unnamed-chunk-102" class="exercise"><strong>Exercise 4.70  (Ex 136)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-110" class="exercise"><strong>Exercise 4.71  (Ex 141)  </strong></span>
+<span id="exr:unnamed-chunk-103" class="exercise"><strong>Exercise 4.71  (Ex 141)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-111" class="exercise"><strong>Exercise 4.72  (Ex 144)  </strong></span>
+<span id="exr:unnamed-chunk-104" class="exercise"><strong>Exercise 4.72  (Ex 144)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-112" class="exercise"><strong>Exercise 4.73  (Ex 145)  </strong></span>
+<span id="exr:unnamed-chunk-105" class="exercise"><strong>Exercise 4.73  (Ex 145)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-113" class="exercise"><strong>Exercise 4.74  (Ex 150)  </strong></span>
+<span id="exr:unnamed-chunk-106" class="exercise"><strong>Exercise 4.74  (Ex 150)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-114" class="exercise"><strong>Exercise 4.75  (Ex 154)  </strong></span>
+<span id="exr:unnamed-chunk-107" class="exercise"><strong>Exercise 4.75  (Ex 154)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-115" class="exercise"><strong>Exercise 4.76  (Ex 156)  </strong></span>
+<span id="exr:unnamed-chunk-108" class="exercise"><strong>Exercise 4.76  (Ex 156)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-116" class="exercise"><strong>Exercise 4.77  (Ex 161)  </strong></span>
+<span id="exr:unnamed-chunk-109" class="exercise"><strong>Exercise 4.77  (Ex 161)  </strong></span>
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-117" class="exercise"><strong>Exercise 4.78  (Ex 166)  </strong></span>
+<span id="exr:unnamed-chunk-110" class="exercise"><strong>Exercise 4.78  (Ex 166)  </strong></span>
 </div>
 
 
@@ -756,7 +908,7 @@ Combine the two results to get the final result.<a href="#fn1" class="footnoteRe
 <div class="footnotes">
 <hr />
 <ol start="1">
-<li id="fn1"><p>Note: This could be done in one step, but I found it easier to split up into two.<a href="homework.html#fnref1">↩</a></p></li>
+<li id="fn1"><p>Note: This could be done in one step, but I found it easier to split up into two.<a href="homework.html#fnref1" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>
@@ -811,7 +963,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
+    var src = "true";
     if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');

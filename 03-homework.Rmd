@@ -4,13 +4,15 @@
 
 ### Assigned Problems
 
+NOTE: This homework submission is for both Ralph Trane and Alex Hayes. For almost all of the problems here, we worked together on a whiteboard. We then took pictures or handwritten notes of the solutions and wrote them up here.
+
 ```{exercise, name = "Ex 2"}
 Let $\C$ be a collection of subsets of $\Omega$ and let $\Gamma = \{ \F | \F \text{ is a } \sigma \text{-field on } \Omega \text{ and } \C \subset \F \}$. Show that $\Gamma \neq \emptyset$ and $\sigma(\C) = \cap_{\F \in \Gamma} \F$. 
 ```
 
 ```{solution, name = "Ex 2"}
 Let $\P(\Omega)$ be the collection of all subsets of $\Omega$. We know that this is a $\sigma$-field. It also contains $\C$. Hence, $\Gamma \neq \emptyset$. 
-
+ 
 By definition, $\sigma(\C)$ is the smallest $\sigma$-field that contains $\C$, hence $\sigma(\C) \in \Gamma$ and $\sigma(\C) \subset \F$ for all $\F \in \Gamma$. Therefore, $\sigma(\C) \subset \cap_{\F \in \Gamma} \F$. But since $\sigma(\C) \in \Gamma$, $\sigma(\C) \in \cap_{\F \in \Gamma} \F$, which in turn ensures that $\cap_{\F \in \Gamma} \F \subset \sigma(\C)$. 
 
 Hence $\sigma(\C) = \cap_{\F \in \Gamma} \F$. 
@@ -23,7 +25,7 @@ a) Let $\C$ be a $\pi$-system and $\mathcal{D}$ be a $\lambda$-system such that 
 ```
 
 ```{solution, name = "Ex 5"}
-
+TODO
 ```
 
 ```{exercise, name = "Ex 12"}
@@ -100,7 +102,7 @@ Combine the two results to get the final result.^[Note: This could be done in on
 ```
 
 ```{solution, name = "Ex 14 (iii)"}
-
+TODO
 ```
 
 ```{solution, name = "Ex 14 (iv)"}
@@ -132,7 +134,7 @@ b) $\sigma(\lim \sup_n f_n) \subset \cap_{n=1}^\infty \sigma(f_n, f_{n+1},\ldots
 ```
 
 ```{solution, name = "Ex 19"}
-
+TODO
 ```
 
 
@@ -163,7 +165,16 @@ For any c.d.f. $F$ and any $a \ge 0$, show that $\int [F(x+a) - F(x)] dx = a$
 ```
 
 ```{solution}
+Note that $F(X) = \int 1_{-\infty, x} dP$. Then 
 
+$$
+\begin{aligned}
+\int [F(x+a) - F(x)] dx &= \int_\R \left(\int 1_{-\infty, x + a} dP \right) -
+   \left(\int 1_{-\infty, x} dP \right) dx\\
+&= \int_\R \int 1_{x, x + a} dx \\
+&= a 
+\end{aligned}
+$$
 ```
 
 
@@ -292,45 +303,197 @@ Now assume $P_n << \nu$. Let $A \in \F$ with $\nu(A) = 0$. Then $P_n(A) = 0$ for
 ```
 
 ```{exercise, name = "Ex 55"}
+Let $X$ be a random variable. Show that
+
+(a) If $E X$ exists, then $E X = \int_0^\infty P(X > x) dx - \int_{-\infty}^0 P(X \le x) dx$.
+
+(b) If $X$ has range $0, 1, 2, ...$, then $E X = \sum_{n=1}^\infty
+ P(X \ge x)$
+```
+
+```{solution, name = "EX 55 (a)"}
+First rewrite the RHS in terms of PDFS
+
+$$\int_0^\infty \int_x^\infty f(y) dy dx - \int_{-\infty}^0 \int_{-\infty}^x f(y) dy dx$$
+  
+Then we can use Fubini (since $f$ is positive) to switch the order of the integrals
+
+$$
+\begin{aligned}
+&= \int_0^\infty \int_0^y f(y) dy dx - \int_{-\infty}^0 \int_{-y}^0 f(y) dy dx \\
+&= \int_0^\infty f(y) \int_0^y 1 dx dy - \int_{-\infty}^0 f(y) \int_{-y}^0 1 dx dy \\
+&= \int_0^\infty f(y) y dy dx - \int_{-\infty}^0 -y \cdot f(y) dy \\
+&= E X
+\end{aligned}
+$$
+```
+
+```{solution, name = "EX 55 (b)"}
+TODO
 ```
 
 ```{exercise, name = "Ex 56"}
+Calculate the expectation and variance of the noncentral t distribution.
 ```
 
+```{solution, name = "Ex 56 (a)"}
+We did these. The integrals were hard. There were two. We don't have time to write up the nasty calculus, but do know that we suffered to prove this result. YAY MAAAAATH! We may staple the ugly to the back to the back of the nice solutions.
+```
+
+
 ```{exercise, name = "Ex 65"}
+TODO
 ```
 
 ```{exercise, name = "Ex 74"}
+Let $\phi_n$ be a the chf of a probability measure $P_n, n = 1, 2, ...$. Let $\{a_n\}$ be a sequence of nonnegative numbers with $\sum_{n=1}^\infty a_n = 1$. Show that $\sum_{n=1}^\infty a_n \phi_n$ is a ch.f. and find its corresponding probability measure.
+```
+
+```{solution, name = "Ex 74"}
+Take $P = \sum_n a_n P_n$. Note that $P_n$ is dominated by $P$, so that there exists a density $g_n = dP_n/dP$ for each $n$ (exercise 35). Consider $P(\Omega) = \int_\Omega \sum a_n g_n(x) dP = 1$, so that $\sum a_n g_n(x) = 1$ almost everywhere. Then
+
+$$
+\begin{aligned}
+\sum_n a_n \phi_n &= \sum_n a_n \int e^{itx} g_n(x) dP \\
+&= \int \sum_n a_n e^{itx} g_n(x) dP \qquad \text{Fubini} \\
+&= \int e^{itx} dP \\
+&= \phi(x)
+\end{aligned}
+$$
 ```
 
 ```{exercise, name = "Ex 83"}
+TODO
 ```
 
 ```{exercise, name = "Ex 85"}
+TODO
 ```
 
 ```{exercise, name = "Ex 93"}
+TODO
 ```
 
 ```{exercise, name = "Ex 99"}
+LEt $X_1, X_2, ...$ be i.i.d random variables and let $Y$ be a discrete random variable taking positive integer values. Assume that $X_i$ and $Y$ are independent.
+
+(a) Obtain the ch.f. of Z
+(b) Show $E Z = E Y E X_1$
+(c) Show Var Z = E Y Var(X_1) + Var(Y) (E X_1)^2
+```
+
+```{solution, name = "Ex 99 (a)"}
+TODO
+```
+
+```{solution, name = "Ex 99 (b)"}
+$$
+\begin{aligned}
+E Z &= E(\sum_{i=1}^Y X_i) \\
+&= E( E(\sum_{i=1}^Y X_i) | Y ) \\
+&= E(Y E(X_1 | Y)) \\
+&= EY E(E(X_1 | Y)) \\
+&= EY E X_1
+\end{aligned}
+$$
+```
+
+```{solution, name = "Ex 99 (c)"}
+$$
+\begin{aligned}
+Var Z &= Var(E(Z | Y)) + E(Var(Z | Y)) \\
+&= Var(E(Y X_1 | Y)) + E(Var(Y X_1)) \\
+&= Var(Y E(X_1 | Y)) + E(Y^2 Var(X_1)) \\
+&= (E(X_1))^2 Var(Y) + E(Y^2) Var(X_1)
+\end{aligned}
+$$
 ```
 
 ```{exercise, name = "Ex 101"}
+TODO
 ```
 
 ```{exercise, name = "Ex 106"}
+Let $\{Y_n\}$ be a sequence of independent random. Show that the following are martingales:
+  
+(a) $X_1 = Y_1$, $X_{n+1} = X_n + Y_{n+1} h_n(X_1, ..., X_n)$ where $h_n$ are Borel.
+(b) Suppose $E Y_n = 0$ and $Var Y_n = \sigma^2$ for all $n$. $X_n = (sum_{j=1}^n Y_j)^2 - n \sigma^2$
+(c) Suppose $Y_n > 0$ and $E Y_n = 1$ for all $n$. $X_n = Y_1 \cdot ... \cdot Y_n$.
+```
+
+```{solution, name = "Ex 106 (a)"}
+Recall that a sequence $X_n$ is a martingale if $E(X_{n+1} | X_1, ..., X_n) = X_n$.
+
+$$
+\begin{aligned}
+E(X_{n+1} = X_n + Y_{n+1} h_n(X_1, ..., X_n) | X_1, ..., X_n) &= 
+  X_n +  h_n(X_1, ..., X_n) E(Y_{n+1} | X_1, ..., X_n) \\
+&= X_n +  h_n(X_1, ..., X_n) 0 \\
+&= X_n
+\end{aligned}
+$$
+```
+
+```{solution, name = "Ex 106 (b)"}
+$$
+\begin{aligned}
+E(\sum_{j=1}^{n+1} Y_j)^2 - (n + 1) \sigma^2 | X_1, ..., X_n) &= 
+  E(\sum_{j=1}^{n} Y_j + Y_{n+1})^2  | X_1, ..., X_n) - (n + 1) \sigma^2 \\
+&= E(\sum_{j=1}^{n} Y_j | X_1, ..., X_n)^2 + E(Y_{n+1} \cdot \sum_{j=1}^{n} Y_j | X_1, ..., X_n) + E(Y_{n+1}^2  | X_1, ..., X_n) - (n + 1) \sigma^2 \\
+&= E(\sum_{j=1}^{n} Y_j | X_1, ..., X_n)^2 + E(Y_{n+1}) E(\sum_{j=1}^{n} Y_j | X_1, ..., X_n) + \sigma^2 - (n + 1) \sigma^2 \\
+&= (\sum_{j=1}^{n} Y_j)^2 + n \sigma^2
+\end{aligned}
+$$
+```
+  
+```{solution, name = "Ex 106 (c)"}
+$$
+\begin{aligned}
+E( Y_1 \cdot ... \cdot Y_n \cdot Y_{n+1} | X_1, ..., X_n) &= Y_1 \cdot ... \cdot Y_n E(Y_{n+1} | X_1, ..., X_n) \\
+&= Y_1 \cdot ... \cdot Y_n \\
+&= X_n
+\end{aligned}
+$$
 ```
 
 ```{exercise, name = "Ex 115"}
+Let $X_1, X_2, ...$ be a sequence of identically distributed random variables with finite $E |X_1|$ and let $Y_n = n^{-1} \max_{i \le n} |X_i|$.
+
+(a) Show that $Y_n \to 0$ in $L_1$
+(b) Show that $Y_n \to 0$ almost surely
 ```
+
+```{solution, name = "Ex 115 (a)"}
+$E Y_n = \int_0^\infty {1 \over n}  P(\max_{i \le n} |X_i| > t) dt$ by exercise 1.55. The integrand is then bounded by
+
+$${1 \over n} \sum P(\max_{i \le n} |X_i| > t)$$
+  
+which equals ${1 \over n}  P(|X_1| > t)$ since the $X_i$ are identical. This is finite by hypothesis. Thus we can apply the DCT to see that 
+
+$$\lim E Y_n = \int_0^\infty \lim {1 \over n}  P(\max_{i \le n} |X_i| > t) dt = 0$$
+```
+
+
+```{solution, name = "Ex 115 (b)"}
+The condition that $E |X_1|$ converges and being identical gives us that that $ \lim X_n / n$ converges to zero almost surely. then we truncate. for some large enough N, $X_n / n$ must be less than epsilon. then for $|X_n| / n$ for n < N, there are only finitely many cases and so the max exists and is bounded, and goes to zero by the $n$ in the denominator. this gives us that $\lim Y_n$ goes to zero as $n$ goes to zero. in fact it goes to zero almost everywhere, since the limit $|X_n| / n$ goes to zero almost everywhere by the hypothesis that $X_n$ is absolutely integrable. thus $\lim Y_n$ goes to zero almost surely.
+```
+
 
 ```{exercise, name = "Ex 117"}
 ```
+
 
 ```{exercise, name = "Ex 126"}
 ```
 
 ```{exercise, name = "Ex 127"}
+(a) Suppose X_n converge in distribution to X. Show X_n is O_P(1).
+```
+
+```{solution, name = "Ex 127 (a)"}
+Suppose X_n converge in distribution to X. For large enough M, we have $P(|X| > M) < \epsilon_1$ (i.e the tail probability is small). For large enough $n$,  $P(|X_n| > \epsilon_1) - P(|X| > \epsilon) < \epsilon) < $\epsilon_2$. Pick $n$ large enough so that $\epsilon_2$ is controlled. 
+  
+  http://users.ices.utexas.edu/~alen/articles/asymp-final.pdf - page 7
 ```
 
 ```{exercise, name = "Ex 128"}
@@ -517,6 +680,7 @@ Let $f$ be a non-negative Borel function on $(\Omega, \F)$. Show that $f$ is the
 ```
 
 ```{exercise, name = "Ex 122"}
+TODO - Alex
 ```
 
 ```{exercise, name = "Ex 125"}
