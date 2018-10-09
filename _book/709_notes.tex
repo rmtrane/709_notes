@@ -1059,6 +1059,11 @@ then
 
 \subsection{Assigned Problems}\label{assigned-problems}
 
+NOTE: This homework submission is for both Ralph Trane and Alex Hayes.
+For almost all of the problems here, we worked together on a whiteboard.
+We then took pictures or handwritten notes of the solutions and wrote
+them up here.
+
 \BeginKnitrBlock{exercise}[Ex 2]
 \protect\hypertarget{exr:unnamed-chunk-21}{}{\label{exr:unnamed-chunk-21}
 \iffalse (Ex 2) \fi{} }Let \(\C\) be a collection of subsets of
@@ -1093,7 +1098,7 @@ Hence \(\sigma(\C) = \cap_{\F \in \Gamma} \F\).
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{solution}[Ex 5]
-\iffalse{} {Solution (Ex 5). } \fi{}
+\iffalse{} {Solution (Ex 5). } \fi{}TODO
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{exercise}[Ex 12]
@@ -1209,7 +1214,7 @@ Combine the two results to get the final result.\footnote{Note: This
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{solution}[Ex 14 (iii)]
-\iffalse{} {Solution (Ex 14 (iii)). } \fi{}
+\iffalse{} {Solution (Ex 14 (iii)). } \fi{}TODO
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{solution}[Ex 14 (iv)]
@@ -1232,12 +1237,11 @@ measurable.
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{solution}[Ex 14 (v)]
-\iffalse{} {Solution (Ex 14 (v)). } \fi{}Let
-\(f: \Omega \rightarrow \R^p\), where \(\Omega\) is a borel set. Assume
-\(f\) is continuous. Then, if \(A\) is an open set, \(f^{-1}(A)\) is an
-open set, and therefore borel. Hence, \(f^{-1}((a,\infty))\) is a borel
-set for all \(a\), and by \((i)\) we have that \(f\) is a borel
-function.
+\iffalse{} {Solution (Ex 14 (v)). } \fi{}Let \(f: \Omega \to \R^p\),
+where \(\Omega\) is a borel set. Assume \(f\) is continuous. Then, if
+\(A\) is an open set, \(f^{-1}(A)\) is an open set, and therefore borel.
+Hence, \(f^{-1}((a,\infty))\) is a borel set for all \(a\), and by
+\((i)\) we have that \(f\) is a borel function.
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{exercise}[Ex 19]
@@ -1256,7 +1260,7 @@ functions on a measurable space. Show that
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{solution}[Ex 19]
-\iffalse{} {Solution (Ex 19). } \fi{}
+\iffalse{} {Solution (Ex 19). } \fi{}TODO
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{exercise}[Ex 24]
@@ -1266,7 +1270,7 @@ functions on a measurable space. Show that
 a \(\delta_\epsilon\) such that for \(A \in \F\):
 
 \[
-  \nu(A) < \delta_\epsilon \Rightarrow \int_A |f| d\nu < \epsilon. 
+  \nu(A) < \delta_\epsilon \to \int_A |f| d\nu < \epsilon. 
 \]
 \EndKnitrBlock{exercise}
 
@@ -1289,7 +1293,17 @@ that \(\int [F(x+a) - F(x)] dx = a\)
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{solution}
-\iffalse{} {Solution. } \fi{}ALEX!
+\iffalse{} {Solution. } \fi{}Note that
+\(F(X) = \int 1_{-\infty, x} dP\). Then
+
+\[
+\begin{aligned}
+\int [F(x+a) - F(x)] dx &= \int_\R \left(\int 1_{-\infty, x + a} dP \right) -
+   \left(\int 1_{-\infty, x} dP \right) dx\\
+&= \int_\R \int 1_{x, x + a} dx \\
+&= a 
+\end{aligned}
+\]
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{exercise}[Ex 34]
@@ -1321,10 +1335,10 @@ utilizing the monotone convergence theorem and the fact that we know (i)
 holds for simple functions,
 
 \begin{align*}
-  \int f d\lambda &= \int \lim_{n \rightarrow \infty} \phi_n d\lambda \\
-                  &= \lim_{n \rightarrow \infty} \int \phi_n d\lambda \\
-                  &= \lim_{n \rightarrow \infty} \int \phi_n g d\nu \\
-                  &= \int \lim_{n \rightarrow \infty} \phi_n g d\nu \\
+  \int f d\lambda &= \int \lim_{n \to \infty} \phi_n d\lambda \\
+                  &= \lim_{n \to \infty} \int \phi_n d\lambda \\
+                  &= \lim_{n \to \infty} \int \phi_n g d\nu \\
+                  &= \int \lim_{n \to \infty} \phi_n g d\nu \\
                   &= \int f g d\nu,
 \end{align*}
 
@@ -1472,114 +1486,315 @@ Now assume \(P_n << \nu\). Let \(A \in \F\) with \(\nu(A) = 0\). Then
 
 \BeginKnitrBlock{exercise}[Ex 55]
 \protect\hypertarget{exr:unnamed-chunk-48}{}{\label{exr:unnamed-chunk-48}
-\iffalse (Ex 55) \fi{} }ALEX
+\iffalse (Ex 55) \fi{} } Let \(X\) be a random variable. Show that
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  If \(E X\) exists, then
+  \(E X = \int_0^\infty P(X > x) dx - \int_{-\infty}^0 P(X \le x) dx\).
+\item
+  If \(X\) has range \(0, 1, 2, ...\), then
+  \(E X = \sum_{n=1}^\infty P(X \ge x)\)
+\end{enumerate}
 \EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}[EX 55 (a)]
+\iffalse{} {Solution (EX 55 (a)). } \fi{} First rewrite the RHS in terms
+of PDFS
+
+\[\int_0^\infty \int_x^\infty f(y) dy dx - \int_{-\infty}^0 \int_{-\infty}^x f(y) dy dx\]
+
+Then we can use Fubini (since \(f\) is positive) to switch the order of
+the integrals
+
+\[
+\begin{aligned}
+&= \int_0^\infty \int_0^y f(y) dy dx - \int_{-\infty}^0 \int_{-y}^0 f(y) dy dx \\
+&= \int_0^\infty f(y) \int_0^y 1 dx dy - \int_{-\infty}^0 f(y) \int_{-y}^0 1 dx dy \\
+&= \int_0^\infty f(y) y dy dx - \int_{-\infty}^0 -y \cdot f(y) dy \\
+&= E X
+\end{aligned}
+\]
+\EndKnitrBlock{solution}
 
 \BeginKnitrBlock{exercise}[Ex 56]
-\protect\hypertarget{exr:unnamed-chunk-49}{}{\label{exr:unnamed-chunk-49}
-\iffalse (Ex 56) \fi{} }ALEX
+\protect\hypertarget{exr:unnamed-chunk-50}{}{\label{exr:unnamed-chunk-50}
+\iffalse (Ex 56) \fi{} }Calculate the expectation and variance of the
+noncentral t distribution.
 \EndKnitrBlock{exercise}
 
+\BeginKnitrBlock{solution}[Ex 56 (a)]
+\iffalse{} {Solution (Ex 56 (a)). } \fi{}We did these. The integrals
+were hard. There were two. We don't have time to write up the nasty
+calculus, but do know that we suffered to prove this result. YAY
+MAAAAATH! We may staple the ugly to the back to the back of the nice
+solutions.
+\EndKnitrBlock{solution}
+
 \BeginKnitrBlock{exercise}[Ex 65]
-\protect\hypertarget{exr:unnamed-chunk-50}{}{\label{exr:unnamed-chunk-50}
-\iffalse (Ex 65) \fi{} }ALEX
+\protect\hypertarget{exr:unnamed-chunk-52}{}{\label{exr:unnamed-chunk-52}
+\iffalse (Ex 65) \fi{} }TODO
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 74]
-\protect\hypertarget{exr:unnamed-chunk-51}{}{\label{exr:unnamed-chunk-51}
-\iffalse (Ex 74) \fi{} }ALEX
+\protect\hypertarget{exr:unnamed-chunk-53}{}{\label{exr:unnamed-chunk-53}
+\iffalse (Ex 74) \fi{} }Let \(\phi_n\) be a the chf of a probability
+measure \(P_n, n = 1, 2, ...\). Let \(\{a_n\}\) be a sequence of
+nonnegative numbers with \(\sum_{n=1}^\infty a_n = 1\). Show that
+\(\sum_{n=1}^\infty a_n \phi_n\) is a ch.f. and find its corresponding
+probability measure.
 \EndKnitrBlock{exercise}
 
+\BeginKnitrBlock{solution}[Ex 74]
+\iffalse{} {Solution (Ex 74). } \fi{}Take \(P = \sum_n a_n P_n\). Note
+that \(P_n\) is dominated by \(P\), so that there exists a density
+\(g_n = dP_n/dP\) for each \(n\) (exercise 35). Consider
+\(P(\Omega) = \int_\Omega \sum a_n g_n(x) dP = 1\), so that
+\(\sum a_n g_n(x) = 1\) almost everywhere. Then
+
+\[
+\begin{aligned}
+\sum_n a_n \phi_n &= \sum_n a_n \int e^{itx} g_n(x) dP \\
+&= \int \sum_n a_n e^{itx} g_n(x) dP \qquad \text{Fubini} \\
+&= \int e^{itx} dP \\
+&= \phi(x)
+\end{aligned}
+\]
+\EndKnitrBlock{solution}
+
 \BeginKnitrBlock{exercise}[Ex 83]
-\protect\hypertarget{exr:unnamed-chunk-52}{}{\label{exr:unnamed-chunk-52}
-\iffalse (Ex 83) \fi{} }ALEX
+\protect\hypertarget{exr:unnamed-chunk-55}{}{\label{exr:unnamed-chunk-55}
+\iffalse (Ex 83) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 85]
-\protect\hypertarget{exr:unnamed-chunk-53}{}{\label{exr:unnamed-chunk-53}
-\iffalse (Ex 85) \fi{} }
+\protect\hypertarget{exr:unnamed-chunk-56}{}{\label{exr:unnamed-chunk-56}
+\iffalse (Ex 85) \fi{} }TODO
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 93]
-\protect\hypertarget{exr:unnamed-chunk-54}{}{\label{exr:unnamed-chunk-54}
-\iffalse (Ex 93) \fi{} }ALEX
+\protect\hypertarget{exr:unnamed-chunk-57}{}{\label{exr:unnamed-chunk-57}
+\iffalse (Ex 93) \fi{} }TODO
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 99]
-\protect\hypertarget{exr:unnamed-chunk-55}{}{\label{exr:unnamed-chunk-55}
-\iffalse (Ex 99) \fi{} }ALEX
+\protect\hypertarget{exr:unnamed-chunk-58}{}{\label{exr:unnamed-chunk-58}
+\iffalse (Ex 99) \fi{} }LEt \(X_1, X_2, ...\) be i.i.d random variables
+and let \(Y\) be a discrete random variable taking positive integer
+values. Assume that \(X_i\) and \(Y\) are independent.
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  Obtain the ch.f. of Z
+\item
+  Show \(E Z = E Y E X_1\)
+\item
+  Show Var Z = E Y Var(X\_1) + Var(Y) (E X\_1)\^{}2
+\end{enumerate}
 \EndKnitrBlock{exercise}
 
+\BeginKnitrBlock{solution}[Ex 99 (a)]
+\iffalse{} {Solution (Ex 99 (a)). } \fi{}TODO
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{solution}[Ex 99 (b)]
+\iffalse{} {Solution (Ex 99 (b)). } \fi{} \[
+\begin{aligned}
+E Z &= E(\sum_{i=1}^Y X_i) \\
+&= E( E(\sum_{i=1}^Y X_i) | Y ) \\
+&= E(Y E(X_1 | Y)) \\
+&= EY E(E(X_1 | Y)) \\
+&= EY E X_1
+\end{aligned}
+\]
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{solution}[Ex 99 (c)]
+\iffalse{} {Solution (Ex 99 (c)). } \fi{} \[
+\begin{aligned}
+Var Z &= Var(E(Z | Y)) + E(Var(Z | Y)) \\
+&= Var(E(Y X_1 | Y)) + E(Var(Y X_1)) \\
+&= Var(Y E(X_1 | Y)) + E(Y^2 Var(X_1)) \\
+&= (E(X_1))^2 Var(Y) + E(Y^2) Var(X_1)
+\end{aligned}
+\]
+\EndKnitrBlock{solution}
+
 \BeginKnitrBlock{exercise}[Ex 101]
-\protect\hypertarget{exr:unnamed-chunk-56}{}{\label{exr:unnamed-chunk-56}
-\iffalse (Ex 101) \fi{} }
+\protect\hypertarget{exr:unnamed-chunk-62}{}{\label{exr:unnamed-chunk-62}
+\iffalse (Ex 101) \fi{} }TODO
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 106]
-\protect\hypertarget{exr:unnamed-chunk-57}{}{\label{exr:unnamed-chunk-57}
-\iffalse (Ex 106) \fi{} }ALEX
+\protect\hypertarget{exr:unnamed-chunk-63}{}{\label{exr:unnamed-chunk-63}
+\iffalse (Ex 106) \fi{} }Let \(\{Y_n\}\) be a sequence of independent
+random. Show that the following are martingales:
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \(X_1 = Y_1\), \(X_{n+1} = X_n + Y_{n+1} h_n(X_1, ..., X_n)\) where
+  \(h_n\) are Borel.
+\item
+  Suppose \(E Y_n = 0\) and \(Var Y_n = \sigma^2\) for all \(n\).
+  \(X_n = (sum_{j=1}^n Y_j)^2 - n \sigma^2\)
+\item
+  Suppose \(Y_n > 0\) and \(E Y_n = 1\) for all \(n\).
+  \(X_n = Y_1 \cdot ... \cdot Y_n\).
+\end{enumerate}
 \EndKnitrBlock{exercise}
+
+\BeginKnitrBlock{solution}[Ex 106 (a)]
+\iffalse{} {Solution (Ex 106 (a)). } \fi{}Recall that a sequence \(X_n\)
+is a martingale if \(E(X_{n+1} | X_1, ..., X_n) = X_n\).
+
+\[
+\begin{aligned}
+E(X_{n+1} = X_n + Y_{n+1} h_n(X_1, ..., X_n) | X_1, ..., X_n) &= 
+  X_n +  h_n(X_1, ..., X_n) E(Y_{n+1} | X_1, ..., X_n) \\
+&= X_n +  h_n(X_1, ..., X_n) 0 \\
+&= X_n
+\end{aligned}
+\]
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{solution}[Ex 106 (b)]
+\iffalse{} {Solution (Ex 106 (b)). } \fi{} \[
+\begin{aligned}
+E(\sum_{j=1}^{n+1} Y_j)^2 - (n + 1) \sigma^2 | X_1, ..., X_n) &= 
+  E(\sum_{j=1}^{n} Y_j + Y_{n+1})^2  | X_1, ..., X_n) - (n + 1) \sigma^2 \\
+&= E(\sum_{j=1}^{n} Y_j | X_1, ..., X_n)^2 + E(Y_{n+1} \cdot \sum_{j=1}^{n} Y_j | X_1, ..., X_n) + E(Y_{n+1}^2  | X_1, ..., X_n) - (n + 1) \sigma^2 \\
+&= E(\sum_{j=1}^{n} Y_j | X_1, ..., X_n)^2 + E(Y_{n+1}) E(\sum_{j=1}^{n} Y_j | X_1, ..., X_n) + \sigma^2 - (n + 1) \sigma^2 \\
+&= (\sum_{j=1}^{n} Y_j)^2 + n \sigma^2
+\end{aligned}
+\]
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{solution}[Ex 106 (c)]
+\iffalse{} {Solution (Ex 106 (c)). } \fi{} \[
+\begin{aligned}
+E( Y_1 \cdot ... \cdot Y_n \cdot Y_{n+1} | X_1, ..., X_n) &= Y_1 \cdot ... \cdot Y_n E(Y_{n+1} | X_1, ..., X_n) \\
+&= Y_1 \cdot ... \cdot Y_n \\
+&= X_n
+\end{aligned}
+\]
+\EndKnitrBlock{solution}
 
 \BeginKnitrBlock{exercise}[Ex 115]
-\protect\hypertarget{exr:unnamed-chunk-58}{}{\label{exr:unnamed-chunk-58}
-\iffalse (Ex 115) \fi{} }
+\protect\hypertarget{exr:unnamed-chunk-67}{}{\label{exr:unnamed-chunk-67}
+\iffalse (Ex 115) \fi{} }Let \(X_1, X_2, ...\) be a sequence of
+identically distributed random variables with finite \(E |X_1|\) and let
+\(Y_n = n^{-1} \max_{i \le n} |X_i|\).
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  Show that \(Y_n \to 0\) in \(L_1\)
+\item
+  Show that \(Y_n \to 0\) almost surely
+\end{enumerate}
 \EndKnitrBlock{exercise}
 
+\BeginKnitrBlock{solution}[Ex 115 (a)]
+\iffalse{} {Solution (Ex 115 (a)). }
+\fi{}\(E Y_n = \int_0^\infty {1 \over n} P(\max_{i \le n} |X_i| > t) dt\)
+by exercise 1.55. The integrand is then bounded by
+
+\[{1 \over n} \sum P(\max_{i \le n} |X_i| > t)\]
+
+which equals \({1 \over n} P(|X_1| > t)\) since the \(X_i\) are
+identical. This is finite by hypothesis. Thus we can apply the DCT to
+see that
+
+\[\lim E Y_n = \int_0^\infty \lim {1 \over n}  P(\max_{i \le n} |X_i| > t) dt = 0\]
+\EndKnitrBlock{solution}
+
+\BeginKnitrBlock{solution}[Ex 115 (b)]
+\iffalse{} {Solution (Ex 115 (b)). } \fi{}The condition that \(E |X_1|\)
+converges and being identical gives us that that \(\lim X_n / n\)
+converges to zero almost surely. then we truncate. for some large enough
+N, \(X_n / n\) must be less than epsilon. then for \(|X_n| / n\) for n
+\textless{} N, there are only finitely many cases and so the max exists
+and is bounded, and goes to zero by the \(n\) in the denominator. this
+gives us that \(\lim Y_n\) goes to zero as \(n\) goes to zero. in fact
+it goes to zero almost everywhere, since the limit \(|X_n| / n\) goes to
+zero almost everywhere by the hypothesis that \(X_n\) is absolutely
+integrable. thus \(\lim Y_n\) goes to zero almost surely.
+\EndKnitrBlock{solution}
+
 \BeginKnitrBlock{exercise}[Ex 117]
-\protect\hypertarget{exr:unnamed-chunk-59}{}{\label{exr:unnamed-chunk-59}
+\protect\hypertarget{exr:unnamed-chunk-70}{}{\label{exr:unnamed-chunk-70}
 \iffalse (Ex 117) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 126]
-\protect\hypertarget{exr:unnamed-chunk-60}{}{\label{exr:unnamed-chunk-60}
+\protect\hypertarget{exr:unnamed-chunk-71}{}{\label{exr:unnamed-chunk-71}
 \iffalse (Ex 126) \fi{} }Prove (vii) of Theorem 1.8
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{solution}
-\iffalse{} {Solution. } \fi{}Let \(X_n \rightarrow d X\),
-\(P(X = c) = 1\).
+\iffalse{} {Solution. } \fi{}Let \(X_n \to d X\), \(P(X = c) = 1\).
 
 Apply triangle inequality and assumption:
 
 \[
-  \lim_{n \rightarrow \infty} P(\norm{X_n - c} > \epsilon) \le \lim_{n \rightarrow \infty} P(\norm{X_n - X} > \epsilon) + \lim_{n \rightarrow \infty} P(\norm{X - c} > \epsilon) = 0.
+  \lim_{n \to \infty} P(\norm{X_n - c} > \epsilon) \le \lim_{n \to \infty} P(\norm{X_n - X} > \epsilon) + \lim_{n \to \infty} P(\norm{X - c} > \epsilon) = 0.
 \]
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{exercise}[Ex 127]
-\protect\hypertarget{exr:unnamed-chunk-62}{}{\label{exr:unnamed-chunk-62}
-\iffalse (Ex 127) \fi{} }
+\protect\hypertarget{exr:unnamed-chunk-73}{}{\label{exr:unnamed-chunk-73}
+\iffalse (Ex 127) \fi{} }(a) Suppose X\_n converge in distribution to X.
+Show X\_n is O\_P(1).
 \EndKnitrBlock{exercise}
 
+\BeginKnitrBlock{solution}[Ex 127 (a)]
+\iffalse{} {Solution (Ex 127 (a)). } \fi{}Suppose X\_n converge in
+distribution to X. For large enough M, we have
+\(P(|X| > M) < \epsilon_1\) (i.e the tail probability is small). For
+large enough \(n\),
+\(P(|X_n| > \epsilon_1) - P(|X| > \epsilon) < \epsilon) < \epsilon_2\).
+Pick \(n\) large enough so that \(\epsilon_2\) is controlled.
+
+\url{http://users.ices.utexas.edu/~alen/articles/asymp-final.pdf} - page
+7
+\EndKnitrBlock{solution}
+
 \BeginKnitrBlock{exercise}[Ex 128]
-\protect\hypertarget{exr:unnamed-chunk-63}{}{\label{exr:unnamed-chunk-63}
+\protect\hypertarget{exr:unnamed-chunk-75}{}{\label{exr:unnamed-chunk-75}
 \iffalse (Ex 128) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 137]
-\protect\hypertarget{exr:unnamed-chunk-64}{}{\label{exr:unnamed-chunk-64}
+\protect\hypertarget{exr:unnamed-chunk-76}{}{\label{exr:unnamed-chunk-76}
 \iffalse (Ex 137) \fi{} }Let \(\{X_n\}\) and \(\{Y_n\}\) be two
-sequences of R.Vs. Assume \(X_n \rightarrow_d X\) and
-\(P_{Y_n | X_n = x_n} \rightarrow_w P_Y\) almost surely for every
-sequence of numbers \(\{x_n\}\), where \(X\) and \(Y\) are independent
-random variables. Show that \(X_n + Y_n \rightarrow_d X + Y\).
+sequences of R.Vs. Assume \(X_n \to_d X\) and
+\(P_{Y_n | X_n = x_n} \to_w P_Y\) almost surely for every sequence of
+numbers \(\{x_n\}\), where \(X\) and \(Y\) are independent random
+variables. Show that \(X_n + Y_n \to_d X + Y\).
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{solution}
 \iffalse{} {Solution. } \fi{} \[
-  P_{Y_n,X_n} = P_{Y_n|X_n}\cdot P_{X_n} \rightarrow P_Y P_X = P_{Y,X},
+  P_{Y_n,X_n} = P_{Y_n|X_n}\cdot P_{X_n} \to P_Y P_X = P_{Y,X},
 \]
 
 where the last equality holds due to independence of \(X\) and \(Y\).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{exercise}[Ex 138]
-\protect\hypertarget{exr:unnamed-chunk-66}{}{\label{exr:unnamed-chunk-66}
+\protect\hypertarget{exr:unnamed-chunk-78}{}{\label{exr:unnamed-chunk-78}
 \iffalse (Ex 138) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 140]
-\protect\hypertarget{exr:unnamed-chunk-67}{}{\label{exr:unnamed-chunk-67}
+\protect\hypertarget{exr:unnamed-chunk-79}{}{\label{exr:unnamed-chunk-79}
 \iffalse (Ex 140) \fi{} }\(X_n \sim N(\mu_n, \sigma^2_n, n \in \N\) and
 \(X \sim N(\mu, \sigma^2)\). Show that
 \(X_n \to_d X \iff \mu_n \to \mu\) and \(\sigma_n \to \sigma\).
@@ -1601,9 +1816,9 @@ unique, this contradicts our assumption.
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{exercise}[Ex 142]
-\protect\hypertarget{exr:unnamed-chunk-69}{}{\label{exr:unnamed-chunk-69}
+\protect\hypertarget{exr:unnamed-chunk-81}{}{\label{exr:unnamed-chunk-81}
 \iffalse (Ex 142) \fi{} }\(f_n\) is the Lebesgue p.d.f. of the
-t-distribution \(t_n\). Show that \(f_n(x) \rightarrow f(x)\) for all
+t-distribution \(t_n\). Show that \(f_n(x) \to f(x)\) for all
 \(x \in \R\), where \(f\) is the Lebesgue p.d.f. for standard normal.
 \EndKnitrBlock{exercise}
 
@@ -1611,28 +1826,26 @@ t-distribution \(t_n\). Show that \(f_n(x) \rightarrow f(x)\) for all
 \iffalse{} {Solution. } \fi{}By definition,
 \(f_n(x) = \frac{\Gamma(\tfrac{n+1}{2})}{\sqrt{n\pi} \Gamma(\tfrac{n}{2})}\left(1 + \frac{x^2}{n}\right)^{\tfrac{-(n+1)}{2}}\).
 
-Note that
-\(\lim_{n \rightarrow \infty}\left(1+\frac{x}{n}\right)^n = e^x\). So,
-since \(\sqrt{1+\tfrac{x^2}{n}} \rightarrow 0\),
+Note that \(\lim_{n \to \infty}\left(1+\frac{x}{n}\right)^n = e^x\). So,
+since \(\sqrt{1+\tfrac{x^2}{n}} \to 0\),
 
-\[\left(1 + \frac{x^2}{n}\right)^{\tfrac{-(n+1)}{2}} = \frac{1}{\left(1+\tfrac{x^2/2}{n/2}\right)^{-n/2}\sqrt{1+\tfrac{x^2}{n}}} \rightarrow e^{-x^2/2}.\]
+\[\left(1 + \frac{x^2}{n}\right)^{\tfrac{-(n+1)}{2}} = \frac{1}{\left(1+\tfrac{x^2/2}{n/2}\right)^{-n/2}\sqrt{1+\tfrac{x^2}{n}}} \to e^{-x^2/2}.\]
 
-Since
-\(\lim_{n \rightarrow \infty} \frac{\Gamma(n + c)}{\Gamma(n)n^c} = 1\),
+Since \(\lim_{n \to \infty} \frac{\Gamma(n + c)}{\Gamma(n)n^c} = 1\),
 
-\[\lim_{n \rightarrow \infty} \frac{\Gamma(\tfrac{n}{2} + \tfrac{1}{2})}{\Gamma(\tfrac{n}{2})\sqrt{n/2}} = 1.\]
+\[\lim_{n \to \infty} \frac{\Gamma(\tfrac{n}{2} + \tfrac{1}{2})}{\Gamma(\tfrac{n}{2})\sqrt{n/2}} = 1.\]
 
 So
 
 \[\begin{aligned}
-  \lim_{n \rightarrow \infty} f_n(x) &= \lim_{n\rightarrow \infty} \frac{\Gamma(\tfrac{n+1}{2})}{\sqrt{n\pi} \Gamma(\tfrac{n}{2})}\left(1 + \frac{x^2}{n}\right)^{\tfrac{-(n+1)}{2}} \\
-                                     &= \frac{1}{\sqrt{2\pi}}e^{-x^2/2}\lim_{n\rightarrow \infty}\frac{\Gamma(\tfrac{n}{2} + \tfrac{1}{2})}{\Gamma(\tfrac{n}{2})\sqrt{n/2}} \\
+  \lim_{n \to \infty} f_n(x) &= \lim_{n\to \infty} \frac{\Gamma(\tfrac{n+1}{2})}{\sqrt{n\pi} \Gamma(\tfrac{n}{2})}\left(1 + \frac{x^2}{n}\right)^{\tfrac{-(n+1)}{2}} \\
+                                     &= \frac{1}{\sqrt{2\pi}}e^{-x^2/2}\lim_{n\to \infty}\frac{\Gamma(\tfrac{n}{2} + \tfrac{1}{2})}{\Gamma(\tfrac{n}{2})\sqrt{n/2}} \\
                                      &= \frac{1}{\sqrt{2\pi}}e^{-x^2/2}.
 \end{aligned}\]
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{exercise}[Ex 146]
-\protect\hypertarget{exr:unnamed-chunk-71}{}{\label{exr:unnamed-chunk-71}
+\protect\hypertarget{exr:unnamed-chunk-83}{}{\label{exr:unnamed-chunk-83}
 \iffalse (Ex 146) \fi{} }Let \(U_1, U_2, \ldots\) be i.i.d. random
 variables, \(U_i \sim U[0,1]\). Let
 \(Y_n = (\prod_{i=1}^n U_i)^{-1/n}\). Show that
@@ -1661,7 +1874,7 @@ that
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{exercise}[Ex 149]
-\protect\hypertarget{exr:unnamed-chunk-73}{}{\label{exr:unnamed-chunk-73}
+\protect\hypertarget{exr:unnamed-chunk-85}{}{\label{exr:unnamed-chunk-85}
 \iffalse (Ex 149) \fi{} }Let \(X_1, \ldots X_n\) be i.i.d. random
 variables such that for \(x = 3,4,\ldots\),
 \(P(X_1 = \pm x) = (2cx^2 \log(x))^{-1}\), where
@@ -1698,7 +1911,7 @@ using an argument as above).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{exercise}[Ex 152]
-\protect\hypertarget{exr:unnamed-chunk-75}{}{\label{exr:unnamed-chunk-75}
+\protect\hypertarget{exr:unnamed-chunk-87}{}{\label{exr:unnamed-chunk-87}
 \iffalse (Ex 152) \fi{} }Let \(T_n = \sum_{i=1}^n X_i\), where
 \(X_1,X_2,\ldots\) are independent and \(P(X_n = \pm n^\theta) = 0.5\)
 for some \(\theta > 0\).
@@ -1747,7 +1960,7 @@ convergence in probability implies convergence in distribution).
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{exercise}[Ex 153]
-\protect\hypertarget{exr:unnamed-chunk-77}{}{\label{exr:unnamed-chunk-77}
+\protect\hypertarget{exr:unnamed-chunk-89}{}{\label{exr:unnamed-chunk-89}
 \iffalse (Ex 153) \fi{} }Let \(X_2, X_3, \ldots\) be independent random
 variables with \(P(X_n = \pm \sqrt{n/\log(n)}) = 0.5\). Show that
 \(\sum_{k=1}^\infty \frac{E|X_k|^p}{k^p} = \infty\) for all
@@ -1773,12 +1986,12 @@ Use that \(\log(x)\) is an increasing function:
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{exercise}[Ex 163]
-\protect\hypertarget{exr:unnamed-chunk-79}{}{\label{exr:unnamed-chunk-79}
+\protect\hypertarget{exr:unnamed-chunk-91}{}{\label{exr:unnamed-chunk-91}
 \iffalse (Ex 163) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 164]
-\protect\hypertarget{exr:unnamed-chunk-80}{}{\label{exr:unnamed-chunk-80}
+\protect\hypertarget{exr:unnamed-chunk-92}{}{\label{exr:unnamed-chunk-92}
 \iffalse (Ex 164) \fi{} }Let \(X_1, X_2, \ldots\) be independent
 variables with \(P(X_j = \pm j^a) = P(X_j = 0) = \tfrac{1}{3}\), where
 \(a > 0\), \(j=1,2,\ldots\). Does Liapounov's condition hold?
@@ -1803,14 +2016,14 @@ Choose \(\delta = 2\). Using Jensens inequality with \(\phi(x) = x^2\)
 and the ratio test, we see that
 
 \[
-\frac{(\tfrac{2}{3})^4}{(\tfrac{2}{3})^2} \frac{\sum_{j=1}^\infty ((j^a)^2)^2}{\left(\sum_{j=1}^\infty j^{2a}\right)^{2}} \to 0
+\frac{(\tfrac{2}{3})^4}{(\tfrac{2}{3})^2} \frac{\sum_{j=1}^\infty ((j^a)^2)^2}{\left(\sum_{j=1}^\infty j^{2a}\right)^{2}} \to 0.
 \]
 \EndKnitrBlock{solution}
 
 \subsection{Suggested Problems}\label{suggested-problems}
 
 \BeginKnitrBlock{exercise}[Ex 3]
-\protect\hypertarget{exr:unnamed-chunk-82}{}{\label{exr:unnamed-chunk-82}
+\protect\hypertarget{exr:unnamed-chunk-94}{}{\label{exr:unnamed-chunk-94}
 \iffalse (Ex 3) \fi{} }Let \(\Omega, \F_j)\), \(j=1,2,\ldots\), be
 measurable spaces such that \(\F_j \subset \F_{j+1}\). Is
 \(\cup_j \F_j\) a \(\sigma\)-field?
@@ -1831,7 +2044,7 @@ i.e.~it is not a \(\sigma\)-algebra.
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{exercise}[Ex 6]
-\protect\hypertarget{exr:unnamed-chunk-84}{}{\label{exr:unnamed-chunk-84}
+\protect\hypertarget{exr:unnamed-chunk-96}{}{\label{exr:unnamed-chunk-96}
 \iffalse (Ex 6) \fi{} }Prove part (ii) and (iii) of proposition
 \ref{prp:properties-of-measures}.
 \EndKnitrBlock{exercise}
@@ -1886,18 +2099,18 @@ we use (i) to get the result:
 Taking the limit on both sides gives us
 
 \[
-  \nu\left(\cup_{i=1}^k A_i \right) = \lim_{n \rightarrow \infty} \nu(A_n).
+  \nu\left(\cup_{i=1}^k A_i \right) = \lim_{n \to \infty} \nu(A_n).
 \]
 \EndKnitrBlock{solution}
 
 \BeginKnitrBlock{exercise}[Ex 15]
-\protect\hypertarget{exr:unnamed-chunk-86}{}{\label{exr:unnamed-chunk-86}
+\protect\hypertarget{exr:unnamed-chunk-98}{}{\label{exr:unnamed-chunk-98}
 \iffalse (Ex 15) \fi{} }Show that a monotone function from \(\R\) to
 \(\R\) is Borel, and a c.d.f. on \(\R^k\) is Borel.
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 17]
-\protect\hypertarget{exr:unnamed-chunk-87}{}{\label{exr:unnamed-chunk-87}
+\protect\hypertarget{exr:unnamed-chunk-99}{}{\label{exr:unnamed-chunk-99}
 \iffalse (Ex 17) \fi{} }Let \(f\) be a non-negative Borel function on
 \((\Omega, \F)\). Show that \(f\) is the limit of a sequence of simple
 functions \(\{\phi_n \}\) on \((\Omega, \F)\) with
@@ -1905,197 +2118,197 @@ functions \(\{\phi_n \}\) on \((\Omega, \F)\) with
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 23]
-\protect\hypertarget{exr:unnamed-chunk-88}{}{\label{exr:unnamed-chunk-88}
+\protect\hypertarget{exr:unnamed-chunk-100}{}{\label{exr:unnamed-chunk-100}
 \iffalse (Ex 23) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 25]
-\protect\hypertarget{exr:unnamed-chunk-89}{}{\label{exr:unnamed-chunk-89}
+\protect\hypertarget{exr:unnamed-chunk-101}{}{\label{exr:unnamed-chunk-101}
 \iffalse (Ex 25) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 31]
-\protect\hypertarget{exr:unnamed-chunk-90}{}{\label{exr:unnamed-chunk-90}
+\protect\hypertarget{exr:unnamed-chunk-102}{}{\label{exr:unnamed-chunk-102}
 \iffalse (Ex 31) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 36]
-\protect\hypertarget{exr:unnamed-chunk-91}{}{\label{exr:unnamed-chunk-91}
+\protect\hypertarget{exr:unnamed-chunk-103}{}{\label{exr:unnamed-chunk-103}
 \iffalse (Ex 36) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 46]
-\protect\hypertarget{exr:unnamed-chunk-92}{}{\label{exr:unnamed-chunk-92}
+\protect\hypertarget{exr:unnamed-chunk-104}{}{\label{exr:unnamed-chunk-104}
 \iffalse (Ex 46) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 53]
-\protect\hypertarget{exr:unnamed-chunk-93}{}{\label{exr:unnamed-chunk-93}
+\protect\hypertarget{exr:unnamed-chunk-105}{}{\label{exr:unnamed-chunk-105}
 \iffalse (Ex 53) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 57]
-\protect\hypertarget{exr:unnamed-chunk-94}{}{\label{exr:unnamed-chunk-94}
+\protect\hypertarget{exr:unnamed-chunk-106}{}{\label{exr:unnamed-chunk-106}
 \iffalse (Ex 57) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 61]
-\protect\hypertarget{exr:unnamed-chunk-95}{}{\label{exr:unnamed-chunk-95}
+\protect\hypertarget{exr:unnamed-chunk-107}{}{\label{exr:unnamed-chunk-107}
 \iffalse (Ex 61) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 66]
-\protect\hypertarget{exr:unnamed-chunk-96}{}{\label{exr:unnamed-chunk-96}
+\protect\hypertarget{exr:unnamed-chunk-108}{}{\label{exr:unnamed-chunk-108}
 \iffalse (Ex 66) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 70]
-\protect\hypertarget{exr:unnamed-chunk-97}{}{\label{exr:unnamed-chunk-97}
+\protect\hypertarget{exr:unnamed-chunk-109}{}{\label{exr:unnamed-chunk-109}
 \iffalse (Ex 70) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 73]
-\protect\hypertarget{exr:unnamed-chunk-98}{}{\label{exr:unnamed-chunk-98}
+\protect\hypertarget{exr:unnamed-chunk-110}{}{\label{exr:unnamed-chunk-110}
 \iffalse (Ex 73) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 78]
-\protect\hypertarget{exr:unnamed-chunk-99}{}{\label{exr:unnamed-chunk-99}
+\protect\hypertarget{exr:unnamed-chunk-111}{}{\label{exr:unnamed-chunk-111}
 \iffalse (Ex 78) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 79]
-\protect\hypertarget{exr:unnamed-chunk-100}{}{\label{exr:unnamed-chunk-100}
+\protect\hypertarget{exr:unnamed-chunk-112}{}{\label{exr:unnamed-chunk-112}
 \iffalse (Ex 79) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 81]
-\protect\hypertarget{exr:unnamed-chunk-101}{}{\label{exr:unnamed-chunk-101}
+\protect\hypertarget{exr:unnamed-chunk-113}{}{\label{exr:unnamed-chunk-113}
 \iffalse (Ex 81) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 82]
-\protect\hypertarget{exr:unnamed-chunk-102}{}{\label{exr:unnamed-chunk-102}
+\protect\hypertarget{exr:unnamed-chunk-114}{}{\label{exr:unnamed-chunk-114}
 \iffalse (Ex 82) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 86]
-\protect\hypertarget{exr:unnamed-chunk-103}{}{\label{exr:unnamed-chunk-103}
+\protect\hypertarget{exr:unnamed-chunk-115}{}{\label{exr:unnamed-chunk-115}
 \iffalse (Ex 86) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 88]
-\protect\hypertarget{exr:unnamed-chunk-104}{}{\label{exr:unnamed-chunk-104}
+\protect\hypertarget{exr:unnamed-chunk-116}{}{\label{exr:unnamed-chunk-116}
 \iffalse (Ex 88) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 91]
-\protect\hypertarget{exr:unnamed-chunk-105}{}{\label{exr:unnamed-chunk-105}
+\protect\hypertarget{exr:unnamed-chunk-117}{}{\label{exr:unnamed-chunk-117}
 \iffalse (Ex 91) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 97]
-\protect\hypertarget{exr:unnamed-chunk-106}{}{\label{exr:unnamed-chunk-106}
+\protect\hypertarget{exr:unnamed-chunk-118}{}{\label{exr:unnamed-chunk-118}
 \iffalse (Ex 97) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 98]
-\protect\hypertarget{exr:unnamed-chunk-107}{}{\label{exr:unnamed-chunk-107}
+\protect\hypertarget{exr:unnamed-chunk-119}{}{\label{exr:unnamed-chunk-119}
 \iffalse (Ex 98) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 102]
-\protect\hypertarget{exr:unnamed-chunk-108}{}{\label{exr:unnamed-chunk-108}
+\protect\hypertarget{exr:unnamed-chunk-120}{}{\label{exr:unnamed-chunk-120}
 \iffalse (Ex 102) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 104]
-\protect\hypertarget{exr:unnamed-chunk-109}{}{\label{exr:unnamed-chunk-109}
+\protect\hypertarget{exr:unnamed-chunk-121}{}{\label{exr:unnamed-chunk-121}
 \iffalse (Ex 104) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 114]
-\protect\hypertarget{exr:unnamed-chunk-110}{}{\label{exr:unnamed-chunk-110}
+\protect\hypertarget{exr:unnamed-chunk-122}{}{\label{exr:unnamed-chunk-122}
 \iffalse (Ex 114) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 116]
-\protect\hypertarget{exr:unnamed-chunk-111}{}{\label{exr:unnamed-chunk-111}
+\protect\hypertarget{exr:unnamed-chunk-123}{}{\label{exr:unnamed-chunk-123}
 \iffalse (Ex 116) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 116]
-\protect\hypertarget{exr:unnamed-chunk-112}{}{\label{exr:unnamed-chunk-112}
+\protect\hypertarget{exr:unnamed-chunk-124}{}{\label{exr:unnamed-chunk-124}
 \iffalse (Ex 116) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 118]
-\protect\hypertarget{exr:unnamed-chunk-113}{}{\label{exr:unnamed-chunk-113}
+\protect\hypertarget{exr:unnamed-chunk-125}{}{\label{exr:unnamed-chunk-125}
 \iffalse (Ex 118) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 119]
-\protect\hypertarget{exr:unnamed-chunk-114}{}{\label{exr:unnamed-chunk-114}
+\protect\hypertarget{exr:unnamed-chunk-126}{}{\label{exr:unnamed-chunk-126}
 \iffalse (Ex 119) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 121]
-\protect\hypertarget{exr:unnamed-chunk-115}{}{\label{exr:unnamed-chunk-115}
+\protect\hypertarget{exr:unnamed-chunk-127}{}{\label{exr:unnamed-chunk-127}
 \iffalse (Ex 121) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 122]
-\protect\hypertarget{exr:unnamed-chunk-116}{}{\label{exr:unnamed-chunk-116}
-\iffalse (Ex 122) \fi{} }
+\protect\hypertarget{exr:unnamed-chunk-128}{}{\label{exr:unnamed-chunk-128}
+\iffalse (Ex 122) \fi{} }TODO - Alex
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 125]
-\protect\hypertarget{exr:unnamed-chunk-117}{}{\label{exr:unnamed-chunk-117}
+\protect\hypertarget{exr:unnamed-chunk-129}{}{\label{exr:unnamed-chunk-129}
 \iffalse (Ex 125) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 136]
-\protect\hypertarget{exr:unnamed-chunk-118}{}{\label{exr:unnamed-chunk-118}
+\protect\hypertarget{exr:unnamed-chunk-130}{}{\label{exr:unnamed-chunk-130}
 \iffalse (Ex 136) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 141]
-\protect\hypertarget{exr:unnamed-chunk-119}{}{\label{exr:unnamed-chunk-119}
+\protect\hypertarget{exr:unnamed-chunk-131}{}{\label{exr:unnamed-chunk-131}
 \iffalse (Ex 141) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 144]
-\protect\hypertarget{exr:unnamed-chunk-120}{}{\label{exr:unnamed-chunk-120}
+\protect\hypertarget{exr:unnamed-chunk-132}{}{\label{exr:unnamed-chunk-132}
 \iffalse (Ex 144) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 145]
-\protect\hypertarget{exr:unnamed-chunk-121}{}{\label{exr:unnamed-chunk-121}
+\protect\hypertarget{exr:unnamed-chunk-133}{}{\label{exr:unnamed-chunk-133}
 \iffalse (Ex 145) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 150]
-\protect\hypertarget{exr:unnamed-chunk-122}{}{\label{exr:unnamed-chunk-122}
+\protect\hypertarget{exr:unnamed-chunk-134}{}{\label{exr:unnamed-chunk-134}
 \iffalse (Ex 150) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 154]
-\protect\hypertarget{exr:unnamed-chunk-123}{}{\label{exr:unnamed-chunk-123}
+\protect\hypertarget{exr:unnamed-chunk-135}{}{\label{exr:unnamed-chunk-135}
 \iffalse (Ex 154) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 156]
-\protect\hypertarget{exr:unnamed-chunk-124}{}{\label{exr:unnamed-chunk-124}
+\protect\hypertarget{exr:unnamed-chunk-136}{}{\label{exr:unnamed-chunk-136}
 \iffalse (Ex 156) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 161]
-\protect\hypertarget{exr:unnamed-chunk-125}{}{\label{exr:unnamed-chunk-125}
+\protect\hypertarget{exr:unnamed-chunk-137}{}{\label{exr:unnamed-chunk-137}
 \iffalse (Ex 161) \fi{} }
 \EndKnitrBlock{exercise}
 
 \BeginKnitrBlock{exercise}[Ex 166]
-\protect\hypertarget{exr:unnamed-chunk-126}{}{\label{exr:unnamed-chunk-126}
+\protect\hypertarget{exr:unnamed-chunk-138}{}{\label{exr:unnamed-chunk-138}
 \iffalse (Ex 166) \fi{} }
 \EndKnitrBlock{exercise}
 

@@ -304,15 +304,16 @@ Now assume $P_n << \nu$. Let $A \in \F$ with $\nu(A) = 0$. Then $P_n(A) = 0$ for
 ```
 
 ```{exercise, name = "Ex 55"}
+
 Let $X$ be a random variable. Show that
 
 (a) If $E X$ exists, then $E X = \int_0^\infty P(X > x) dx - \int_{-\infty}^0 P(X \le x) dx$.
+(b) If $X$ has range $0, 1, 2, ...$, then $E X = \sum_{n=1}^\infty P(X \ge x)$
 
-(b) If $X$ has range $0, 1, 2, ...$, then $E X = \sum_{n=1}^\infty
- P(X \ge x)$
 ```
 
 ```{solution, name = "EX 55 (a)"}
+
 First rewrite the RHS in terms of PDFS
 
 $$\int_0^\infty \int_x^\infty f(y) dy dx - \int_{-\infty}^0 \int_{-\infty}^x f(y) dy dx$$
@@ -327,6 +328,7 @@ $$
 &= E X
 \end{aligned}
 $$
+  
 ```
 
 ```{exercise, name = "Ex 56"}
@@ -357,6 +359,7 @@ $$
 &= \phi(x)
 \end{aligned}
 $$
+
 ```
 
 ```{exercise, name = "Ex 83"}
@@ -377,6 +380,7 @@ LEt $X_1, X_2, ...$ be i.i.d random variables and let $Y$ be a discrete random v
 (a) Obtain the ch.f. of Z
 (b) Show $E Z = E Y E X_1$
 (c) Show Var Z = E Y Var(X_1) + Var(Y) (E X_1)^2
+
 ```
 
 ```{solution, name = "Ex 99 (a)"}
@@ -384,6 +388,7 @@ TODO
 ```
 
 ```{solution, name = "Ex 99 (b)"}
+
 $$
 \begin{aligned}
 E Z &= E(\sum_{i=1}^Y X_i) \\
@@ -393,9 +398,11 @@ E Z &= E(\sum_{i=1}^Y X_i) \\
 &= EY E X_1
 \end{aligned}
 $$
+  
 ```
 
 ```{solution, name = "Ex 99 (c)"}
+
 $$
 \begin{aligned}
 Var Z &= Var(E(Z | Y)) + E(Var(Z | Y)) \\
@@ -404,6 +411,7 @@ Var Z &= Var(E(Z | Y)) + E(Var(Z | Y)) \\
 &= (E(X_1))^2 Var(Y) + E(Y^2) Var(X_1)
 \end{aligned}
 $$
+
 ```
 
 ```{exercise, name = "Ex 101"}
@@ -416,6 +424,7 @@ Let $\{Y_n\}$ be a sequence of independent random. Show that the following are m
 (a) $X_1 = Y_1$, $X_{n+1} = X_n + Y_{n+1} h_n(X_1, ..., X_n)$ where $h_n$ are Borel.
 (b) Suppose $E Y_n = 0$ and $Var Y_n = \sigma^2$ for all $n$. $X_n = (sum_{j=1}^n Y_j)^2 - n \sigma^2$
 (c) Suppose $Y_n > 0$ and $E Y_n = 1$ for all $n$. $X_n = Y_1 \cdot ... \cdot Y_n$.
+
 ```
 
 ```{solution, name = "Ex 106 (a)"}
@@ -429,9 +438,11 @@ E(X_{n+1} = X_n + Y_{n+1} h_n(X_1, ..., X_n) | X_1, ..., X_n) &=
 &= X_n
 \end{aligned}
 $$
+  
 ```
 
 ```{solution, name = "Ex 106 (b)"}
+
 $$
 \begin{aligned}
 E(\sum_{j=1}^{n+1} Y_j)^2 - (n + 1) \sigma^2 | X_1, ..., X_n) &= 
@@ -441,9 +452,11 @@ E(\sum_{j=1}^{n+1} Y_j)^2 - (n + 1) \sigma^2 | X_1, ..., X_n) &=
 &= (\sum_{j=1}^{n} Y_j)^2 + n \sigma^2
 \end{aligned}
 $$
+
 ```
   
 ```{solution, name = "Ex 106 (c)"}
+
 $$
 \begin{aligned}
 E( Y_1 \cdot ... \cdot Y_n \cdot Y_{n+1} | X_1, ..., X_n) &= Y_1 \cdot ... \cdot Y_n E(Y_{n+1} | X_1, ..., X_n) \\
@@ -451,6 +464,7 @@ E( Y_1 \cdot ... \cdot Y_n \cdot Y_{n+1} | X_1, ..., X_n) &= Y_1 \cdot ... \cdot
 &= X_n
 \end{aligned}
 $$
+
 ```
 
 ```{exercise, name = "Ex 115"}
@@ -458,6 +472,7 @@ Let $X_1, X_2, ...$ be a sequence of identically distributed random variables wi
 
 (a) Show that $Y_n \to 0$ in $L_1$
 (b) Show that $Y_n \to 0$ almost surely
+
 ```
 
 ```{solution, name = "Ex 115 (a)"}
@@ -468,11 +483,12 @@ $${1 \over n} \sum P(\max_{i \le n} |X_i| > t)$$
 which equals ${1 \over n}  P(|X_1| > t)$ since the $X_i$ are identical. This is finite by hypothesis. Thus we can apply the DCT to see that 
 
 $$\lim E Y_n = \int_0^\infty \lim {1 \over n}  P(\max_{i \le n} |X_i| > t) dt = 0$$
+
 ```
 
 
 ```{solution, name = "Ex 115 (b)"}
-The condition that $E |X_1|$ converges and being identical gives us that that $ \lim X_n / n$ converges to zero almost surely. then we truncate. for some large enough N, $X_n / n$ must be less than epsilon. then for $|X_n| / n$ for n < N, there are only finitely many cases and so the max exists and is bounded, and goes to zero by the $n$ in the denominator. this gives us that $\lim Y_n$ goes to zero as $n$ goes to zero. in fact it goes to zero almost everywhere, since the limit $|X_n| / n$ goes to zero almost everywhere by the hypothesis that $X_n$ is absolutely integrable. thus $\lim Y_n$ goes to zero almost surely.
+The condition that $E |X_1|$ converges and being identical gives us that that $\lim X_n / n$ converges to zero almost surely. then we truncate. for some large enough N, $X_n / n$ must be less than epsilon. then for $|X_n| / n$ for n < N, there are only finitely many cases and so the max exists and is bounded, and goes to zero by the $n$ in the denominator. this gives us that $\lim Y_n$ goes to zero as $n$ goes to zero. in fact it goes to zero almost everywhere, since the limit $|X_n| / n$ goes to zero almost everywhere by the hypothesis that $X_n$ is absolutely integrable. thus $\lim Y_n$ goes to zero almost surely.
 ```
 
 
@@ -500,7 +516,7 @@ $$
 ```
 
 ```{solution, name = "Ex 127 (a)"}
-Suppose X_n converge in distribution to X. For large enough M, we have $P(|X| > M) < \epsilon_1$ (i.e the tail probability is small). For large enough $n$,  $P(|X_n| > \epsilon_1) - P(|X| > \epsilon) < \epsilon) < $\epsilon_2$. Pick $n$ large enough so that $\epsilon_2$ is controlled. 
+Suppose X_n converge in distribution to X. For large enough M, we have $P(|X| > M) < \epsilon_1$ (i.e the tail probability is small). For large enough $n$,  $P(|X_n| > \epsilon_1) - P(|X| > \epsilon) < \epsilon) < \epsilon_2$. Pick $n$ large enough so that $\epsilon_2$ is controlled. 
   
   http://users.ices.utexas.edu/~alen/articles/asymp-final.pdf - page 7
 ```
